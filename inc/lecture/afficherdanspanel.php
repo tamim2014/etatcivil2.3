@@ -1,7 +1,7 @@
 <?php
 $id=$_GET['n'];
 try{$conn = new PDO('mysql:host=localhost;dbname=etatcivil;charset=utf8', 'root', '');}
-catch(Exception $e){die('Erreur de connexion à la base de données: '.$e->getMessage());}
+catch(Exception $e){die('Erreur de connexion ï¿½ la base de donnï¿½es: '.$e->getMessage());}
 
 $reponse = $conn->query('SELECT * FROM liste WHERE ID='.$id );
 $donnees = $reponse->fetch();
@@ -13,7 +13,7 @@ $donnees = $reponse->fetch();
 <html>
 <head>
      <title> </title>
-	 <meta  charset="ISO 8859-1" />
+	 
 	 <link href="css/afficherdanspanel.css" rel="stylesheet" title="Style" />
      
 </head>
@@ -23,7 +23,7 @@ $donnees = $reponse->fetch();
 <table border="0" align="center"  style="border-collapse:collapse; bordercolor:#111111; max-width:500px;" >
   
    <tr>
-      <td align="center" VALIGN="top"><h2>UNION DES COMORES</h2> <h6>Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement<h6> <h3>MINISTERE DE L'INTERIEUR</h3> <img src="img/armoirie.png"  /> <h4> Pr&eacute;fecture de: </h4> <input type="text"  style="margin-left:-95px;"  value="<?php echo $donnees["prefecture"];?>"  ><hr/>  <h4>Centre d'Etat Civil de: </h4>  <input type="text"  style="margin-left:-95px;"  value="<?php echo $donnees["centretatcivil"];?>" > <hr/> <div style="margin-left:10px;"><h6 align="left"><input type="text"   style="margin-left:65px;"  value="<?php echo $donnees["registre"];?>" ><br>Registre N° ------------------------------</h6><h6 align="left"><input type="text"   style="margin-left:65px;"  value="<?php echo $donnees["acte"];?>" ><br>Acte N°-----------------------------------</h6><h6 align="left" ><input type="text"  style="margin-left:65px;" value="<?php echo $donnees["date_acte"];?>" ><br>Du-----------------------------------------</h6></div></td>
+      <td align="center" VALIGN="top"><h2>UNION DES COMORES</h2> <h6>Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement<h6> <h3>MINISTERE DE L'INTERIEUR</h3> <img src="img/armoirie.png"  /> <h4> Pr&eacute;fecture de: </h4> <input type="text"  style="margin-left:-95px;"  value="<?php echo $donnees["prefecture"];?>"  ><hr/>  <h4>Centre d'Etat Civil de: </h4>  <input type="text"  style="margin-left:-95px;"  value="<?php echo $donnees["centretatcivil"];?>" > <hr/> <div style="margin-left:10px;"><h6 align="left"><input type="text"   style="margin-left:65px;"  value="<?php echo $donnees["registre"];?>" ><br>Registre Nï¿½ ------------------------------</h6><h6 align="left"><input type="text"   style="margin-left:65px;"  value="<?php echo $donnees["acte"];?>" ><br>Acte Nï¿½-----------------------------------</h6><h6 align="left" ><input type="text"  style="margin-left:65px;" value="<?php echo $donnees["date_acte"];?>" ><br>Du-----------------------------------------</h6></div></td>
       
 	  <td  align="left"  rowspan="2" >
 	     <h1 align="center"  style="color: white; text-shadow: 2px 2px 4px #1D702D;">ACTE DE NAISSANCE</h1>

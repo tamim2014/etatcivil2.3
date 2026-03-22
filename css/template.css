@@ -51,6 +51,14 @@ body {
 }
 
 
+/* Clear floats after the columns */
+.contenu:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
 .colonne_contenu {
     width: 68%;
     float: left;
@@ -58,12 +66,7 @@ body {
     background: white;
 }
 
-/* Clear floats after the columns */
-.contenu:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+
 
 .colonne_laterale li {
     list-style:none;
