@@ -13,6 +13,7 @@
     <link href="css/slide.css"     rel="stylesheet"   />
 	<link href="css/dropdown.css"  rel="stylesheet"    />
 
+
 	<script src="js/jquery.js"></script>
 </head>
 
@@ -69,8 +70,8 @@
 			</div>
 		</form>
     </div>     
-    <div class="footer" style="margin-top:0; padding-top:0; ">
-        Pied de Page
+    <div class="footer" style="text-align:left; ">
+        <span ><span style="color:#555;">2026 &copy; -</span> <span style="color:#333;">Etat civil</span></span>
     </div>
 </body>
 </html>

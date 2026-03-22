@@ -12,7 +12,20 @@
 	 <link href="css/slide.css"     rel="stylesheet"   /> 
 	 <link href="css/dropdown.css"  rel="stylesheet"    />
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />  <!-- pour les bouton du panneau central -->
-	 <link href="css/ecritureBD.css" rel="stylesheet" title="Style" /> 
+	 <link href="css/ecritureBD.css" rel="stylesheet" title="Style" />
+     <style>
+	      /* sinon le footer remonte */
+	     .footer {
+            position:absolute;
+			width:100%;
+		 }
+		 /* Agrandir les champs de saisie dans le panneau centrale */
+		 body div.contenu form div.colonne_contenu aside table.tabledroite  tr td input{
+			 padding:.5em .5em ;
+			 margin-bottom:.3em ;
+		 }
+	 </style>	 
+     
 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js"></script>
@@ -34,7 +47,7 @@
 			<?php include("inc/accueil/accueil_menucentral_ecriture.php"); ?> 
 		</div>
     </header>
-	<div class="contenu">
+	<div class="contenu" style="margin-bottom:0;">
 		<form action ="SERVEUR/ecritureBD_insertionSQL.php" method="post" name="form1" >
 			<!-- LE PANNEAU DE GAUCHE :  -->
 			<div class="colonne_laterale" style="width: 33%; ">
@@ -46,8 +59,8 @@
 			 <!-- LE PANNEAU CENTRAL   -->
             <div class="colonne_contenu" style="padding:0; width: 40%;">
 			     <aside style="padding:1.5em 0 0 0; background:#ececea;">
-					<table class="tabledroite"  >
-						<p class="showacte"> <!-- Pour afficher l'acte modifiÃ© dans la partie droite de la page modifie_.php  -->
+					<table class="tabledroite showacte"  >
+					    <!-- <p class="showacte">  Pour afficher l'acte modifiÃ© dans la partie droite de la page modifie_.php  -->
 							<tr> 
 								 <td> <input type="text" name="naissance_jour_moi"  placeholder=" Le" > </td>
 								 <td> <input type="text" name="naissance_an"  placeholder=" ici l'an"> </td>
@@ -120,8 +133,8 @@
 			</div>
 		</form>
 	</div><!-- div.contenu -->
-    <div class="footer">
-        Pied de Page
+    <div class="footer" style="text-align:left; ">
+        <span ><span style="color:#555;">2026 &copy; -</span> <span style="color:#333;">Etat civil</span></span>
     </div>	
 </body>
 </html>
