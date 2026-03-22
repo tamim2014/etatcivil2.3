@@ -80,9 +80,11 @@ body {
 }
 
 .footer {
-    background-color: #74AFAD;
-    padding: 10px;
-    text-align: center;
+    background-color: #74AFAD; 
+    text-align: left;
+	
+	margin-top:0;
+	padding:0.5em 1em; 
 }
 
 img {
