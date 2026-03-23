@@ -1,7 +1,7 @@
 <?php
  echo '
  
- 	          <div id="m"   style="width:80%; margin-left:10%;  padding-top:0; margin-top:0;    ">
+ 	        <div id="m"   style="width:80%; margin-left:10%;  padding-top:0; margin-top:0;    ">
 			    <!--
                 <a href="accueil.php"   > <div class="kangalaheMenu" style="padding-top : 40px;  height: 80px; "  >  <input type="button"  value="Accueil"   style="background-color: #cdbe9f; height: 30px;   display: block;  margin: auto; top:580px;   font-style: italic; font-family: Times New Roman, Georgia, Serif; "/>     </div></a>
 				<p> &nbsp;</p>
