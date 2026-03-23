@@ -18,7 +18,7 @@
    
 //1. Requête (SQL): On récupère tout le contenu de la table liste)   
       //$requete = "SELECT * FROM liste WHERE acte=".$num." OR  nom=$nom'";
-      $requete = "SELECT * FROM liste WHERE   nom='". ltrim($nom)."'" ;	  	
+      $requete = "SELECT * FROM liste WHERE   nom='".ltrim($nom)."'" ;	  	
 	  $result = mysqli_query($conn,$requete);    
 //2. Stockage dans une variable(PHP): $donnees = $reponse->fetch(); 
      
@@ -29,7 +29,7 @@
 	 $table.= '<tr ><th>ID</th><th>Nom </th><th> Prenom </th><th>Acte numero</th><th>Edit</th><th>Imprimer</th><th>Afficher</th></tr>';
 	 while ($donnees = mysqli_fetch_array($result) )  	 	 
 	 { 
-       $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td>  <td> <a href=" modifier_.php? n='.$donnees["ID"].'  &  nom_='.$donnees["nom"].'   &  prenom_='.$donnees["prenom"].'   &   acte_='.$donnees["acte"].' ">Modifier</a> </td>    <td> <a href="supprimer.php?n='.$donnees["ID"].'">Imprimer</a> </td>     <td> <a id="lien"  href="#" onclick="showActe('.$donnees["ID"].');">Afficher</a> </td></tr>  <tr> <td> </td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>';
+       $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td>  <td> <a href=" modifier_.php? n='.$donnees["ID"].'  &  nom_='.$donnees["nom"].'   &  prenom_='.$donnees["prenom"].'   &   acte_='.$donnees["acte"].' ">Modifier</a> </td>    <td> <a href="imprimer.php?n='.$donnees["ID"].'">Imprimer</a> </td>     <td> <a id="lien"  href="#" onclick="showActe('.$donnees["ID"].');">Afficher</a> </td></tr>  <tr> <td> </td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>';
 	   $_SESSION['identifiant']= $donnees['ID']; // Où est-ce qu'on utilise cette variable session?
 	 } 
      $table.='</table>'; 

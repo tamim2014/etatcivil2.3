@@ -38,11 +38,10 @@ try {
         $result = $req->fetch(PDO::FETCH_ASSOC);
 
 	    //if ($result[0] == 0){
-		//if (!isset($result[0])){
 		if (empty($result)) {
 			$message = ' aucun resultat trouv&eacute;'; 
 		}else{
-		 // --- enregistrement en session de l'utilisateur
+		 // --- enregistrement en session du numéro
 			$_SESSION["acte"] = $numero;
 		 // --- redirection en fonction de l'utilisateur
 			header("Location: lectureBD2.php?num=".$numero );
@@ -54,23 +53,23 @@ try {
 		  
     if(!empty($nomm) )
     {
-	  /*
-	  $sql2="SELECT * FROM `liste` WHERE `nom`='$nomm';";
-	  $req2=mysqli_query($db,$sql2) or die('Erreur SQl !<br>'.$sql2.'<br>'.mysqli_error($db));
-	  $result2 = mysqli_fetch_row($req2);
-	  */
+	    /*
+	     $sql2="SELECT * FROM `liste` WHERE `nom`='$nomm';";
+	     $req2=mysqli_query($db,$sql2) or die('Erreur SQl !<br>'.$sql2.'<br>'.mysqli_error($db));
+	     $result2 = mysqli_fetch_row($req2);
+	    */
 
-	$req2 = $bdd->prepare("SELECT * FROM liste WHERE nom = :nom");
-    $req2->execute([':nom' => $nomm]);
-    $result2 = $req2->fetch(PDO::FETCH_ASSOC);
+	    $req2 = $bdd->prepare("SELECT * FROM liste WHERE nom = :nom");
+        $req2->execute([':nom' => $nomm]);
+        $result2 = $req2->fetch(PDO::FETCH_ASSOC);
 	    //if ($result2[0] == 0){
-		if (!isset($result2[0])){
+		if (empty($result2)){
 			$message = ' aucun resultat trouv&eacute;'; 
 		}else{
-		 // --- enregistrement en session de l'utilisateur
+		 // --- enregistrement en session du nom
 			$_SESSION["nom"]=$nomm;
 		 // --- redirection en fonction de l'utilisateur
-			header("Location: lectureBD2.php?nom=".$nomm);
+			header("Location: lectureBD2.php?nom=".$nomm );
 		}
 	}
 	
@@ -119,7 +118,7 @@ try {
 						 </caption>
 						 <tr> <td >RECHERCHE DE DOCUMENT</td></tr>
 						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> num&eacute;ro<br/> <input id="recherchenum" type="text" name="acte_" pattern=".{1,}"  > </td></tr> 
-						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> nom    <br/> <input id="recherchenom"  type="text" name="nom_"  > </td></tr>
+						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> nom    <br/>       <input id="recherchenom" type="text" name="nom_"  > </td></tr>
 						 <tr><td style="padding-top:1em;">
 							 <textarea class="t_area" name="myTextBox" cols="18" rows="4"> <?php echo $message ; ?> </textarea>
 						 <br/><input type="submit" name="envoie" value="Chercher"  style="background:transparent ; color:#111; padding:.3em 3.3em; margin:1em auto; " />

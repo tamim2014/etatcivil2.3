@@ -15,11 +15,11 @@
 	
 	
 	
-	if(isset($num)){
+	if(!empty($num) ){
 	   $requete = "SELECT * FROM liste WHERE acte=".$num ;  
 	   $result = mysqli_query($conn,$requete);
-	}else if(isset($nom)){
-	  $requete = "SELECT * FROM liste WHERE   nom='". ltrim($nom)."'" ;	  	
+	}else if(!empty($nom) ){
+	  $requete = "SELECT * FROM liste WHERE   nom='".ltrim($nom)."'" ;	  	
 	  $result = mysqli_query($conn,$requete); 
 	}
 	
@@ -28,7 +28,7 @@
 		 $p = $donnees["prefecture"];
     }
 
- 
+    
 ?>
 
 
@@ -104,8 +104,8 @@
 						 <div class="mnayvawo" style="padding:5.8em;">
                             <?php 
 							//Resulat de la recherche: Une table en une seule ligne et 7 colonnes(en haut à droite)
-							if(isset($_GET['num'])){include("SERVEUR/lectureBD2_searchPlayBack.php");}
-							else if(isset($_GET['nom']) ) {include("SERVEUR/lectureBD2_searchPlayBackByName.php");}
+							if(!empty($_GET['num'])){include("SERVEUR/lectureBD2_searchPlayBack.php");}
+							else if(!empty($_GET['nom'])) {include("SERVEUR/lectureBD2_searchPlayBackByName.php");}
 							//"La connaissance s'acquiert par l'expérience, tout le reste n'est que de l'information" .Albert Einstein.
 
 							/****************** Rappel sur les sessions *********************************
