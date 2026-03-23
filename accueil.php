@@ -37,7 +37,9 @@ try {
         $req->execute([':numero' => $numero]);
         $result = $req->fetch(PDO::FETCH_ASSOC);
 
-	    if ($result[0] == 0){
+	    //if ($result[0] == 0){
+		//if (!isset($result[0])){
+		if (empty($result)) {
 			$message = ' aucun resultat trouv&eacute;'; 
 		}else{
 		 // --- enregistrement en session de l'utilisateur
@@ -61,7 +63,9 @@ try {
 	$req2 = $bdd->prepare("SELECT * FROM liste WHERE nom = :nom");
     $req2->execute([':nom' => $nomm]);
     $result2 = $req2->fetch(PDO::FETCH_ASSOC);
-	    if ($result2[0] == 0){$message = ' aucun resultat trouv&eacute;'; 
+	    //if ($result2[0] == 0){
+		if (!isset($result2[0])){
+			$message = ' aucun resultat trouv&eacute;'; 
 		}else{
 		 // --- enregistrement en session de l'utilisateur
 			$_SESSION["nom"]=$nomm;

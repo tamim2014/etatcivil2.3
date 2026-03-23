@@ -158,7 +158,7 @@
     function popup_lectureBD2()
         {    
            //window.open("http://google.fr/", "Autrepage", "toolbar=1, location=1, directories=1, status=1, scrollbars=1, resizable=1, copyhistory=1");
-		     window.open("afficherdanspop.php", 'Popup', 'scrollbars=1, Menubar=1, resizable=1,height=409,width=918 ,  top=258, left=175 '); return false;          
+		     window.open("afficherdanspop.php",'Popup','scrollbars=1,Menubar=1,resizable=1,height=409,width=958,top=258,left=175'); return false;          
 		}
 		
 
