@@ -12,8 +12,7 @@ include("SERVEUR/pop.php");
      <title>Pop relatif à la page affichée suite à une recherche par Numero/Nom(lecturetureBD2.php) </title>
 	 <link href="css/afficher.css" rel="stylesheet" title="Style" /> 
      <style>
-	     input { border:none; }
-		 
+	     input { border:none; }		 
      </style>	 
 </head>
 
@@ -50,8 +49,8 @@ include("SERVEUR/pop.php");
 				      <input type="text"  style="margin-left:65px;" value="<?php echo $donnees["date_acte"];?>" ><br>
 				      Du -----------------------------------------
 					</p>
-				   </h6>
-				</div>
+				</h6>
+			</div>
 		</td>
       
 	  <td  align="left"  rowspan="2" >
