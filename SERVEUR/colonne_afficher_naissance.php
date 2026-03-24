@@ -24,6 +24,7 @@ while($ligne=mysqli_fetch_array($R)){// en utlisant FOREACH ça marche pas .j'sa
     //$table.='<tr><td>'.$ligne["nom"].'</td><td>'.$ligne["prenom"].'</td><td>'.$ligne["acte"].'</td><td>'.$ligne["prefecture"].'</td> <td  > <a href="afficher.php?n='.$ligne["ID"].'"     onclick=" window.open(this.href, \'Popup\', \'scrollbars=1,resizable=1,height=409,width=918 ,  top=258, left=175 \'); return false;" >Afficher</a> </td></tr>';
     $table.='<tr><td>'.$ligne["nom"].'</td><td>'.$ligne["prenom"].'</td><td>'.$ligne["acte"].'</td><td>'.$ligne["prefecture"].'</td> <td  > <a href="#"   onclick="popup_lectureBD2();" >Afficher</a> </td></tr>';
     $_SESSION["v"]= $p; // stocke la prefecture pour la transmettre à la page rectifier naissance.php suite à un éventuel clic sur le bouton rectifier
+    $_SESSION['identifiant']= $ligne['ID']; // pour l'affichage du document. Voir afficherdanspop.php( don include pop.php)
 }
 $table.='</table>';
 

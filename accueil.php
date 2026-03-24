@@ -95,7 +95,7 @@ try {
               -> onchange=captureCombo(this.value); // du fichier capture_items.js
               -> xmlhttp.open("GET","SERVEUR/colonne_afficher_naissance.php?p="+str,true);			  
 	    4.TASK
-			👉  J'importe ici "lectureBD.js" pour afficher le document via  la fonction popup_lectureBD2()
+			👉  J'importe ici "lectureBD.js" pour afficher le document via  la fonction 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popup_lectureBD2()
                 cette fonction utilise "afficherdanspop.php" et je l'ai déjà formaté			
 			
 			    "afficher.php" n'est donc pas utilisée. Elle fonctionne mais elle me pose 2 contraintes:
@@ -105,6 +105,20 @@ try {
 			    Celui-là je l'ai déjà formaté!
 			
 			👉 Le fichier "afficher.php" ne sert donc plus à rien maintenant !
+			
+		5. Problème 
+		        Erreur d'affichage  Undefined array key "identifiant"
+		        Par contre si tu fais  une recherche de document au préalable, 
+				l'erreur ne s'affiche pas. tu as le document. 		       
+		    Cause:
+		       Les données à afficher sont selectionné à partir d'un identifiant 
+			   stocké dans une variable session dans les résultat de recherche(lecturedb2.phph).
+			Solution:
+			    colonnne_afficher_naissance.php: Stocker l'identifiant du document à afficher dans une variable session 
+				pour le fournir à afficherdanspop.php(notamment son include pop.php). Il en a besoin 
+				pour selectionner le document. => $_SESSION['identifiant']= $ligne['ID'];
+				
+			   
 	-->
 	<script src="js/lectureBD.js"></script>
 </head>
