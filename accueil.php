@@ -95,7 +95,7 @@ try {
               -> onchange=captureCombo(this.value); // du fichier capture_items.js
               -> xmlhttp.open("GET","SERVEUR/colonne_afficher_naissance.php?p="+str,true);			  
 	    4.TASK
-			👉  J'importe ici "lectureBD.js" pour afficher le document via  la fonction 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popup_lectureBD2()
+			👉  J'importe ici "lectureBD.js" pour afficher le document via  la fonction popup_lectureBD2()
                 cette fonction utilise "afficherdanspop.php" et je l'ai déjà formaté			
 			
 			    "afficher.php" n'est donc pas utilisée. Elle fonctionne mais elle me pose 2 contraintes:
@@ -106,7 +106,7 @@ try {
 			
 			👉 Le fichier "afficher.php" ne sert donc plus à rien maintenant !
 			
-		5. Problème 
+		5. Problème1 
 		        Erreur d'affichage  Undefined array key "identifiant"
 		        Par contre si tu fais  une recherche de document au préalable, 
 				l'erreur ne s'affiche pas. tu as le document. 		       
@@ -117,10 +117,20 @@ try {
 			    colonnne_afficher_naissance.php: Stocker l'identifiant du document à afficher dans une variable session 
 				pour le fournir à afficherdanspop.php(notamment son include pop.php). Il en a besoin 
 				pour selectionner le document. => $_SESSION['identifiant']= $ligne['ID'];
-				
+		   	
+		  Probleme2
+		      Un seul document s'affiche les autres non. Peu importe quel document tu cliques c'est tjrs le mm document qui s'affiche
+	        Cause:	  
+			  Seul le premier document dont l'identifiant est stocké( dans la variable session) continu de s"afficher .
+			  Aucun autre document ne put s'afficher
+			solution
+			  Ne pas utiliser une variable session
+			  Donc revenir sur le fichier afficher.php et prendre le temps de le formater
+			  
+			  Donc l'importation de lectureBD.js n'est pas necessaire ici
 			   
 	-->
-	<script src="js/lectureBD.js"></script>
+	<!-- <script src="js/lectureBD.js"></script> -->
 </head>
 
 <body >

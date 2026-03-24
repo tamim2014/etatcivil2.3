@@ -1,0 +1,6 @@
+👉 "afficherdanspanel.php"  obsolète !
+    
+   Je n'utilise pas "afficherdanspanel.php" dans lectureBD2.php
+
+   Cela étant le seul endroit où il est utilisé =>  "afficherdanspanel.php" ne sert plus à rien. compliqué, moins pratique, donc obsolète.
+ 

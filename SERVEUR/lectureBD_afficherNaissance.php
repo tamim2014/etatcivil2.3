@@ -46,7 +46,20 @@ $reponse = $requete; // déjà exécutée ( avec la reqête préparée, pas beso
 $table='<table >'; 
 $table.='<tr><th>Nom </th><th> Prenom </th><th> Numero </th><th> Prefecture </th><th>  </th> <tr>';
 while($ligne = $reponse->fetch()){// en utlisant FOREACH ça marche pas .j'sais pas pourquoi
- $table.='<tr><td>'.$ligne["nom"].'</td><td>'.$ligne["prenom"].'</td><td>'.$ligne["acte"].'</td><td>'.$ligne["prefecture"].'</td> <td  > <a href="afficher.php?n='.$ligne["ID"].'"     onclick=" window.open(this.href, \'Popup\', \'scrollbars=1,resizable=1,height=409,width=918 ,  top=258, left=175 \'); return false; "   >Afficher</a> </td></tr>';
+ /**
+    LecturBD.php/lectureBD_afficherNaissance.php: On affiche plus de document via "afficher.php" .
+    On le fait avec "afficherdanspop.php" .
+    Usage de la fonction popup_lectureBD2()  pour ce faire.
+	Probleme:
+	  Seul le premier document dont l'identifiant est stocké( dans la variable session) continu de s"afficher .
+      Aucun autre document ne êut s'afficher
+    solution
+      Ne pas utiliser une variable session
+      Donc revenir sur le fichier afficher.php et prendre le temps de le formater	  
+ */
+ 
+  $table.='<tr><td>'.$ligne["nom"].'</td><td>'.$ligne["prenom"].'</td><td>'.$ligne["acte"].'</td><td>'.$ligne["prefecture"].'</td> <td  > <a href="afficher.php?n='.$ligne["ID"].'"     onclick=" window.open(this.href, \'Popup\', \'scrollbars=1,resizable=1,height=409,width=918 ,  top=258, left=175 \'); return false; "   >Afficher</a> </td></tr>';
+ // $table.='<tr><td>'.$ligne["nom"].'</td><td>'.$ligne["prenom"].'</td><td>'.$ligne["acte"].'</td><td>'.$ligne["prefecture"].'</td> <td  > <a href="#"  onclick="popup_lectureBD2();" >Afficher</a> </td></tr>';
 
  }
 $table.='</table>';
