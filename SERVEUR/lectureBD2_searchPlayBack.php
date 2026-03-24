@@ -31,8 +31,8 @@
 	 while ($donnees = mysqli_fetch_array($result) )  	 	 
 	 { 
         /**
-         onclick="showActe('.$donnees["ID"].') n'arrive pas à afficher
-         Je vais donc le remplacer par onclick="popup_lectureBD2();
+           showActe('.$donnees["ID"].') n'arrive pas à afficher->( affichage dans 1 PANEL)
+           Je vais donc le remplacer par popup_lectureBD2() -> ( affichage dans 1 POPUP)  
         */
 		
        // $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td>  <td> <a href=" modifier_.php? n='.$donnees["ID"].'  &  nom_='.$donnees["nom"].'   &  prenom_='.$donnees["prenom"].'   &   acte_='.$donnees["acte"].' ">Modifier</a> </td>    <td> <a href="imprimer.php?n='.$donnees["ID"].'">Imprimer</a> </td>     <td> <a id="lien"  href="#" onclick="showActe('.$donnees["ID"].');">Afficher</a> </td></tr>  <tr> <td> </td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>';
