@@ -86,6 +86,27 @@ try {
 	<link href="css/dropdown.css"  rel="stylesheet"    />
 
 	<script src="js/jquery.js"></script>
+	<!--
+	    1.OBJET:   Affichage de document dans la page d'accueil(via 1 popup)
+	    2.CIBLE:   SERVEUR/colonne_afficher_naissance.php
+        3.CHEMIN:	 accueil.php
+		      -> include("inc/accueil/accueil_prefecture.php")
+		      -> include("inc/accueil/accueil_choisir_naissance.php")
+              -> onchange=captureCombo(this.value); // du fichier capture_items.js
+              -> xmlhttp.open("GET","SERVEUR/colonne_afficher_naissance.php?p="+str,true);			  
+	    4.TASK
+			👉  J'importe ici "lectureBD.js" pour afficher le document via  la fonction popup_lectureBD2()
+                cette fonction utilise "afficherdanspop.php" et je l'ai déjà formaté			
+			
+			    "afficher.php" n'est donc pas utilisée. Elle fonctionne mais elle me pose 2 contraintes:
+			       1. implementer le pupop dans le lien( ce qui est sale et fastidieux)
+			       2. reformater le fichier afficher.php car le rendu n'est pas bien
+			    alors qu'avec la f° popup_lectureBD2(), c'est le fichier  "afficherdanspop.php" qui affiche. 
+			    Celui-là je l'ai déjà formaté!
+			
+			👉 Le fichier "afficher.php" ne sert donc plus à rien maintenant !
+	-->
+	<script src="js/lectureBD.js"></script>
 </head>
 
 <body >
