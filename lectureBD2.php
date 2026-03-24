@@ -83,7 +83,7 @@
                         <div id="m"   style="width:80%; margin-left:10%;  padding-top:0; margin-top:0;    ">
 				            <div class="kangalaheMenu" style="margin-top:0;">
 							     
-                                 <a href="#"   onclick="popup_lectureBD2(); "   ><input  class="teteMenuGauche" type="button"  value="Afficher" align="center"  /> </a>								 
+                                 <a href="#" onclick="popup_lectureBD2(); " ><input  class="teteMenuGauche" type="button"  value="Afficher" align="center"  /> </a>								 
 				            </div>
 			            </div>						
 

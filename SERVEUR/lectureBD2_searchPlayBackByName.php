@@ -26,10 +26,16 @@
      //if($result){
 
 	 $table='<table  class="resultat_moteur" style="left:42.11%; top:18%;"  >';
-	 $table.= '<tr ><th>ID</th><th>Nom </th><th> Prenom </th><th>Acte numero</th><th>Edit</th><th>Imprimer</th><th>Afficher</th></tr>';
+	 $table.= '<tr ><th>ID</th><th>Nom </th><th> Prenom </th><th>Acte numero</th><th style="color:transparent;">Edit</th><th style="color:transparent;">Imprimer</th><th style="color:transparent;">Afficher</th></tr>';
 	 while ($donnees = mysqli_fetch_array($result) )  	 	 
 	 { 
-       $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td>  <td> <a href=" modifier_.php? n='.$donnees["ID"].'  &  nom_='.$donnees["nom"].'   &  prenom_='.$donnees["prenom"].'   &   acte_='.$donnees["acte"].' ">Modifier</a> </td>    <td> <a href="imprimer.php?n='.$donnees["ID"].'">Imprimer</a> </td>     <td> <a id="lien"  href="#" onclick="showActe('.$donnees["ID"].');">Afficher</a> </td></tr>  <tr> <td> </td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>';
+        /**
+         onclick="showActe('.$donnees["ID"].') n'arrive pas à afficher
+         Je vais donc le remplacer par onclick="popup_lectureBD2();"
+        */
+		
+       // $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td>  <td> <a href=" modifier_.php? n='.$donnees["ID"].'  &  nom_='.$donnees["nom"].'   &  prenom_='.$donnees["prenom"].'   &   acte_='.$donnees["acte"].' ">Modifier</a> </td>    <td> <a href="imprimer.php?n='.$donnees["ID"].'">Imprimer</a> </td>     <td> <a id="lien"  href="#" onclick="showActe('.$donnees["ID"].');">Afficher</a> </td></tr>  <tr> <td> </td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>';
+       $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td>  <td> <a href=" modifier_.php? n='.$donnees["ID"].'  &  nom_='.$donnees["nom"].'   &  prenom_='.$donnees["prenom"].'   &   acte_='.$donnees["acte"].' ">Modifier</a> </td>    <td> <a href="imprimer.php?n='.$donnees["ID"].'">Imprimer</a> </td>     <td> <a id="lien"  href="#" onclick="popup_lectureBD2();" >Afficher</a> </td></tr>  <tr> <td> </td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>';
 	   $_SESSION['identifiant']= $donnees['ID']; // Où est-ce qu'on utilise cette variable session?
 	 } 
      $table.='</table>'; 

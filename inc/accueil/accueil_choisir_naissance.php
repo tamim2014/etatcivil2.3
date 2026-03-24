@@ -7,7 +7,9 @@
   $arrayMayotte = array( 'Dzaoudzi' => 'Dzaoudzi', 'Mtsapere' => 'Mtsapere','Mtsamboro' => 'Mtsamboro','Mamoudzou' => 'Mamoudzou','Pamandzi' => 'Pamandzi');  
   
   $selected = ''; // Variable qui ajoutera l'attribut selected de la liste déroulante
-  //Appel de la page afficher_naissance.php par la f° JavaScript onchange(nomdelaprefectured du select)  
+  //Appel de la page afficher_naissance.php par la f° JavaScript onchange(nomdelaprefectured du select)
+  // c'est la fonction captureCombo(this.value) qui appelle le fichier  SERVEUR/colonne_afficher_naissance.php
+  // Et ce fichier SERVEUR/colonne_afficher_naissance.php qui affiche la table dans la page accueil.php
   echo '<select   onchange=captureCombo(this.value); > <optgroup label="Ngazidja"> ',"\n"; // this.value designe le bavounaissance
   foreach($arrayNgazidja as $valeurBavou => $nomBavou)  // Parcours du tableau
   {  
