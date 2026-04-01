@@ -7,10 +7,10 @@
 
 	/**
 	 *
-	 *  Pas besoin de reconnaiction dans un fichier include si la page source est connectée
+	 *  Pas besoin de reconnection dans un fichier include si la page source est connectée
+	 *
 	 *  require_once teste la connection, si elle est là, elle connecte pas inutilement
      *  require_once 'SERVEUR/connection_mysqli.php';
-	 *
 	 *
 	 */
    
@@ -43,7 +43,7 @@
    
 	 
 	 /***************************************************************************************************
-include("connection_PDO.php");
+require_once  'connection_PDO.php';
    
 //1. Requête (SQL): On récupère tout le contenu de la table liste)
      $reponse = $conn->query("SELECT * FROM liste WHERE acte=".$num." OR  nom='". ltrim($nom)."'"  );
@@ -56,7 +56,7 @@ include("connection_PDO.php");
 	 
 	 ________________________________
 	 //1.Connexion
-include("connection_mysql.php");
+require_once  'connection_mysql.php';
 //2.Récupération des données de la base(par construction d'une variables php de stockage tampon)  
 $R=mysql_query("SELECT * FROM  liste WHERE prefecture='".$p."' ") or exit(mysql_error( ));
 //3.Affichage

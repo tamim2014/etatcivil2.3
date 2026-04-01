@@ -6,7 +6,7 @@ session_start();// pour pouvoir recuperer $_SESSION["v"] càd la prefecture sél
 
 
 //1.Connexion
-//include("connection_PDO.php");
+//require_once  'connection_PDO.php';
 	try{
 		 $conn = new PDO('mysql:host=localhost;dbname=etatcivil;charset=utf8', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 	}	

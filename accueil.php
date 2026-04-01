@@ -44,7 +44,7 @@ try {
 		 // --- enregistrement en session du numéro
 			$_SESSION["acte"] = $numero;
 		 // --- redirection vers la page d'affichage
-			header("Location: lectureBD2.php?num=".$numero );
+			header("Location: lectureBD2.php?num=".$numero ); exit;
 		}
 	}
 	//ctype_digit($nombre) verifie si c est un nombre entier

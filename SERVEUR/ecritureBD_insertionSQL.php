@@ -44,7 +44,7 @@ $datejugement=$_POST['datejugement'];
 
 
 // 2.ON LES INSERE DANS LA TABLE LISTE DE LA BASE etatcivil
-include("connection_PDO.php");
+require_once 'connection_PDO.php';
 
 $req=$conn->prepare('INSERT INTO liste(nom,prefecture,centretatcivil,registre,acte,date_acte,prenom,delivre_a,delivre_le,delivre_an,num_serie, naissance_jour_moi,naissance_an,naissance_heure,naissance_minuite, naissance_nom_prenom,naissance_lieu,naissance_sexe, pere_nom_prenom,pere_datenaisance,pere_lieunaissance,pere_profession,pere_villederesidence, mere_nom_prenom,mere_datenaisance,mere_lieunaissance,mere_profession, mere_villederesidenc, declaration_faite_par,declaration_recue_pa, datejugement ) 
                                VALUES(:nom, :prefecture, :centretatcivil, :registre, :acte, :date_acte, :prenom, :delivre_a, :delivre_le, :delivre_an, :num_serie, :naissance_jour_moi, :naissance_an, :naissance_heure, :naissance_minuite, :naissance_nom_prenom, :naissance_lieu, :naissance_sexe, :pere_nom_prenom, :pere_datenaisance, :pere_lieunaissance, :pere_profession, :pere_villederesidence, :mere_nom_prenom, :mere_datenaisance, :mere_lieunaissance, :mere_profession, :mere_villederesidenc, :declaration_faite_par, :declaration_recue_pa, :datejugement)');

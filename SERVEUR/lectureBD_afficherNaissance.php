@@ -21,7 +21,7 @@ if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc())
 $_SESSION['pref']=$pr; // Pour pouvoir afficher la colonne "Imprimer" dans le panel  "yivawo"  tjrs dans la mm prefecture
 
 //1.Connexion
-include("connection_PDO.php");
+require_once  'connection_PDO.php';
 
 //2.Requête
 
