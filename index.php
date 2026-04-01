@@ -12,6 +12,20 @@
 	<link href="css/accueil22.css" rel="stylesheet"   />
     <link href="css/slide.css"     rel="stylesheet"   />
 	<link href="css/dropdown.css"  rel="stylesheet"    />
+	<style>
+	    .btnHover:hover{
+			padding-top:1%; padding-bottom:1%;
+			padding-left:12% !important;
+			font-size:1em !important;
+			font-style: italic !important;
+			background-color: #cdbe7f !important;  
+			border-radius:2px;			
+            box-shadow:
+                          0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+                           0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+		    }			
+		}
+	</style>
 
 
 	<script src="js/jquery.js"></script>
@@ -51,7 +65,7 @@
 						 <tr><td> <font color="#cdbe9f"><b>Votre</b></font> mot de passe<br/> <input  type="password"  id="pswd_"     name="motdepasse_" style="background:#ddd;"> </td></tr>
 						 <tr><td style="padding-top:1em;">
 							 <textarea class="t_area" name="myTextBox" cols="18" rows="4"> Veuillez saisir vos identifiants </textarea>
-						 <br/><input id="valider_" type="submit" class="submit" value="Valider"   name="envoie"  style="background: #ECECEA ; color:#111; padding:.3em 3.3em; margin:1em auto; border-radius:4px; " />
+						 <br/><input id="valider_" type="submit" class="submit btnHover" value="Valider"   name="envoie"  style="background: #ECECEA ; color:#111; padding:.3em 3.3em; margin:1em auto; border-radius:4px; " />
 						 </td></tr>
 					</table>					 
 				</aside>

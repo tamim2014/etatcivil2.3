@@ -142,7 +142,7 @@ button      {
 
 #login_:hover , #pswd_:hover  { background-color: #1D702D; color:#ffffff; font-size: 17px; font-weight:bold;    box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5); }
 
-#valider_:hover { color: #1D702D; font-weight:bold; font-size: 20px; font-style: italic;}
+#valider_:hover { color: #1D702D;   font-style: italic;}
 #recherchenum, #recherchenom { background-color: #e5eecc; border-radius:4px;}
 #recherchenum:hover, #recherchenom:hover { background-color: #cdbe7f; color:green;  font-weight:bold;  box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5);}
 .t_area{

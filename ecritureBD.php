@@ -14,7 +14,7 @@
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />  <!-- pour les bouton du panneau central -->
 	 <link href="css/ecritureBD.css" rel="stylesheet" title="Style" />
      <style>
-	      /* sinon le footer remonte */
+	    /* sinon le footer remonte */
 	     .footer {
             position:absolute;
 			width:100%;
@@ -24,6 +24,14 @@
 			 padding:.5em .5em ;
 			 margin-bottom:.3em ;
 		 }
+		
+	    .btnHover:hover{
+			background-color: #cdbe7f !important;  
+			border-radius:2px;			
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5); 
+            color:inherit !important;			
+		}					
+	
 	 </style>	 
      
 

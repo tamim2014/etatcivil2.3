@@ -84,6 +84,13 @@ try {
 	<link href="css/accueil22.css" rel="stylesheet"   />
     <link href="css/slide.css"     rel="stylesheet"   />
 	<link href="css/dropdown.css"  rel="stylesheet"    />
+	<style>
+	    .btnHover:hover{
+			background-color: #cdbe7f !important;  
+			border-radius:2px;			
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5);                   
+		}					
+	</style>
 
 	<script src="js/jquery.js"></script>
 	<!--
@@ -166,7 +173,7 @@ try {
 						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> name    <br/>       <input id="recherchenom" type="text" name="nom_"  > </td></tr>
 						 <tr><td style="padding-top:1em;">
 							 <textarea class="t_area" name="myTextBox" cols="18" rows="4"> <?php echo $message ; ?> </textarea>
-						 <br/><input type="submit" name="envoie" value="Chercher"  style="background:transparent ; color:#111; padding:.3em 3.3em; margin:1em auto; " />
+						 <br/><input class="btnHover" type="submit" name="envoie" value="Chercher"  style="background:transparent ; color:#111; padding:.3em 3.3em; margin:1em auto; " />
 						 </td></tr>
 					</table>					 
 				</aside>
