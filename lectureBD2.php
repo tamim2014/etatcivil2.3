@@ -13,23 +13,14 @@
 
     if(!isset($_GET['num'])) $_GET['num']="";    $num=$_GET['num']; 
 	if(!isset($_GET['nom'])) $_GET['nom']="";     $nom=$_GET['nom'];
-
-	$BD_serveur = "localhost";
-    $BD_utilisateur = "root";
-    $BD_motDePasse = "";// Ce mot de passe est enregistré dans la table "user" de la base "mysql" du serveur Mysql. Pour le modifier (en ligne de commande) aller dans la base mysql(table user): update user set Password="" where Host="localhost"; Puis verifier en faisant select User, Password, Host from user;
-    $BD_base = "etatcivil";
-	$message='';
 	
-	$conn = mysqli_connect($BD_serveur,$BD_utilisateur,'',$BD_base)or die('Erreur de connection :'.mysqli_error());
-	$conn->set_charset("utf8");
-	
-	
+	require_once 'SERVEUR/connection_mysqli.php';
 	
 	if(!empty($num) ){
 	   $requete = "SELECT * FROM liste WHERE acte=".$num ;  
 	   $result = mysqli_query($conn,$requete);
 	}else if(!empty($nom) ){
-	  $requete = "SELECT * FROM liste WHERE   nom='".ltrim($nom)."'" ;	  	
+	  $requete = "SELECT * FROM liste WHERE   nom='".ltrim($nom)."'" ;	  	 
 	  $result = mysqli_query($conn,$requete); 
 	}
 	

@@ -6,8 +6,14 @@
 *
 ******************/
 
-$conn = mysqli_connect('localhost','root','','etatcivil')or die('Erreur de connection : '.mysqli_error());
-$conn->set_charset("utf8");
+	$BD_serveur = "localhost";
+    $BD_utilisateur = "root";
+    $BD_motDePasse = "";// Ce mot de passe est enregistré dans la table "user" de la base "mysql" du serveur Mysql. Pour le modifier (en ligne de commande) aller dans la base mysql(table user): update user set Password="" where Host="localhost"; Puis verifier en faisant select User, Password, Host from user;
+    $BD_base = "etatcivil";
+	$message='';
+	
+	$conn = mysqli_connect($BD_serveur,$BD_utilisateur,'',$BD_base)or die('Erreur de connection :'.mysqli_error());
+	$conn->set_charset("utf8");
 /*
 $conn=mysql_connect('localhost','root', '') ;
 mysql_select_db('etatcivil',$conn) or die('erreur de connexion à la base');
