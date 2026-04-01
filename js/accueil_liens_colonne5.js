@@ -1,8 +1,19 @@
 
-		
+	   /**
+        *
+		* Solution AJAX
+		*
+		*  Normalement un lien href renvoie vers une nouvelle page! 
+		*  Ici, on veut que le href renvoie la page dans  la même page source: Notamment dan un panel
+		*
+        *  Affichage des tables dans le slide de la page d'accueil
+		*  Cette solution AJAX est désactivée, remplacée par des simple lien html.
+		*  !!  Je ne sais pas encore si la désactivation est effective sur "supprimer"( à verifier) !!
+        *		
+	    */
 		
 
-		// SOLUTION AJAX POUR L'ACTIVATION  (LE CONTROLE) DE LA 5ème COLONNE
+		// SOLUTION POUR CHARGER LES TABLES DANS UN PANEL DE LA PAGE D'ACCUEIL
 		       		// instance XMLHttpRequest  for all browsers
 		function instanceXMLHttpRequest() {
                 if (window.XMLHttpRequest) {
@@ -28,7 +39,8 @@
             }
         }
 		
-
+    /****************************
+	
 		
 		function imprimer(str) { // accueil.php(include prefecture.php)
             if (str == "") { 
@@ -45,5 +57,48 @@
             }
         }
 		
+								
+		function showSupprimer(str) { // accueil.php(include prefecture.php)
+            if (str == "") { 
+			     document.getElementById("panel").innerHTML = ""; return; 
+			} else { 
+
+				instanceXMLHttpRequest();
+                xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { document.getElementById("panel").innerHTML = xmlhttp.responseText;}};
+                //xmlhttp.open("GET","SERVEUR/accueil_imprimer_acte.php?print_="+str,true);
+				xmlhttp.open("GET","SERVEUR/colonne_supprimer_acte.php",true);
+                xmlhttp.send();
+            }
+        }
+		
+		function showRectifier(str) { // accueil.php(include prefecture.php)
+            if (str == "") { 
+			     document.getElementById("panel").innerHTML = ""; return; 
+			} else { 
+
+				instanceXMLHttpRequest();
+                xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { document.getElementById("panel").innerHTML = xmlhttp.responseText;}};
+                //xmlhttp.open("GET","SERVEUR/accueil_imprimer_acte.php?print_="+str,true);
+				xmlhttp.open("GET","SERVEUR/colonne_rectifier_acte.php",true);
+                xmlhttp.send();
+            }
+        }
+		
+		***** c'est la même fonction que  imprimer(str) *********
+		function showImprimer(str) { // accueil.php(include prefecture.php)
+            if (str == "") { 
+			     document.getElementById("panel").innerHTML = ""; return; 
+			} else { 
+
+				instanceXMLHttpRequest();
+                xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { document.getElementById("panel").innerHTML = xmlhttp.responseText;}};
+                //xmlhttp.open("GET","SERVEUR/accueil_imprimer_acte.php?print_="+str,true);
+				xmlhttp.open("GET","SERVEUR/colonne_imprimer_acte.php",true);
+                xmlhttp.send();
+            }
+        }
+		
+
+		******************************************/
 
 		

@@ -68,8 +68,8 @@ try {
 		}else{
 		 // --- enregistrement en session du nom
 			$_SESSION["nom"]=$nomm;
-		 // --- redirection vers la page d'affichage
-			header("Location: lectureBD2.php?nom=".$nomm );
+		 // --- redirection vers la page d'affichage: TOUJOURS exit; après une Location
+			header("Location: lectureBD2.php?nom=".$nomm ); exit;
 		}
 	}
 	

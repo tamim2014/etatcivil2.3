@@ -1,6 +1,16 @@
 
 <?php session_start();
 
+   /** 
+    *
+	* num et nom  proviennent de la page accuiel.php
+	* respectivement à la ligne47 et à la ligne72 de la page d'accueil
+	*
+	* accuiel.php/ligne47: header("Location: lectureBD2.php?num=".$numero );
+	* accuiel.php/ligne72: header("Location: lectureBD2.php?nom=".$nomm );
+	*
+	*/
+
     if(!isset($_GET['num'])) $_GET['num']="";    $num=$_GET['num']; 
 	if(!isset($_GET['nom'])) $_GET['nom']="";     $nom=$_GET['nom'];
 

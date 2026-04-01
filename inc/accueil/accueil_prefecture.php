@@ -27,13 +27,13 @@
 				Acte de dec&egrave;s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <?php include("inc/accueil/accueil_choisir_deces.php"); ?>
 			 </td></tr>  
 		</table>
-		<!-- le p'tit menu sous le panel [qui controle la 5ème colonne du slide]-->
+		<!-- le p'tit menu sous le panel [qui appelle une nouvelle table: voir la 5ème colonne du slide]-->
 		<div id="commandePanel" >
 			<!-- Solution jQuery -->
 			<a id="zima"    href="SERVEUR/colonne_supprimer_acte.php"> <input type="button"  value="Supprimer"  class="boutonSupprimer" /></a> 
 			<a id="rectif"  href="SERVEUR/colonne_rectifier_acte.php"> <input type="button"  value="Rectifier"  class="boutonRectifier" /></a>
 			<a id="print_"  href="SERVEUR/colonne_imprimer_acte.php" >  <input type="button"  value="Imprimer"    class="boutonImprimer" /></a> 
-			<a id="trier"   href="SERVEUR/trier.php" >  <input type="button"  value="Ordre alphabetique"    class="boutonTrier" /></a> 
+			<a id="trier"   href="SERVEUR/trier.php" >  <input type="button"  value="Ordre alphabétique"    class="boutonTrier" /></a> 
 
 			<!-- Solution AJAX 
 			<a id="zima"    href="#"  onclick="showSupprimer()> <input type="button"  value="Supprimer"  class="boutonSupprimer" /></a> 

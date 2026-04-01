@@ -43,7 +43,7 @@ try {
 	  
 	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	 <script type="text/javascript">
-	 //affiche l'acte modifi� dans la partie droite de la page modifie_.php( OK m� �a sert � rien if o virere tout �a)
+	 //affiche l'acte modifié dans la partie droite de la page modifie_.php( OK mais ça sert à rien i fo ouvirere tout ça)
 		$(function(){
 			$(' a #acteAJAX').click(function(e){
 				$('.showacte').load($(this).attr('href'));

@@ -13,9 +13,9 @@ include("connection_mysqli.php");
 $R=mysqli_query($conn , "SELECT * FROM  liste WHERE prefecture='".$_SESSION["v"]."' ") or exit(mysqli_error($conn ));
 //3.Affichage
 $table='<table>'; 
-$table.='<tr><th>Nom </th><th> Prenom </th><th> Numero </th><th> Prefecture </th><th>  </th></tr>';
+$table.='<tr><th>Nom </th> <th> Prenom </th> <th> Numero </th><th> Prefecture </th> <th></th></tr>';
 while($ligne2=mysqli_fetch_array($R)){// en utlisant FOREACH ça marche pas .j'sais pas pourquoi
-	 $table.='<tr><td>'.$ligne2["nom"].'</td><td>'.$ligne2["prenom"].'</td><td>'.$ligne2["acte"].'</td><td>'.$ligne2["prefecture"].'</td> <td> <a id="s1" href="SERVEUR/supprimer.php?n='.$ligne2["ID"].'"">Supprimer</a> </td></tr>';
+	 $table.='<tr><td>'.$ligne2["nom"].'</td><td>'.$ligne2["prenom"].'</td><td>'.$ligne2["acte"].'</td><td>'.$ligne2["prefecture"].'</td> <td> <a id="s1" href="SERVEUR/supprimer.php?n='.$ligne2["ID"].'">Supprimer</a> </td></tr>';
 	 }
 $table.='</table>';
 echo $table;
