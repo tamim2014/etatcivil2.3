@@ -8,7 +8,7 @@
 **************************************************************************************************/
  session_start(); // Recup de la prfecture dans  $_SESSION["pref"] pour le menu de la page lectureBD.php
 //1.Connexion
-include("connection_mysql.php");
+require_once  'connection_mysql.php';
 //2.Récupération des données de la base(par construction d'une variables php de stockage tampon)
 $R=mysql_query("SELECT * FROM  liste WHERE prefecture='".$_SESSION['pref']."' ") or exit(mysql_error( ));
 //3.Affichage

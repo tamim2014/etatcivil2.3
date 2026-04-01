@@ -38,7 +38,7 @@ session_start();
 	    if ($result[0] == 0){$message= '  Connexion echou&eacute;e, veuillez donc r&eacute;essayer  SVP! '; // a revoir
 		}else{
 		     //$_SESSION["pseudo"] = $login;// --- enregistrement en session de l'utilisateur
-		     header("Location: accueil.php");// --- redirection vers 
+		     header("Location: accueil.php"); exit;
 		}
 	}
 

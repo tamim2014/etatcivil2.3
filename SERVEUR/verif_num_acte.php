@@ -7,7 +7,7 @@
 	*
 	******************/
 	
-    include("connection_mysqli.php");
+    require_once 'connection_mysqli.php';
 	
     $message='';
     if(isset($_POST['acte'])) $acte=$_POST['acte'];
