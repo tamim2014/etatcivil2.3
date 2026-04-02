@@ -97,7 +97,7 @@ th
 }
 table.color_line tr:nth-child(2n+1) td {
     color:Peru ;
-    background:silver;
+    background:silver; /* background:silver; */
 	 border-radius:8px;
     -webkit-border-radius:8px;
 	-moz-border-radius:8px;
@@ -240,6 +240,29 @@ border-radius:20px;
 }
 
 
-  
-	
-	
+ 
+/***** SCROLBAR DE LA TABLE  ********/
+
+/* Largeur du scrollbar */
+.scrolbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Le canal (la piste) */
+.scrolbar::-webkit-scrollbar-track {
+  background: white; /*  couleur du canal */
+  border-radius: 0 8px 8px 0;   /* arrondi du canal */
+}
+
+/* Le bouton (le thumb) */
+.scrolbar::-webkit-scrollbar-thumb {
+  background: #888;        /* couleur du thumb */
+  border-radius: 0 8px 8px 0;    /* arrondi du thumb */
+}
+
+
+	    .btnHover:hover{
+			background-color: #cdbe7f !important;  
+			border-radius:2px;			
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5);                   
+		}	

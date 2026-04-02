@@ -40,15 +40,7 @@ try {
 	 <link href="css/dropdown.css"  rel="stylesheet"    />
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />  <!-- pour les bouton du panneau central -->
 	 <link href="css/ecritureBD.css" rel="stylesheet" title="Style" />
-     <style>
-	    .btnHover:hover{
-			background-color: #cdbe7f !important;  
-			border-radius:2px;			
-            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5);
-            color:inherit !important;			
-		}					
-	</style>	 
-	  
+	 	  
 	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	 <script type="text/javascript">
 	 //affiche l'acte modifié dans la partie droite de la page modifie_.php( OK mais ça sert à rien i fo ouvirere tout ça)

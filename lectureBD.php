@@ -12,13 +12,6 @@
      <link href="css/slide.css"     rel="stylesheet"   />
 	 <link href="css/dropdown.css"  rel="stylesheet"    />
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />
-	<style>
-	    .btnHover:hover{
-			background-color: #cdbe7f !important;  
-			border-radius:2px;			
-            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5);                   
-		}					
-	</style>
 	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/capture_items.js"></script>  <!--  <script src="js/acteOutSlide.js"></script> -->
@@ -65,7 +58,8 @@
 					 <tr><td > 
                          <div class="mnayvawo"><button  class="boutoyahemnayivawo"> Actes extraits de la pr&eacute;fecture de:<span id="wilaya_" style="color:#000066;  font-size: 17px; font-style: italic; font-family: \"Times New Roman\", Georgia, Serif;" > <?php  echo  $s; ?></span> </button>   </div>					 
 						 <div class="line1" style="width:98%; height:5px; margin:auto;"></div>
-						 <div id="yivawo"></div> 
+						 <!-- Conteneur de la table -->
+						 <div id="yivawo" class="scrolbar"></div> 
 					 </td></tr>
 				</table>
 		        <?php include("inc/lecture/sousmenu.php"); ?> 

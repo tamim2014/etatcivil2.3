@@ -11,17 +11,14 @@
 	 <script src="js/accueil_liens_colonne5.js"></script>
 	 <script src="js/accueil_commandes_panel.js"></script>
      
-	  <link href="css/slide.css" rel="stylesheet" title="Style_du_Slide_padeDaccueil" />
+	  <link href="css/slide.css" rel="stylesheet" title="Style_du_Slide_pageDaccueil" />
 	  <link href="css/prefecture.css" rel="stylesheet" title="boutons_Sous_Le_Slide" />
 	  <link href="css/commandes_panel.css" rel="stylesheet"  /> 
-
-
-
-
+	  
 	
-		<table  >
+		<table>
 			 <tr><td class="listemenu" id="flip" > 
-				Acte de naissance  <?php include("inc/accueil/accueil_choisir_naissance.php"); ?>   <div id="panel"></div>  
+				Acte de naissance  <?php include("inc/accueil/accueil_choisir_naissance.php"); ?>   <div id="panel" class="scrolbar"></div> <!-- div#panel est le conteneur de la table -->  
 				Acte de mariage&nbsp;&nbsp;&nbsp;  <?php include("inc/accueil/accueil_choisir_mariage.php"); ?>
 				Acte de divorce&nbsp;&nbsp;&nbsp;&nbsp; <?php include("inc/accueil/accueil_choisir_divorce.php"); ?>
 				Acte de dec&egrave;s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <?php include("inc/accueil/accueil_choisir_deces.php"); ?>

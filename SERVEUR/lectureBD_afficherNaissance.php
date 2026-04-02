@@ -58,7 +58,7 @@ while($ligne = $reponse->fetch()){// en utlisant FOREACH ça marche pas .j'sais 
  */
  // TASK: il faut mettre le popup dans une fonction
  $table.='<tr><td>'.$ligne["nom"].'</td><td>'.$ligne["prenom"].'</td><td>'.$ligne["acte"].'</td><td>'.$ligne["prefecture"].'</td><td><a href="#">Imprimer</a></td><td><a href="afficher.php?n='.$ligne["ID"].'" onclick=" window.open(this.href, \'Popup\', \'scrollbars=1,resizable=1,height=409,width=918 ,  top=258, left=175 \'); return false;">Afficher</a></td></tr>';
- // $table.='<tr><td>'.$ligne["nom"].'</td><td>'.$ligne["prenom"].'</td><td>'.$ligne["acte"].'</td><td>'.$ligne["prefecture"].'</td> <td><a href="#">Imprimer</a></td> <td> <a class="btnPopup" href="#">Afficher</a> </td></tr>';
+ // $table.='<tr><td>'.$ligne["nom"].'</td><td>'.$ligne["prenom"].'</td><td>'.$ligne["acte"].'</td><td>'.$ligne["prefecture"].'</td> <td><a href="#">Imprimer</a></td> <td> <a class="btnPopup" href="afficher.php?n='.$ligne["ID"].'">Afficher</a> </td></tr>';
  
 
  }

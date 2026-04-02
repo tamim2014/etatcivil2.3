@@ -84,14 +84,6 @@ try {
 	<link href="css/accueil22.css" rel="stylesheet"   />
     <link href="css/slide.css"     rel="stylesheet"   />
 	<link href="css/dropdown.css"  rel="stylesheet"    />
-	<style>
-	    .btnHover:hover{
-			background-color: #cdbe7f !important;  
-			border-radius:2px;			
-            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5);                   
-		}					
-	</style>
-
 	<script src="js/jquery.js"></script>
 	<!--
 	    1.OBJET:   Affichage de document dans la page d'accueil(via 1 popup)
