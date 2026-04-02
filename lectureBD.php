@@ -21,7 +21,7 @@
 	</style>
 	 
 	 <script src="js/jquery.js"></script>
-	 <script src="js/capture_items.js"></script>    <!--    <script src="js/acteOutSlide.js"></script> -->
+	 <script src="js/capture_items.js"></script>  <!--  <script src="js/acteOutSlide.js"></script> -->
 	 <script src="js/lectureBD.js"></script>
 </head>
 
@@ -65,7 +65,7 @@
 					 <tr><td > 
                          <div class="mnayvawo"><button  class="boutoyahemnayivawo"> Actes extraits de la pr&eacute;fecture de:<span id="wilaya_" style="color:#000066;  font-size: 17px; font-style: italic; font-family: \"Times New Roman\", Georgia, Serif;" > <?php  echo  $s; ?></span> </button>   </div>					 
 						 <div class="line1" style="width:98%; height:5px; margin:auto;"></div>
-						 <div id="yivawo"  ></div> 
+						 <div id="yivawo"></div> 
 					 </td></tr>
 				</table>
 		        <?php include("inc/lecture/sousmenu.php"); ?> 

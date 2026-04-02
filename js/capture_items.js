@@ -1,3 +1,4 @@
+
 //AJAX    
    
 		// instance XMLHttpRequest  for all browsers. Attention! c'est peut être cette fonction qui pose problème à IE
@@ -72,13 +73,37 @@
 
 				xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { 
 					document.getElementById("yivawo").innerHTML = xmlhttp.responseText;}
+					//activerPopup();
 				};
             }
         }
 		
+//_____________________________________________
 
+/*
+function popup_lectureBD2_(url){
+    window.open(
+        url,
+        'Popup',
+        'scrollbars=1,resizable=1,height=409,width=918,top=258,left=175'
+    );
+}
+
+function activerPopup() {
+    document.querySelectorAll(".btnPopup").forEach(function(el){
+        el.addEventListener("click", function(e){
+            e.preventDefault();
+            popup_lectureBD2_(this.href);
+        });
+    });
+}
+
+*/
 
 		
+
+
+
 		
 		
 
