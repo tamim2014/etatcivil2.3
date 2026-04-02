@@ -96,12 +96,20 @@ th
 
 }
 table.color_line tr:nth-child(2n+1) td {
-    color:Peru ;
-    background:silver; /* background:silver; */
+    color: Peru ; 
+    background:silver; 
 	 border-radius:8px;
     -webkit-border-radius:8px;
 	-moz-border-radius:8px;
 }
+.couleurPoliceTable  tr:nth-child(2n) td { 
+		 color:  #800080 !important; /*  Peru  */
+}
+.couleurPoliceTable  tr:nth-child(2n+1) td { 
+		 color:black !important;
+}
+ 
+ 
 .color_line { position:absolute; z-index:2;  left:310px;  right:40px; top:114px;    height:490px; width:500px;   
               overflow:  auto; 
 			  white-space:nowrap;
@@ -261,8 +269,8 @@ border-radius:20px;
 }
 
 
-	    .btnHover:hover{
-			background-color: #cdbe7f !important;  
-			border-radius:2px;			
-            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5);                   
-		}	
+.btnHover:hover{
+	background-color: #cdbe7f !important;  
+	border-radius:2px;			
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5);                   
+}	

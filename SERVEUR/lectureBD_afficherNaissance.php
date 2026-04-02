@@ -42,7 +42,7 @@ $reponse = $requete; // déjà exécutée ( avec la reqête préparée, pas beso
 //3.Affichage
 
 //3.1 On construit une table d'affichage
-$table='<table >'; 
+$table='<table class="couleurPoliceTable" >'; 
 $table.='<tr><th>Nom </th><th> Prenom </th><th> Numéro </th><th> Prefecture </th><th></th><th></th> <tr>';
 while($ligne = $reponse->fetch()){// en utlisant FOREACH ça marche pas .j'sais pas pourquoi
  /**
