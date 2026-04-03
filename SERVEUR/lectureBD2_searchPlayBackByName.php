@@ -23,7 +23,7 @@
 //3.Affichage 
      //if($result){
 
-	 $table='<table  class="resultat_moteur" style="left:42.11%; top:18%;"  >';
+	 $table='<table  class="resultat_moteur couleurPoliceTableResultat" style="left:42.11%; top:18%;"  >';
 	 $table.= '<tr ><th>ID</th><th>Nom </th><th> Prenom </th><th>Acte numero</th><th style="color:transparent;">Edit</th><th style="color:transparent;">Imprimer</th><th style="color:transparent;">Afficher</th></tr>';
 	 while ($donnees = mysqli_fetch_array($result) )  	 	 
 	 { 

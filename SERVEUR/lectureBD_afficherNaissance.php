@@ -43,7 +43,7 @@ $reponse = $requete; // déjà exécutée ( avec la reqête préparée, pas beso
 
 //3.1 On construit une table d'affichage
 $table='<table class="couleurPoliceTable" >'; 
-$table.='<tr><th>Nom </th><th> Prenom </th><th> Numéro </th><th> Prefecture </th><th></th><th></th> <tr>';
+$table.='<tr><th>Nom </th><th> Prenom </th><th> Numéro </th><th> Prefecture </th><th></th><th style="border-radius:8px 0 8px 8px;"></th> <tr>';
 while($ligne = $reponse->fetch()){// en utlisant FOREACH ça marche pas .j'sais pas pourquoi
  /**
     LecturBD.php/lectureBD_afficherNaissance.php: On affiche plus de document via "afficher.php" .

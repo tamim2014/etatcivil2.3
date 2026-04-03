@@ -102,11 +102,23 @@ table.color_line tr:nth-child(2n+1) td {
     -webkit-border-radius:8px;
 	-moz-border-radius:8px;
 }
+/* accueil.php, lectureBD.php */
 .couleurPoliceTable  tr:nth-child(2n) td { 
 		 color:  #800080 !important; /*  Peru  */
 }
 .couleurPoliceTable  tr:nth-child(2n+1) td { 
 		 color:black !important;
+}
+/* lectureBD2.php: lectureBD2_searchPlayByName.php: Résultat de recherche par nom cas de plusieurs documents trouvés */
+.couleurPoliceTableResultat  tr:nth-child(2n) td { 
+		 color:black; /*  Peru  */
+		 
+}
+.couleurPoliceTableResultat  tr:nth-child(2n+1) td { 
+		 color:#800080;
+		 background:silver;
+		 
+		 
 }
  
  
@@ -264,7 +276,7 @@ border-radius:20px;
 
 /* Le bouton (le thumb) */
 .scrolbar::-webkit-scrollbar-thumb {
-  background: #888;        /* couleur du thumb */
+  background: #888;  /* couleur du thumb */
   border-radius: 0 8px 8px 0;    /* arrondi du thumb */
 }
 

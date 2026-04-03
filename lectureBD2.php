@@ -29,6 +29,7 @@
 		 $p = $donnees["prefecture"];
     }
 
+
     
 ?>
 
@@ -43,6 +44,16 @@
      <link href="css/slide.css"     rel="stylesheet"   />
 	 <link href="css/dropdown.css"  rel="stylesheet"    />	 
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />
+	 <style>
+	     /* Table resultat de recherche par noms */
+		 .scrolbar::-webkit-scrollbar-track {
+			  background: inherit; /*  couleur du canal */
+			  
+		 }
+		.mnayvawo{
+		height:auto;
+	    }
+	 </style>
 	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/capture_items.js"></script>    <!--    <script src="js/acteOutSlide.js"></script> -->
@@ -99,7 +110,7 @@
                          <div class="mnayvawo"><button  class="boutoyahemnayivawo"> Acte extrait de la pr&eacute;fecture de:<span id="wilaya_" style="color:#000066;  font-size: 17px; font-style: italic; font-family: \"Times New Roman\", Georgia, Serif;" > <?php  echo  $p; ?></span> </button>   </div>					 
 						 <div class="line1" style="width:98%; height:5px; margin:auto;"></div>
 
-						 <div class="mnayvawo" style="padding:5.8em;">
+						 <div class="mnayvawo scrolbar" style="padding:5.8em;  max-height:28.5em !important; overflow-y:auto;">
                             <?php 
 							//Resulat de la recherche: Une table en une seule ligne et 7 colonnes(en haut à droite)
 							if(!empty($_GET['num'])){include("SERVEUR/lectureBD2_searchPlayBack.php");}
