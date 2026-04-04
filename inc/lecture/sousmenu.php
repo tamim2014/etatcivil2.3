@@ -1,8 +1,18 @@
 <?php
 
+/**
+ *
+ * C'est l'ancien menu(personnalisé, sympa, mais problematique)
+ * Le menu accordeon se trouve maintenant dans le topnav
+ *
+ * Pour tester ce menu recuperer sur github la branch:lectureBD_archive
+ * dans le dépôt "etatcivil23"
+ *
+ */ 
+
 echo '
  
-<ul style=" list-style:none;"    >
+<ul style="list-style:none;"    >
 <li class="sousmenu1"  >     
 	    <a href="#"><input class="teteSousMenuDroite" type="button" value="Grande comores" align="center"    /> </a>
 		<ul class="panel3" >
