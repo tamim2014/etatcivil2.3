@@ -27,7 +27,8 @@
 			</div> 				
 		</div>		
 		<div class="menu topnav"  id="myTopnav"> 
-				<?php include("inc/accueil/accueil_menucentral.php"); ?> 
+				<!-- include("inc/accueil/accueil_menucentral.php"); --> 
+				<?php include("inc/lecture/topMenu.php"); ?> 
 		</div>
     </header>
 
