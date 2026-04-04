@@ -65,7 +65,7 @@
                          <div class="mnayvawo"><button  class="boutoyahemnayivawo"> Actes extraits de la pr&eacute;fecture de:<span id="wilaya_" style="color:#000066;  font-size: 17px; font-style: italic; font-family: \"Times New Roman\", Georgia, Serif;" > <?php  echo  $s; ?></span> </button>   </div>					 
 						 <div class="line1" style="width:98%; height:5px; margin:auto;"></div>
 						 <!-- Conteneur de la table -->
-						 <div id="yivawo" class="scrolbar"></div> 
+						 <div id="yivawo" class="scrolbar" ></div> 
 					 </td></tr>
 				</table>
 				 <!-- Suppression sous-menu personnalisé(Remplacé par sous-menus de l'accrdéon du topnav) -->  
