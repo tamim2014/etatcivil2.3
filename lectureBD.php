@@ -7,15 +7,19 @@
 <head>
      <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
      <title> Acces en Lecture a la base etatcivil: connexion,recupreation affichage</title>
+	 
      <link href="css/template.css"  rel="stylesheet" type="text/css" >
 	 <link href="css/accueil22.css" rel="stylesheet"   />
      <link href="css/slide.css"     rel="stylesheet"   />
 	 <link href="css/dropdown.css"  rel="stylesheet"    />
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />
+	 <link href="css/accordeon2.css" rel="stylesheet" /> <!-- Exclusivement sur cette page!  -->
+	 
 	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/capture_items.js"></script>  <!--  <script src="js/acteOutSlide.js"></script> -->
 	 <script src="js/lectureBD.js"></script>
+	 <script src="js/moteurJquery.js"> </script><!--Exclusivement sur cette page! Pour le menu accordeon du topnav-les préfectures...( moteur un peu vieux mais il tourne) --> 
 </head>
 
 <body>
@@ -72,6 +76,11 @@
         <span ><span style="color:#555;">2026 &copy; -</span> <span style="color:#333;">Etat civil</span></span>
     </div>
     <!-- <div class="mnayvawo">  <button  class="boutoyahemnayivawo"> Actes extraits de la pr&eacute;fecture de:<span id="wilaya_" style="color:#000066;  font-size: 17px; font-style: italic; font-family: \"Times New Roman\", Georgia, Serif;" > <?php  echo  $s; ?></span> </button>   </div>  -->
+
+
+
+   
+
 <body>
 </html>
 
