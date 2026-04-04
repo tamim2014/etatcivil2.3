@@ -33,29 +33,24 @@
 
 
 //lectureBD.php
-          //jQuery : Recuperation des clics sur les  sous menu(sousmenu.php)
+          //jQuery : Recuperation des clics sur les  sous menu(sousmenu.php) et ACTIVATION DES LIENS DU SOUS-MENU(les prefectures)
 		  //AJAX:    Transmissions (des clics recuperés) vers la div #yivawo de la page lectureBD.php
 		 $(document).ready(function(){
-						/* sousmenu.php: Pour capter les clics sur les sous-menus*/
-					$("ul li.sousmenu1  ul.panel3 li a ").click(function() {  /* Attention! pas d'ESPACE entre l'elt et sa classe  */ /* ICI ??a marche  */
+			 
+			        /* topMenu.php: Pour capter les clics sur les sous-menus*/
+					
+					// Valable pour les 3 île(Grande-comores, Anjouan, Moheli): ACTIVATION DES LIENS DU SOUS-MENU accordeon(les prefectures)
+					$("ul li.dropdown div.dropdown-content div#aside ul.navigation li.toggleSubMenu  ul.subMenu li a").click(function() {  
 							   captureSousMenu(this.textContent);
 						
 					});
 					
-					$("ul li.sousmenu2  ul.panel3 li a").click(function() {  
-							   captureSousMenu(this.textContent);
-					}); 
-					
-					$("ul li.sousmenu3  ul.panel3 li a").click(function() { 
-							   captureSousMenu(this.textContent);
-					}); 
-					/*************************Essai sur le mnayvawo**********************
-					$("ul li.sousmenu3  ul.panel3 li a").click(function() { 
-							   var msg='<?PHP echo $_SESSION["pref"];?>'; // Passage d'une variable php à javaScript
-							   $("annonce").html(msg); //document.getElementById("annonce").innerHTML= msg;
-							 
-					});
-					********************************************************************/
+			        /****************** Abandonné (c'était pour le menu personnalisé):sousmenu.php **********/ 
+					/* sousmenu.php: Pour capter les clics sur les sous-menus
+						$("ul li.sousmenu1  ul.panel3 li a ").click(function() { captureSousMenu(this.textContent); });
+						$("ul li.sousmenu2  ul.panel3 li a").click(function() { captureSousMenu(this.textContent); }); 
+						$("ul li.sousmenu3  ul.panel3 li a").click(function() { captureSousMenu(this.textContent); }); 
+                    */
 		});
 
 

@@ -50,7 +50,8 @@
 					     <img src="img/armoirie.png" style="z-index:3;  margin-left:40%; margin-right:40%; width:20%;  "  />
 					 </caption>
 					 <tr ><td style="padding-top:0; padding-bottom:8em; margin-top:0; ">
-						 <?php include("inc/lecture/menugauche.php"); ?>  
+						 <!-- Suppression menu personnalisé(Remplacé par menus de l'accrdéon du topnav) -->  
+						 <!-- include("inc/lecture/menugauche.php"); -->  
 					 </td></tr>
 				</table>
 			</aside>
@@ -67,7 +68,8 @@
 						 <div id="yivawo" class="scrolbar"></div> 
 					 </td></tr>
 				</table>
-		        <?php include("inc/lecture/sousmenu.php"); ?> 
+				 <!-- Suppression sous-menu personnalisé(Remplacé par sous-menus de l'accrdéon du topnav) -->  
+		        <!-- include("inc/lecture/sousmenu.php"); --> 
             </aside>
         </div>			
 	</div> <!-- fin  <div class="contenu"  >  -->
