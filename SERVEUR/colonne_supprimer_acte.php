@@ -8,7 +8,16 @@
 ******************/
 session_start();//Recup de la prfecture dans  $_SESSION["v"] ( variable session définie dans la page SERVEUR/colonne_afficher_naissance.php)
 //1.Connexion
-include("connection_mysqli.php");
+require_once 'connection_mysqli.php';
+if ($_SESSION["user_role"] !== "admin") {
+  echo "<script>showDialog('Vous n\'avez pas les droit!');</script>";
+  exit;
+}
+
+
+
+
+
 //2.Récupération des données de la base(par construction d'une variables php de stockage tampon)
 $R=mysqli_query($conn , "SELECT * FROM  liste WHERE prefecture='".$_SESSION["v"]."' ") or exit(mysqli_error($conn ));
 //3.Affichage
@@ -21,3 +30,5 @@ $table.='</table>';
 echo $table;
 mysqli_close($conn);
 ?>
+
+

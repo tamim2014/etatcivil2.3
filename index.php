@@ -1,5 +1,5 @@
 
-<?php include("SERVEUR/authentification.php ");  ?>
+<?php  include("SERVEUR/authentification.php ");  ?>
 
 
 <!DOCTYPE html>
@@ -109,7 +109,6 @@
     </div>
 </body>
 </html>
-
 
 
 

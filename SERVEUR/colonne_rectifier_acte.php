@@ -15,12 +15,18 @@ session_start();// pour pouvoir recuperer $_SESSION["v"] càd la prefecture sél
 //2.Récupération des données de la base(par construction d'une variables php de stockage tampon) 
 
 
-if(!isset($_SESSION["v"])){ 
-  echo "<script>showDialog('Veuillez ouvrir la table avant de traiter ses données !');</script>";
-  exit;
-}else{
-	$R="SELECT * FROM  liste WHERE prefecture='".$_SESSION["v"]."' ";
+if (!isset($_SESSION["v"])) {
+    echo "<script>showDialog('Veuillez ouvrir la table avant de traiter ses données !');</script>";
+    exit;
 }
+
+if ($_SESSION["user_role"] !== "admin") {
+    echo "<script>showDialog(\"Monsieur ".$_SESSION["pseudo"]."!   Vous n'avez pas les droits...\");</script>";
+    exit;
+}
+
+$R = "SELECT * FROM liste WHERE prefecture='".$_SESSION["v"]."' ";
+
 $R = $conn->query("SELECT * FROM  liste WHERE prefecture='".$_SESSION["v"]."' ");
 
 //3.Affichage

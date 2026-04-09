@@ -17,8 +17,7 @@ session_start();
 
 	$db = mysqli_connect($BD_serveur,$BD_utilisateur,'',$BD_base)or die('Erreur de connection :'.mysqli_error());
 	$db->set_charset("utf8");
-   
- 
+    	
   if(isset($_POST['pseudo_']))  $login = $_POST['pseudo_'];
   if(isset($_POST['motdepasse_']))  $mdp = $_POST['motdepasse_'];
  
@@ -29,17 +28,28 @@ session_start();
    // Le mot de passe est-il rempli ?
     if(empty($mdp) && isset($_POST["envoie"]) ){$message = '  Veuillez aussi indiquer,  votre mot de passe SVP !';}
 	
-    if (!empty($login) && !empty($mdp)){
-	  $sql="SELECT COUNT(*) 
-	          FROM listeofficiers WHERE motdepasse = '". mysqli_real_escape_string($db , $_POST['motdepasse_']) . "' AND pseudo = '" . mysqli_real_escape_string( $db , $_POST['pseudo_']) . "'"; 
-	  $req=mysqli_query($db ,$sql) or die('Erreur SQl !<br>'.$sql.'<br>'.mysqli_error($db));
-	 
-	  $result = mysqli_fetch_row($req);
-	    if ($result[0] == 0){$message= '  Connexion echou&eacute;e, veuillez donc r&eacute;essayer  SVP! '; // a revoir
-		}else{
-		     //$_SESSION["pseudo"] = $login;// --- enregistrement en session de l'utilisateur
-		     header("Location: accueil.php"); exit;
+	if (!empty($login) && !empty($mdp)){
+
+		$sql = "SELECT * 
+				FROM listeofficiers 
+				WHERE motdepasse = '". mysqli_real_escape_string($db , $_POST['motdepasse_']) . "' 
+				AND pseudo = '" . mysqli_real_escape_string($db , $_POST['pseudo_']) . "'";
+
+		$req = mysqli_query($db ,$sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysqli_error($db));
+
+		$row = mysqli_fetch_assoc($req);
+
+		if (!$row) {
+			$message = 'Connexion échouée, veuillez réessayer SVP !';
+		} else {
+
+			$_SESSION["pseudo"] = $row["pseudo"];
+			$_SESSION["user_role"] = $row["user"];  // <-- maintenant ça marche
+
+			header("Location: accueil.php");
+			exit;
 		}
 	}
+
 
 ?>
