@@ -21,7 +21,7 @@ if (!isset($_SESSION["v"])) {
 }
 
 if ($_SESSION["user_role"] !== "admin") {
-    echo "<script>showDialog(\"Monsieur ".$_SESSION["pseudo"]."!   Vous n'avez pas les droits...\");</script>";
+    echo "<script>showDialog(\"M. <b>".$_SESSION["pseudo"]."</b>!&nbsp;&nbsp;Vous n'avez pas les droits...\");</script>";
     exit;
 }
 

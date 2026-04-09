@@ -320,4 +320,8 @@ border-radius:20px;
 }
 #dialogContent button:hover {
 	background: #558C89; /* #005a9e; effet hover */
+}
+#dialogMessage {
+	/* Pour pouvoir mettre le nom de l'utilisateur en gras */
+	white-space: normal;
 }	
