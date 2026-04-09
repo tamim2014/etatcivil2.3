@@ -9,9 +9,17 @@
 session_start();//Recup de la prfecture dans  $_SESSION["v"] ( variable session définie dans la page SERVEUR/colonne_afficher_naissance.php)
 //1.Connexion
 require_once 'connection_mysqli.php';
+
+if (!isset($_SESSION["v"])) {
+    echo "<script>showDialog('Veuillez ouvrir la table avant de traiter ses données !');</script>";
+    exit;
+}
+
+
 if ($_SESSION["user_role"] !== "admin") {
-  echo "<script>showDialog('Vous n\'avez pas les droit!');</script>";
-  exit;
+   echo "<script>showDialog(\"M. <b>".$_SESSION["pseudo"]."</b>!&nbsp;&nbsp;Vous n'avez pas les droits...\");</script>";
+   //echo "<script> showDialog('Test <b>GRAS</b> direct'); </script>";
+ exit;
 }
 
 

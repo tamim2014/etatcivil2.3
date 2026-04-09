@@ -85,6 +85,13 @@ try {
     <link href="css/slide.css"     rel="stylesheet"   />
 	<link href="css/dropdown.css"  rel="stylesheet"    />
     <!-- ✅ Pour les messages - Boite de dialogue -->
+	<style>
+	 /*
+		#dialogMessage {
+			white-space: normal;
+		}
+	 */
+    </style>
 	<script src="js/dialogueBox.js"></script>
 	<!-- ✅ Ouverture du panel -->
 	<script src="js/jquery.js"></script>

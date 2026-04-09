@@ -4,7 +4,9 @@
  *
  */
 function showDialog(msg) {
-	document.getElementById("dialogMessage").innerText = msg;
+	console.log(msg);
+	//document.getElementById("dialogMessage").innerText = msg;
+	document.getElementById("dialogMessage").innerHTML = msg;
 	document.getElementById("dialogBox").style.display = "flex";
 }
 
