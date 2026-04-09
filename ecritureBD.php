@@ -24,6 +24,7 @@
 			 padding:.5em .5em ;
 			 margin-bottom:.3em ;
 		 }
+		 
 			
 	 </style>	 
      

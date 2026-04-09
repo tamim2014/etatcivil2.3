@@ -84,7 +84,9 @@ try {
 	<link href="css/accueil22.css" rel="stylesheet"   />
     <link href="css/slide.css"     rel="stylesheet"   />
 	<link href="css/dropdown.css"  rel="stylesheet"    />
-	
+    <!-- ✅ Pour les messages - Boite de dialogue -->
+	<script src="js/dialogueBox.js"></script>
+	<!-- ✅ Ouverture du panel -->
 	<script src="js/jquery.js"></script>
 	<!--
 	    1.OBJET:   Affichage de document dans la page d'accueil(via 1 popup)
@@ -149,8 +151,8 @@ try {
 	    <form action ="" method="POST" name="form1" >
 			<!-- LE PANNEAU DE GAUCHE : Recher des document par numero ou nom -->
 			<div class="colonne_laterale" style=" margin-bottom:0; padding-bottom:0; height:auto;">
-				<aside style="padding:0; margin-bottom:0; " >
-					<table class="tablegauche" style="margin-bottom:0; padding-bottom:0; height:24em;"  > 
+				<aside class="aside1" style="padding:0; margin-bottom:0; " >
+					<table class="tablegauche" style="margin-bottom:0; padding-bottom:0; height:24em; "  > <!-- height:24em;  -->
 					    <!-- <caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;  ">  -->
 						<caption  style="caption-side:top; box-shadow: 0 20px 65px #cdbe9f inset;> 
 						    <font color="gray" style="line-height:2;">
@@ -158,14 +160,14 @@ try {
 								 <h6> Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement  </h6>
 								 <h4> MINISTERE DE L'INTERIEUR  </h4>
 							 </font>
-							 <!-- <img src="img/armoirie.png" style="z-index:3; transform: translate(200%, 0);  "  /> -->
-							  <img src="img/armoirie.png" style="z-index:3;  margin-left:40%; margin-right:40%; width:20%;  "  />
+							  <img src="img/armoirie.png" style="z-index:3; transform: translate(210%, 0);  "  /> 
+							<!--  <img src="img/armoirie.png" style="z-index:3;  margin-left:40%; margin-right:40%; width:20%;  " /> -->
 						 </caption>
 						 <tr> <td >RECHERCHE DE DOCUMENT</td></tr>
-						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> number<br/> <input id="recherchenum" type="text" name="acte_" pattern=".{1,}"  > </td></tr> 
-						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> name    <br/>       <input id="recherchenom" type="text" name="nom_"  > </td></tr>
+						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> number<br/> <input style="width:50%;" id="recherchenum" type="text" name="acte_" pattern=".{1,}"  > </td></tr> 
+						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> name    <br/> <input style="width:50%;" id="recherchenom" type="text" name="nom_"  > </td></tr>
 						 <tr><td style="padding-top:1em;">
-							 <textarea class="t_area" name="myTextBox" cols="18" rows="4"> <?php echo $message ; ?> </textarea>
+							 <textarea class="t_area" style="font-size:1em" name="myTextBox" cols="24" rows="4"> <?php echo $message ; ?> </textarea>
 						 <br/><input class="btnHover" type="submit" name="envoie" value="Chercher"  style="background:transparent ; color:#111; padding:.3em 3.3em; margin:1em auto; " />
 						 </td></tr>
 					</table>					 
@@ -173,11 +175,21 @@ try {
 			</div>
 			<!-- LE PANNEAU DE DROITE : Recher des document par liste déroulante -->
 			<div class="colonne_contenu" style="padding:0;">
-				<aside>
+				<aside class="aside2">
 					<table  class="tabledroite" >
 			             <tr><td class="listemenu"> <?php include("inc/accueil/accueil_prefecture.php"); ?> </td></tr> 
 		            </table>
 				</aside>
+			    <p>
+				   Tasks: 09.04.2026<br>
+				   Si tu cliques sur les boutons(Supprimer,Rectifier, Imprimer, ordre alphabétique),
+				   avant d'ouvrir la table:<br>
+                    Bug: Un message d'erreur<br><br>				   
+				  👉 Remplace ce bug par un message dans dialogbox type windows:<br>
+				      Veuiller ouvrir la table avant de traiter ses données !<br><b>
+					  
+					  INCHA ALLAH
+				</p> 	
 			</div>
 		</form>
     </div>     

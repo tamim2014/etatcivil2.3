@@ -74,13 +74,13 @@ try {
 		  	<div class="colonne_laterale" style="width: 33%; ">
 			    <aside style="padding: 1.5em 0 0 0; background:inherit; ">
 					<table class="tablegauche"  name="listes" style="min-height:24.5em; " >
-						<caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;  "> 
+						<caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;    "> 
 							<font color="gray" style="line-height:2;">
 								<h3> UNION DES COMORES  </h3>
 								<h6> Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement  </h6>
 								<h4> MINISTERE DE L'INTERIEUR  </h4>
 							</font>
-							<img src="img/armoirie.png"  style="z-index:3;   transform: translate(120%, 0); "  />
+							<img src="img/armoirie.png"  style="z-index:3;   transform: translate(210%, 0);" />
 						</caption>
 						<input type="hidden" name="suprim" value=" <?php echo $id;?> " /> 
 						<tr>

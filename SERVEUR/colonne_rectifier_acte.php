@@ -3,8 +3,6 @@
 
 session_start();// pour pouvoir recuperer $_SESSION["v"] càd la prefecture séléctionnée
 
-
-
 //1.Connexion
 //require_once  'connection_PDO.php';
 	try{
@@ -14,9 +12,15 @@ session_start();// pour pouvoir recuperer $_SESSION["v"] càd la prefecture sél
 		die('Erreur de connexion à la base de données: '.$e->getMessage());
 	} 
 
-//2.Récupération des données de la base(par construction d'une variables php de stockage tampon)  
-$R="SELECT * FROM  liste WHERE prefecture='".$_SESSION["v"]."' ";
+//2.Récupération des données de la base(par construction d'une variables php de stockage tampon) 
 
+
+if(!isset($_SESSION["v"])){ 
+  echo "<script>showDialog('Veuillez ouvrir la table avant de traiter ses données !');</script>";
+  exit;
+}else{
+	$R="SELECT * FROM  liste WHERE prefecture='".$_SESSION["v"]."' ";
+}
 $R = $conn->query("SELECT * FROM  liste WHERE prefecture='".$_SESSION["v"]."' ");
 
 //3.Affichage
