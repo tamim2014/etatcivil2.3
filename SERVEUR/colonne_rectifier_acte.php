@@ -4,29 +4,24 @@
 session_start();// pour pouvoir recuperer $_SESSION["v"] càd la prefecture séléctionnée
 
 //1.Connexion
-//require_once  'connection_PDO.php';
-	try{
-		 $conn = new PDO('mysql:host=localhost;dbname=etatcivil;charset=utf8', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-	}	
-	catch(Exception $e){
-		die('Erreur de connexion à la base de données: '.$e->getMessage());
-	} 
+require_once  'connection_PDO.php';
 
-//2.Récupération des données de la base(par construction d'une variables php de stockage tampon) 
-
-
+/*
+ * A défaut d'une prefecture selectionné( $_SESSION["v"]): Aucune table ne peut s'ouvrir
+ * ❌ => Un message d'erreur s'impose
+ * ✅ => Cette condition corrige ce bug
+ */ 
 if (!isset($_SESSION["v"])) {
-    echo "<script>showDialog('Veuillez ouvrir la table avant de traiter ses données !');</script>";
-    exit;
+    echo "<script>alert('Veuillez ouvrir la table avant de traiter ses données ⚠️');</script>";
+	exit;
 }
-
+// Gestion des droits utilisateurs sur la fonction Rectifier
 if ($_SESSION["user_role"] !== "admin") {
-    echo "<script>showDialog(\"M. <b>".$_SESSION["pseudo"]."</b>!&nbsp;&nbsp;Vous n'avez pas les droits...\");</script>";
+    echo "<script>showDialog(\"M. <b>".$_SESSION["pseudo"]."</b>!&nbsp;&nbsp;Vous n\'avez pas les droits...\");</script>";
     exit;
 }
-
+//2.Récupération des données de la base(par construction d'une variables php de stockage tampon) 
 $R = "SELECT * FROM liste WHERE prefecture='".$_SESSION["v"]."' ";
-
 $R = $conn->query("SELECT * FROM  liste WHERE prefecture='".$_SESSION["v"]."' ");
 
 //3.Affichage

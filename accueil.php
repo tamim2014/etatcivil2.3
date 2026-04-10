@@ -187,16 +187,6 @@ try {
 			             <tr><td class="listemenu"> <?php include("inc/accueil/accueil_prefecture.php"); ?> </td></tr> 
 		            </table>
 				</aside>
-			    <p>
-				   Tasks: 09.04.2026<br>
-				   Si tu cliques sur les boutons(Supprimer,Rectifier, Imprimer, ordre alphabétique),
-				   avant d'ouvrir la table:<br>
-                    Bug: Un message d'erreur<br><br>				   
-				  👉 Remplace ce bug par un message dans dialogbox type windows:<br>
-				      Veuiller ouvrir la table avant de traiter ses données !<br><b>
-					  
-					  INCHA ALLAH
-				</p> 	
 			</div>
 		</form>
     </div>     

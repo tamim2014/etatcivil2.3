@@ -324,4 +324,5 @@ border-radius:20px;
 #dialogMessage {
 	/* Pour pouvoir mettre le nom de l'utilisateur en gras */
 	white-space: normal;
+	padding:1em;
 }	

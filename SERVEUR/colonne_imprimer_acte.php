@@ -3,7 +3,18 @@
 <?php
  session_start(); // Recup de la prfecture dans  $_SESSION["v"]
 //1.Connexion
-include("connection_mysqli.php");
+require_once 'connection_mysqli.php';
+/*
+ * A défaut d'une prefecture selectionné( $_SESSION["v"]): Aucune table ne peut s'ouvrir
+ * ❌ => Un message d'erreur s'impose
+ * ✅ => Cette condition corrige ce bug
+ */ 
+if (!isset($_SESSION["v"])) {
+   // echo "<script>showDialog('Veuillez ouvrir la table avant de traiter ses données !');</script>";
+    echo "<script>alert('Veuillez ouvrir la table avant d\'imprimer les documents ⚠️');</script>";
+    exit;
+}
+
 //2.Récupération des données de la base(par construction d'une variables php de stockage tampon)
 $R=mysqli_query($conn , "SELECT * FROM  liste WHERE prefecture='".$_SESSION["v"]."' ") or exit(mysqli_error($conn ));
 //3.Affichage

@@ -9,22 +9,20 @@
 session_start();//Recup de la prfecture dans  $_SESSION["v"] ( variable session définie dans la page SERVEUR/colonne_afficher_naissance.php)
 //1.Connexion
 require_once 'connection_mysqli.php';
-
+/*
+ * A défaut d'une prefecture selectionné( $_SESSION["v"]): Aucune table ne peut s'ouvrir
+ * ❌ => Un message d'erreur s'impose
+ * ✅ => Cette condition corrige ce bug
+ */ 
 if (!isset($_SESSION["v"])) {
-    echo "<script>showDialog('Veuillez ouvrir la table avant de traiter ses données !');</script>";
+    echo "<script>alert('Veuillez ouvrir la table avant de traiter ses données ⚠️');</script>";
     exit;
 }
-
-
+// Gestion des droits utilisateurs sur la fonction Imprimer
 if ($_SESSION["user_role"] !== "admin") {
-   echo "<script>showDialog(\"M. <b>".$_SESSION["pseudo"]."</b>!&nbsp;&nbsp;Vous n'avez pas les droits...\");</script>";
-   //echo "<script> showDialog('Test <b>GRAS</b> direct'); </script>";
- exit;
+   echo "<script>showDialog(\"M. <b>".$_SESSION["pseudo"]."</b>!&nbsp;&nbsp;Vous n\'avez pas les droits...\");</script>";
+   exit;
 }
-
-
-
-
 
 //2.Récupération des données de la base(par construction d'une variables php de stockage tampon)
 $R=mysqli_query($conn , "SELECT * FROM  liste WHERE prefecture='".$_SESSION["v"]."' ") or exit(mysqli_error($conn ));
