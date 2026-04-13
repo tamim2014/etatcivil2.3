@@ -10,7 +10,7 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
  // echo '<div class="rappel">'.$rappel.'</div>' ;
 
 
-//2.Requ�te SQL requ�te
+//2.Requete SQL requete
 
 try {
     $conn = new PDO(
@@ -40,6 +40,11 @@ try {
 	 <link href="css/dropdown.css"  rel="stylesheet"    />
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />  <!-- pour les bouton du panneau central -->
 	 <link href="css/ecritureBD.css" rel="stylesheet" title="Style" />
+	 <style>
+	   input{
+		  padding:.2em .5em;
+	   }
+     </style>	 
 	 	  
 	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	 <script type="text/javascript">
@@ -73,7 +78,7 @@ try {
 		  <!-- LE PANNEAU DE GAUCHE :  -->
 		  	<div class="colonne_laterale" style="width: 33%; ">
 			    <aside class="aside1">
-					<table class="tablegauche"  name="listes" style="min-height:24.5em; " >
+					<table class="tablegauche"  name="listes" style="height:30em; padding:1em inherit; " >
 						<caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;    "> 
 							<font color="gray" style="line-height:2;">
 								<h3> UNION DES COMORES  </h3>
@@ -84,8 +89,8 @@ try {
 						</caption>
 						<input type="hidden" name="suprim" value=" <?php echo $id;?> " /> 
 						<tr>
-						    <td> Pr&eacute;fecture: </td> 
-							<td> 
+						    <td><br> Pr&eacute;fecture: </td> 
+							<td><br> 
                                 <select  name="prefecture" onChange="changement(this)"  >
 									 <optgroup label="Ngazidja"> 
 									 <option value="<?php echo $donnees["prefecture"];?>"   >  <?php echo $donnees["prefecture"];?> </option>
@@ -178,8 +183,8 @@ try {
 							<td> <input type="text" name="delivre_an"  value="<?php echo $donnees["delivre_an"];?>" required > </td>
 						</tr>
 						<tr>
-						    <td> S&eacute;rie Num  </td>
-							<td> <input type="text" name="num_serie" value="<?php echo $donnees["num_serie"];?>" required  ></td>
+						    <td> Série Num <br><br> </td>
+							<td> <input type="text" name="num_serie" value="<?php echo $donnees["num_serie"];?>" required ><br><br></td>
 						</tr>
 					</table>
 				</aside>
@@ -188,7 +193,7 @@ try {
 		    <!-- LE PANNEAU DE CENTRAL : -->
 		    <div class="colonne_contenu" style="padding:0; width: 40%;">
 			    <aside class="aside2">
-                   	<table  class="tabledroite" >
+                   	<table  class="tabledroite" style="height:43em;" >
 						 <p class="showacte"> <!-- Pour afficher l'acte modifié dans la partie droite de la page modifie_.php  -->
 							 <tr> <td> <input type="text" name="naissance_jour_moi"  value="<?php echo $donnees["naissance_jour_moi"];?>" placeholder=" Le" > </td>
 							 <td> <input type="text" name="naissance_an"  value="<?php echo $donnees["naissance_an"];?>" placeholder=" ici l'an"> </td></tr>
@@ -228,29 +233,14 @@ try {
 
 		    <!-- LE PANNEAU DE DROITE :  -->
 		    <div class="colonne_laterale"  style="width: 25%; ">
-				<aside class="aside1">
-					<aside >
-						<table  class="tablecentre" >
+				<aside class="aside1" >
+						<table  class="tablemenu" style="height:40em;" > 
 							<tr><td> 
 								  <?php include("inc/ecriture/ecritureBD_edit_menudroite1.php"); ?>
 							</td></tr>     
 						</table>
-					</aside>
-					<aside style="padding: 1.5em 0 0 0; background:inherit;">
-						<table  class="tablecentre" >
-							<tr><td> 
-								  <?php include("inc/ecriture/ecritureBD_edit_menudroite2.php"); ?>
-							</td></tr>     
-						</table>
-					</aside>
-					<aside style="padding: 1.5em 0 0 0; background:inherit;">
-						<table  class="tablecentre" >
-							<tr><td> 
-								  <?php  echo '<div class="rappel">'.$rappel.'</div>' ;   ?>
-							</td></tr>     
-						</table>
-					</aside>
-				 </aside>
+					     <?php  echo '<div class="rappel">'.$rappel.'</div>' ;   ?>
+				</aside>
 			</div><!-- 2�me div.colonne_laterale -->
 		</form>
 	</div><!-- div.contenu -->

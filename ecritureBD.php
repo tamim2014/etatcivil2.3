@@ -25,27 +25,6 @@
 			 margin-bottom:.3em ;
 		 }
 	     		 
-		 /* Problème de l'espace entre table.tablegauche et aside.aside1  */
-		 
-		 table.tablegauche  aside.aside1 {
-			   /*
-				display: flow-root !important;
-				overflow: hidden !important;
-				padding-top: 1px !important;
-				*/
-		  }
-		  .aside1 {
-			  /*
-				display: flow-root !important;
-			    overflow: hidden !important;
-			   padding-top: 1px !important;
-			*/		
-
-			 border-top: 1px solid transparent;
-		  }
-
-		 
-			
 	 </style>	 
      
 
