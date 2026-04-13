@@ -11,7 +11,7 @@ body {
 
 /* Style en-tête */
 .en-tete{
-    background-color: #558C89;
+    background-color: #558C89; /*   ✍️*/
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
@@ -20,7 +20,7 @@ body {
 }
 
 .menu{
-    background-color: #74AFAD;
+    background-color: #74AFAD; /*  ✍️*/
     /* Essai  */
     margin-top: -16px;
     text-align: center;
@@ -73,10 +73,21 @@ body {
 }
 
 .colonne_laterale aside {
-    background:#FFF;
-    margin:0 0 15px;
+	/* à supprimer ces 2 première proprietés  ✍️ */
+    background:inherit;    
     padding:15px;
+	
+	margin:0 0 15px;
 }
+
+.aside1, .aside2 {
+	padding:0 !important; 
+	margin-bottom:0 !important;
+}
+
+
+
+
 .colonne_laterale aside h1 {
     border-bottom: 1px dashed #CCC;
     margin-bottom:10px;
@@ -95,4 +106,41 @@ img {
     margin-right: 8px;
 }
 
+/* ################ TASKS: COMPLEMENT DE ZONNING(Remplir toute la hauteur de la page) ###########################################  
+ *
+ * Problème qui reste: ecriturBD.php
+ * virer l'espace qui reste en haut entre la table.tablegauche et aside.aside1
+   * ???
+   *
+ */	
 
+ .colonne_laterale,.colonne_contenu {
+	  display: grid !important; /* ⚠️ Annule l'espace vide entre la table et le footer - mais aside s'impose */
+	  min-height:100vh !important;
+	  
+  }
+ .colonne_laterale{ 
+	  border-right:1px solid #c4c4c4 !important;
+	  padding-right:0; 
+	  padding-bottom:0 !important;
+ }
+ .tablegauche{ 
+	  min-height:50vh !important; /*⚠️  22.5em; */
+
+  }
+  aside.aside1, aside.aside2{
+	 box-shadow: 0 0 65px #cdbe9f inset !important;
+	 min-height:100% !important;  /* ⚠️ virer l'espace qui reste entre la tablegauche et le footer */
+	 margin-top:0 !important;
+	 margin-bottom:0 !important;
+	 background:#ECECEA !important;
+  }
+  aside.aside2{
+	  box-shadow:none !important;
+  }
+  /* 
+   * Problème qui reste: ecriturBD.php
+   * virer l'espace qui reste en haut entre la table.tablegauche et aside.aside1
+   * ???
+   *		   
+   */

@@ -24,6 +24,7 @@
 			 padding:.5em .5em ;
 			 margin-bottom:.3em ;
 		 }
+	
 		 
 			
 	 </style>	 
@@ -50,17 +51,17 @@
 		</div>
     </header>
 	<div class="contenu" style="margin-bottom:0;">
-		<form action ="SERVEUR/ecritureBD_insertionSQL.php" method="post" name="form1" >
+		<form action ="SERVEUR/ecritureBD_insertionSQL.php" method="post" name="form1"  >
 			<!-- LE PANNEAU DE GAUCHE :  -->
-			<div class="colonne_laterale" style="width: 33%; ">
-				<aside style="padding:0; background:inherit;">			    
+			<div class="colonne_laterale" style="width: 33%;  " >
+				<aside class="aside1" style="padding:0 !important;  " >			    
 		             <?php include("inc/ecriture/ecritureBD_panodegauche.php"); ?>
             	</aside>
 			</div>
 
 			 <!-- LE PANNEAU CENTRAL   -->
             <div class="colonne_contenu" style="padding:0; width: 40%;">
-			     <aside style="padding:1.5em 0 0 0; background:#ececea;">
+			     <aside class="aside2">
 					<table class="tabledroite showacte"  >
 					    <!-- <p class="showacte">  Pour afficher l'acte modifiÃ© dans la partie droite de la page modifie_.php  -->
 							<tr> 
@@ -125,8 +126,8 @@
 			</div>
 			<!-- LE PANNEAU DE DROITE: -->
 			<div class="colonne_laterale" style="width: 25%; ">
-				<aside style="padding:1.5em 0 0 0; background:inherit; ">			    
-		            <table  class="tablemenu" style="min-height:35.5em; padding-bottom:5em;" >    
+				<aside class="aside1">			    
+		            <table  class="tablemenu" style="min-height:35.5em; " >    
 						<tr><td>
 							<?php include("inc/ecriture/ecritureBD_menudroite.php"); ?>
 						</td></tr>

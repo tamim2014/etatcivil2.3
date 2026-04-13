@@ -19,7 +19,7 @@ $R=mysqli_query($conn, "SELECT * FROM  liste WHERE prefecture='".$p."' ") or exi
 //3.Affichage
 //3.1 On construit un tableau de présentation des données
 $table='<table class="couleurPoliceTable">'; 
-$table.='<tr ><th>Nom</th><th> Prenom </th><th> Numero </th><th>Prefecture</th><th style="border-radius:8px 0 8px 8px;"></th> <tr>';
+$table.='<tr ><th>Nom888</th><th> Prenom </th><th> Numero </th><th>Prefecture</th><th style="border-radius:8px 0 8px 8px;"></th> <tr>';
 while($ligne=mysqli_fetch_array($R)){// en utlisant FOREACH ça marche pas .j'sais pas pourquoi
   //$table.='<tr><td>'.$ligne["nom"].'</td><td>'.$ligne["prenom"].'</td><td>'.$ligne["acte"].'</td><td>'.$ligne["prefecture"].'</td> <td><a href="afficher.php?n='.$ligne["ID"].'"  onclick="window.open(this.href, \'Popup\', \'scrollbars=1,resizable=1,height=409,width=918 ,  top=258, left=175 \'); return false;">Afficher</a></td></tr>';
   // Remplacer afficher.php par afficherdanspop.php(qui est déjà formaté)

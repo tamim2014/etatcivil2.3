@@ -72,7 +72,7 @@ try {
 		<form action ="" method="post" name="form1" >
 		  <!-- LE PANNEAU DE GAUCHE :  -->
 		  	<div class="colonne_laterale" style="width: 33%; ">
-			    <aside style="padding: 1.5em 0 0 0; background:inherit; ">
+			    <aside class="aside1">
 					<table class="tablegauche"  name="listes" style="min-height:24.5em; " >
 						<caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;    "> 
 							<font color="gray" style="line-height:2;">
@@ -187,7 +187,7 @@ try {
 					 
 		    <!-- LE PANNEAU DE CENTRAL : -->
 		    <div class="colonne_contenu" style="padding:0; width: 40%;">
-			    <aside style="padding: 1.5em 0 0 0; background:#ececea;">
+			    <aside class="aside2">
                    	<table  class="tabledroite" >
 						 <p class="showacte"> <!-- Pour afficher l'acte modifié dans la partie droite de la page modifie_.php  -->
 							 <tr> <td> <input type="text" name="naissance_jour_moi"  value="<?php echo $donnees["naissance_jour_moi"];?>" placeholder=" Le" > </td>
@@ -227,28 +227,30 @@ try {
 			</div>
 
 		    <!-- LE PANNEAU DE DROITE :  -->
-		    <div class="colonne_laterale" style="width: 25%; ">
-				<aside style="padding: 1.5em 0 0 0; background:inherit;">
-				    <table  class="tablecentre" >
-						<tr><td> 
-							  <?php include("inc/ecriture/ecritureBD_edit_menudroite1.php"); ?>
-						</td></tr>     
-					</table>
-		        </aside>
-				<aside style="padding: 1.5em 0 0 0; background:inherit;">
-				    <table  class="tablecentre" >
-						<tr><td> 
-							  <?php include("inc/ecriture/ecritureBD_edit_menudroite2.php"); ?>
-						</td></tr>     
-					</table>
-		        </aside>
-				<aside style="padding: 1.5em 0 0 0; background:inherit;">
-				    <table  class="tablecentre" >
-						<tr><td> 
-							  <?php  echo '<div class="rappel">'.$rappel.'</div>' ;   ?>
-						</td></tr>     
-					</table>
-		        </aside>
+		    <div class="colonne_laterale"  style="width: 25%; ">
+				<aside class="aside1">
+					<aside >
+						<table  class="tablecentre" >
+							<tr><td> 
+								  <?php include("inc/ecriture/ecritureBD_edit_menudroite1.php"); ?>
+							</td></tr>     
+						</table>
+					</aside>
+					<aside style="padding: 1.5em 0 0 0; background:inherit;">
+						<table  class="tablecentre" >
+							<tr><td> 
+								  <?php include("inc/ecriture/ecritureBD_edit_menudroite2.php"); ?>
+							</td></tr>     
+						</table>
+					</aside>
+					<aside style="padding: 1.5em 0 0 0; background:inherit;">
+						<table  class="tablecentre" >
+							<tr><td> 
+								  <?php  echo '<div class="rappel">'.$rappel.'</div>' ;   ?>
+							</td></tr>     
+						</table>
+					</aside>
+				 </aside>
 			</div><!-- 2�me div.colonne_laterale -->
 		</form>
 	</div><!-- div.contenu -->

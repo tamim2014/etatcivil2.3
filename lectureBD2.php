@@ -76,7 +76,7 @@
 	<div class="contenu" style="margin-bottom:0;"  >
 		<!-- LE PANNEAU DE GAUCHE :  -->
 		<div class="colonne_laterale" style=" margin-bottom:0; padding-bottom:0; height:auto;" >
-			<aside style="padding:0; margin-bottom:0; " >
+			<aside class="aside1" >
 				<table class="tablegauche" style="margin-bottom:0; padding-bottom:0; height:25em;"> 
 				     <caption  style="caption-side:top; box-shadow: 0 20px 65px #cdbe9f inset;  "> 
 						<font color="gray" style="line-height:2;">
@@ -88,13 +88,14 @@
 					 </caption>
 					 <tr ><td style="padding-top:0; padding-bottom:8em; margin-top:0; ">
 						
-
+                        <!--
                         <div id="m"   style="width:80%; margin-left:10%;  padding-top:0; margin-top:0;    ">
 				            <div class="kangalaheMenu" style="margin-top:0;">
 							     
                                  <a href="#" onclick="popup_lectureBD2(); " ><input  class="teteMenuGauche" type="button"  value="Afficher" align="center"  /> </a>								 
 				            </div>
-			            </div>						
+			            </div>
+                        -->						
 
 					 </td></tr>
 				</table>
@@ -102,8 +103,7 @@
 		</div>
 		<!-- LE PANNEAU DE DROITE :  -->
 		<div class="colonne_contenu" style="padding:0;">
-			<aside>
-			    
+			<aside class="aside2">
 				<table  class="tabledroite" style="padding-top:0;">
 				     
 					 <tr><td > 

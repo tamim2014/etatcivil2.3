@@ -47,7 +47,7 @@
 	<div class="contenu" style="margin-bottom:0;"  >
 		<!-- LE PANNEAU DE GAUCHE :  -->
 		<div class="colonne_laterale" style=" margin-bottom:0; padding-bottom:0; height:auto;" >
-			<aside style="padding:0; margin-bottom:0; " >
+			<aside class="aside1">
 				<table class="tablegauche" style="margin-bottom:0; padding-bottom:0; height:25em;"> 
 				     <caption  style="caption-side:top; box-shadow: 0 20px 65px #cdbe9f inset;  "> 
 						<font color="gray" style="line-height:2;">
@@ -66,7 +66,7 @@
 		</div>
 		<!-- LE PANNEAU DE DROITE :  -->
 		<div class="colonne_contenu" style="padding:0;">
-			<aside>
+			<aside class="aside2">
 				<table  class="tabledroite" style="padding-top:0;">
 				     <!-- <caption style="caption-side:top"> <font color="#FFFFFF"><h3> Liste des actes de naissance </h3></caption> -->
 					 <tr><td > 

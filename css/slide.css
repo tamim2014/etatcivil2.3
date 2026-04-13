@@ -26,10 +26,11 @@
 
 }
 
+/* table du panel: accueil.php  */
 
 #panel table tr:nth-child(2n+2) td {
     color:Peru ;
-    background: silver;
+    background: silver;  /*    ✍️*/
     -webkit-border-radius:4px;
 }
 
@@ -95,9 +96,12 @@
 	-khtml-border-radius:8px;
 	
 }
+
+/* Pour table lecturBD */
+
 .panelIsland1 table tr:nth-child(2n+2) td {
     color:Peru ;
-    background: silver;
+    background:silver !important; /* #f7f7f9     ✍️*/
 	border-radius:4px;
 	border-radius:4px;
     -webkit-border-radius:4px;
@@ -125,7 +129,7 @@ table
 th
 {
  color:white ;
- background:green;	
+ background:green;	/*  green;  ✍️ */
  box-shadow: 7px 6px 15px #333;
    border-radius:8px 8px 0px 0px;
   -webkit-border-radius:8px;

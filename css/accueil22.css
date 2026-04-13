@@ -85,19 +85,23 @@ td, th
 	text-align:center;
 }
 a  { text-align:right; text-decoration: none; }
+
+/* ⚠️ Pour les tables de la page d'accueil: Voir aussi sur slide.css pour les table à l'interieur du panel */
 th
 {
  color:white ;
- background:green;	
+ background: green;	/*   #558C89;  ✍️ */	
  border-radius:8px;
  -webkit-border-radius:8px;
  -moz-border-radius:8px;
  box-shadow: 7px 6px 15px #333;
 
-}
-table.color_line tr:nth-child(2n+1) td {
+} 
+/* ⚠️ Table lectureBD.php: voir aussi Table accueil.php sur slide.css pour les table à l'interieur du panel */
+
+/table.color_line tr:nth-child(2n+1) td  { 
     color: Peru ; 
-    background:silver; 
+    background:silver !important; /*  #f7f7f9    ✍️*/
 	 border-radius:8px;
     -webkit-border-radius:8px;
 	-moz-border-radius:8px;
@@ -116,7 +120,7 @@ table.color_line tr:nth-child(2n+1) td {
 }
 .couleurPoliceTableResultat  tr:nth-child(2n+1) td { 
 		 color:#800080;
-		 background:silver;
+		 background: silver !important; /*  #f7f7f   ✍️*/
 		 
 		 
 }
@@ -202,7 +206,12 @@ button      {
 }
 
 .tablegauche, .tablemenu{
-  position:relative; padding:5%; margin:0; border-radius:0; text-align:center; min-height:22.5em; 
+  position:relative; /* ⚠️  */
+  padding:5%;  
+  margin:0; 
+  border-radius:0; 
+  text-align:center; 
+  min-height:24.5em; 
   /* box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47; */
   box-shadow: 0 0 65px #cdbe9f inset;
   
@@ -210,7 +219,11 @@ button      {
 }
 /*acueil.php ? ecritureBD.php , ecritureBD.php */
 .tabledroite { 
-	position:relative; padding:5%; margin:0; border-radius:0; min-height:33.5em; 
+	position:relative; /* ⚠️  */
+	padding:5%; 
+	margin:0; 
+	border-radius:0; 
+	min-height:33.5em; /* ⚠️  */
 	/* box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;  */
 	
 	  background: #ECECEA;
