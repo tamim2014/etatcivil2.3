@@ -29,10 +29,8 @@
 		}
 
 	    .tablegauche{
-		    display:flex;
-		    min-height:100vh !important;
-			
-			
+		    display:flex; /* c'ce qui donne ce rendu particulier à cette page ⚠️ */
+		    min-height:100vh !important; 
 	    }
 	    .tablegauche tr td {  
 		   padding-left:2vw;
@@ -47,6 +45,7 @@
 		textarea{
 			height:10vh;
 		}
+		/* Virer les bortures autour des champs */
 		input:focus,
 		textarea:focus {
 			outline: none !important;
@@ -71,14 +70,6 @@
 			-webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5) !important;
 			box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5) !important;
 		}
-
-		
-		
-		
-		
-		
-		
-
 		
 		/*
 		#login_:hover , #pswd_:hover  { background-color:white !important; color:#ffffff; font-size: 17px; font-weight:bold;    box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5); }

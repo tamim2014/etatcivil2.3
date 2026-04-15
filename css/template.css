@@ -123,9 +123,9 @@ img {
  
 
   aside.aside1, aside.aside2{
-	 min-height:100vh !important;  /* ⚠️ virer l'espace qui reste entre la tablegauche et le footer */
+	 height:100% !important;  /* ⚠️ virer l'espace qui reste entre la tablegauche et le footer */
 	 box-shadow: 0 0 65px #cdbe9f inset !important; 
-	 background:#ECECEA !important;
+	 background:#ECECEA  !important; 
 	 /*
 	 margin-top:0 !important;
 	 margin-bottom:0 !important;
@@ -138,4 +138,5 @@ img {
   .tablegauche{ 
 	  min-height:50vh !important; /*⚠️  22.5em; */
   }
+  
 

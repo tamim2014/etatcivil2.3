@@ -75,7 +75,7 @@
 		/* Le tableau des résultats */	
 		#yivawo  {  
               position: relative;
-              height:59.5vh; /* min-height:59vh 🔍 pour voir que les colonnes ne descendent pas jusqu'au footer <= Bug zonning à corriger rapidement INCHA ALLAH */
+              height:59vh !important; /* min-height:59vh 🔍 pour voir que les colonnes ne descendent pas jusqu'au footer <= Bug zonning à corriger rapidement(solution: .aside1, aside2 {height:100%;// aulieu de min-height:100vh}) INCHA ALLAH */
 			  /* top:52px; left:13px; height:444px; width:539px;  */
               width:100%;  margin:2% auto ; /* centrage horizontal du .mnayvawo*/			  
 	          background-color: #e5eecc; 
