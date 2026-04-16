@@ -39,7 +39,15 @@ session_start();
 				AND pseudo = '" . mysqli_real_escape_string($conn , $_POST['pseudo_']) . "'";
 
 		$req = mysqli_query($conn ,$sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysqli_error($conn));
+        // User Management
+		if ($login == "usermanagement" && $mdp == "8888") {
+			header("Location: userManagement.php");
+			exit;
+		}
 
+		
+		
+        // Utilisateurs officiers d'état civil
 		$row = mysqli_fetch_assoc($req);
 
 		if (!$row) {
