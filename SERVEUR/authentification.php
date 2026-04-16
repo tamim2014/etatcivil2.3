@@ -8,21 +8,24 @@
 	
 */
 session_start();
+    /*
     $BD_serveur = "localhost";
     $BD_utilisateur = "root";
-    $BD_motDePasse = "";// Ce mot de passe est enregistré dans la table "user" de la base "mysql" du serveur Mysql. Pour le modifier (en ligne de commande) aller dans la base mysql(table user): update user set Password="" where Host="localhost"; Puis verifier en faisant select User, Password, Host from user;
+    $BD_motDePasse = "";
     $BD_base = "etatcivil";
 	$message='';
 	
 
-	$db = mysqli_connect($BD_serveur,$BD_utilisateur,'',$BD_base)or die('Erreur de connection :'.mysqli_error());
-	$db->set_charset("utf8");
+	$conn = mysqli_connect($BD_serveur,$BD_utilisateur,'',$BD_base)or die('Erreur de connection :'.mysqli_error());
+	$conn->set_charset("utf8");
+	*/
+  require_once 'SERVEUR/connection_mysqli.php';
     	
   if(isset($_POST['pseudo_']))  $login = $_POST['pseudo_'];
   if(isset($_POST['motdepasse_']))  $mdp = $_POST['motdepasse_'];
- 
 	
 	$message = 'Veuillez vous identifier dans les deux champs ci-dessus';
+	
 	// Le login est-il rempli ?
     if(empty($login) && isset($_POST["envoie"]) ) {$message = 'Veuillez indiquer votre nom svp !';}
    // Le mot de passe est-il rempli ?
@@ -32,10 +35,10 @@ session_start();
 
 		$sql = "SELECT * 
 				FROM listeofficiers 
-				WHERE motdepasse = '". mysqli_real_escape_string($db , $_POST['motdepasse_']) . "' 
-				AND pseudo = '" . mysqli_real_escape_string($db , $_POST['pseudo_']) . "'";
+				WHERE motdepasse = '". mysqli_real_escape_string($conn , $_POST['motdepasse_']) . "' 
+				AND pseudo = '" . mysqli_real_escape_string($conn , $_POST['pseudo_']) . "'";
 
-		$req = mysqli_query($db ,$sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysqli_error($db));
+		$req = mysqli_query($conn ,$sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysqli_error($conn));
 
 		$row = mysqli_fetch_assoc($req);
 
@@ -43,8 +46,8 @@ session_start();
 			$message = 'Connexion échouée, veuillez réessayer SVP !';
 		} else {
 
-			$_SESSION["pseudo"] = $row["pseudo"];
-			$_SESSION["user_role"] = $row["user"];  
+			$_SESSION["pseudo"] = $row["pseudo"]; //🎁
+			$_SESSION["user_role"] = $row["user"];//🎁 Gestion des droits(1.3 👉 colonne_rectifier.php, colonne_supprimer.php)  
 
 			header("Location: accueil.php");
 			exit;

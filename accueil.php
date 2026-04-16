@@ -1,14 +1,16 @@
 <?php
 
 session_start();
-    $BD_serveur     = "localhost";
-    $BD_utilisateur = "root";
-    $BD_motDePasse  = "";
-    $BD_base        = "etatcivil";
 
-	// Connexion PDO
+
+// Connexion PDO
+/*
+$BD_serveur     = "localhost";
+$BD_utilisateur = "root";
+$BD_motDePasse  = "";
+$BD_base        = "etatcivil";
 try {
-    $bdd = new PDO(
+    $conn = new PDO(
         'mysql:host=localhost;dbname=etatcivil;charset=utf8',
         'root',
         '',
@@ -17,6 +19,8 @@ try {
 } catch (Exception $e) {
     die('Erreur de connexion à la base de données: ' . $e->getMessage());
 }
+*/
+  require_once 'SERVEUR/connection_PDO.php';
   
  // moteur de recherche 
   if(isset($_POST['acte_']))  $numero=$_POST['acte_'];
@@ -33,7 +37,7 @@ try {
 	  $req=mysqli_query($db,$sql) or die('Erreur SQl !<br>'.$sql.'<br>'.mysqli_error($db));
 	  $result = mysqli_fetch_row($req);
 	  */
-        $req = $bdd->prepare("SELECT * FROM liste WHERE acte = :numero");
+        $req = $conn->prepare("SELECT * FROM liste WHERE acte = :numero");
         $req->execute([':numero' => $numero]);
         $result = $req->fetch(PDO::FETCH_ASSOC);
 
@@ -59,7 +63,7 @@ try {
 	     $result2 = mysqli_fetch_row($req2);
 	    */
 
-	    $req2 = $bdd->prepare("SELECT * FROM liste WHERE nom = :nom");
+	    $req2 = $conn->prepare("SELECT * FROM liste WHERE nom = :nom");
         $req2->execute([':nom' => $nomm]);
         $result2 = $req2->fetch(PDO::FETCH_ASSOC);
 	    //if ($result2[0] == 0){

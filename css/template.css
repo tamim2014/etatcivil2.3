@@ -45,11 +45,9 @@ body {
 
 
 .colonne_laterale {
-    
     width: 30%;
     /* float: left;   ✍️remplacé par  form{ display: left}  <= 2 paradigme encien(1998) et nouveau(2017) */
     padding: 0 20px 0 20px; 
-    
     list-style-type: none;
 }
 
@@ -111,32 +109,28 @@ img {
     margin-right: 8px;
 }
 
-/* ################ TASKS: COMPLEMENT DE ZONNING(Remplir toute la hauteur de la page) ###########################################  */ 
+/* ################ TASKS: COMPLEMENT DE ZONNING(Virer l'espace vide en bas=> remplir donc, toute la hauteur de la page) ###########################################  */ 
   
   form{
-	/*⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️Attention c'est le parent des colonnes, pas .contenu ⚠️⚠️⚠️⚠️⚠️⚠️⚠️  */
-	/*⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️Par contre .contenu est le bon parent dans les pages d'accès en lecture ⚠️⚠️⚠️⚠️⚠️⚠️⚠️  */
-	/*⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ form { display:flex }  remplace .colonne_laterale, .colonne_contenu { float:left; }⚠️⚠️⚠️⚠️⚠️⚠️⚠️  */
+	     /* ⚠    Attention form est le parent des colonnes, pas .contenu                              ⚠️ *******/
+	    /* ⚠⚠️   Par contre .contenu est le bon parent dans les pages d'accès en lecture             ⚠️⚠️ ****/
+	   /* ⚠️⚠️⚠️  form { display:flex }  remplace .colonne_laterale, .colonne_contenu { float:left; }⚠️⚠️⚠️ */
 	 
-	 display: flex; 
+	 display: flex; /** 🎯 */
   }
  
 
   aside.aside1, aside.aside2{
-	 height:100% !important;  /* ⚠️ virer l'espace qui reste entre la tablegauche et le footer */
-	 box-shadow: 0 0 65px #cdbe9f inset !important; 
+	 height:100% !important;  /* ⚠️ virer l'espace vide en bas */
 	 background:#ECECEA  !important; 
-	 /*
-	 margin-top:0 !important;
-	 margin-bottom:0 !important;
-	 */
+	 box-shadow: 0 0 65px #cdbe9f inset !important;
   }
   aside.aside2{
 	  box-shadow:none !important;
   }
   
   .tablegauche{ 
-	  min-height:50vh !important; /*⚠️  22.5em; */
+	  min-height:50vh !important; /*⚠️ c'était à 22.5em; */
   }
   
 
