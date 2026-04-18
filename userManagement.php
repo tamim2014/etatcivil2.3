@@ -83,12 +83,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Accueil </title>
+    <title>Gestion utilisateurs </title>
 	<link href="css/template.css"  rel="stylesheet" type="text/css" >
 	<link href="css/accueil22.css" rel="stylesheet"   />
     <link href="css/slide.css"     rel="stylesheet"   />
 	<link href="css/dropdown.css"  rel="stylesheet"    />
-	<link href="css/usermanagement.css"  rel="stylesheet"    />
+	<link href="css/flextablegauche.css"  rel="stylesheet" />
+	<link href="css/usermanagement.css"  rel="stylesheet"    /> <!-- ⚠️ specifique à cette page -->
+	<link href="css/responsive.css"  rel="stylesheet"    />
 	<script src="js/jquery.js"></script>
 </head>
 
@@ -101,6 +103,8 @@
 			</div> 
 		</div>		
 		<div class="menu topnav"  id="myTopnav"> 
+		       <!-- ⚠️ Sur symfony il faut virer l'include et mettre le morcaut html integral  --> 
+		       <!-- ⚠️ ou {% include 'fichier.html.twig' %}  --> 
 			   <?php include("inc/accueil/accueil_menucentral_login.php");   ?>
 		</div>
     </header>

@@ -1,6 +1,6 @@
 /*
  *
- * style specifique à index.php
+ * style specifique à index.php et userMananagement.php
  *
  */
 	    .btnHover:hover{
@@ -21,8 +21,11 @@
 		
 	    .tablegauche{
 		    display:flex; /* c'ce qui donne ce rendu particulier à cette page ⚠️ */
-			width:79vh; /* ⚠️ */
+			width:79vh; /* 🔍⚠️ */
 		    min-height:100vh !important; /* ⚠️ */
+			margin-bottom:0; 
+			padding-bottom:0;    
+			background:#ECECEA; 
 	    }
 	    .tablegauche tr td {  
 		   padding-left:2vw;
