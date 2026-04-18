@@ -1,24 +1,7 @@
 <?php
-/*
-	try{$conn = new PDO('mysql:host=localhost;dbname=etatcivil;charset=utf8', 'root', ''); }
-	catch(Exception $e){die('Erreur de connexion à la base de données: '.$e->getMessage());}
-	
-	$reponse = $conn->query('SELECT * FROM liste WHERE ID='.$id );
-	$donnees = $reponse->fetch();
-	
-*/
-session_start();
-    /*
-    $BD_serveur = "localhost";
-    $BD_utilisateur = "root";
-    $BD_motDePasse = "";
-    $BD_base = "etatcivil";
-	$message='';
-	
 
-	$conn = mysqli_connect($BD_serveur,$BD_utilisateur,'',$BD_base)or die('Erreur de connection :'.mysqli_error());
-	$conn->set_charset("utf8");
-	*/
+session_start();
+
   require_once 'SERVEUR/connection_mysqli.php';
     	
   if(isset($_POST['pseudo_']))  $login = $_POST['pseudo_'];
