@@ -1,6 +1,11 @@
 
-<?php  
+<?php
+   
+	
     include("SERVEUR/authentification.php "); 
+	// ✅ Afficher les utilisateurs
+	$officiers = "SELECT * FROM listeofficiers;";
+	$resultat = mysqli_query($conn, $officiers);
 
     // ✅ Ajouter un utilisateur
 	
@@ -31,7 +36,12 @@
 						VALUES ('$pseudo', '$mdp', '$user')";
 
 				if (mysqli_query($conn, $sql)) {
-					echo "<p style='color:green; text-align:center;'>Utilisateur ajouté avec succès.</p>";
+					echo "
+					<div class='alert' style='color:green' >
+						⚠️ Utilisateur ajouté avec succès !
+						<span  class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+					</div>
+					";
 				} else {
 					echo "<p style='color:red; text-align:center;'>Erreur lors de l'ajout.</p>";
 				}
@@ -40,20 +50,14 @@
 	}
 	
 	// ⛔ Suprimer un utilisateur
-	
+	   
 		if (isset($_POST['supprimer'])) {
-
 			$pseudo_del = mysqli_real_escape_string($conn, $_POST['pseudo_del']);
-
 			if (!empty($pseudo_del)) {
-
-				// Vérifier si le login existe
 				$check = "SELECT * FROM listeofficiers WHERE pseudo = '$pseudo_del'";
 				$res = mysqli_query($conn, $check);
 
 				if (mysqli_num_rows($res) == 0) {
-
-					// ⚠️ Le login n'existe pas
 					
 					echo "
 						<div class='alert'>
@@ -63,18 +67,28 @@
 					";
 
 				} else {
-
-					// Le login existe → suppression
+					
 					$sql = "DELETE FROM listeofficiers WHERE pseudo = '$pseudo_del'";
-
+                    
 					if (mysqli_query($conn, $sql)) {
-						echo "<p style='color:green; text-align:center;'>Utilisateur supprimé avec succès.</p>";
+						
+						echo "
+						<div class='alert' style='color:green' >
+						   ⚠️ Utilisateur supprimé avec succès !
+						   <span  class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+					    </div>
+						";
+						
 					} else {
 						echo "<p style='color:red; text-align:center;'>Erreur lors de la suppression.</p>";
 					}
+					
 				}
+				
 			}
 		}
+		
+
 ?>
 
 
@@ -91,10 +105,13 @@
 	<link href="css/flextablegauche.css"  rel="stylesheet" />
 	<link href="css/usermanagement.css"  rel="stylesheet"    /> <!-- ⚠️ specifique à cette page -->
 	<link href="css/responsive.css"  rel="stylesheet"    />
+	
+	
 	<script src="js/jquery.js"></script>
 </head>
 
 <body >
+
     <header>
 		<div class="en-tete">
 			<div class="hollowTop"   >				   
@@ -111,9 +128,14 @@
     <div class="contenu" style="display:flex;">
 	    <form id="formSource" action ="" method="POST" name="form1"  >
 			<!-- LE PANNEAU DE GAUCHE : Recher des document par numero ou nom -->
-			<div class="colonne_laterale" style="min-height:100vh !important; width:100%;" >
-				<aside  class="aside1" style="height:100% !important;">
-					<table class="tablegauche"> 
+
+			<div class="colonne_laterale" style=" width:100%;" >
+				<aside  class="aside1">
+				    <!--
+					  -- Problème de l'espace en bas
+					  -- ⚠️il faut ajouter "min-height:100% !important;" sur .tablegauche
+					-->
+					<table class="tablegauche" style="min-height:100% !important;" > 
 					    <!-- <caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;  ">  -->
 						<caption  style="caption-side:top; box-shadow: 0 20px 65px #cdbe9f inset; padding:0 8px;"> 
 						    <font color="gray" style="line-height:2;">
@@ -182,7 +204,29 @@
 					<button type="submit" name="supprimer" class="btn-delete">Supprimer</button>
 				</form>
 			</div>
-		</div><!-- test black -->
+			<!-- liste user -->
+			<div class="form-container">
+			  			    <h2>Liste des officiers</h2>
+				<table class="officiers scrolbar" border="1" cellpadding="5">
+					<tr>
+						<th>ID</th>
+						<th>Pseudo</th>
+						<th>User</th>
+					</tr>
+					 <?php
+						while($ligne = $resultat->fetch_assoc()){
+							echo "
+							<tr>
+									<td>".$ligne['ID']."</td>
+									<td>".$ligne['pseudo']."</td>
+									<td>".$ligne['user']."</td>
+							</tr>";
+						}
+					?>
+						
+				</table>
+		    </div>  	
+		</div>
 
     </div>  <!-- Fin div.contenu -->    
     <div class="footer" style="text-align:left; ">
