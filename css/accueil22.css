@@ -99,13 +99,31 @@ th
 } 
 /* ⚠️ Table lectureBD.php: voir aussi Table accueil.php sur slide.css pour les table à l'interieur du panel */
 
-/table.color_line tr:nth-child(2n+1) td  { 
+table.color_line tr:nth-child(2n+1) td  { 
     color: Peru ; 
     background:silver !important; /*  #f7f7f9    ✍️*/
 	 border-radius:8px;
     -webkit-border-radius:8px;
 	-moz-border-radius:8px;
 }
+/* table usermanagement.php */
+table.officiers tr:nth-child(2n+1) td  { 
+    background:#ddd /*  silver    ✍️*/
+}
+table.officiers tr  th  { 
+	background:#007bff;
+    border-radius:0;	
+}
+table.officiers tr  th:first-child  { 
+    border-radius:8px 0 0 0;	
+}
+table.officiers tr  th:last-child  { 
+    border-radius:0 8px 0 0;	
+}
+table.officiers tr  th, table.officiers tr  td  { 
+    padding:.3em;	
+}
+
 /* accueil.php, lectureBD.php */
 .couleurPoliceTable  tr:nth-child(2n) td { 
 		 color:  #800080 !important; /*  Peru  */
