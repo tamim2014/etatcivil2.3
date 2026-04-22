@@ -3,7 +3,7 @@
  * Samedi 18.04.26
  *
  * Fichiers cibles:
- * index.php, userManagement.php
+ * lectureBD.php, lectureBD2.php,
  *
  * ⚠️div.contenu: Conteneur de #formeSource  et colonne_contenu
  *
@@ -91,6 +91,7 @@
 		 .colonne_laterale {
 			flex: 1 1 200px; /* largeur minimale */
 			/* max-width: 300px; */
+			max-width: 29% ; /* ⚠️ */
 			box-sizing: border-box;
 		}
 
@@ -106,10 +107,36 @@
 		/* @media (max-width: 1000px) { */
 		@media screen and (max-width: 1000px) {
 			#formSource{ width:100%; height:40vh; } 
-			.colonne_laterale{ padding:0; } 
+			.colonne_laterale{ 
+			   min-width: 100% ; /* ⚠️ */
+			   padding:0; 
+			} 
 			.tablegauche{ 
 			      width:100%; /* ⚠️ */
 			      min-height:auto !important; /* ⚠️ */
-				  
 			} 
+			/* 
+			 *  Problème:Débordement tabledroite dans lectureBD2.php 
+			 * .mnayvawo{ padding:5.8em; } le coupable
+			 *  Solution: j'ajoute la classe .mnayvawo2 pour pas impacter lectureBD.php
+			 */
+			 .mnayvawo2{ padding:1em 1.2em !important; }
+			 /* 
+			  *Problème: Débordement tabledroite dans lectureBD.php si tabale ouverte
+              * On remonte à lectureBD2_searchPlayBack.php		  
+              *	mais 		  
+              *	table.resultat_moteur ne prend pas tjrs		  
+			  */
+			  /*
+			  .mnayvawo, .line1, .manayvawo table.resultat_moteur {
+				max-width:80%  ; 
+				overflow-x:hedden ;
+				
+			  }
+			  */
+			 
+			  
+			
+			
+            			
 		}

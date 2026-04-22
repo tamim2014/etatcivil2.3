@@ -2,24 +2,6 @@
 
 session_start();
 
-
-// Connexion PDO
-/*
-$BD_serveur     = "localhost";
-$BD_utilisateur = "root";
-$BD_motDePasse  = "";
-$BD_base        = "etatcivil";
-try {
-    $conn = new PDO(
-        'mysql:host=localhost;dbname=etatcivil;charset=utf8',
-        'root',
-        '',
-        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
-    );
-} catch (Exception $e) {
-    die('Erreur de connexion à la base de données: ' . $e->getMessage());
-}
-*/
   require_once 'SERVEUR/connection_PDO.php';
   
  // moteur de recherche 
@@ -88,55 +70,12 @@ try {
 	<link href="css/accueil22.css" rel="stylesheet"   />
     <link href="css/slide.css"     rel="stylesheet"   />
 	<link href="css/dropdown.css"  rel="stylesheet"    />
+	<link href="css/responsiveAccueil.css"  rel="stylesheet"/>
     <!-- ✅ Pour les messages - Boite de dialogue et les Popup -->
 	<script src="js/dialogueBox.js"></script>
 	<!-- ✅ Ouverture du panel -->
 	<script src="js/jquery.js"></script>
 
-	<!--
-	    1.OBJET:   Affichage de document dans la page d'accueil(via 1 popup)
-	    2.CIBLE:   SERVEUR/colonne_afficher_naissance.php
-        3.CHEMIN:	 accueil.php
-		      -> include("inc/accueil/accueil_prefecture.php")
-		      -> include("inc/accueil/accueil_choisir_naissance.php")
-              -> onchange=captureCombo(this.value); // du fichier capture_items.js
-              -> xmlhttp.open("GET","SERVEUR/colonne_afficher_naissance.php?p="+str,true);			  
-	    4.TASK
-			👉  J'importe ici "lectureBD.js" pour afficher le document via  la fonction popup_lectureBD2()
-                cette fonction utilise "afficherdanspop.php" et je l'ai déjà formaté			
-			
-			    "afficher.php" n'est donc pas utilisée. Elle fonctionne mais elle me pose 2 contraintes:
-			       1. implementer le pupop dans le lien( ce qui est sale et fastidieux)
-			       2. reformater le fichier afficher.php car le rendu n'est pas bien
-			    alors qu'avec la f° popup_lectureBD2(), c'est le fichier  "afficherdanspop.php" qui affiche. 
-			    Celui-là je l'ai déjà formaté!
-			
-			👉 Le fichier "afficher.php" ne sert donc plus à rien maintenant !
-			
-		5. Problème1 
-		        Erreur d'affichage  Undefined array key "identifiant"
-		        Par contre si tu fais  une recherche de document au préalable, 
-				l'erreur ne s'affiche pas. tu as le document. 		       
-		    Cause:
-		       Les données à afficher sont selectionné à partir d'un identifiant 
-			   stocké dans une variable session dans les résultat de recherche(lecturedb2.phph).
-			Solution:
-			    colonnne_afficher_naissance.php: Stocker l'identifiant du document à afficher dans une variable session 
-				pour le fournir à afficherdanspop.php(notamment son include pop.php). Il en a besoin 
-				pour selectionner le document. => $_SESSION['identifiant']= $ligne['ID'];
-		   	
-		  Probleme2
-		      Un seul document s'affiche les autres non. Peu importe quel document tu cliques c'est tjrs le mm document qui s'affiche
-	        Cause:	  
-			  Seul le premier document dont l'identifiant est stocké( dans la variable session) continu de s"afficher .
-			  Aucun autre document ne put s'afficher
-			solution
-			  Ne pas utiliser une variable session
-			  Donc revenir sur le fichier afficher.php et prendre le temps de le formater
-			  
-			  Donc l'importation de lectureBD.js n'est pas necessaire ici
-			   
-	-->
 	<!-- <script src="js/lectureBD.js"></script> -->
 </head>
 
@@ -165,10 +104,11 @@ try {
 								 <h6> Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement  </h6>
 								 <h4> MINISTERE DE L'INTERIEUR  </h4>
 							 </font>
-							  <img src="img/armoirie.png" style="z-index:3; transform: translate(210%, 0);  "  /> 
-							<!--  <img src="img/armoirie.png" style="z-index:3;  margin-left:40%; margin-right:40%; width:20%;  " /> -->
+							
+							<!--  <img src="img/armoirie.png" style="z-index:3; transform: translate(210%, 0);  "  /> -->
+							  <img src="img/armoirie.png" style="z-index:3;  margin-left:40%; margin-right:40%; width:20%;  " /> 
 						 </caption>
-						 <tr> <td >RECHERCHE DE DOCUMENT</td></tr>
+						 <tr > <td id="recherchedocument">RECHERCHE DE DOCUMENT</td></tr>
 						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> number<br/> <input style="width:50%;" id="recherchenum" type="text" name="acte_" pattern=".{1,}"  > </td></tr> 
 						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> name    <br/> <input style="width:50%;" id="recherchenom" type="text" name="nom_"  > </td></tr>
 						 <tr><td style="padding-top:1em;">

@@ -1,11 +1,11 @@
 /*
  * Garges-les-gonesse
- * Samedi 18.04.26
+ * Samedi 22.04.26
  *
  * Fichiers cibles:
- * index.php, userManagement.php
- *
- * ⚠️div.contenu: Conteneur de #formeSource  et colonne_contenu
+ * accueil.php, 
+ * 
+ * ⚠️form: Conteneur de div.colonne_laterale  et div.colonne_contenu
  *
  * Application responsive sur:
  * topnav
@@ -80,8 +80,8 @@
 		 
 /* RESONSIVE div.contenu */
 
-		/*  ✅ 1. Rendre .contenu responsive */
-	    .contenu {/* ⚠️⚠️⚠️ */
+		/*  ✅ 1. Rendre form responsive */
+	    form { /* ⚠️⚠️⚠️ */
 			display: flex;
 			flex-wrap: wrap; /* ← indispensable */
 			width: 100%;
@@ -90,8 +90,9 @@
 		/*  ✅ 2. Rendre .colonne_laterale flexible */
 		 .colonne_laterale {
 			flex: 1 1 200px; /* largeur minimale */
-			/* max-width: 300px; */
-			box-sizing: border-box;
+			max-width: 29% ; /* ⚠️ */
+			
+			box-sizing: border-box; 
 		}
 
 		/*  ✅ 3. Rendre .colonne_contenu flexible */
@@ -106,10 +107,14 @@
 		/* @media (max-width: 1000px) { */
 		@media screen and (max-width: 1000px) {
 			#formSource{ width:100%; height:40vh; } 
-			.colonne_laterale{ padding:0; } 
+			.colonne_laterale{ 
+			    min-width: 100% ; /* ⚠️ */
+			    padding:0; 
+			} 
 			.tablegauche{ 
 			      width:100%; /* ⚠️ */
 			      min-height:auto !important; /* ⚠️ */
 				  
 			} 
 		}
+        

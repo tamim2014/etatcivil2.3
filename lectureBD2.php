@@ -44,6 +44,7 @@
      <link href="css/slide.css"     rel="stylesheet"   />
 	 <link href="css/dropdown.css"  rel="stylesheet"    />	 
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />
+	 <link href="css/responsivelectureBD.css"  rel="stylesheet"/>
 	 <style>
 	     /* Table resultat de recherche par noms */
 		 .scrolbar::-webkit-scrollbar-track {
@@ -112,12 +113,11 @@
 		<div class="colonne_contenu" style="padding:0;">
 			<aside class="aside2">
 				<table  class="tabledroite" style="padding-top:0;">
-				     
 					 <tr><td > 
                          <div class="mnayvawo"><button  class="boutoyahemnayivawo"> Acte extrait de la pr&eacute;fecture de:<span id="wilaya_" style="color:#000066;  font-size: 17px; font-style: italic; font-family: \"Times New Roman\", Georgia, Serif;" > <?php  echo  $p; ?></span> </button>   </div>					 
 						 <div class="line1" style="width:98%; height:5px; margin:auto;"></div>
 
-						 <div class="mnayvawo scrolbar" style="padding:5.8em;  max-height:28.5em !important; overflow-y:auto;">
+						 <div class="mnayvawo mnayvawo2 scrolbar" style="padding:5.8em;  max-height:28.5em !important; overflow-y:auto;">
                             <?php 
 							//Resulat de la recherche: Une table en une seule ligne et 7 colonnes(en haut à droite)
 							if(!empty($_GET['num'])){include("SERVEUR/lectureBD2_searchPlayBack.php");}
@@ -135,13 +135,8 @@
 						 
 					 </td></tr>
 				</table>
-		        
-				
             </aside>
         </div>	
-
-
-
 		
 	</div> <!-- fin  <div class="contenu"  >  -->
 	

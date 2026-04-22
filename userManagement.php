@@ -100,12 +100,12 @@
     <meta charset="UTF-8">
     <title>Gestion utilisateurs </title>
 	<link href="css/template.css"  rel="stylesheet" type="text/css" >
-	<link href="css/accueil22.css" rel="stylesheet"   />
-    <link href="css/slide.css"     rel="stylesheet"   />
-	<link href="css/dropdown.css"  rel="stylesheet"    />
+	<link href="css/accueil22.css" rel="stylesheet" />
+    <link href="css/slide.css"     rel="stylesheet" />
+	<link href="css/dropdown.css"  rel="stylesheet" />
 	<link href="css/flextablegauche.css"  rel="stylesheet" />
-	<link href="css/usermanagement.css"  rel="stylesheet"    /> <!-- ⚠️ specifique à cette page -->
-	<link href="css/responsive.css"  rel="stylesheet"    />
+	<link href="css/usermanagement.css"  rel="stylesheet" /> <!-- ⚠️ specifique à cette page -->
+	<link href="css/responsive.css"  rel="stylesheet"/>
 	<style>
 
 	</style>
