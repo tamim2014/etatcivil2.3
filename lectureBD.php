@@ -13,7 +13,8 @@
      <link href="css/slide.css"     rel="stylesheet"   />
 	 <link href="css/dropdown.css"  rel="stylesheet"    />
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />
-	 <link href="css/accordeon2.css" rel="stylesheet" /> <!-- Exclusivement sur cette page!  -->
+	 <link href="css/accordeon2.css" rel="stylesheet" /> <!-- Obsolete et viré!-- c'est pour l'ancien menu:Exclusivement sur cette page!  -->
+	 <link href="css/responsivelectureBD.css"  rel="stylesheet"/>
 	 <style>
        	.contenu{
 		      /*⚠️  On remplace float:left sur les contenus par display:flex sur le conteneur ⚠️      */
