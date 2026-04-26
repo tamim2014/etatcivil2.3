@@ -3,7 +3,7 @@
   
 	<ul style="margin-left:28%;">
 	  <li class="dropdown" >
-		<button class="dropbtn btnHover">&emsp;&ensp;<a  href="accueil.php">Accueil</a> &emsp;&emsp;</button>
+		<button class="dropbtn btnHover btn-accueil"><a  href="accueil.php">Accueil</a></button>
     </li>	  
 	  <li class="dropdown" >
 		<button class="dropbtn"> Acte de naissance</button>

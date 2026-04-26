@@ -10,17 +10,23 @@
                      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                 }
 		}
+		// Avec symfony on gait:
+		// xmlhttp.open("GET", "/naissance/colonne?p=" + prfctr, true);
         function captureCombo(prfctr) { 
-            if (prfctr == "") { 
+            if (prfctr == "") {
+                 // Si aucune prefecture choisie, le panel est vide, donc ne souvre pas				
 			     document.getElementById("panel").innerHTML = ""; return; 
 			} else { 
-                instanceXMLHttpRequest();// instance XMLHttpRequest for IE7+, Firefox, Chrome, Opera, Safari // code for IE6, IE5
-                //1.Connection[au serveur php] et Paramèttrage[prfctr est la prefecture choisie] 
+                instanceXMLHttpRequest();
+                //1. On prend une table relative à la prefecture capturée 
 				xmlhttp.open("GET","SERVEUR/colonne_afficher_naissance.php?p="+prfctr,true);
-                //2.Envoi
 				xmlhttp.send(); 
-				//3.Réception de la réponse du serveur [xmlhttp.responseText] et affichage la div panel[document.getElementById("panel").innerHTML ]
-				xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { document.getElementById("panel").innerHTML = xmlhttp.responseText;}};
+				xmlhttp.onreadystatechange = function() { 
+				    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { 
+				// 2.On charge la table dans le panel
+					   document.getElementById("panel").innerHTML = xmlhttp.responseText;
+					}
+				};
 
             }
         }

@@ -22,7 +22,7 @@ session_start();
 				AND pseudo = '" . mysqli_real_escape_string($conn , $_POST['pseudo_']) . "'";
 
 		$req = mysqli_query($conn ,$sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysqli_error($conn));
-        // User Management
+        // User management
 		if ($login == "usermanagement" && $mdp == "8888") {
 			header("Location: userManagement.php");
 			exit;
@@ -34,11 +34,11 @@ session_start();
 		$row = mysqli_fetch_assoc($req);
 
 		if (!$row) {
-			$message = 'Connexion échouée, veuillez réessayer SVP !';
+			$message = 'Veuillez saisir vos identifiants';
 		} else {
 
 			$_SESSION["pseudo"] = $row["pseudo"]; //🎁
-			$_SESSION["user_role"] = $row["user"];//🎁 Gestion des droits(1.3 👉 colonne_rectifier.php, colonne_supprimer.php)  
+			$_SESSION["user_role"] = $row["roles"];//🎁 Gestion des droits(1.3 👉 colonne_rectifier.php, colonne_supprimer.php)  
 
 			header("Location: accueil.php");
 			exit;

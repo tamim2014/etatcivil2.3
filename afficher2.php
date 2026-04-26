@@ -26,7 +26,7 @@ require_once 'SERVEUR/connection_PDO.php';
 $reponse = $conn->query('SELECT * FROM liste WHERE acte='.$acte );
 $donnees = $reponse->fetch();
 /*
-$pdo = new PDO('mysql:host=example.com;dbname=database', 'user', 'password');
+$pdo = new PDO('mysql:host=example.com;dbname=database', 'roles', 'password');
 $statement = $pdo->query("SELECT 'Bonjour, cher utilisateur de MySQL !' AS _message FROM DUAL");
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 echo htmlentities($row['_message']);

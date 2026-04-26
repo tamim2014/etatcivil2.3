@@ -26,7 +26,7 @@ CREATE TABLE `listeofficiers` (
 	`ID` INT(10) NOT NULL AUTO_INCREMENT,
 	`pseudo` VARCHAR(30) NOT NULL COLLATE 'utf8mb3_unicode_ci',
 	`motdepasse` VARCHAR(30) NOT NULL COLLATE 'utf8mb3_unicode_ci',
-	`user` VARCHAR(30) NULL DEFAULT NULL COLLATE 'utf8mb3_unicode_ci',
+	`roles` VARCHAR(30) NULL DEFAULT NULL COLLATE 'utf8mb3_unicode_ci',
 	PRIMARY KEY (`ID`) USING BTREE
 )
 COLLATE='utf8mb3_unicode_ci'

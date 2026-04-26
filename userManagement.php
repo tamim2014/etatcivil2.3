@@ -11,7 +11,7 @@
 
 		$pseudo = mysqli_real_escape_string($conn, $_POST['pseudo']);
 		$mdp    = mysqli_real_escape_string($conn, $_POST['mdp']);
-		$user   = mysqli_real_escape_string($conn, $_POST['user']);
+		$roles   = mysqli_real_escape_string($conn, $_POST['roles']);
 
 		if (!empty($pseudo) && !empty($mdp)) {
 
@@ -30,8 +30,8 @@
 			} else {
 
 				// Insertion uniquement si le login n'existe pas
-				$sql = "INSERT INTO listeofficiers (pseudo, motdepasse, user)
-						VALUES ('$pseudo', '$mdp', '$user')";
+				$sql = "INSERT INTO listeofficiers (pseudo, motdepasse, roles)
+						VALUES ('$pseudo', '$mdp', '$roles')";
 
 				if (mysqli_query($conn, $sql)) {
 					echo "
@@ -183,8 +183,8 @@
 					</div>
 
 					<div class="form-group">
-						<label for="user">User (optionnel)</label>
-						<input type="text" id="user" name="user">
+						<label for="roles">roles (optionnel)</label>
+						<input type="text" id="roles" name="roles">
 					</div>
 
 					<button type="submit" name="ajouter" class="btn-submit">Ajouter</button>
@@ -203,14 +203,14 @@
 					<button type="submit" name="supprimer" class="btn-delete">Supprimer</button>
 				</form>
 			</div>
-			<!-- liste user -->
+			<!-- liste roles -->
 			<div class="form-container">
 			  			    <h2>Liste des officiers</h2>
 				<table class="officiers scrolbar" cellpadding="5" style="border:1px solid #c4c4c4;">
 					<tr>
 						<th>ID</th>
 						<th>Pseudo</th>
-						<th>User</th>
+						<th>roles</th>
 					</tr>
 					<?php
 						while($ligne = $resultat->fetch_assoc()){
@@ -218,7 +218,7 @@
 							<tr>
 									<td>".$ligne['ID']."</td>
 									<td>".$ligne['pseudo']."</td>
-									<td>".$ligne['user']."</td>
+									<td>".$ligne['roles']."</td>
 							</tr>";
 						}
 					?>

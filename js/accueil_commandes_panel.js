@@ -13,12 +13,13 @@
 	 // CommandePanel  page d'acceuil (include prefecture.php)
 	 // Solution jQuery pour afficher une table en fonction du bouton cliqué
             $(document).ready(function(){
+				   // On ouvre le panel
                  $("#flip").click(function(){ $("#panel").slideToggle("slow");}); //Déroulé du slide changement de prefecture dans le comboBox
-				 
-				 $(' a#rectif, a#zima , a#print_ , a#trier ').click(function(e){ 
-                  $('#panel').load($(this).attr('href')); // appel le fichier  <a id="zima"  href="SERVEUR/colonne_supprimer_acte.php" > par exemple
-                  e.preventDefault();//Très important.Sinon redirection dans une autre page
-                 });
+				  // On charge une table en fonction du bouton ET DE LA PREFECTURE CAPTURE
+				  $('a#rectif, a#zima , a#print_ , a#trier ').click(function(e){ 
+                       $('#panel').load($(this).attr('href')); // appel le fichier  <a id="zima"  href="SERVEUR/colonne_supprimer_acte.php" > par exemple
+                       e.preventDefault();//Très important.Sinon redirection dans une autre page
+                  });
                  //$('.tab a:first').trigger('click'); // Affiche la page1 par défaut
             });
 	

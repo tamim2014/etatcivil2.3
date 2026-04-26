@@ -4,7 +4,7 @@
 <html lang="fr">
 <head>
 	 <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"> <!-- local storage -recup Acte n° pour transmission à la pop -->
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes"> <!-- local storage -recup Acte n° pour transmission à la pop -->
 	 <title> Acces en Ecriture &aacute; la base etatcivil</title>
 	 <link href="css/template.css"  rel="stylesheet" type="text/css" >
 	 <link href="css/accueil22.css" rel="stylesheet"   />

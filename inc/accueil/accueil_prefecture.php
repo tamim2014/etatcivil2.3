@@ -43,6 +43,7 @@
 			<a id="print_"  href="#" onclick="showImprimer()">  <input type="button"  value="Imprimer"    class="boutonImprimer" /></a> 
 			-->
 		</div>
+		
 		<!-- ✅ Pour les messages - Boite de dialogue -->
 		<div id="dialogBox">
 			<div id="dialogContent">
