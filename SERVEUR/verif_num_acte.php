@@ -27,7 +27,8 @@
 	   
 	}
 	
-
-	echo '<div class="rappel">'.$message.'</div>' ;
-
+    // le div casse la structure
+	// le message ne s'affiche pas: Avec ou sans div
+	//echo '<div class="rappel" style="background:red;">'.$message.'</div>' ;
+      echo $message;
 ?>

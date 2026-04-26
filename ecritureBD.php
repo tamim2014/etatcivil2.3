@@ -1,4 +1,16 @@
-<?php session_start();  //echo "Acte<br>".$_SESSION["showInPop"]; ?>
+<?php 
+   session_start();  //echo "Acte<br>".$_SESSION["showInPop"]; 
+  /*
+   * Cet include etait en bas: sous </htmtl>
+   * Mais en bas il provoque une remontée du footer
+   *
+   * header('Location: ecritureBD.php');//Warning: Cannot modify header information - headers already sent by
+   * 
+   *
+   * EN PLUS LES MESSAGES NE S'AFFICHENT PAS: Je sais pas pourquoi
+   */
+   include("SERVEUR/verif_num_acte.php"); 
+?>
  
 <!DOCTYPE html>
 <html lang="fr">
@@ -14,11 +26,7 @@
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />  <!-- pour les bouton du panneau central -->
 	 <link href="css/ecritureBD.css" rel="stylesheet" title="Style" />
      <style>
-	    /* sinon le footer remonte */
-	     .footer {
-            position:absolute;
-			width:100%;
-		 }
+
 		 /* Agrandir les champs de saisie dans le panneau centrale */
 		 body div.contenu form div.colonne_contenu aside table.tabledroite  tr td input{
 			 padding:.5em .5em ;
@@ -227,10 +235,7 @@
     </div>	
 </body>
 </html>
-<?php
-  //header('Location: ecritureBD.php');//Warning: Cannot modify header information - headers already sent by
- include("SERVEUR/verif_num_acte.php"); 
-?>
+
 
 
 

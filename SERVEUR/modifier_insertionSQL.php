@@ -1,5 +1,8 @@
 <?php 
-$reponse->closeCursor(); // D'oÃ¹ vient ce truc? voir ligne16
+//$reponse->closeCursor(); // D'ou vient ce truc? voir ligne16 - c'est parce que j'avais mis l'include en bas du html
+
+
+
 
 if (isset($id)){
   if(isset($_POST['nom'])){
@@ -66,6 +69,7 @@ $accent=$q->execute(array($nom,$prefecture,$centretatcivil,$registre,$acte,$date
 		}
 	  	
   }
+  
 } 
 
 

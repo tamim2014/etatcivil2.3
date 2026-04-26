@@ -25,6 +25,8 @@ try {
 	
 	$reponse = $conn->query('SELECT * FROM liste WHERE ID='.$id );
 	$donnees = $reponse->fetch();
+    // Je l'ai mis en bas du <html>
+	//include("SERVEUR/modifier_insertionSQL.php"); => page blanche
 
 ?>
 <!DOCTYPE html>
@@ -242,8 +244,8 @@ try {
 			</div><!-- 2�me div.colonne_laterale -->
 		</form>
 	</div><!-- div.contenu -->
-	<div class="footer">
-        Pied de Page
+    <div class="footer" style="text-align:left;">
+        <span ><span style="color:#555;">2026 &copy; -</span> <span style="color:#333;">Etat civil</span></span>
     </div>
 	<script>		
 		document.getElementByClassName("rediriger").addEventListener("click", function() {
@@ -252,5 +254,10 @@ try {
 	</script>
 </body>
 </html>
+<?php
+	// Pourquoi j'ai mis le traitement ici
+	// Parce que sur action="" ça marche pas. 
+	// En haut ça marche pas aussi
 
-<?php include("SERVEUR/modifier_insertionSQL.php"); ?>  
+	include("SERVEUR/modifier_insertionSQL.php");   
+?>
