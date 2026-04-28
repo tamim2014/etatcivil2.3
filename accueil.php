@@ -4,7 +4,9 @@ session_start();
 
   require_once 'SERVEUR/connection_PDO.php';
   
- // moteur de recherche 
+ // moteur de recherche
+ // moteur de recherche
+
   if(isset($_POST['acte_']))  $numero=$_POST['acte_'];
   if(isset($_POST['nom_']))   $nomm=$_POST['nom_'];
 
