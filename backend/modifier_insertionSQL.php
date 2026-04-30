@@ -1,9 +1,6 @@
 <?php 
 //$reponse->closeCursor(); // D'ou vient ce truc? voir ligne16 - c'est parce que j'avais mis l'include en bas du html
 
-
-
-
 if (isset($id)){
   if(isset($_POST['nom'])){
 // new data
@@ -47,9 +44,6 @@ $datejugement=$_POST['datejugement'];
 $declaration_recue_pa=$_POST['declaration_recue_pa'];
 
 
-
-
-
 // query  acte=?, acte=?, acte=?, acte=?, acte=?
  
 $sql = "UPDATE liste 
@@ -66,12 +60,10 @@ $accent=$q->execute(array($nom,$prefecture,$centretatcivil,$registre,$acte,$date
 			   print_r($q->errorInfo());
 			   print_r($sql->errorInfo());
 			echo  '</div>';
-		}
-	  	
+		}	  	
   }
   
 } 
-
 
 //3.Réinitialisation  de l'auto-incrément(si la table est vidée): 
 $conn->exec("ALTER TABLE liste AUTO_INCREMENT=0 ");//mysql_query("ALTER TABLE liste AUTO_INCREMENT=0 ");

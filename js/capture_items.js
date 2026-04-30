@@ -1,6 +1,6 @@
 
       
-		// instance XMLHttpRequest  for all browsers. Attention! c'est peut être cette fonction qui pose problème à IE
+		// instance XMLHttpRequest  for all browsers. Attention! c'est peut ï¿½tre cette fonction qui pose problï¿½me ï¿½ IE
 		function instanceXMLHttpRequest() {
                 if (window.XMLHttpRequest) {
                      // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -18,8 +18,8 @@
 			     document.getElementById("panel").innerHTML = ""; return; 
 			} else { 
                 instanceXMLHttpRequest();
-                //1. On prend une table relative à la prefecture capturée 
-				xmlhttp.open("GET","SERVEUR/colonne_afficher_naissance.php?p="+prfctr,true);
+                //1. On prend une table relative ï¿½ la prefecture capturï¿½e 
+				xmlhttp.open("GET","backend/colonne_afficher_naissance.php?p="+prfctr,true);
 				xmlhttp.send(); 
 				xmlhttp.onreadystatechange = function() { 
 				    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { 
@@ -30,17 +30,17 @@
 
             }
         }
-		function captureSousMenu(prfctr){ // prfctr=préfecture selectionnée dans le sous-menu
+		function captureSousMenu(prfctr){ // prfctr=prï¿½fecture selectionnï¿½e dans le sous-menu
             if (prfctr == "") { 
 			     document.getElementById("yivawo").innerHTML = ""; return; 
 			}else{ 
                 instanceXMLHttpRequest();// instance XMLHttpRequest for IE7+
                
-                //1.Connection[au serveur php] et Paramèttrage[prfctr est la prefecture choisie]  
-				xmlhttp.open("GET","SERVEUR/lectureBD_afficherNaissance.php?pr="+prfctr,true); // On DEVRAI reutileSER le mm script car c'est le mm traitement MAIS LA VARIABLE SESSION se la ramene et m'emmerde!
+                //1.Connection[au backend php] et Paramï¿½ttrage[prfctr est la prefecture choisie]  
+				xmlhttp.open("GET","backend/lectureBD_afficherNaissance.php?pr="+prfctr,true); // On DEVRAI reutileSER le mm script car c'est le mm traitement MAIS LA VARIABLE SESSION se la ramene et m'emmerde!
                 //2.Envoi
 				xmlhttp.send(); 
-				//3.Réception réponse du serveur [xmlhttp.responseText] et affichage dans div yivawo
+				//3.Rï¿½ception rï¿½ponsebackendveur [xmlhttp.responseText] et affichage dans div yivawo
 				xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { 
 					document.getElementById("yivawo").innerHTML = xmlhttp.responseText;}
 					//activerPopup();
@@ -51,9 +51,9 @@
 		function captureSousMenu(prfctr) { // la mm fonction avec fetch
 			const cible = document.getElementById("yivawo");
 			if(prfctr === ""){ cible.innerHTML=""; return; }
-			fetch(`SERVEUR/lectureBD_afficherNaissance.php?pr=${encodeURIComponent(prfctr)}`)
+			fetch(`backend/lectureBD_afficherNaissance.php?pr=${encodeURIComponent(prfctr)}`)
 				.then(response => {
-					if (!response.ok) { throw new Error("Erreur réseau : " + response.status }
+					if (!response.ok) { throw new Error("Erreur rï¿½seau : " + response.status }
 					return response.text();
 				})
 				.then(data => {
@@ -94,10 +94,10 @@
     *
     * ETAPE1: jQuery capture le clic sur la prefecture
 	           $("... ul.subMenu li a").click(...);
-    * ETAPE2: jQuery transmet la prefecture(prfctr) cliquée à AJAX en lança cette fonction: 
+    * ETAPE2: jQuery transmet la prefecture(prfctr) cliquï¿½e ï¿½ AJAX en lanï¿½a cette fonction: 
 	           captureSousMenu(this.textContent);
     *
-    * ETAPE3: AJAX execute la fontion pour afficher la table relative à la prefecture transmise:
+    * ETAPE3: AJAX execute la fontion pour afficher la table relative ï¿½ la prefecture transmise:
     *         xmlhttp.open(...url de la table...);
 	*         xmlhttp.send();
     *         document.getElementById("yivawo").innerHTML = xmlhttp.responseText;	 
@@ -107,7 +107,7 @@
 	$(document).ready(function(){
 		//topMenu.php(sous-menu): : ACTIVATION DES LIENS DU SOUS-MENU accordeon(les prefectures)
 		$("ul li.dropdown div.dropdown-content div#aside ul.navigation li.toggleSubMenu  ul.subMenu li a").click(function() {// jQuery capture clic 
-			captureSousMenu(this.textContent); // jQuery transmet la capture à AJAX
+			captureSousMenu(this.textContent); // jQuery transmet la capture ï¿½ AJAX
 		});
 	});
 

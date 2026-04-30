@@ -6,7 +6,7 @@
 *date: 16/05/2018
 *
 ******************/
-// NOUS SOMMES CÔTE SERVEUR
+// NOUS SOMMES CÔTE backend
 session_start();
 //Défintion des varibles: ATTENTION "  LE FAIRE TOUJOURS AVANT LA CONNEXION"
 if(!isset($_GET["p"])) $_GET["p"]=""; 

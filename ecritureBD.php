@@ -9,7 +9,7 @@
    *
    * EN PLUS LES MESSAGES NE S'AFFICHENT PAS: Je sais pas pourquoi
    */
-   include("SERVEUR/verif_num_acte.php"); 
+   include("backend/verif_num_acte.php"); 
 ?>
  
 <!DOCTYPE html>
@@ -54,7 +54,7 @@
 		</div>
     </header>
 	<div class="contenu" style="margin-bottom:0;">
-		<form action ="SERVEUR/ecritureBD_insertionSQL.php" method="post" name="form1" >
+		<form action ="backend/ecritureBD_insertionSQL.php" method="post" name="form1" >
 			<!-- LE PANNEAU DE GAUCHE :  -->
 			<div class="colonne_laterale" style="width: 33%;  " >
 				<aside class="aside1" style="padding:0 !important;  " >			    

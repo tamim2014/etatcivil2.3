@@ -4,11 +4,11 @@
 		* Solution AJAX
 		*
 		*  Normalement un lien href renvoie vers une nouvelle page! 
-		*  Ici, on veut que le href renvoie la page dans  la même page source: Notamment dan un panel
+		*  Ici, on veut que le href renvoie la page dans  la mï¿½me page source: Notamment dan un panel
 		*
         *  Affichage des tables dans le slide de la page d'accueil
-		*  Cette solution AJAX est désactivée, remplacée par des simple lien html.
-		*  !!  Je ne sais pas encore si la désactivation est effective sur "supprimer"( à verifier) !!
+		*  Cette solution AJAX est dï¿½sactivï¿½e, remplacï¿½e par des simple lien html.
+		*  !!  Je ne sais pas encore si la dï¿½sactivation est effective sur "supprimer"( ï¿½ verifier) !!
         *		
 	    */
 		
@@ -25,7 +25,7 @@
                 }
 		}
 		
-				// Activation des LIENS dans les tables affichées dans le slide de la page d'accueil
+				// Activation des LIENS dans les tables affichï¿½es dans le slide de la page d'accueil
 		function supprimer(str) { // accueil.php(include prefecture.php)
             if (str == "") { 
 			     document.getElementById("panel").innerHTML = ""; return; 
@@ -33,8 +33,8 @@
 
 				instanceXMLHttpRequest();
                 xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { document.getElementById("panel").innerHTML = xmlhttp.responseText;}};
-                //xmlhttp.open("GET","SERVEUR/accueil_supprimer_acte.php?delete_="+str,true);
-				xmlhttp.open("GET","SERVEUR/supprimer.php",true);
+                //xmlhttp.open("GET","backend/accueil_supprimer_acte.php?delete_="+str,true);
+				xmlhttp.open("GET","backend/supprimer.php",true);
                 xmlhttp.send();
             }
         }
@@ -49,9 +49,9 @@
 
 				instanceXMLHttpRequest();
                 xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { document.getElementById("panel").innerHTML = xmlhttp.responseText;}};
-                //xmlhttp.open("GET","SERVEUR/accueil_imprimer_acte.php?print_="+str,true);
+                //xmlhttp.open("GET","backend/accueil_imprimer_acte.php?print_="+str,true);
 				//xmlhttp.open("GET","imprimer.php?print_="+str,true);
-				xmlhttp.open("GET","SERVEUR/accueil_imprimer_acte.php",true);
+				xmlhttp.open("GET","backend/accueil_imprimer_acte.php",true);
 				
                 xmlhttp.send();
             }
@@ -65,8 +65,8 @@
 
 				instanceXMLHttpRequest();
                 xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { document.getElementById("panel").innerHTML = xmlhttp.responseText;}};
-                //xmlhttp.open("GET","SERVEUR/accueil_imprimer_acte.php?print_="+str,true);
-				xmlhttp.open("GET","SERVEUR/colonne_supprimer_acte.php",true);
+                //xmlhttp.open("GET","backend/accueil_imprimer_acte.php?print_="+str,true);
+				xmlhttp.open("GET","backend/colonne_supprimer_acte.php",true);
                 xmlhttp.send();
             }
         }
@@ -78,13 +78,13 @@
 
 				instanceXMLHttpRequest();
                 xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { document.getElementById("panel").innerHTML = xmlhttp.responseText;}};
-                //xmlhttp.open("GET","SERVEUR/accueil_imprimer_acte.php?print_="+str,true);
-				xmlhttp.open("GET","SERVEUR/colonne_rectifier_acte.php",true);
+                //xmlhttp.open("GET","backend/accueil_imprimer_acte.php?print_="+str,true);
+				xmlhttp.open("GET","backend/colonne_rectifier_acte.php",true);
                 xmlhttp.send();
             }
         }
 		
-		***** c'est la même fonction que  imprimer(str) *********
+		***** c'est la mï¿½me fonction que  imprimer(str) *********
 		function showImprimer(str) { // accueil.php(include prefecture.php)
             if (str == "") { 
 			     document.getElementById("panel").innerHTML = ""; return; 
@@ -92,8 +92,8 @@
 
 				instanceXMLHttpRequest();
                 xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { document.getElementById("panel").innerHTML = xmlhttp.responseText;}};
-                //xmlhttp.open("GET","SERVEUR/accueil_imprimer_acte.php?print_="+str,true);
-				xmlhttp.open("GET","SERVEUR/colonne_imprimer_acte.php",true);
+                //xmlhttp.open("GET","backend/accueil_imprimer_acte.php?print_="+str,true);
+				xmlhttp.open("GET","backend/colonne_imprimer_acte.php",true);
                 xmlhttp.send();
             }
         }

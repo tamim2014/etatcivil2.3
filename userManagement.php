@@ -2,7 +2,7 @@
 <?php
    
 	
-    include("SERVEUR/authentification.php "); 
+    include("backend/authentification.php"); // pas despace sinon ça plante en ligne 
 
 
     // ✅ 1. Ajouter un utilisateur

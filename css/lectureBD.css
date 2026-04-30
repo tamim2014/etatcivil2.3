@@ -130,7 +130,7 @@
 			 padding-bottom:1em !important;
 		 }  
 
-      /* On remplace les btn (Imprimer, Afficher) par des icone 👉 voir SERVEUR/lectureBD_afficherNaissance.php */
+      /* On remplace les btn (Imprimer, Afficher) par des icone 👉 voir backend/lectureBD_afficherNaissance.php */
 
 		.icon-btn {
 			font-size: 18px;      

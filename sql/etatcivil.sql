@@ -5,7 +5,7 @@
 -- Author: A.M.A
 -- Client :  127.0.0.1
 -- Généré le :  Lun 14 Décembre 2015 à 05:45
--- Version du serveur :  5.6.15-log
+-- Version du backend :  5.6.15-log
 -- Version de PHP :  5.4.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";

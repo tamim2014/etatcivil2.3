@@ -11,7 +11,7 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 
 
 //2.Requete SQL requete
-
+/*
 try {
     $conn = new PDO(
         'mysql:host=localhost;dbname=etatcivil;charset=utf8',
@@ -22,11 +22,12 @@ try {
 } catch(Exception $e) {
     die('Erreur de connexion à la base de données: '.$e->getMessage());
 }
-	
+*/
+	require_once 'backend/connection_PDO.php';
 	$reponse = $conn->query('SELECT * FROM liste WHERE ID='.$id );
 	$donnees = $reponse->fetch();
     // Je l'ai mis en bas du <html>
-	//include("SERVEUR/modifier_insertionSQL.php"); => page blanche
+	//include("backend/modifier_insertionSQL.php"); => page blanche
 
 ?>
 <!DOCTYPE html>
@@ -259,5 +260,5 @@ try {
 	// Parce que sur action="" ça marche pas. 
 	// En haut ça marche pas aussi
 
-	include("SERVEUR/modifier_insertionSQL.php");   
+	include("backend/modifier_insertionSQL.php");   
 ?>

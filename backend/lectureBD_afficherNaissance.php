@@ -1,6 +1,6 @@
 
 <?php
-// NOUS SOMMES CÔTE SERVEUR
+// NOUS SOMMES CÔTE backend
 session_start();
 
 //Défintion des varibles: ATTENTION! LE FAIRE TOUJOURS AVANT LA CONNEXION
@@ -70,7 +70,7 @@ $table .= '<tr>
 
  }
 $table.='</table>';
-//3.2 on vide $pr et on libere la memoir occupée par cet "interrogation serveur"
+//3.2 on vide $pr et on libere la memoir occupée par cet "interrogation backend"
 unset($pr);
 
 $reponse->closeCursor(); // mysql_close(); i parait que ça sert à rien puisque MySQL le fait tout seul

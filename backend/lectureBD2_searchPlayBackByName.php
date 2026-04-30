@@ -10,31 +10,29 @@
 	 *  Pas besoin de reconnection dans un fichier include si la page source est connectée
 	 *
 	 *  require_once teste la connection, si elle est là, elle connecte pas inutilement
-     *  require_once 'SERVEUR/connection_mysqli.php';
+     *  require_once 'backend/connection_mysqli.php';
 	 *
 	 */
-	
    
-//1. Requête (SQL): On récupère tout le contenu de la table liste) 
+//1. Requête (SQL): On récupère tout le contenu de la table liste)   
       //$requete = "SELECT * FROM liste WHERE acte=".$num." OR  nom=$nom'";
-      $requete = "SELECT * FROM liste WHERE acte=".$num ;  
-	  $result = mysqli_query($conn,$requete);
+      $requete = "SELECT * FROM liste WHERE   nom='".ltrim($nom)."'" ;	  	
+	  $result = mysqli_query($conn,$requete);    
 //2. Stockage dans une variable(PHP): $donnees = $reponse->fetch(); 
-	 
+     
 //3.Affichage 
      //if($result){
 
-	 $table='<table  class="resultat_moteur" style="left:42.11%; top:18%;"  >';
+	 $table='<table  class="resultat_moteur couleurPoliceTableResultat" style="left:42.11%; top:18%;"  >';
 	 $table.= '<tr ><th>ID</th><th>Nom </th><th> Prenom </th><th>Acte numero</th><th style="color:transparent;">Edit</th><th style="color:transparent;">Imprimer</th><th style="color:transparent;">Afficher</th></tr>';
-
 	 while ($donnees = mysqli_fetch_array($result) )  	 	 
 	 { 
-        /**
+        /***
            showActe('.$donnees["ID"].') n'arrive pas à afficher->( affichage dans 1 PANEL)
            Je vais donc le remplacer par popup_lectureBD2() -> ( affichage dans 1 POPUP)  
         */
-       $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td>  <td> <a href="modifier_.php?n='.$donnees["ID"].'  &  nom_='.$donnees["nom"].'   &  prenom_='.$donnees["prenom"].'   &   acte_='.$donnees["acte"].' ">Modifier</a> </td>  <td> <a href="imprimer.php?n='.$donnees["ID"].'">Imprimer</a> </td>     <td> <a id="lien"  href="#" onclick="popup_lectureBD2();">Afficher</a> </td></tr>';
-	   $_SESSION['identifiant']= $donnees['ID']; // g oublié Où j'utilise cette variable session? (utiliser vs code pour traquer $_SESSION['identifiant'] ) 
+       $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td>  <td> <a href=" modifier_.php? n='.$donnees["ID"].'  &  nom_='.$donnees["nom"].'   &  prenom_='.$donnees["prenom"].'   &   acte_='.$donnees["acte"].' ">Modifier</a> </td>  <td> <a href="imprimer.php?n='.$donnees["ID"].'">Imprimer</a> </td> <td> <a id="lien"  href="#" onclick="popup_lectureBD2();">Afficher</a> </td></tr>';
+	   $_SESSION['identifiant']= $donnees['ID']; // Où est-ce qu'on utilise cette variable session?
 	 } 
      $table.='</table>'; 
      echo $table;

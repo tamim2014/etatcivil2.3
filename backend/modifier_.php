@@ -12,7 +12,7 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
  // echo '<div class="rappel">'.$rappel.'</div>' ;
 
 
-//2.Requête SQL requête
+//2.Requï¿½te SQL requï¿½te
 
 try {
     $conn = new PDO(
@@ -47,7 +47,7 @@ try {
 	  
 	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	 <script type="text/javascript">
-	 //affiche l'acte modifié dans la partie droite de la page modifie_.php( OK mé ça sert à rien if o virere tout ça)
+	 //affiche l'acte modifiï¿½ dans la partie droite de la page modifie_.php( OK mï¿½ ï¿½a sert ï¿½ rien if o virere tout ï¿½a)
 		$(function(){
 			$(' a #acteAJAX').click(function(e){
 				$('.showacte').load($(this).attr('href'));
@@ -257,7 +257,7 @@ try {
 						</td></tr>     
 					</table>
 		        </aside>
-			</div><!-- 2ème div.colonne_laterale -->
+			</div><!-- 2ï¿½me div.colonne_laterale -->
 		</form>
 	</div><!-- div.contenu -->
 	<div class="footer">
@@ -270,4 +270,4 @@ try {
 	</script>
 </body>
 </html>
-<?php include("SERVEUR/modifier_insertionSQL.php"); ?>  
+<?php include("backend/modifier_insertionSQL.php"); ?>  

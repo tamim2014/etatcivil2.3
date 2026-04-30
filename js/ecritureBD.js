@@ -16,24 +16,24 @@ function instanceAJAX() {
                 }*/
 		}
 
-/* ACCES AU SERVEUR(pour lire les fichier .txt)*/
+/* ACCES AU backend(pour lire les fichier .txt)*/
 function changement(prefecture){//list1 
 	var index = prefecture.selectedIndex;//Identifie l'option selectionnée par l'utilisateur dans le 1er menu
 	var valeur = prefecture[index].text;// retourne le texte de l'option (<option>texte</option>) càd OS ou Naviateur ou Programmation
 	var liste_elements = document.getElementsByTagName("select"); // [ou document.formulaires.elements] tous les options du formulaires
 	var list2elements = liste_elements["centretatcivil"];// list2, Seulements les options de la 2ème liste déroulante.
-	url ="SERVEUR/centre/"+valeur + ".txt";//  OS.txt ou Naviateur.txt ou Programmation.txt
+	url ="backend/centre/"+valeur + ".txt";//  OS.txt ou Naviateur.txt ou Programmation.txt
 
 
 	if (valeur != "") {
 
 		instanceAJAX();// instance XMLHttpRequest for IE7+, Firefox, Chrome, Opera, Safari // code for IE6, IE5
 					   
-						//Connection[au serveur ]   
+						//Connection[au backend ]   
 						xhr.open("GET",url,true); 
 						// Envoi
 						xhr.send(null); 
-		//Réception de la réponse du serveur [xmlhttp.responseText] et affichage 
+		//Réception de la réponse du backend [xmlhttp.responseText] et affichage 
 		if(xhr) {// On s'assure que l'objet xhr a bien été créé
 			xhr.onreadystatechange = function(){
 				if(xhr.readyState == 4 && xhr.status == 200){

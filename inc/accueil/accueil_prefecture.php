@@ -20,7 +20,7 @@
 	  <link href="css/prefecture.css" rel="stylesheet" title="boutons_Sous_Le_Slide" />
 	  <link href="css/commandes_panel.css" rel="stylesheet"  /> 
 	  
-	
+	  <!-- On choisi la prefecture pour afficher sa table relatif sdans le panel --> 
 		<table>
 			 <tr><td class="listemenu" id="flip" > 
 				Acte de naissance  <?php include("inc/accueil/accueil_choisir_naissance.php"); ?>   <div id="panel" class="scrolbar"></div> <!-- div#panel est le conteneur de la table -->  
@@ -32,10 +32,10 @@
 		<!-- le p'tit menu sous le panel [qui appelle une nouvelle table: voir la 5ème colonne du slide]-->
 		<div id="commandePanel" >
 			<!-- Solution jQuery -->
-			<a id="zima"    href="SERVEUR/colonne_supprimer_acte.php"> <input type="button"  value="Supprimer"  class="boutonSupprimer" /></a> 
-			<a id="rectif"  href="SERVEUR/colonne_rectifier_acte.php"> <input type="button"  value="Rectifier"  class="boutonRectifier" /></a>
-			<a id="print_"  href="SERVEUR/colonne_imprimer_acte.php" >  <input type="button"  value="Imprimer"    class="boutonImprimer" /></a> 
-			<a id="trier"   href="SERVEUR/trier.php" >  <input type="button"  value="Ordre alphabétique"    class="boutonTrier" /></a> 
+			<a id="zima"    href="backend/colonne_supprimer_acte.php"> <input type="button"  value="Supprimer"  class="boutonSupprimer"/></a> 
+			<a id="rectif"  href="backend/colonne_rectifier_acte.php"> <input type="button"  value="Rectifier"  class="boutonRectifier"/></a>
+			<a id="print_"  href="backend/colonne_imprimer_acte.php" >  <input type="button"  value="Imprimer"    class="boutonImprimer"/></a> 
+			<a id="trier"   href="backend/trier.php" >  <input type="button"  value="Ordre alphabétique"    class="boutonTrier"/></a> 
 
 			<!-- Solution AJAX 
 			<a id="zima"    href="#"  onclick="showSupprimer()> <input type="button"  value="Supprimer"  class="boutonSupprimer" /></a> 

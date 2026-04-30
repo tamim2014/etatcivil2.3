@@ -1,6 +1,6 @@
 
 <?php
-// NOUS SOMMES CÔTE SERVEUR
+// NOUS SOMMES CÔTE backend
 //session_start();
 //Défintion des varibles: ATTENTION "  LE FAIRE TOUJOURS AVANT LA CONNEXION"
 $p9=$_GET['p9'];
@@ -28,7 +28,7 @@ while($ligne = $reponse->fetch()){// en utlisant FOREACH ça marche pas .j'sais 
 
  }
 $table.='</table>';
-//3.2 on libere la memoir occupée par cet "interogation serveur"
+//3.2 on libere la memoir occupée par cet "interogation backend"
 $reponse->closeCursor(); // mysql_close(); i parait que ça sert à rien puisque MySQL le fait tout seul
 //3.3 On affiche le résultat
 echo $table;

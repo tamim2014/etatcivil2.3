@@ -6,13 +6,13 @@
 *
 ******************/
 
-	$BD_serveur = "localhost";
+	$BD_backend = "localhost";
     $BD_utilisateur = "root";
-    $BD_motDePasse = "";// Ce mot de passe est enregistré dans la table "roles" de la base "mysql" du serveur Mysql. Pour le modifier (en ligne de commande) aller dans la base mysql(table roles): update roles set Password="" where Host="localhost"; Puis verifier en faisant select roles, Password, Host from roles;
+    $BD_motDePasse = "";// Ce mot de passe est enregistré dans la table "roles" de la base "mysql" du backend Mysql. Pour le modifier (en ligne de commande) aller dans la base mysql(table roles): update roles set Password="" where Host="localhost"; Puis verifier en faisant select roles, Password, Host from roles;
     $BD_base = "etatcivil";
 	$message='';
 	
-	$conn = mysqli_connect($BD_serveur,$BD_utilisateur,'',$BD_base)or die('Erreur de connection :'.mysqli_error());
+	$conn = mysqli_connect($BD_backend,$BD_utilisateur,'',$BD_base)or die('Erreur de connection :'.mysqli_error());
 	$conn->set_charset("utf8");
 /*
 $conn=mysql_connect('localhost','root', '') ;

@@ -2,7 +2,7 @@
 
 session_start();
 
-    require_once 'SERVEUR/connection_mysqli.php';
+    require_once 'backend/connection_mysqli.php';
     
     // On recuper les login/passwd saisis	
     if(isset($_POST['pseudo_']))  $login = $_POST['pseudo_'];

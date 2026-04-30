@@ -23,7 +23,7 @@
 	  $result = mysqli_fetch_row($req);
 
 	   if ($result[0] != 0){ $message='Ce numero  est  <br> déjà attribué!  <br>'; }
-	   else {include("SERVEUR/ecritureBD_insertionSQL.php");}
+	   else {include("backend/ecritureBD_insertionSQL.php");}
 	   
 	}
 	

@@ -24,8 +24,8 @@
 								<li>    <a href="#" class="island2" style="padding-left:37px; padding-right:37px;" > Moheli     </a>   </li><hr>
 								<li>    <a href="#" class="island3" style="padding-left:33.5px; padding-right:33.5px;" > Anjouan    </a>   </li>
 							</ul> 
-							<a  id="print__" class="piedMenuGauche"   href="SERVEUR/colonne_imprimer_acte2.php"><input type="button"  value="Imprimer" align="center"  style="background-color: #cdbe9f; height: 30px; font-weight: bold;  font-style: italic; font-family: Times New Roman, Georgia, Serif;  "  /> </a>
-							<a  id="show__" class="piedMenuGauche"   href="SERVEUR/colonne_afficher_acte2.php"><input type="button"  value="Afficher" align="center"  style="background-color: #cdbe9f; height: 30px;  font-weight: bold;  font-style: italic; font-family: Times New Roman, Georgia, Serif; "/> </a>
+							<a  id="print__" class="piedMenuGauche"   href="backend/colonne_imprimer_acte2.php"><input type="button"  value="Imprimer" align="center"  style="background-color: #cdbe9f; height: 30px; font-weight: bold;  font-style: italic; font-family: Times New Roman, Georgia, Serif;  "  /> </a>
+							<a  id="show__" class="piedMenuGauche"   href="backend/colonne_afficher_acte2.php"><input type="button"  value="Afficher" align="center"  style="background-color: #cdbe9f; height: 30px;  font-weight: bold;  font-style: italic; font-family: Times New Roman, Georgia, Serif; "/> </a>
 					
 				</div>
 			</div>

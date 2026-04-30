@@ -1,8 +1,8 @@
 <?php
 
-require_once 'SERVEUR/connection_PDO.php';
+require_once 'backend/connection_PDO.php';
 
-if(!isset($_GET['n'])) $_GET['n']=""; // Transmis par 'SERVEUR/colonne-afficher-naissance.php'
+if(!isset($_GET['n'])) $_GET['n']=""; // Transmis par 'backend/colonne-afficher-naissance.php'
 
 $id = isset($_GET['n']) ? intval($_GET['n']) : 0;
 

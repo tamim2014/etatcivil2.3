@@ -13,12 +13,12 @@
  *
  */
 
-if(!isset($_GET['n'])) $_GET['n']=""; // Transmis par ecritureBD.php ou 'SERVEUR/colonne-afficher-naissance.php' , ...etc
+if(!isset($_GET['n'])) $_GET['n']=""; // Transmis par ecritureBD.php ou 'backend/colonne-afficher-naissance.php' , ...etc
 $id=$_GET['n'];
 $id=ltrim($id);
 // try{$conn = new PDO('mysql:host=localhost;dbname=etatcivil;charset=utf8', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));} //// Le array active les exception PDO: pour obtenir + de détail sur d'eventuels erreurs
 // catch(Exception $e){die('Erreur de connexion à la base de données: '.$e->getMessage());}
-require_once 'SERVEUR/connection_PDO.php';
+require_once 'backend/connection_PDO.php';
 
 $reponse = $conn->query('SELECT * FROM liste WHERE ID='.$id );
 $donnees = $reponse->fetch();

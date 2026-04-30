@@ -2,7 +2,7 @@
 
 session_start();
 
-  require_once 'SERVEUR/connection_PDO.php';
+  require_once 'backend/connection_PDO.php';
   
  // moteur de recherche
  // moteur de recherche

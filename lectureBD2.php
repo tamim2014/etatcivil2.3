@@ -1,5 +1,6 @@
 
-<?php session_start();
+<?php 
+   session_start();
 
    /** 
     *
@@ -14,7 +15,7 @@
     if(!isset($_GET['num'])) $_GET['num']="";    $num=$_GET['num']; 
 	if(!isset($_GET['nom'])) $_GET['nom']="";     $nom=$_GET['nom'];
 	
-	require_once 'SERVEUR/connection_mysqli.php';
+	require_once 'backend/connection_mysqli.php';
 	
 	if(!empty($num) ){
 	   $requete = "SELECT * FROM liste WHERE acte=".$num ;  
@@ -120,8 +121,8 @@
 						 <div class="mnayvawo mnayvawo2 scrolbar" style="padding:5.8em;  max-height:28.5em !important; overflow-y:auto;">
                             <?php 
 							//Resulat de la recherche: Une table en une seule ligne et 7 colonnes(en haut à droite)
-							if(!empty($_GET['num'])){include("SERVEUR/lectureBD2_searchPlayBack.php");}
-							else if(!empty($_GET['nom'])) {include("SERVEUR/lectureBD2_searchPlayBackByName.php");}
+							if(!empty($_GET['num'])){include("backend/lectureBD2_searchPlayBack.php");}
+							else if(!empty($_GET['nom'])) {include("backend/lectureBD2_searchPlayBackByName.php");}
 							//"La connaissance s'acquiert par l'expérience, tout le reste n'est que de l'information" .Albert Einstein.
 
 							/****************** Rappel sur les sessions *********************************

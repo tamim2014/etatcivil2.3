@@ -23,7 +23,7 @@ $table.='<tr><th>Nom </th><th> Prenom </th><th> Numero </th><th> Prefecture </th
 while($ligne2=mysqli_fetch_array($R)){// en utlisant FOREACH ça marche pas .j'sais pas pourquoi
 	 //$table.='<tr><td>'.$ligne2["nom"].'</td><td>'.$ligne2["prenom"].'</td><td>'.$ligne2["acte"].'</td><td>'.$ligne2["prefecture"].'</td> <td> <a href="#" onclick="imprimer(this.value)">Imprimer</a> </td></tr>';
 	  /**
-	  la fonction onclick="imprimer(this.value) appelle un fichier SERVEUR/accueil_imprimer_acte.php" 
+	  la fonction onclick="imprimer(this.value) appelle un fichier backend/accueil_imprimer_acte.php" 
 	  Je vais donc annuler cette fonction et activer href comme dans lectureBD.php
 	  */
 	$table.='<tr><td>'.$ligne2["nom"].'</td><td>'.$ligne2["prenom"].'</td><td>'.$ligne2["acte"].'</td><td>'.$ligne2["prefecture"].'</td> <td> <a href="imprimer.php?n='.$ligne2["ID"].'" >Imprimer</a> </td></tr>';
