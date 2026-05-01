@@ -1,10 +1,11 @@
 <?php
 
 session_start();
-
+  //require_once 'backend/connection_mysqli.php';
   require_once 'backend/connection_PDO.php';
+  // include("backend/searchEngine.php"); //⚠️ Mettre le moteur dans ce fichier avant de tester mysqli
   
- // moteur de recherche
+  
  // moteur de recherche
 
   if(isset($_POST['acte_']))  $numero=$_POST['acte_'];
@@ -17,10 +18,13 @@ session_start();
     if(!empty($numero) && ctype_digit($numero) )
     {	 
 	  /*
+	   * Version mysqli
+	   *
 	  $sql="SELECT * FROM liste WHERE acte =".$numero; // PAS DE SLASH POUR UN ENTIER
-	  $req=mysqli_query($db,$sql) or die('Erreur SQl !<br>'.$sql.'<br>'.mysqli_error($db));
+	  $req=mysqli_query($conn,$sql) or die('Erreur SQl !<br>'.$sql.'<br>'.mysqli_error($db));
 	  $result = mysqli_fetch_row($req);
-	  */
+	   *
+	   */
         $req = $conn->prepare("SELECT * FROM liste WHERE acte = :numero");
         $req->execute([':numero' => $numero]);
         $result = $req->fetch(PDO::FETCH_ASSOC);
@@ -36,20 +40,25 @@ session_start();
 		}
 	}
 	//ctype_digit($nombre) verifie si c est un nombre entier
-	if(!empty($numero) && !ctype_digit($_POST['acte_'])) {$message = 'le numero est mal saisi'; }
-
+	if(!empty($numero) && !ctype_digit($_POST['acte_'])) {
+		$message = 'le numero est mal saisi'; 
+	}
 		  
     if(!empty($nomm) )
     {
-	    /*
+	   /*
+	    * Version mysqli
+	    *
 	     $sql2="SELECT * FROM `liste` WHERE `nom`='$nomm';";
-	     $req2=mysqli_query($db,$sql2) or die('Erreur SQl !<br>'.$sql2.'<br>'.mysqli_error($db));
+	     $req2=mysqli_query($conn,$sql2) or die('Erreur SQl !<br>'.$sql2.'<br>'.mysqli_error($db));
 	     $result2 = mysqli_fetch_row($req2);
+		*
 	    */
 
 	    $req2 = $conn->prepare("SELECT * FROM liste WHERE nom = :nom");
         $req2->execute([':nom' => $nomm]);
         $result2 = $req2->fetch(PDO::FETCH_ASSOC);
+		
 	    //if ($result2[0] == 0){
 		if (empty($result2)){
 			$message = ' aucun resultat trouv&eacute;'; 

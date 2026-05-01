@@ -1,5 +1,8 @@
 
-<?php session_start(); if(!isset($_SESSION["pref"])) $_SESSION["pref"]=""; $s=$_SESSION["pref"]; ?>
+<?php 
+  session_start(); 
+  if(!isset($_SESSION["pref"])) $_SESSION["pref"]=""; $s=$_SESSION["pref"]; 
+?>
 
 
 <!DOCTYPE html>
