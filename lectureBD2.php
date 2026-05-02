@@ -14,7 +14,8 @@
 	*/
 
     if(!isset($_GET['num'])) $_GET['num']="";    $num=$_GET['num']; 
-	if(!isset($_GET['nom'])) $_GET['nom']="";     $nom=$_GET['nom'];
+	if(!isset($_GET['nom'])) $_GET['nom']="";     $nom=$_GET['nom']; 
+	
 	
 	//require_once 'backend/connection_mysqli.php'; //⚠️ searchEngine connete déjà mais en pdo
 	 
@@ -32,6 +33,7 @@
 	*/
 	
 	//pdo
+	
 	if (!empty($num)) {
 		$requete = $conn->prepare("SELECT * FROM liste WHERE acte = :num");
 		$requete->execute(['num' => $num]);
