@@ -1,6 +1,6 @@
 	 
 	// GESTION DES MENU DE LA PAGE lectureBD.php 
-	// Ces menus sont vir�s dans la nouvelle page lectureBD.php(archiv� chez github
+	// Ces menus sont vires dans la nouvelle page lectureBD.php(archiv� chez github
 	// Lien de l'archive: https://github.com/tamim2014/etatcivil23/tree/lectureBD_archive
 	 
         /***************************** script de base qui a ispir� le slide**********************
@@ -125,7 +125,7 @@
                      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                 }
 		}
-      // Cette fonction r�pond au clic sur le lien "Afficher"
+      // Cette fonction repond au clic sur le lien "Afficher"
 	   function showActe(str) { // SUITE AU CLIC SUR LE LIEN "afficher"
             if (str == "") { 
 			     document.getElementById("yivawo").innerHTML = ""; return; 

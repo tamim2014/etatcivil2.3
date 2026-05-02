@@ -10,15 +10,19 @@
                      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                 }
 		}
-		// Avec symfony on gait:
-		// xmlhttp.open("GET", "/naissance/colonne?p=" + prfctr, true);
+		
+		
+		
+		// accueil.php
         function captureCombo(prfctr) { 
             if (prfctr == "") {
                  // Si aucune prefecture choisie, le panel est vide, donc ne souvre pas				
 			     document.getElementById("panel").innerHTML = ""; return; 
 			} else { 
                 instanceXMLHttpRequest();
-                //1. On prend une table relative � la prefecture captur�e 
+                //1. On prend une table relative � la prefecture captur�e
+		        // Avec symfony on fait:
+		        // xmlhttp.open("GET", "/naissance/colonne?p=" + prfctr, true);				
 				xmlhttp.open("GET","backend/colonne_afficher_naissance.php?p="+prfctr,true);
 				xmlhttp.send(); 
 				xmlhttp.onreadystatechange = function() { 
@@ -27,20 +31,23 @@
 					   document.getElementById("panel").innerHTML = xmlhttp.responseText;
 					}
 				};
-
             }
         }
-		function captureSousMenu(prfctr){ // prfctr=pr�fecture selectionn�e dans le sous-menu
+		
+		
+		
+		// lectureBD.php-> include("inc/lecture/topMenu.php"); ⚠️voir ligne 116
+		function captureSousMenu(prfctr){ // prfctr=prefecture selectionnee dans le sous-menu
             if (prfctr == "") { 
 			     document.getElementById("yivawo").innerHTML = ""; return; 
 			}else{ 
                 instanceXMLHttpRequest();// instance XMLHttpRequest for IE7+
                
-                //1.Connection[au backend php] et Param�ttrage[prfctr est la prefecture choisie]  
+                //1.Connection[au backend php] et Paramettrage[prfctr est la prefecture choisie]  
 				xmlhttp.open("GET","backend/lectureBD_afficherNaissance.php?pr="+prfctr,true); // On DEVRAI reutileSER le mm script car c'est le mm traitement MAIS LA VARIABLE SESSION se la ramene et m'emmerde!
                 //2.Envoi
 				xmlhttp.send(); 
-				//3.R�ception r�ponsebackendveur [xmlhttp.responseText] et affichage dans div yivawo
+				//3.Reception reponse [xmlhttp.responseText] et affichage dans div yivawo
 				xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { 
 					document.getElementById("yivawo").innerHTML = xmlhttp.responseText;}
 					//activerPopup();
@@ -91,10 +98,12 @@
  /**
     * 
 	* L'AFFICHAGE DE LA TABLE DANS "lectureBD.php" SE FAIT EN 3 ETAPES:
+	*
+	* Combinaison jQuery/Ajax
     *
     * ETAPE1: jQuery capture le clic sur la prefecture
 	           $("... ul.subMenu li a").click(...);
-    * ETAPE2: jQuery transmet la prefecture(prfctr) cliqu�e � AJAX en lan�a cette fonction: 
+    * ETAPE2: jQuery transmet la prefecture(prfctr) cliquee a AJAX en lancant cette fonction: 
 	           captureSousMenu(this.textContent);
     *
     * ETAPE3: AJAX execute la fontion pour afficher la table relative � la prefecture transmise:
@@ -103,7 +112,7 @@
     *         document.getElementById("yivawo").innerHTML = xmlhttp.responseText;	 
 	*
     */	 
-		 
+	// lectureBD.php-> include("inc/lecture/topMenu.php"); ⚠️voir ligne 40	 
 	$(document).ready(function(){
 		//topMenu.php(sous-menu): : ACTIVATION DES LIENS DU SOUS-MENU accordeon(les prefectures)
 		$("ul li.dropdown div.dropdown-content div#aside ul.navigation li.toggleSubMenu  ul.subMenu li a").click(function() {// jQuery capture clic 
