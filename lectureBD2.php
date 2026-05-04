@@ -65,16 +65,6 @@
 	 <link href="css/dropdown.css"  rel="stylesheet"    />	 
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsivelectureBD.css"  rel="stylesheet"/>
-	 <style>
-	     /* Table resultat de recherche par noms */
-		 .scrolbarSearch::-webkit-scrollbar-track {
-			  background: inherit; /*  couleur du canal */
-			  
-		 }
-        
-
-
-	 </style>
 	 <!--
 	    ⚠️Attention. form est le parent des colones, pas .contenu ⚠️  
 	    ⚠️Par contre .contenu est le bon parent dans les pages d'accès en lecture( comme ici) ⚠️
