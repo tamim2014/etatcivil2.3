@@ -1,5 +1,5 @@
 <?php
-   include("backend/searchEngine.php"); 	
+   include("backend/searchMessages.php"); 	
 ?>
 
 <!DOCTYPE html>

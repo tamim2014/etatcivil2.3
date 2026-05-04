@@ -1,7 +1,7 @@
 
 <?php 
   //session_start();  //backend/searcheEngin demarre une session
-    include("backend/searchEngine.php"); // c'est une connection pdo ici  qui m'oblige à convertir 3 fichiers
+    include("backend/searchMessages.php"); // c'est une connection pdo ici  qui m'oblige à convertir 3 fichiers
 
    /** 
     *

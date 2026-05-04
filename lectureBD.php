@@ -1,7 +1,7 @@
 
 <?php 
   //session_start();  backend/searcheEngin demarre une session
-  include("backend/searchEngine.php");
+  include("backend/searchMessages.php");
   // c'la valeur capturée par capture_items.js et transmis à lectureBD_aficherNaissance.php
   if(!isset($_SESSION["pref"])) $_SESSION["pref"]=""; $s=$_SESSION["pref"]; 
   
