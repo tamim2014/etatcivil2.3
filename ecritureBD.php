@@ -29,7 +29,7 @@
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
      <style>
 		 /* 🧩 Nettoyage: Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */
-	     		 
+		 
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js"></script>

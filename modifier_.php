@@ -43,10 +43,14 @@ try {
 	 <link href="css/dropdown.css"  rel="stylesheet"    />
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />  <!-- pour les bouton du panneau central -->
 	 <link href="css/ecritureBD.css" rel="stylesheet" title="Style" />
+	 <link href="css/ecritureBDmenudroite.css" rel="stylesheet" title="Style" />  <!--  Enleve les debordement❌ Maislaisser l'ancien style des btn dans cette page -->
+	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
+	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
 	 <style>
 	   input{
 		  padding:.2em .5em;
 	   }
+	   *{border: 1px solid red;}
      </style>	 
 	 	  
 	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>

@@ -1,15 +1,14 @@
 <?php
  echo '
- 	    <div id="menudroite">
-                <a href="accueil.php"> 
+ 	    <div id="menudroite" >
+                <a href="accueil.php" class="linkhome2"> 
 				    <div class="kangalaheMenu">  
 					   <input type="button" class="btnHover writeBtn" value="Accueil" />
 					</div>     
 				</a>
 				
+				
 				<div class="kangalaheMenu">			  
-				    <!-- <input type="submit" onclick="actenumero();" id="enregistrer"  name="Enregistrer" value="Enregistrer"/> -->					
-				    <!-- Ne pas rediriger vers l\'accueil: Afficher pour verifier d\'abord  -->
 					<input type="submit" class="btnWrite" id="enregistrer" name="Enregistrer" value="Enregistrer"/> 					
 		        </div>
 				

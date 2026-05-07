@@ -71,7 +71,7 @@
 			 }
              #tetu{  padding:1.2em .5em !important;}
 			 
-		/* 🧩 Les Boutons  */
+		/* 🧩 Style des Boutons: 2 au centre, 4 à droite  */
 			   
 		   /* Bouton Afficher l'acte, bouton imprimer l'acte  */
 		   .btnOutput{
@@ -117,3 +117,4 @@
 		   .writeBtn:hover{
 			   color:#fff !important;
 		   }
+		   
