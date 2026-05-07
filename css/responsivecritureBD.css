@@ -48,24 +48,29 @@
 		.kangalaheMenu{
 			width:auto !important;
 		}
+		
+		
 		/* btn Accueil(transparent),  btns Enregistrer, Rectifier, Nouveau document */
 		#menudroite a .kangalaheMenu input, #menudroite .kangalaheMenu input, #menudroite .kangalaheMenu a input {
 			width:100%;
 		}
 
 		/* ✅ Reajustement après test: Sur andoid */
+		
 		/*✔️ Désactiver le sticky */
 		.sticky { 
 		    position: static;
 		    top:auto;
 	    }
 		/*✔️ Aligner les labels de la declaration */
+		/*
 		.jugement{
 			margin-left:0 !important;
 		}
 		.jugement span{
 			margin-left:auto !important;
 		} 
+		*/
 		/*✔️ combler la colonne de droite */
 		#menudroite{
 			padding:0;
@@ -99,7 +104,39 @@
 		#menudroite a .kangalaheMenu, .footer{
 			display:none;
 		}
+		/* Elargir les champs de saisie de la table gauche: le laabel haut depasse */
+		.tablegauche tr td select, .tablegauche tr td input{
+		   padding:.1em .3em .1em .5em; /* 8px */
+		   width:69.69% !important;
+	    }
+		
+	
+	
+	
+	  
+
+		
+		 /* ✅ modifier_.php */
+	   
+
+	
+	
 	}
+	
+	@media screen and (max-width: 1000px) {
+		/*  Ajuster l'espace*/
+		.tablemenu{
+		   height:auto !important;
+		   margin:0 !important;
+		   padding:0 !important;
+		}
+		/* Resserer les btns */
+	   .menudroiteEdit .kangalaheMenu{
+		   margin-top: 0 !important;			   
+		}
+	}
+	
+	
 	
    /*
 	  Le test qui sauve : tjrs poser ça pour debug

@@ -173,15 +173,15 @@
 							 <tr><td> <font color="##1D702D"><b>La d&eacute;claration</b></font></td> </tr>
 							 <tr> 
 								 <td> <input type="text" name="declaration_faite_par" placeholder=" faite par:"> </td>
-								 <td class="jugement" style="text-align: left; margin-left:10px;"> <span style=" margin-left:90px;" >  Emetteur jugement</span></td>
+								 <td ><input class="jugement" type="text"  placeholder="Emetteur jugement"></td>
 							 </tr>
 							 <tr> 
 								 <td > <input type="text" name="declaration_recue_pa" placeholder=" re&ccedil;ue par"> </td>
-								 <td class="jugement" style="text-align: left; margin-left:10px;"> <span style=" margin-left:90px;" >  Titre  recepteur</span></td>
+								 <td ><input class="jugement" type="text"  placeholder="Titre  recepteur"></td>
 							 </tr>
 							 <tr> 
 								 <td> <input id="tetu" type="date" name="datejugement" placeholder=" date jugement : " style="height:15px;"> </td>
-								 <td class="jugement" style="text-align: left; margin-left:10px;"> <span style=" margin-left:90px;" >Date  jugement</span></td>
+								 <td ><input class="jugement" type="text"  placeholder="Date jugement"></td>
 							 </tr>
 						 </p>
 						<tr> 

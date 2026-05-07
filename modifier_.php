@@ -50,7 +50,13 @@ try {
 	   input{
 		  padding:.2em .5em;
 	   }
-	   *{border: 1px solid red;}
+	
+	   
+	   	.menudroiteEdit .kangalaheMenu{
+			margin-top: 2em;			   
+		}
+	   
+	
      </style>	 
 	 	  
 	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>

@@ -118,3 +118,26 @@
 			   color:#fff !important;
 		   }
 		   
+		   /*✔️ labels de la declaration */
+		   	.jugement{
+			    border:none !important;
+				background:transparent !important;
+		    }
+			
+			/* ✅ modifier_.php */
+			
+		    /*Ecarter les btn menu droite */
+					/* Grandir les champs de saisie */
+		    input{
+				  padding:.2em .5em;
+			}
+			
+			.menudroiteEdit .kangalaheMenu{
+				margin-top: 2em;			   
+			}
+			
+	
+			
+			
+			
+
