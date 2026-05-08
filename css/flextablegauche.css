@@ -21,6 +21,8 @@
 		
 	    .tablegauche{
 		    display:flex; /* c'ce qui donne ce rendu particulier à cette page ⚠️ */
+			gap:10px;
+            align-items:flex-star;		
 			width:79vh; /* 🔍⚠️ */
 		    min-height:100vh !important; /* ⚠️ */
 			margin-bottom:0; 

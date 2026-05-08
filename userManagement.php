@@ -104,6 +104,32 @@
 	<link href="css/flextablegauche.css"  rel="stylesheet" />
 	<link href="css/usermanagement.css"  rel="stylesheet" /> <!-- ⚠️ specifique à cette page -->
 	<link href="css/responsive.css"  rel="stylesheet"/>
+	
+	<style>
+	    .contenu{
+			display:flex !important;			
+	    }
+
+	
+	    @media screen and (max-width: 1000px) {
+			#formSource, .colonne_contenu {
+				flex: 1 1 300px !important;
+			}
+			
+			
+			/*✔️ Désactiver le sticky */
+			.sticky { 
+				position: static;
+				top:auto;
+			}
+			/* ⚠️⚠️Voilà le coupable( qui mange le 1er formulaire gauche 
+			    .tablegauche{  display:grid; }
+				demander à chatgpt commen faire
+			*/
+		}
+	</style>
+	
+	
 	<script src="js/jquery.js"></script><!-- pourquoi? -->
 </head>
 
@@ -122,7 +148,7 @@
 			   <?php include("inc/accueil/accueil_menucentral_login.php");   ?>
 		</div>
     </header>
-    <div class="contenu" style="display:flex;">
+    <div class="contenu">
 	    <form id="formSource" action ="" method="POST" name="form1"  >
 			<!-- LE PANNEAU DE GAUCHE : Recher des document par numero ou nom -->
 
