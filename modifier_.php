@@ -46,18 +46,6 @@ try {
 	 <link href="css/ecritureBDmenudroite.css" rel="stylesheet" title="Style" />  <!--  Enleve les debordement❌ Maislaisser l'ancien style des btn dans cette page -->
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
-	 <style>
-	   input{
-		  padding:.2em .5em;
-	   }
-	
-	   
-	   	.menudroiteEdit .kangalaheMenu{
-			margin-top: 2em;			   
-		}
-	   
-	
-     </style>	 
 	 	  
 	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	 <script type="text/javascript">
