@@ -110,7 +110,6 @@
 			.tablegauche{ 
 			      width:100%; /* ⚠️ */
 			      min-height:auto !important; /* ⚠️ */
-				  
 			} 
 		}
 		
@@ -164,7 +163,7 @@
 					font-size:.95rem;
 		        }
 				#valider_{
-	                 background: transparent;
+	                 background: transparent !important;
 				}
 				/* ✅ 8. Supprimer l'espace vide en bas ⚠️ 
 				 * 1ere espace:Espace reduit mais impossible à chasser malgré tout ça 
@@ -197,14 +196,44 @@
 					padding-top:2em !important;
 				}
 				
+				/* 🧩 Usermanagement.php */
 				
-				/*
-				#formSource{ height:auto;  }
+				@media (max-width: 1000px) {
+					.colonne_contenu h1{
+						margin-top:51.51%;
+						margin-bottom:0 ;
+					}
+					.colonne_contenu .form1{
+						margin-top:1em ;
+					}
+					.colonne_contenu .table1{
+						margin-bottom:0 ;
+					}							
+				}
+				
+				/*✔️ Désactiver le sticky 
+				.sticky { 
+					position: static;
+					top:auto;
+				}
 				*/
 		}
 	
 	
-	
-	
-	
 	/* 🧩 Ajustement après test android */
+	
+	 @media (max-width: 768px) {
+		/* index.php */
+		.t_area{
+			padding:.3em;
+			font-size:.1rem;
+			font-weight:100;
+		}
+		.footer{
+			padding-top:3em !important;
+		}
+		.footer span{
+			font-size:.85rem !important;
+		}
+		/* userManagement.php */
+	 }

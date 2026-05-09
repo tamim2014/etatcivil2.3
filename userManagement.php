@@ -1,9 +1,5 @@
-
 <?php
-   
-	
     include("backend/authentification.php"); // pas despace sinon ça plante en ligne 
-
 
     // ✅ 1. Ajouter un utilisateur
 	
@@ -96,39 +92,16 @@
 
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes">
     <title>Gestion utilisateurs </title>
 	<link href="css/template.css"  rel="stylesheet" type="text/css" >
 	<link href="css/accueil22.css" rel="stylesheet" />
     <link href="css/slide.css"     rel="stylesheet" />
 	<link href="css/dropdown.css"  rel="stylesheet" />
+	<link href="css/factorisation.css"  rel="stylesheet"/>
 	<link href="css/flextablegauche.css"  rel="stylesheet" />
 	<link href="css/usermanagement.css"  rel="stylesheet" /> <!-- ⚠️ specifique à cette page -->
 	<link href="css/responsive.css"  rel="stylesheet"/>
-	
-	<style>
-	    .contenu{
-			display:flex !important;			
-	    }
-
-	
-	    @media screen and (max-width: 1000px) {
-			#formSource, .colonne_contenu {
-				flex: 1 1 300px !important;
-			}
-			
-			
-			/*✔️ Désactiver le sticky */
-			.sticky { 
-				position: static;
-				top:auto;
-			}
-			/* ⚠️⚠️Voilà le coupable( qui mange le 1er formulaire gauche 
-			    .tablegauche{  display:grid; }
-				demander à chatgpt commen faire
-			*/
-		}
-	</style>
-	
 	
 	<script src="js/jquery.js"></script><!-- pourquoi? -->
 </head>
@@ -138,8 +111,8 @@
     <header  >
 		<div class="en-tete">
 			<div class="hollowTop"   >				   
-			   <input type=image src="img/drapeau.png" align="left" class="flag" style="height:100%; filter:brightness(80%);" />
-			   <p class="text_header" style="padding-top:2%; padding-left:45%;">OFFICE    D'&Eacute;TAT CIVIL </p>			  
+			   <input type=image src="img/drapeau.png" align="left" class="flag"  />
+			   <p class="text_header">OFFICE D'&Eacute;TAT CIVIL </p>			  
 			</div> 
 		</div>		
 		<div class="menu topnav" id="myTopnav" > 
@@ -160,22 +133,21 @@
 					-->
 					<table class="tablegauche" style="min-height:100% !important;" > 
 					    <!-- <caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;  ">  -->
-						<caption  style="caption-side:top; box-shadow: 0 20px 65px #cdbe9f inset; padding:0 8px;"> 
+						<caption> 
 						    <font color="gray" style="line-height:2;">
 								 <h3> UNION DES COMORES  </h3>
 								 <h6> Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement  </h6>
-								 <h4 style="line-height:1.3 !important;"> MINISTERE <br>DE<br> L'INTERIEUR  </h4>
+								 <h4> MINISTERE <br>DE<br> L'INTERIEUR  </h4>
 							 </font>
 							 <!-- <img src="img/armoirie.png" style="z-index:3; transform: translate(200%, 0);  "  /> -->
-							  <img src="img/armoirie.png" style="z-index:3;  margin-left:40%; margin-right:40%; margin-bottom:1%; width:20%;  "  />
-						      
+							  <img src="img/armoirie.png"/>
 							</caption>
 						 <tr > <td id="auth">AUTHENTIFICATION</td></tr>
 						 <tr><td> <font color="#cdbe9f"><b>Entrer votre</b></font> login<br/> <input  type="text"   id="login_"    name="pseudo_" > </td></tr> 
 						 <tr><td> <font color="#cdbe9f"><b>Votre</b></font> mot de passe<br/> <input  type="password"  id="pswd_"     name="motdepasse_"> </td></tr>
 						 <tr ><td style="padding-top:1em;">
 							 <textarea style="font-size:1em; " class="t_area" name="myTextBox"> Veuillez saisir vos identifiants </textarea>
-						 <br/><input id="valider_" type="submit" class="submit btnHover" value="Valider"   name="envoie"  style="background: #ECECEA ; color:#111; padding:.3em 3.3em; margin:1em auto 0; border-radius:4px; " />
+						 <br/><input id="valider_" type="submit" class="submit btnHover" value="Valider"   name="envoie"/>
 						 </td></tr>
 					</table>					 
 				</aside>
@@ -191,7 +163,7 @@
 		<!-- LE PANNEAU DE DROITE -->
 		<div class="colonne_contenu" style="text-align:center; background:inherit; ">
 		    <h1>User management</h1>
-			<div class="form-container">
+			<div class="form-container form1">
 				<h2>Ajouter un officier d'état civil</h2>
 
 				<form method="POST" action="userManagement.php">
@@ -228,7 +200,7 @@
 				</form>
 			</div>
 			<!-- liste roles -->
-			<div class="form-container">
+			<div class="form-container table1">
 			  			    <h2>Liste des officiers</h2>
 				<table class="officiers scrolbar" cellpadding="5" style="border:1px solid #c4c4c4;">
 					<tr>

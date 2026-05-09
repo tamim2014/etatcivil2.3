@@ -7,12 +7,13 @@
 
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes">
     <title>authentification </title>
 	<link href="css/template.css"  rel="stylesheet" type="text/css" >
 	<link href="css/accueil22.css" rel="stylesheet"/>
     <link href="css/slide.css"     rel="stylesheet"/>
 	<link href="css/dropdown.css"  rel="stylesheet"/>
-	<link href="css/refactor.css"  rel="stylesheet"/> <!-- ⚠️ On nettoie les elts pour factoriser ici  --> 
+	<link href="css/factorisation.css"  rel="stylesheet"/> <!-- ⚠️ On nettoie les elts pour factoriser ici  --> 
 	<link href="css/flextablegauche.css"  rel="stylesheet" />  
 	<link href="css/responsive.css"  rel="stylesheet"    />
 
