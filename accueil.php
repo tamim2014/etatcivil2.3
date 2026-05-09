@@ -7,6 +7,7 @@
 
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes">
     <title>Accueil </title>
 	<link href="css/template.css"  rel="stylesheet" type="text/css" >
 	<link href="css/accueil22.css" rel="stylesheet"   />
@@ -70,8 +71,11 @@
 			</div>
 		</form>
     </div>     
-    <div class="footer" style="text-align:left;">
-        <span ><span style="color:#555;">2026 &copy; -</span> <span style="color:#333;">Etat civil</span></span>
+    <div class="footer">
+        <p>
+		    <span>2026 &copy; -</span> 
+			<span>Etat civil</span>
+		</p>
     </div>
 </body>
 </html>

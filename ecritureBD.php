@@ -228,8 +228,11 @@
 		</form>	
 		
 	</div><!-- div.contenu -->
-    <div class="footer" style="text-align:left; ">
-        <span ><span style="color:#555;">2026 &copy; -</span> <span style="color:#333;">Etat civil</span></span>
+    <div class="footer">
+        <p>
+		    <span>2026 &copy; -</span> 
+			<span>Etat civil</span>
+		</p>
     </div>
     <!-- css du sticky: en bas de template.css -->
 	<!-- sticky.js : si je le met en haut ça prend pas -->

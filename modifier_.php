@@ -33,7 +33,8 @@ try {
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	 <meta charset="utf-8"> 
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes"> 
 	 <script src="js/ecritureBD.js"></script>
 	 <title> Acces en Ecriture a la base etatcivil</title>
 	 <link href="css/template.css"  rel="stylesheet" type="text/css" >
@@ -243,8 +244,11 @@ try {
 			</div><!-- 2�me div.colonne_laterale -->
 		</form>
 	</div><!-- div.contenu -->
-    <div class="footer" style="text-align:left;">
-        <span ><span style="color:#555;">2026 &copy; -</span> <span style="color:#333;">Etat civil</span></span>
+    <div class="footer">
+        <p>
+		    <span>2026 &copy; -</span> 
+			<span>Etat civil</span>
+		</p>
     </div>
 	<script>		
 		document.getElementByClassName("rediriger").addEventListener("click", function() {

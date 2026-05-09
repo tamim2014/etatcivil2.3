@@ -58,6 +58,7 @@
 <html lang="fr">
 <head>
      <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes">
      <title>Resultat de ta recherche: acte de naissance trouv&eacute;</title>
      <link href="css/template.css"  rel="stylesheet" type="text/css" >
 	 <link href="css/accueil22.css" rel="stylesheet"   />
@@ -151,8 +152,11 @@
 		
 	</div> <!-- fin  <div class="contenu"  >  -->
 	
-    <div class="footer" style="text-align:left; ">
-        <span ><span style="color:#555;">2026 &copy; -</span> <span style="color:#333;">Etat civil</span></span>
+    <div class="footer">
+        <p>
+		    <span>2026 &copy; -</span> 
+			<span>Etat civil</span>
+		</p>
     </div>
     <!-- <div class="mnayvawo">  <button  class="boutoyahemnayivawo"> Actes extraits de la pr&eacute;fecture de:<span id="wilaya_" style="color:#000066;  font-size: 17px; font-style: italic; font-family: \"Times New Roman\", Georgia, Serif;" > <?php  echo  $s; ?></span> </button>   </div>  -->
 <body>
