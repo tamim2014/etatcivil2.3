@@ -102,6 +102,7 @@
 	<link href="css/flextablegauche.css"  rel="stylesheet" />
 	<link href="css/usermanagement.css"  rel="stylesheet" /> <!-- ⚠️ specifique à cette page -->
 	<link href="css/responsive.css"  rel="stylesheet"/>
+
 	
 	<script src="js/jquery.js"></script><!-- pourquoi? -->
 </head>
@@ -131,7 +132,7 @@
 					  -- Problème de l'espace en bas
 					  -- ⚠️il faut ajouter "min-height:100% !important;" sur .tablegauche
 					-->
-					<table class="tablegauche" style="min-height:100% !important;" > 
+					<table class="tablegauche tablegauche2" style="min-height:100% !important;" > 
 					    <!-- <caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;  ">  -->
 						<caption> 
 						    <font color="gray" style="line-height:2;">
@@ -165,19 +166,15 @@
 		    <h1>User management</h1>
 			<div class="form-container form1">
 				<h2>Ajouter un officier d'état civil</h2>
-
 				<form method="POST" action="userManagement.php">
-					
 					<div class="form-group">
 						<label for="pseudo">Nom d'utilisateur</label>
 						<input type="text" id="pseudo" name="pseudo" required>
 					</div>
-
 					<div class="form-group">
 						<label for="mdp">Mot de passe</label>
 						<input type="password" id="mdp" name="mdp" required>
 					</div>
-
 					<div class="form-group">
 						<label for="roles">roles (optionnel)</label>
 						<input type="text" id="roles" name="roles">
@@ -201,7 +198,7 @@
 			</div>
 			<!-- liste roles -->
 			<div class="form-container table1">
-			  			    <h2>Liste des officiers</h2>
+			  	<h2>Liste des officiers</h2>
 				<table class="officiers scrolbar" cellpadding="5" style="border:1px solid #c4c4c4;">
 					<tr>
 						<th>ID</th>

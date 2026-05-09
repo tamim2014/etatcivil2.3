@@ -150,8 +150,14 @@
 					gap:0;
 			        width:100% ;
 		        }
+				/* pour index.php */
 				.tablegauche th, .tablegauche td{
-                    min-width:100vw;
+                    min-width:100vw; 
+		        }
+				/* pour usermanagement.php */
+				
+				.tablegauche2 th, .tablegauche2 td{
+                    min-width:97vw;					
 		        }
 				/* ✅ 6. Elargir les input  */
 				.tablegauche td input, .t_area{
@@ -200,14 +206,14 @@
 				
 				@media (max-width: 1000px) {
 					.colonne_contenu h1{
-						margin-top:51.51%;
-						margin-bottom:0 ;
+						margin-top:51.51% !important;
+						margin-bottom:0 !important ;
 					}
 					.colonne_contenu .form1{
 						margin-top:1em ;
 					}
 					.colonne_contenu .table1{
-						margin-bottom:0 ;
+						margin-bottom:0 !important;
 					}							
 				}
 				
@@ -217,12 +223,13 @@
 					top:auto;
 				}
 				*/
-		}
+		} 
 	
 	
 	/* 🧩 Ajustement après test android */
 	
-	 @media (max-width: 768px) {
+	 /* @media (max-width: 768px) { */
+	 @media screen and (max-width: 1000px) { 
 		/* index.php */
 		.t_area{
 			padding:.3em;
@@ -236,4 +243,32 @@
 			font-size:.85rem !important;
 		}
 		/* userManagement.php */
+		div.table1 table.officiers tr th:first-child, .officiers tr td:first-child {
+			display:none;
+		}
+		div.table1 table.officiers, div.table1 table.officiers tr th, div.table1 table.officiers tr td{
+			border-radius:0;
+		}
+		
+		div.table1 table.officiers tr td{
+			font-size:.65rem;
+		}
+		 /* Aligner verticalement les formulaire de la page droite */
+        .form-container form {
+			 display: block !important;
+			 flex-direction: column !important; /* « Arrange tes enfants du haut vers le bas, comme une pile verticale. »  */
+		}
+		
+	 }
+	 
+	 @media (max-width: 768px) {
+		 /* sortir .colonne_contenu en dessous de "formSource */
+		.colonne_contenu h1{
+			margin-top:71.71% !important;
+			margin-bottom:0 !important ;
+		}
+		/* text du footer */
+		.footer span {
+			padding-bottom:2em !important;
+		}
 	 }
