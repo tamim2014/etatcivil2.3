@@ -267,8 +267,12 @@
 			margin-top:71.71% !important;
 			margin-bottom:0 !important ;
 		}
+		/* stabiliser le footer */
+		.footer{
+			height:auto; /* sinon <p> sort hors du footer */ 
+		}
 		/* text du footer */
-		.footer span {
-			padding-bottom:2em !important;
+		.footer p {
+			padding:1em 1em 0;		
 		}
 	 }
