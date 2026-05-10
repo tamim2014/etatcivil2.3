@@ -106,15 +106,64 @@
 		
 		/* @media (max-width: 1000px) { */
 		@media screen and (max-width: 1000px) {
-			#formSource{ width:100%; height:40vh; } 
+			#formSource{ 
+			    width:100%;
+               	height:40vh; 
+			} 
 			.colonne_laterale{ 
-			    min-width: 100% ; /* ⚠️ */
+			    min-width: 100%; /* ⚠️ */
 			    padding:0; 
 			} 
 			.tablegauche{ 
 			      width:100%; /* ⚠️ */
 			      min-height:auto !important; /* ⚠️ */
-				  
-			} 
+			}
+			
+			/* Dimanche 10.05.26 */
+			
+			/* Elargir les input */
+            .tablegauche input, textarea{
+			    min-width:80% !important;
+		    }
+			/* remplir l'espace */
+			.tabledroite{
+			    margin:0 ;
+				padding:0;
+				min-height:auto !important;
+				width:auto;
+		    }
+			.tabledroite tr td.listemenu{
+				
+			}
+			.listemenu{
+				line-height:1.5;
+				
+			}
+			.tabledroite tr td table, #commandePanel {
+                max-width:94%  !important;
+				margin:auto;
+				
+			}
+
+			.aside2{
+				display:grid;
+					
+              				
+			}
+			.colonne_contenu{
+				margin-top:4% !important;
+				margin-bottom:10% !important;
+			
+				
+			}
+			/* reajustement apres test */
+            body, .tabledroite {
+				box-shadow: 0 0 65px #cdbe9f inset;
+			}
+			body,.tabledroite{
+				background: #ccc; /* c4c4c4 */
+			}
+
+		
 		}
         

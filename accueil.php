@@ -10,10 +10,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes">
     <title>Accueil </title>
 	<link href="css/template.css"  rel="stylesheet" type="text/css" >
-	<link href="css/accueil22.css" rel="stylesheet"   />
-    <link href="css/slide.css"     rel="stylesheet"   />
-	<link href="css/dropdown.css"  rel="stylesheet"    />
+	<link href="css/accueil22.css" rel="stylesheet"/>
+    <link href="css/slide.css"     rel="stylesheet"/>
+	<link href="css/dropdown.css"  rel="stylesheet"/>
+	<link href="css/searchEngine.css"  rel="stylesheet"/>
+	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	<link href="css/responsiveAccueil.css"  rel="stylesheet"/>
+	
     <!-- ✅ Pour les messages - Boite de dialogue et les Popup -->
 	<script src="js/dialogueBox.js"></script>
 	<!-- ✅ Ouverture du panel -->
@@ -51,9 +54,10 @@
 							<!--  <img src="img/armoirie.png" style="z-index:3; transform: translate(210%, 0);  "  /> -->
 							  <img src="img/armoirie.png" style="z-index:3;  margin-left:40%; margin-right:40%; width:20%;  " /> 
 						 </caption>
-						 <tr > <td id="recherchedocument">RECHERCHE DE DOCUMENT</td></tr>
-						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> number<br/> <input style="width:50%;" id="recherchenum" type="text" name="acte_" pattern=".{1,}"  > </td></tr> 
-						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> name    <br/> <input style="width:50%;" id="recherchenom" type="text" name="nom_"  > </td></tr>
+						 <tr> <td id="recherchedocument">RECHERCHE DE DOCUMENT</td></tr>
+						  <tr><td> <font color="#cdbe9f"><b>Search by</b></font> number<br/> <input style="width:50%;" id="recherchenum" type="text" name="acte_" pattern=".{1,}"> </td></tr>
+						  <tr><td> <font color="#cdbe9f"><b>Search by</b></font> name    <br/> <input style="width:50%;" id="recherchenom" type="text" name="nom_"> </td></tr>
+						 
 						 <tr><td style="padding-top:1em;">
 							 <textarea class="t_area" style="font-size:1em" name="myTextBox" cols="24" rows="4"> <?php echo $message ; ?> </textarea>
 						 <br/><input class="btnHover" type="submit" name="envoie" value="Chercher"  style="background:transparent ; color:#111; padding:.3em 3.3em; margin:1em auto; " />

@@ -62,6 +62,11 @@
 		 */
 	}
 
+    /* Ajustement après test */
+	.dropdown:last-child{
+		padding-bottom:0 !important;
+	}
+
 }
 
 

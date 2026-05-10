@@ -131,6 +131,7 @@
 				    <!--
 					  -- Problème de l'espace en bas
 					  -- ⚠️il faut ajouter "min-height:100% !important;" sur .tablegauche
+					  -- Ajout de la classe .tablegauche2: Pour resoudre le depassement horizontal/scroll
 					-->
 					<table class="tablegauche tablegauche2" style="min-height:100% !important;" > 
 					    <!-- <caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;  ">  -->
@@ -143,9 +144,9 @@
 							 <!-- <img src="img/armoirie.png" style="z-index:3; transform: translate(200%, 0);  "  /> -->
 							  <img src="img/armoirie.png"/>
 							</caption>
-						 <tr > <td id="auth">AUTHENTIFICATION</td></tr>
-						 <tr><td> <font color="#cdbe9f"><b>Entrer votre</b></font> login<br/> <input  type="text"   id="login_"    name="pseudo_" > </td></tr> 
-						 <tr><td> <font color="#cdbe9f"><b>Votre</b></font> mot de passe<br/> <input  type="password"  id="pswd_"     name="motdepasse_"> </td></tr>
+						 <tr > <td id="auth" >AUTHENTIFICATION</td></tr>
+						 <tr><td> <font color="#cdbe9f"><b>Entrer votre</b></font> login<br/> <input type="text"   id="login_"  name="pseudo_" > </td></tr> 
+						 <tr><td> <font color="#cdbe9f"><b>Votre</b></font> mot de passe<br/> <input type="password"  id="pswd_"   name="motdepasse_"> </td></tr>
 						 <tr ><td style="padding-top:1em;">
 							 <textarea style="font-size:1em; " class="t_area" name="myTextBox"> Veuillez saisir vos identifiants </textarea>
 						 <br/><input id="valider_" type="submit" class="submit btnHover" value="Valider"   name="envoie"/>
