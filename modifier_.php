@@ -38,12 +38,11 @@ try {
 	 <script src="js/ecritureBD.js"></script>
 	 <title> Acces en Ecriture a la base etatcivil</title>
 	 <link href="css/template.css"  rel="stylesheet" type="text/css" >
-	 <link href="css/accueil22.css" rel="stylesheet"   />
-		 
-	 <link href="css/slide.css"     rel="stylesheet"   /> 
-	 <link href="css/dropdown.css"  rel="stylesheet"    />
-	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />  <!-- pour les bouton du panneau central -->
-	 <link href="css/ecritureBD.css" rel="stylesheet" title="Style" />
+	 <link href="css/accueil22.css" rel="stylesheet"/>		
+	 <link href="css/slide.css"     rel="stylesheet"/> 
+	 <link href="css/dropdown.css"  rel="stylesheet"/>
+	 <link href="css/lectureBD.css" rel="stylesheet" title="Style"/>  <!-- pour les bouton du panneau central -->
+	 <link href="css/ecritureBD.css" rel="stylesheet" title="Style"/>
 	 <link href="css/ecritureBDmenudroite.css" rel="stylesheet" title="Style" />  <!--  Enleve les debordement❌ Maislaisser l'ancien style des btn dans cette page -->
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
