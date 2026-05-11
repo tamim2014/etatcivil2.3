@@ -115,13 +115,15 @@
 	    .rappel{
 			background:#558C89 !important;
 			color:#333; /* #cba */
-		}
-
-	
-	
+			border-top:.5px solid #222;
+		}	
 	}
 	
 	@media screen and (max-width: 1000px) {
+		/*  tablegauche: Pour acte certifié conforme*/
+		span.conforme{
+			display:none;
+		}
 		/*  Ajuster l'espace*/
 		.tablemenu{
 		   height:auto !important;
@@ -133,9 +135,7 @@
 		   margin-top: 0 !important;			   
 		}
 	}
-	
-	
-	
+		
    /*
 	  Le test qui sauve : tjrs poser ça pour debug
 	  * { outline: 1px solid red; }

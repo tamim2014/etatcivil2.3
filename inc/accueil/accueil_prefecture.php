@@ -21,14 +21,53 @@
 	  <link href="css/commandes_panel.css" rel="stylesheet"  /> 
 	  
 	  <!-- On choisi la prefecture pour afficher sa table relatif sdans le panel --> 
+	    <!--	
 		<table>
-			 <tr><td class="listemenu" id="flip" > 
-				Acte de naissance  <?php include("inc/accueil/accueil_choisir_naissance.php"); ?>   <div id="panel" class="scrolbar"></div> <!-- div#panel est le conteneur de la table -->  
-				Acte de mariage&nbsp;&nbsp;&nbsp;  <?php include("inc/accueil/accueil_choisir_mariage.php"); ?>
-				Acte de divorce&nbsp;&nbsp;&nbsp;&nbsp; <?php include("inc/accueil/accueil_choisir_divorce.php"); ?>
-				Acte de dec&egrave;s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <?php include("inc/accueil/accueil_choisir_deces.php"); ?>
+			 <tr><td class="listemenu" id="flip" > 				
+				<span>Acte de naissance</span> <?php include("inc/accueil/accueil_choisir_naissance.php"); ?>    <div id="panel" class="scrolbar"></div>   
+                <span style="padding-right:8px">Acte de mariage</span> <?php include("inc/accueil/accueil_choisir_mariage.php"); ?>
+                <span style="padding-right:14px">Acte de divorce</span> <?php include("inc/accueil/accueil_choisir_divorce.php"); ?> 
+				<span style="padding-right:26px">Acte de dec&egrave;s</span> <?php include("inc/accueil/accueil_choisir_deces.php"); ?>			
 			 </td></tr>  
 		</table>
+		-->
+		<table>
+		  <tr>
+			<td class="listemenu" id="flip">
+				<div class="blocActes">
+
+					<div class="ligne">
+						<span>Acte de naissance</span>
+						<?php include("inc/accueil/accueil_choisir_naissance.php"); ?>
+						
+					</div>
+					<div id="panel" class="scrolbar"></div>
+
+					<div class="ligne">
+						<span>Acte de mariage</span>
+						<?php include("inc/accueil/accueil_choisir_mariage.php"); ?>
+					</div>
+
+					<div class="ligne">
+						<span>Acte de divorce</span>
+						<?php include("inc/accueil/accueil_choisir_divorce.php"); ?>
+					</div>
+
+					<div class="ligne">
+						<span>Acte de décès</span>
+						<?php include("inc/accueil/accueil_choisir_deces.php"); ?>
+					</div>
+					
+
+				</div>
+
+
+
+
+			</td>
+		  </tr>
+		</table>
+
 		<!-- le p'tit menu sous le panel [qui appelle une nouvelle table: voir la 5ème colonne du slide]-->
 		<div id="commandePanel" >
 			<!-- Solution jQuery -->

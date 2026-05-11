@@ -1,6 +1,5 @@
 
 #panel, #flip {
-   
     text-align: center;
     background-color: #e5eecc;
     border: solid 1px #c3c3c3;
@@ -8,7 +7,6 @@
 	-webkit-border-radius:8px;
 	-moz-border-radius:8px;
 	-khtml-border-radius:8px;
-	
 }
 
 #panel {
@@ -16,14 +14,13 @@
 	 width:100%;
 	 font-size:12px;
 	 overflow:  auto; 
-	 white-space:nowrap;
+	 white-space:nowrap; 
      display: block;
 	 
 	border-radius:8px;
 	-webkit-border-radius:8px;
 	-moz-border-radius:8px;
 	-khtml-border-radius:8px;
-
 }
 
 /* table du panel: accueil.php  */

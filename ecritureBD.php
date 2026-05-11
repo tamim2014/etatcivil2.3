@@ -59,9 +59,9 @@
 							<font color="gray" style="line-height:2;">
 								<h3> UNION DES COMORES  </h3>
 								<h6> Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement </h6>
-								<h4> MINISTERE DE L\'INTERIEUR  </h4>
+								<h4> MINISTERE DE L'INTERIEUR  </h4>
 							</font>
-							<img src="img/armoirie.png"  style="z-index:3;   margin-left:40%; margin-right:40%; width:20%; "  />
+							<img src="img/armoirie.png"  style="z-index:3;   margin-left:40%; margin-right:40%; width:20%;"/>
 						 </caption>	  
 						 <tr>
 						   <td><br> Pr&eacute;fecture: </td>
@@ -103,7 +103,7 @@
 						 </tr>
 						 <tr>
 							 <td></td>
-							 <td><font color="##1D702D"> <b>Centre d'Etat Civil:</b></font></td>		
+							 <td><font color="#1D702D"> <b>Centre d'Etat Civil:</b></font></td>		
 						 </tr>
 						 <tr>
 							 <td>Centre</td> 
@@ -118,10 +118,10 @@
 						 <tr><td> Du(date)  </td> <td> <input type="date" name="date_acte" required ></td></tr>
 						 <tr><td></td> <td></td></tr>
 						 
-						 <tr><td> </td><td><font color="##1D702D"> <b>Naissance de:</b></font></td> </tr>
+						 <tr><td> </td><td><font color="#1D702D"> <b>Naissance de:</b></font></td> </tr>
 						 <tr><td> Nom   </td> <td> <input type="text" name="nom" required> </td></tr>
 						 <tr><td> Pr&eacute;nom  </td> <td> <input type="text" name="prenom" required ></td></tr>
-						 <tr><td> </td><td><font color="##1D702D"> <b>Pour acte certifi&eacute; </b></font></td></tr>
+						 <tr><td> </td><td><font color="#1D702D"> <b>Pour acte certifi&eacute; <span class="conforme">conforme</span></b></font></td></tr>
 						 <tr><td> D&eacute;livr&eacute; &agrave; </td> <td> <input type="text" name="delivre_a" required></td></tr>
 						 <tr><td> Le  </td> <td> <input type="date" name="delivre_le" required></td></tr>
 						 <tr><td> L'an  </td> <td> <input type="text" name="delivre_an"> </td></tr>
@@ -151,7 +151,7 @@
 
 							 <tr> <td> <input type="text" name="naissance_sexe"   placeholder=" du sexe" > </td></tr>
 							 
-							 <tr><td> <font color="##1D702D"><b>Le p&egrave;re</b></font></td><td> <font color="##1D702D"><b>La m&egrave;re</b></font></td> </tr>
+							 <tr><td> <font color="#1D702D"><b>Le p&egrave;re</b></font></td><td> <font color="#1D702D"><b>La m&egrave;re</b></font></td> </tr>
 							  
 							 <tr> <td> <input type="text" name="pere_nom_prenom"  placeholder=" fils(fille) de" >         <td> <input type="text" name="mere_nom_prenom"  placeholder=" et de" > </td> </td></tr>
 							 <tr> <td> <input type="text" name="pere_datenaisance"  placeholder=" n&eacute; le"> </td>    <td> <input type="text" name="mere_datenaisance"  placeholder="n&eacute;e le"  > </td> </tr>
@@ -161,7 +161,7 @@
 					
 
 
-							 <!-- <tr><td> <font color="##1D702D"><b>La m&egrave;re</b></font></td> </tr> -->
+							 <!-- <tr><td> <font color="#1D702D"><b>La m&egrave;re</b></font></td> </tr> -->
 							 <!-- <tr> <td> <input type="text" name="mere_nom_prenom"  placeholder=" et de" > </td></tr> -->
 							 <!-- <tr> <td> <input type="text" name="mere_datenaisance"  placeholder="n&eacute;e le"  > </td> </tr> -->
 							 <!-- <tr> <td> <input type="text" name="mere_lieunaissance"      placeholder=" &agrave;"> </td> </tr> -->
@@ -170,7 +170,7 @@
 							 
 
 
-							 <tr><td> <font color="##1D702D"><b>La d&eacute;claration</b></font></td> </tr>
+							 <tr><td> <font color="#1D702D"><b>La d&eacute;claration</b></font></td> </tr>
 							 <tr> 
 								 <td> <input type="text" name="declaration_faite_par" placeholder=" faite par:"> </td>
 								 <td ><input class="jugement" type="text"  placeholder="Emetteur jugement"></td>

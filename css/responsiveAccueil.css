@@ -66,7 +66,6 @@
         padding: 0;
         cursor: pointer;
     }
-
     .dropbtn {
         width: 100%;
         text-align: left;
@@ -119,51 +118,290 @@
 			      min-height:auto !important; /* ⚠️ */
 			}
 			
-			/* Dimanche 10.05.26 */
+			/* ✅ Dimanche 10.05.26 */
 			
-			/* Elargir les input */
+			/* Elargir les input du searchEngine */
             .tablegauche input, textarea{
 			    min-width:80% !important;
 		    }
-			/* remplir l'espace */
+			
+			/* remplir l'espace à .colonne_contenu */
+			.colonne_contenu{
+				margin-top:4% !important;
+				margin-bottom:10% !important;
+			}
+			.aside2{
+				display:grid;
+			}
 			.tabledroite{
 			    margin:0 ;
 				padding:0;
 				min-height:auto !important;
-				width:auto;
+				width:94% !important;
+				max-width:94%  !important;
+				padding-left:.1em;
+				padding-right:.1em;
 		    }
+			/* La cellule conteneur du panel */
 			.tabledroite tr td.listemenu{
+				line-height:1.5;
+			}
+			.tabledroite tr td table, #commandePanel {
+				width:94%  !important;
+                max-width:94%  !important;
+				margin:auto;
+			}
+
+
+			/* ✅ reajustement d'après test */
+			
+			/* Espacer les acte (sans border sauf l'acte de naissance */
+			
+			
+			/* Augmenter la hauteur du panel: il doit avoir le height du searchEngine(hors caption) */
+		    .tabledroite tr td.listemenu{
+				height:auto;
+				min-height:auto !important;
+			}
+			
+			/* Aerer le panel de commade */
+			
+            td.listemenu table, div#commandePanel{
+			    height:auto;
+				min-height:auto !important;
+		    }
+			td.listemenu table tr td{
+				line-height:3 !important;
+			}
+			div#commandePanel {
+				   display:grid;
+				   gap:10px;
+			}
+            /* completer le gap */
+			.boutonSupprimer, .boutonRectifier, .boutonImprimer, .boutonTrier{
+				top:4px !important; 
+				padding-bottom:10px;
+				margin:auto;
+				border-bottom:.1px solid #ccc;
+			}
+			input.boutonSupprimer {
+			    top:7px !important;
+			}
+			input.boutonTrier {
+				padding-bottom:12px !important;
+			}
+			
+			/* On met le pannel dans un canevas*/
+			body, .colonne_contenu, .tabledroite{
+               background:#ececea !important; 
+			}
+			.tabledroite {
+				height: auto !important;
+				min-height:auto;
+				width:94% !important;
+				padding-top:.7em;
+				padding-bottom:.7em;
+				margin:auto;
+				border-radius:8px 8px 10px 10px;
+				
+				box-shadow:
+                    0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+                    0px 2px 2px 0px rgba(255, 255, 255, 0.5);
 				
 			}
-			.listemenu{
-				line-height:1.5;
+			
+			
+			
+			/* Hover sur les boutons de commandes */
+			.boutonSupprimer:hover, 
+			.boutonRectifier:hover, 
+			.boutonImprimer:hover, 
+			.boutonTrier:hover{
+				background:#eff !important; /* #eff la mm en version clair   */
+				margin:0 1em .5em auto;
+				max-width:94% !important;
+			}
+			
+			#zima,
+            #rectif,
+			#print_,
+            #trier{
+			  /*
+				transition: transform 0.2s ease;
+				transition: transform 0.25s cubic-bezier(.25,.46,.45,.94);
+			  */
+			}
+			
+			#zima:hover,
+            #rectif:hover,
+			#print_:hover,
+            #trier:hover{
+				 background:#e5eecc !important; /* #eff la mm en version clair   */
+			     /*
+				 transition: all 0.3s ease;
+				 transform: scale(1.06);
+				 */
+			}
+			/*neutraliser le strech sur les elts actif */
+			#commandePanel a {
+				display: flex;
+				align-items: center;
+				max-width: 98%; /* ajuste selon ton design */
+				width:98% !;
+				box-sizing: border-box;
+				flex-shrink: 0;
+			}
+			#commandePanel a:focus {
+				outline: none !important;
+				box-shadow: none !important;
+			}
+			#commandePanel a input:focus {
+				outline: none !important;
+				box-shadow: none !important;
+			}
+			#commandePanel a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				box-sizing: border-box;
+				flex-shrink: 0;
+			}
+
+
+
+
+
+			/* Reajustement d'après test */
+			.tabledroite{
+				margin-top:2.5em;
+			}
+			/* Bloc du haut: Aligner les <span>  */
+			
+			/* ___________________________________  */
+			
+
+			/* Alignement vertical: bloc du haut */
+			.blocActes {
+				display: flex;
+				flex-direction: column;
+				gap: 2px; /* ESPACEMENT vertical entre les lignes */
+			}
+
+			.blocActes .ligne {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				/*transition: all 0.3s ease;*/
+				gap:0; /* ESPACEMENT ENTRE LABEL ET SELECT */
 				
+			}
+			.blocActes .ligne span{
+				padding-left:.5em;
+			}
+			
+
+			.blocActes span {
+				display: inline-block;
+				width: 140px; /* Ajuste si besoin */
+				white-space: nowrap;
+			}
+             /* reduire les select */
+			 .blocActes .ligne select {
+				width: 40%; /* 85%; */
+				max-width: 40%;
+				min-width:40%;
+				margin-right:.5em;
+				box-sizing: border-box;
+			 }
+
+
+
+
+
+
+			
+			/*____________________________________*/
+			
+			
+			
+			
+			
+			
+			
+			/* Bloc du bas: les 4 btn de commandes */
+			
+			#commandePanel {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			#commandePanel a {
+				display: flex;
+				flex-direction: row !important;
+				align-items: center;
+				/* transition: all 0.3s ease; */ 
+				gap: 10px;
+			}
+			/* bloc du bas */
+			.tabledroite tr td table, #commandePanel {
+                max-width:94%  !important;
+				margin:auto;
+			}
+			
+			/* Neutraliser le strech d'android sur les elt actifs */ 
+			input:focus,
+			select:focus,
+			button:focus,
+			a:focus {
+				outline: none !important;
+				box-shadow: none !important;
+				transform: none !important;
+			}
+
+		}
+        
+		
+		/* Responsive mobile */
+		@media (max-width: 600px) {
+			.listemenu .ligne {
+				flex-direction: row; /* on garde label + select sur la même ligne */
+				justify-content: space-between;
+			}
+
+			.listemenu span {
+				white-space: nowrap; /* évite que le texte coupe */
 			}
 			.tabledroite tr td table, #commandePanel {
                 max-width:94%  !important;
 				margin:auto;
-				
 			}
+		}
+		
+		
+		/* boutons pas ringard  
+		
+		
+		#commandePanel a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    background: #3A6EA5;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color .25s ease, opacity .25s ease;
+}
 
-			.aside2{
-				display:grid;
-					
-              				
-			}
-			.colonne_contenu{
-				margin-top:4% !important;
-				margin-bottom:10% !important;
-			
-				
-			}
-			/* reajustement apres test */
-            body, .tabledroite {
-				box-shadow: 0 0 65px #cdbe9f inset;
-			}
-			body,.tabledroite{
-				background: #ccc; /* c4c4c4 */
-			}
+#commandePanel a:hover {
+    background-color: #2F5A87;
+    opacity: 0.95;
+}
 
 		
-		}
-        
+		
+		
+*/

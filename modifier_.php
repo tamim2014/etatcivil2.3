@@ -84,7 +84,8 @@ try {
 								<h6> Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement  </h6>
 								<h4> MINISTERE DE L'INTERIEUR  </h4>
 							</font>
-							<img src="img/armoirie.png"  style="z-index:3;   transform: translate(210%, 0);" />
+							<!-- <img src="img/armoirie.png"  style="z-index:3;  transform: translate(210%, 0);" /> -->
+							<img src="img/armoirie.png"  style="z-index:3;   margin-left:40%; margin-right:40%; width:20%;"/>
 						</caption>
 						<input type="hidden" name="suprim" value=" <?php echo $id;?> " /> 
 						<tr>
@@ -126,7 +127,7 @@ try {
 						</tr>
 						<tr>
 						    <td></td>
-							<td><font color="##1D702D"> <b>Centre d'Etat Civil:</b></font></td>
+							<td><font color="#1D702D"> <b>Centre d'Etat Civil:</b></font></td>
 						</tr>
 						<tr>
 							<td>Centre</td> 
@@ -155,7 +156,7 @@ try {
 						 
 						<tr>
 						    <td></td>
-							<td><font color="##1D702D"> <b>Naissance de:</b></font></td>
+							<td><font color="#1D702D"> <b>Naissance de:</b></font></td>
 						</tr>
 						<tr>
 						    <td> Nom </td> 
@@ -167,7 +168,7 @@ try {
 						</tr>
 						<tr>
 						    <td></td>
-							<td><font color="##1D702D"> <b>Pour acte certifi&eacute; conforme</b></font></td>
+							<td><font color="#1D702D"> <b>Pour acte certifi&eacute; <span class="conforme">conforme</span></b></font></td>
 					    </tr>
 						<tr>
 						    <td> D&eacute;livr&eacute; &agrave; </td>
@@ -203,21 +204,21 @@ try {
 							 <tr> <td> <input type="text" name="naissance_lieu"  value="<?php echo $donnees["naissance_lieu"];?>" placeholder=" &agrave;(lieu)"  > </td></tr>
 							 <tr> <td> <input type="text" name="naissance_sexe" value="<?php echo $donnees["naissance_sexe"];?>" placeholder=" du sexe"  > </td></tr>
 							 
-							 <tr> <td> <font color="##1D702D"><b>Le p&egrave;re</b></font></td> <td> </td></tr>
+							 <tr> <td> <font color="#1D702D"><b>Le p&egrave;re</b></font></td> <td> </td></tr>
 							 <tr> <td> <input type="text" name="pere_nom_prenom"  value="<?php echo $donnees["pere_nom_prenom"];?>" placeholder=" fils(fille) de"     > </td></tr>
 							 <tr> <td> <input type="text" name="pere_datenaisance"  value="<?php echo $donnees["pere_datenaisance"];?>" placeholder=" n&eacute; le"  > </td></tr>
 							 <tr> <td> <input type="text" name="pere_lieunaissance"     value="<?php echo $donnees["pere_lieunaissance"];?>" placeholder=" n&eacute; &agrave;"  >      </td></tr>
 							 <tr> <td> <input type="text" name="pere_profession"      value="<?php echo $donnees["pere_profession"] ;?>" placeholder=" profession "   > </td></tr>
 							 <tr> <td> <input type="text" name="pere_villederesidence"    value="<?php echo $donnees["pere_villederesidence"] ;?>" placeholder=" demeurant &agrave;"  > </td></tr>
 							
-							<tr><td> <font color="##1D702D"><b>La m&egrave;re</b></font></td> <td> </td></tr>
+							<tr><td> <font color="#1D702D"><b>La m&egrave;re</b></font></td> <td> </td></tr>
 							 <tr> <td> <input type="text" name="mere_nom_prenom"            value="<?php echo $donnees["mere_nom_prenom"];?>"  placeholder=" et de"   > </td></tr>
 							 <tr> <td> <input type="text" name="mere_datenaisance"  value="<?php echo $donnees["mere_datenaisance"];?>"  placeholder="n&eacute;e le"     > </td></tr>
 							 <tr> <td> <input type="text" name="mere_lieunaissance"      value="<?php echo $donnees["mere_lieunaissance"];?>"   placeholder=" &agrave;"     > </td></tr>
 							 <tr> <td> <input type="text" name="mere_profession"       value="<?php echo $donnees["mere_profession"] ;?>"    placeholder=" profession"     ></td></tr>
 							 <tr> <td> <input type="text" name="mere_villederesidenc"   value="<?php echo $donnees["mere_villederesidenc"] ;?>" placeholder=" demeurant &agrave;"   > </td></tr>
 							 
-							 <tr><td> <font color="##1D702D"><b>La d&eacute;claration</b></font></td> <td> </td></tr>
+							 <tr><td> <font color="#1D702D"><b>La d&eacute;claration</b></font></td> <td> </td></tr>
 							 <tr> <td> <input type="text" name="declaration_faite_par"   value="<?php echo $donnees["declaration_faite_par"];?>" placeholder=" faite par:"  > </td></tr>
 							 <tr> <td> <input type="text" name="datejugement"   value="<?php echo $donnees["datejugement"];?>" placeholder=" date jugement :"  > </td></tr>
 							 <tr> <td> <input type="text" name="declaration_recue_pa"  value="<?php echo $donnees["declaration_recue_pa"];?>" placeholder=" re&ccedil;ue par"  > </td></tr>
