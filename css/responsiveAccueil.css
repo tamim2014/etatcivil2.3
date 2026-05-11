@@ -132,6 +132,7 @@
 			}
 			.aside2{
 				display:grid;
+				
 			}
 			.tabledroite{
 			    margin:0 ;
@@ -217,7 +218,7 @@
 			.boutonRectifier:hover, 
 			.boutonImprimer:hover, 
 			.boutonTrier:hover{
-				background:#eff !important; /* #eff la mm en version clair   */
+				background:#eff !important; /* #eff ressemble #e5eecc en version plus clair   */
 				margin:0 1em .5em auto;
 				max-width:94% !important;
 			}
@@ -379,29 +380,7 @@
 			}
 		}
 		
-		
-		/* boutons pas ringard  
-		
-		
-		#commandePanel a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 14px;
-    background: #3A6EA5;
-    color: white;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color .25s ease, opacity .25s ease;
-}
-
-#commandePanel a:hover {
-    background-color: #2F5A87;
-    opacity: 0.95;
-}
 
 		
 		
 		
-*/

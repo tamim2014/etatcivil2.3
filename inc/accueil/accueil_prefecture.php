@@ -31,7 +31,7 @@
 			 </td></tr>  
 		</table>
 		-->
-		<table>
+		<table class="flip">
 		  <tr>
 			<td class="listemenu" id="flip">
 				<div class="blocActes">
@@ -57,13 +57,7 @@
 						<span>Acte de décès</span>
 						<?php include("inc/accueil/accueil_choisir_deces.php"); ?>
 					</div>
-					
-
 				</div>
-
-
-
-
 			</td>
 		  </tr>
 		</table>
@@ -74,7 +68,7 @@
 			<a id="zima"    href="backend/colonne_supprimer_acte.php"> <input type="button"  value="Supprimer"  class="boutonSupprimer"/></a> 
 			<a id="rectif"  href="backend/colonne_rectifier_acte.php"> <input type="button"  value="Rectifier"  class="boutonRectifier"/></a>
 			<a id="print_"  href="backend/colonne_imprimer_acte.php" >  <input type="button"  value="Imprimer"    class="boutonImprimer"/></a> 
-			<a id="trier"   href="backend/trier.php" >  <input type="button"  value="Ordre alphabétique"    class="boutonTrier"/></a> 
+			<a id="trier"   href="backend/trier.php"> <input  type="button"  value="Ordre alphabétique"  class="boutonTrier"/></a> 
 
 			<!-- Solution AJAX 
 			<a id="zima"    href="#"  onclick="showSupprimer()> <input type="button"  value="Supprimer"  class="boutonSupprimer" /></a> 

@@ -16,6 +16,42 @@
 	<link href="css/searchEngine.css"  rel="stylesheet"/>
 	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	<link href="css/responsiveAccueil.css"  rel="stylesheet"/>
+	<style>
+	    /* Les 4 btn du commande panne */
+		/* label qui virent au vert sur ecritureBD.php => point virgule oublié  */
+		 #commandePanel   {
+			display: table;
+			min-width:100%;
+			padding:8px 14px 18px 14px !important;
+			line-height:2;
+		 }
+         #commandePanl  a {
+			/* Impossible . Pourquoi? */
+			border-bottom:1px solid #c3c3c3 !important;
+		 }
+         #commandePanl  a:last-child {
+           /*
+		   magin-bottom:0;
+		   */
+		 }		 
+			
+		#commandePanl  a, #commandePanl  a input{	
+			padding:10px;
+			background: #e5eecc;
+			color: #111;
+			border-radius: 5px;
+			text-decoration: none;
+			transition: background-color .25s ease, opacity .25s ease;
+		}
+		#commandePanel a input:hover, #commandePanel a:hover {
+			 background-color: #eff !important;		
+		.tabledroite{
+			background: #e5eecc;
+		}
+		
+		
+	</style>
+
 	
     <!-- ✅ Pour les messages - Boite de dialogue et les Popup -->
 	<script src="js/dialogueBox.js"></script>
