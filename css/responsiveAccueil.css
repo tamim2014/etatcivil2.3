@@ -218,37 +218,34 @@
 			.boutonRectifier:hover, 
 			.boutonImprimer:hover, 
 			.boutonTrier:hover{
-				background:#eff !important; /* #eff ressemble #e5eecc en version plus clair   */
+				background:#e5eecc !important; /* #eff ressemble #e5eecc en version plus clair   */
 				margin:0 1em .5em auto;
 				max-width:94% !important;
 			}
 			
-			#zima,
-            #rectif,
-			#print_,
-            #trier{
+
 			  /*
 				transition: transform 0.2s ease;
 				transition: transform 0.25s cubic-bezier(.25,.46,.45,.94);
+				transition: all 0.3s ease;
+				 transform: scale(1.06);
 			  */
-			}
+		
 			
 			#zima:hover,
             #rectif:hover,
 			#print_:hover,
             #trier:hover{
 				 background:#e5eecc !important; /* #eff la mm en version clair   */
-			     /*
-				 transition: all 0.3s ease;
-				 transform: scale(1.06);
-				 */
 			}
 			/*neutraliser le strech sur les elts actif */
 			#commandePanel a {
 				display: flex;
 				align-items: center;
-				max-width: 98%; /* ajuste selon ton design */
+				/*
+				max-width: 98%;  ajuste selon ton design *
 				width:98% !;
+				*/
 				box-sizing: border-box;
 				flex-shrink: 0;
 			}
@@ -377,6 +374,9 @@
 			.tabledroite tr td table, #commandePanel {
                 max-width:94%  !important;
 				margin:auto;
+			}
+			#commandePanel {
+				max-width:40px  !important;
 			}
 		}
 		

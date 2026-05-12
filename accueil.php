@@ -17,25 +17,22 @@
 	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	<link href="css/responsiveAccueil.css"  rel="stylesheet"/>
 	<style>
-	    /* Les 4 btn du commande panne */
-		/* label qui virent au vert sur ecritureBD.php => point virgule oublié  */
+	    /* A mettre dans slide.css: Les 4 btn du commande panne */
+		/* Task:label qui virent au vert sur ecritureBD.php => point virgule oublié  */
 		 #commandePanel   {
 			display: table;
 			min-width:100%;
-			padding:8px 14px 18px 14px !important;
+			/* padding:8px 0 18px 0 !important; */
+			padding:8px 0 8px 0 !important;
 			line-height:2;
 		 }
-         #commandePanl  a {
-			/* Impossible . Pourquoi? */
+         #commandePanel a input {
 			border-bottom:1px solid #c3c3c3 !important;
 		 }
-         #commandePanl  a:last-child {
-           /*
-		   magin-bottom:0;
-		   */
-		 }		 
-			
-		#commandePanl  a, #commandePanl  a input{	
+		 #commandePanel a#trier input:last-child {
+			border-bottom:none !important;
+		 }			
+		#commandePanel a input{	
 			padding:10px;
 			background: #e5eecc;
 			color: #111;
@@ -43,12 +40,35 @@
 			text-decoration: none;
 			transition: background-color .25s ease, opacity .25s ease;
 		}
-		#commandePanel a input:hover, #commandePanel a:hover {
-			 background-color: #eff !important;		
-		.tabledroite{
-			background: #e5eecc;
-		}
-		
+		#commandePanel:hover{
+			 background-color:  #ddd; /* #eff; #e5eecc; */
+			 padding:18px 14px 18px 14px !important;
+        }
+		#commandePanel a input:hover{
+			background-color: #eff;  /* #eff; sinon le marron revient au bord */
+			padding:18px 14px 18px 14px !important; 
+			padding:18px 0 18px 0 !important;
+			opacity: 0.95;
+			color:115;
+			font-weight: 600;
+			transition: background-color .25s ease, opacity .25s ease;
+			
+			 
+        }
+         /* ajouter au resopnsiveAccueil.css et ❌ virer tout ce qui est en conflit avec ça */	
+		@media screen and (max-width: 1000px) {
+			#commandePanel a input:hover{
+				padding:14px 0 14px 0;
+				min-width:100%;
+				margin:auto;
+				transition: background-color .25s ease, opacity .25s ease;
+				background: #e5eecc; !important; /* #e5eecc;  pour rester sobre. Sinon #eff */
+			}
+			#commandePanel a:hover{
+				background:#ddd !important;
+			}
+        }		
+
 		
 	</style>
 

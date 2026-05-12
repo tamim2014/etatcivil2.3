@@ -6,7 +6,7 @@
     <meta charset="utf-8">   
      <title> </title>
 	 <!-- 
-	       Mais ce n'est pas logique ! 
+	       Mais ce n est pas logique ! 
 		   Il y a des dépendances qui sont appelées dans la pages sources:accueil.php
 		   i fo les virer ici, les mettre dans accueil.php et tester
 	 -->
@@ -19,10 +19,11 @@
 	  <link href="css/slide.css" rel="stylesheet" title="Style_du_Slide_pageDaccueil" />
 	  <link href="css/prefecture.css" rel="stylesheet" title="boutons_Sous_Le_Slide" />
 	  <link href="css/commandes_panel.css" rel="stylesheet"  /> 
-	  
-	  <!-- On choisi la prefecture pour afficher sa table relatif sdans le panel --> 
-	    <!--	
-		<table>
+	  <!-- Bloc haut du panel de commande -->
+	  <!-- 
+	   --   On choisi la prefecture pour afficher sa table relatif sdans le panel 
+	   --
+	   	<table>
 			 <tr><td class="listemenu" id="flip" > 				
 				<span>Acte de naissance</span> <?php include("inc/accueil/accueil_choisir_naissance.php"); ?>    <div id="panel" class="scrolbar"></div>   
                 <span style="padding-right:8px">Acte de mariage</span> <?php include("inc/accueil/accueil_choisir_mariage.php"); ?>
@@ -30,39 +31,37 @@
 				<span style="padding-right:26px">Acte de dec&egrave;s</span> <?php include("inc/accueil/accueil_choisir_deces.php"); ?>			
 			 </td></tr>  
 		</table>
+		--
 		-->
 		<table class="flip">
-		  <tr>
-			<td class="listemenu" id="flip">
-				<div class="blocActes">
+		    <tr>
+				<td class="listemenu" id="flip">
+					<div class="blocActes">
+						<div class="ligne">
+							<span>Acte de naissance</span>
+							<?php include("inc/accueil/accueil_choisir_naissance.php"); ?>
+							
+						</div>
+						<div id="panel" class="scrolbar"></div>
 
-					<div class="ligne">
-						<span>Acte de naissance</span>
-						<?php include("inc/accueil/accueil_choisir_naissance.php"); ?>
-						
+						<div class="ligne">
+							<span>Acte de mariage</span>
+							<?php include("inc/accueil/accueil_choisir_mariage.php"); ?>
+						</div>
+						<div class="ligne">
+							<span>Acte de divorce</span>
+							<?php include("inc/accueil/accueil_choisir_divorce.php"); ?>
+						</div>
+						<div class="ligne">
+							<span>Acte de décès</span>
+							<?php include("inc/accueil/accueil_choisir_deces.php"); ?>
+						</div>
 					</div>
-					<div id="panel" class="scrolbar"></div>
-
-					<div class="ligne">
-						<span>Acte de mariage</span>
-						<?php include("inc/accueil/accueil_choisir_mariage.php"); ?>
-					</div>
-
-					<div class="ligne">
-						<span>Acte de divorce</span>
-						<?php include("inc/accueil/accueil_choisir_divorce.php"); ?>
-					</div>
-
-					<div class="ligne">
-						<span>Acte de décès</span>
-						<?php include("inc/accueil/accueil_choisir_deces.php"); ?>
-					</div>
-				</div>
-			</td>
-		  </tr>
+				</td>
+		    </tr>
 		</table>
 
-		<!-- le p'tit menu sous le panel [qui appelle une nouvelle table: voir la 5ème colonne du slide]-->
+		<!-- Bloc bas: le petit menu sous le panel [qui appelle une nouvelle table: voir la 5ème colonne du slide]-->
 		<div id="commandePanel" >
 			<!-- Solution jQuery -->
 			<a id="zima"    href="backend/colonne_supprimer_acte.php"> <input type="button"  value="Supprimer"  class="boutonSupprimer"/></a> 
