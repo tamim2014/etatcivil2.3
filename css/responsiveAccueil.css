@@ -95,11 +95,11 @@
 		}
 
 		/*  ✅ 3. Rendre .colonne_contenu flexible */
-		    .colonne_contenu {
-				flex: 1 1 400px; /* largeur minimale */
-				max-width: 100%;
-				box-sizing: border-box;
-			}
+		.colonne_contenu {
+			flex: 1 1 400px; /* largeur minimale */
+			max-width: 100%;
+			box-sizing: border-box;
+		}
 			
 		/* 🎯 On ajuste les dimensions( surtout .tablegauche) 	*/
 		
@@ -223,21 +223,6 @@
 				max-width:94% !important;
 			}
 			
-
-			  /*
-				transition: transform 0.2s ease;
-				transition: transform 0.25s cubic-bezier(.25,.46,.45,.94);
-				transition: all 0.3s ease;
-				 transform: scale(1.06);
-			  */
-		
-			
-			#zima:hover,
-            #rectif:hover,
-			#print_:hover,
-            #trier:hover{
-				 background:#e5eecc !important; /* #eff la mm en version clair   */
-			}
 			/*neutraliser le strech sur les elts actif */
 			#commandePanel a {
 				display: flex;
@@ -357,6 +342,22 @@
 				box-shadow: none !important;
 				transform: none !important;
 			}
+			
+
+			/*############################################################################################ */
+			/*####### Mise à jour du bloc bas: gris sur le contour + reajustement des btn en mode hover ####### */
+			
+			#commandePanel a:hover{
+				background:#ddd !important;
+			}
+			#commandePanel a input:hover{
+				padding:14px 0 14px 0;
+				min-width:100%;
+				margin:auto;
+				transition: background-color .25s ease, opacity .25s ease;
+				background: #e5eecc; !important; /* #e5eecc;  pour rester sobre. Sinon #eff */
+			}
+			/*############################################################################################ */
 
 		}
         
