@@ -100,6 +100,9 @@
 			max-width: 100%;
 			box-sizing: border-box;
 		}
+		
+		
+		
 			
 		/* 🎯 On ajuste les dimensions( surtout .tablegauche) 	*/
 		
@@ -143,15 +146,26 @@
 				padding-left:.1em;
 				padding-right:.1em;
 		    }
-			/* La cellule conteneur du panel */
+			/* Le bloc haut: La cellule conteneur du panel */
 			.tabledroite tr td.listemenu{
 				line-height:1.5;
+				min-width:92.7vw  !important;
 			}
 			.tabledroite tr td table, #commandePanel {
 				width:94%  !important;
                 max-width:94%  !important;
 				margin:auto;
 			}
+			td.listemenu .blocActes #panel  table tr {
+				font-size:0.75rem !important;
+				
+			}
+			td.listemenu .blocActes #panel  table tr th, 
+			td.listemenu .blocActes #panel  table tr td {
+				border-radius:0 !important;
+			}
+
+			
 
 
 			/* ✅ reajustement d'après test */
@@ -314,9 +328,7 @@
 			   max-height: 250px;
 			 }
 			 
-			 td.listemenu .blocActes #panel  table tr {
-				font-size:0.75rem !important;
-			}
+
 			
 			/*____________________________________*/
 			

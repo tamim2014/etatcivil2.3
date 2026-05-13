@@ -33,7 +33,7 @@
 		</table>
 		--
 		-->
-		<table class="flip">
+		<table class="flip" >
 		    <tr>
 				<td class="listemenu" id="flip">
 					<div class="blocActes">
