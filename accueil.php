@@ -17,7 +17,6 @@
 	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	<link href="css/responsiveAccueil.css"  rel="stylesheet"/>
 	<style>
-	    
 		/* Task:label qui virent au vert sur ecritureBD.php => point virgule oublié  */
 		
 		/* ####### Finition bloc de commande: Bloc bas => dans slide.css ####### */ 

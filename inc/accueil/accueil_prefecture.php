@@ -45,15 +45,15 @@
 						<div id="panel" class="scrolbar"></div>
 
 						<div class="ligne">
-							<span>Acte de mariage</span>
+							<span class="mariage">Acte de mariage</span>
 							<?php include("inc/accueil/accueil_choisir_mariage.php"); ?>
 						</div>
 						<div class="ligne">
-							<span>Acte de divorce</span>
+							<span class="divorce">Acte de divorce</span>
 							<?php include("inc/accueil/accueil_choisir_divorce.php"); ?>
 						</div>
 						<div class="ligne">
-							<span>Acte de décès</span>
+							<span class="deces">Acte de décès</span>
 							<?php include("inc/accueil/accueil_choisir_deces.php"); ?>
 						</div>
 					</div>

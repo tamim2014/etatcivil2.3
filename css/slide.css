@@ -8,15 +8,58 @@
 	-moz-border-radius:8px;
 	-khtml-border-radius:8px;
 }
+/* #########################################################################
+ * 
+ * Bloc haut: Mise à jour du 12.05.26
+ * Aerer les ligne,
+ * aligner verticalement et en augmentant le font-size
+ *
+ * Quant au contenu(la table): Elle est gerée dans accueil22.css 🎉
+ * 
+ */
+ #flip .blocActes {
+    font-size:1.1rem;
+    font-weight:500;
+    /* aligner verticalement */	
+	display:flex;  
+	justify-content:center;
+    align-items:center;
+	text-align:center;
+	flex-direction: column;
+	gap:10px;
+	margin-top:1em;
+	margin-bottom:1em;
+ }
+ /* Alignement horizontal: On aligne les 3 lignes sur actes de naissance */
+ #flip .blocActes .ligne span { float:left; }
+  
+ #flip .blocActes .ligne span.mariage, 
+ #flip .blocActes .ligne span.divorce, 
+ #flip .blocActes .ligne span.deces {
+	 padding-left:0;
+ }
+ #flip .blocActes .ligne span.mariage { padding-right:11px;}
+ #flip .blocActes .ligne span.divorce { padding-right:20px;}
+ #flip .blocActes .ligne span.deces{ padding-right:34px;}
+ 
+ #flip .blocActes .ligne select {
+	 margin-left:5em;
+	 height:2em;
+	 width:15em;
+ }
+ /* ########################### Fin Mise à jour du 12.05.26 ################### */
 
-#panel {
-	 max-height: 250px; /* à la page d'accueil, Tester Moroni avec le maximum d'enregistrement pour voir si les noms des colones ne dépassent pas la 2ème marge(ligne médiane horizontale), auquel cas: diminuer la hauteur du panel  */
+
+
+
+#panel { /*  le vrai conteneur caché⚠️ de la table */
+	 max-height: 420px; /* à la page d'accueil, Tester Moroni-Bambao avec le maximum d'enregistrement pour voir si les noms des colones ne dépassent pas la 2ème marge(ligne médiane horizontale), auquel cas: diminuer la hauteur du panel  */
 	 width:100%;
-	 font-size:12px;
+	/* font-size:12px; */
 	 overflow:  auto; 
 	 white-space:nowrap; 
      display: block;
-	 
+	 background:white;
 	border-radius:8px;
 	-webkit-border-radius:8px;
 	-moz-border-radius:8px;
@@ -27,7 +70,7 @@
 
 #panel table tr:nth-child(2n+2) td {
     color:Peru ;
-    background: silver;  /*    ✍️*/
+    background: #ccd7ff;  /*  silver  ✍️*/
     -webkit-border-radius:4px;
 }
 
@@ -98,7 +141,7 @@
 
 .panelIsland1 table tr:nth-child(2n+2) td {
     color:Peru ;
-    background:silver !important; /* #f7f7f9     ✍️*/
+    background:#ccd7ff !important; /*#ccd7ff, silver,  #f7f7f9     ✍️*/
 	border-radius:4px;
 	border-radius:4px;
     -webkit-border-radius:4px;
@@ -126,7 +169,7 @@ table
 th
 {
  color:white ;
- background:green;	/*  green;  ✍️ */
+ background:#007bff;	/*  green;  ✍️ */
  box-shadow: 7px 6px 15px #333;
    border-radius:8px 8px 0px 0px;
   -webkit-border-radius:8px;

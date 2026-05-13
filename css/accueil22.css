@@ -77,18 +77,19 @@ tr
 	border-radius:5px;
 	margin:0px;
 }
-td, th
-{
+td, th{
 	margin:0px;
 	border:0px;
 	/* padding:3px; */
 	text-align:center;
 }
-a  { text-align:right; text-decoration: none; }
+a{ 
+   text-align:right; 
+   text-decoration: none; 
+}
 
 /* ⚠️ Pour les tables de la page d'accueil: Voir aussi sur slide.css pour les table à l'interieur du panel */
-th
-{
+th{
  color:white ;
  background: green;	/*   #558C89;  ✍️ */	
  border-radius:8px;
@@ -96,7 +97,23 @@ th
  -moz-border-radius:8px;
  box-shadow: 7px 6px 15px #333;
 
-} 
+}
+/*#################### * Bloc haut: Mise à jour du 12.05.26################*/
+/* Accueil: Aerer la table dans le panel et augmenter la police */ 
+td.listemenu table tr td {
+	line-height:3;
+}
+td.listemenu .blocActes #panel  table tr {
+	font-size:0.95rem !important;
+}
+td.listemenu .blocActes #panel{ /*  le vrai conteneur caché⚠️ de la table */
+	
+}
+
+ /* ########################### Fin Mise à jour du 12.05.26 ################### */
+
+
+
 /* ⚠️ Table lectureBD.php: voir aussi Table accueil.php sur slide.css pour les table à l'interieur du panel */
 
 table.color_line tr:nth-child(2n+1) td  { 
@@ -126,7 +143,7 @@ table.officiers tr  th, table.officiers tr  td  {
 
 /* accueil.php, lectureBD.php */
 .couleurPoliceTable  tr:nth-child(2n) td { 
-		 color:  #800080 !important; /*  Peru  */
+		 color:#1f2937   !important; /* #800080  Peru  */
 }
 .couleurPoliceTable  tr:nth-child(2n+1) td { 
 		 color:black !important;

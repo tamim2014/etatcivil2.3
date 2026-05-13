@@ -22,11 +22,7 @@
 		
 		
 /* ############################################################################################# */		
-		
-		
-		
-		
-		
+				
 		.panel3  { /* panel yahé sous-sous-menu de  à droite   - contient les préfectures Moroni-bambao ,Hambou, ...etc*/
 		     list-style:none; text-align:center;
 			 display: none; 
@@ -37,12 +33,7 @@
 			 position:relative;  Line-Height: 1.5;
 			 margin-left: .4%;
 		}
-		
-           
-
-
-		 
-		 
+				 
          /*PANEAU DE DROITE */ 
 		 /* pour lectureBD.php */
 		 .mnayvawo { 
@@ -84,7 +75,7 @@
 		 /* Des couleurs alternées dans les lignes de la table: lectureBD.php*/
 		#yivawo table tr:nth-child(2n+2) td {
 				color:Peru ;
-				background: silver;
+				background:#ccd7ff; /* silver */
 				border-radius:4px;
 				-webkit-border-radius:4px;
 				-moz-border-radius:4px;
