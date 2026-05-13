@@ -76,11 +76,8 @@
 		 #commandePanel:hover a#trier input{
 			 border-bottom:1px solid #b8c29f !important; 
 		 }
-
-
 		
 	</style>
-
 	
     <!-- ✅ Pour les messages - Boite de dialogue et les Popup -->
 	<script src="js/dialogueBox.js"></script>

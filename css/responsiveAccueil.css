@@ -289,29 +289,38 @@
 				width: 140px; /* Ajuste si besoin */
 				white-space: nowrap;
 			}
+			#flip .blocActes .ligne span { 
+			   padding-left:.5em !important;
+			}
              /* reduire les select */
 			 .blocActes .ligne select {
 				width: 40%; /* 85%; */
-				max-width: 40%;
+				max-width: 40% !important;
 				min-width:40%;
 				margin-right:.5em;
 				box-sizing: border-box;
 			 }
-
-
-
-
-
-
+			 #flip .blocActes .ligne span.mariage { padding-right:auto;}
+			 #flip .blocActes .ligne span.divorce { padding-right:auto;}
+			 #flip .blocActes .ligne span.deces{ padding-right:auto;}
+			 
+			 #flip .blocActes .ligne select {
+				 margin-left:auto;
+				 height:2em;
+				 width:40%;
+			 }
+			 
+			 #panel { 
+			   max-height: 250px;
+			 }
+			 
+			 td.listemenu .blocActes #panel  table tr {
+				font-size:0.75rem !important;
+			}
 			
 			/*____________________________________*/
 			
-			
-			
-			
-			
-			
-			
+						
 			/* Bloc du bas: les 4 btn de commandes */
 			
 			#commandePanel {
