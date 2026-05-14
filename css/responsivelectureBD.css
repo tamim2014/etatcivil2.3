@@ -26,8 +26,18 @@
 
 /* --- MODE RESPONSIVE AUTOMATIQUE --- */
 
+	.mobilText1, .mobilText2, .mobilText3{
+		 display:none;
+	}
 
 @media screen and (max-width: 1000px) {
+	.mobilText1, .mobilText2, .mobilText3{
+		display:inline;
+	}
+	.desktopText1, .desktopText2, .desktopText3{
+		display:none; 
+	}
+	
 	.menu ul {
         margin-left: 0 !important;
         padding-left: 0 !important;
@@ -140,7 +150,7 @@
 				
 			  }
 			  */
-			 
+
 			  
 			 /* Colonne_contenu */
 			 			

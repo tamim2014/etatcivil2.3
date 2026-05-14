@@ -26,12 +26,14 @@
 	]);
 
     // ✅ 3. Récupération des données dans 🎁$donnees: Pour affichage du resultat dans une table 
-	 $table='<table  class="resultat_moteur" style="left:42.11%; top:18%;"  >';
-	 $table.= '<tr ><th>ID</th><th>Nom </th><th> Prenom </th><th>Acte numero</th><th style="color:transparent;">Edit</th><th style="color:transparent;">Imprimer</th><th style="color:transparent;">Afficher</th></tr>';
+	 $table='<table class="resultat_moteur" style="left:42.11%; top:18%;">';
+	 $table.='<tr><th>ID</th><th>Nom</th><th>Prenom</th><th>Acte numero</th><th></th><th></th><th></th></tr>';
 
 	 //while ($donnees = mysqli_fetch_array($result) )  
      while ($donnees = $stmt->fetch(PDO::FETCH_ASSOC)) { 	 	 
-       $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td>  <td> <a href="modifier_.php?n='.$donnees["ID"].'  &  nom_='.$donnees["nom"].'   &  prenom_='.$donnees["prenom"].'   &   acte_='.$donnees["acte"].' ">Modifier</a> </td>  <td> <a href="imprimer.php?n='.$donnees["ID"].'">Imprimer</a> </td>     <td> <a id="lien"  href="#" onclick="popup_lectureBD2();">Afficher</a> </td></tr>';
+       $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td><td><a href="modifier_.php?n='.$donnees["ID"].' & nom_='.$donnees["nom"].' & prenom_='.$donnees["prenom"].' & acte_='.$donnees["acte"].'"><span class="desktopText1">Modifier</span><span class="mobilText1">✍️</span></a></td>     
+	   <td><a href="imprimer.php?n='.$donnees["ID"].'"><span class="desktopText2">Imprimer</span><span class="mobilText2">🖨️</span></a></td>
+	   <td><a id="lien" href="#" onclick="popup_lectureBD2();"><span class="desktopText3">Afficher</span><span class="mobilText3">👁</span></a></td></tr>';
 	   // à utiliser dans include backend/pop.php (ligne4) donc dans  afficherdanspop.php
 	   // puisqu'on a courcircuté afficherdanspop.php
 	   // backend/pop.php et cette variables vont à  la poubelle
