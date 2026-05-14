@@ -175,6 +175,13 @@ th
   -webkit-border-radius:8px;
 
 }
+table:hover tr th{
+	background:#2F5A87;
+}
+table tr th:last-child{
+	border-radius:8px 0 8px 8px;
+}
+
 tr
 {
 	-moz-border-radius:4px;
