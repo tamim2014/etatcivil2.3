@@ -66,9 +66,17 @@
 	-khtml-border-radius:8px;
 }
 
-/* table du panel: accueil.php  */
+/* table du panel: Afficher  */
+#panel table.couleurPoliceTable tr:nth-child(2n+2) td {
+    color:Peru ;
+    background: #ccd7ff;  /*  silver  ✍️*/
+    -webkit-border-radius:4px;
+}
 
-#panel table tr:nth-child(2n+2) td {
+
+/* table du panel: Supprimer, Rectifier, Imprimer, Trier  */
+/* #panel table tr:nth-child(2n+2) td { */
+#panel table.crud tr:nth-child(2n+1) td {
     color:Peru ;
     background: #ccd7ff;  /*  silver  ✍️*/
     -webkit-border-radius:4px;
