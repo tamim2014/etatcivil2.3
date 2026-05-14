@@ -65,6 +65,8 @@
      <link href="css/slide.css"     rel="stylesheet"   />
 	 <link href="css/dropdown.css"  rel="stylesheet"    />	 
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />
+	 <link href="css/searchEngine.css"  rel="stylesheet"/>
+	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style"/>
 	 <link href="css/responsivelectureBD.css"  rel="stylesheet"/>
 	 <!--
 	    ⚠️Attention!
@@ -96,7 +98,7 @@
 		<div class="colonne_laterale"  >
 			<aside class="aside1" >
 			    <form action ="" method="POST" name="form1" >
-					<table class="tablegauche" style="height:25em;"> 
+					<table class="tablegauche tablegauche-lectureBD" style="height:25em;"> 
 						 <caption  style="caption-side:top; box-shadow: 0 20px 65px #cdbe9f inset;  "> 
 							<font color="gray" style="line-height:2;">
 								<h3> UNION DES COMORES  </h3>

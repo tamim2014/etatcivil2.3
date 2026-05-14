@@ -86,7 +86,7 @@
 /* @media (max-width: 768px) { */
 @media (max-width: 1000px) {
 	
-	.en-tete{ display:none;}
+	/* .en-tete{ display:none;} */
 
     /* Le conteneur du menu */
     .dropdown-content {
@@ -137,7 +137,9 @@
 	  
 	}
 	
-	.footer {margin-top:0;} 
+	.footer {
+		 margin-top:0;
+	} 
 }
 
 
