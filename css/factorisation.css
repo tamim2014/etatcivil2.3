@@ -36,9 +36,6 @@
    .aside1 .tablegauche caption font h4{
 	   line-height:1.3 !important;
    }
-   .aside1 .tablegauche caption font h4{
-	   line-height:1.3 !important;
-   }
    .aside1 .tablegauche caption img{
 	   /* transform: translate(200%, 0); */
 	   z-index:3;  
@@ -47,10 +44,13 @@
 	   margin-bottom:1%; 
 	   width:20%;
    }
-   #valider_{
+   #valider_, .sbmit{
 	   background: #ECECEA ;
 	   color:#111;
 	   padding:.3em 3.3em;
 	   margin:1em auto 0;
 	   border-radius:4px; 
+   }
+   .sbmit{
+	  background:transparent ; 
    }

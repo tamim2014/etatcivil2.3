@@ -14,7 +14,7 @@
     <link href="css/slide.css"     rel="stylesheet"/>
 	<link href="css/dropdown.css"  rel="stylesheet"/>
 	<link href="css/searchEngine.css"  rel="stylesheet"/>
-	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
+	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style"/>
 	<link href="css/responsiveAccueil.css"  rel="stylesheet"/>
 	
     <!-- ✅ Pour les messages - Boite de dialogue et les Popup -->

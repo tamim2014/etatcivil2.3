@@ -122,7 +122,7 @@
 			 */
 			 .mnayvawo2{ padding:1em 1.2em !important; }
 			 /* 
-			  *Problème: Débordement tabledroite dans lectureBD.php si tabale ouverte
+			  *Problème: Débordement tabledroite dans lectureBD.php si table ouverte
               * On remonte à lectureBD2_searchPlayBack.php		  
               *	mais 		  
               *	table.resultat_moteur ne prend pas tjrs		  
@@ -136,6 +136,56 @@
 			  */
 			 
 			  
+			 /* Colonne_contenu */
+			 			
+			#yivawo, .mnayvawo {
+               white-space: normal !important;
+            }
+			.mnayvawo, .boutoyahemnayivawo {
+               height:auto !important;
+            }
+			..mnayvawo {
+				margin-top:0 !important;
+			}
+			.boutoyahemnayivawo {
+				padding-top:1em;
+				padding-bottom:1em;
+				margin-top:1em;
+				margin-bottom:1em;
+			}
+			body{padding-bottom:0 !important;}
+			
+            /* Gestion table */
+			
+			/* 1) Forcer la table à se réduire */
+			table.tabledroite {
+				table-layout: fixed;
+				width: 100%;
+				border-collapse: collapse; /* 5) réduire l'espace interne */
+			}
+			/* 2) Casser les mots trop longs */
+			table.tabledroite tr td, 
+			table.tabledroite tr th {
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+				white-space: normal;
+			}
+            
+            .colonne_contenu, .aside2, .tabledroite, tbody tr td {
+				height:auto !important;
+			} 
+			
+			.tabledroite {
+				height: auto !important;
+				min-height: auto;
+				width: 100% !important;
+				padding-top: .7em; 
+				padding-bottom: .7em;
+				margin: auto;
+				border-radius: 8px;
+				box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+			}
+			
 			
 			
             			

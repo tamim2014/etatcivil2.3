@@ -38,8 +38,8 @@
 	.btn-accueil a{
 		padding-left:0 ;
 	}
-    .dropbtn {
-        width: 100%;
+    .dropbtn{
+        width: 100% !important;
         text-align: left;
         background: none ; 
         border: none;
@@ -70,9 +70,3 @@
 }
 
 
-/* ✅ mobile  */
-@media (max-width: 768px) {
-	.en-tete{
-		display:none;
-	}
-}

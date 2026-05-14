@@ -1,21 +1,14 @@
 <?php
- echo '
-  
-	<ul style="margin-left:28%;">
+ echo '<ul style="margin-left:28%;"> 
 	  <li class="dropdown" >
-		<button class="dropbtn btnHover">&emsp;&ensp;<a  href="accueil.php">Accueil</a> &emsp;&emsp;</button>
+		<button class="dropbtn btnHover btn-accueil"><a  href="accueil.php">Accueil</a></button>
       </li>	  
 	  <li class="dropdown" >
 		<button class="dropbtn"> Acte de naissance</button>
-		<div class="dropdown-content">
-		    <!--
-		    <a href="#">Grande-Comores-src</a>
-		    <a href="#">Anjouan-src</a>
-		    <a href="#">Moheli-src</a>		  
-		     -->
+		<div class="dropdown-content droplectureBD">
 			<div id="aside"  > 
 				<ul class="navigation"  >	
-					<li class="toggleSubMenu"> <span >Grande-Comores</span>
+					<li class="toggleSubMenu"><span>Grande-Comores</span>
 						<ul class="subMenu">
 						  <li><a href="#" class="island1">Moroni-Bambao</a></li>
 						  <li><a href="#" class="island1">Hambou</a></li>
@@ -46,7 +39,6 @@
 				</ul> 
                 <a href="ecritureBD.php" style="border-top:1px solid #bbb;">Nouvel Acte naissance</a>				
 			</div>
-			
 		</div>
 	  </li>
 	  <li class="dropdown"> 
@@ -71,8 +63,7 @@
 		 </div>	
          		 
 	   </li>
-	</ul> 
-	   
+	</ul> 	   
 ';
  
 ?>

@@ -38,10 +38,12 @@
 		 /* pour lectureBD.php */
 		 .mnayvawo { 
 		      position:relative;
-			  height:60px;
-			  width:100%;  margin:2% auto ; /* centrage horizontal du .mnayvawo*/
-			  padding:.55em; /* centrage vertical du contenu(.boutonyamnayivawo) */
-              			  			  
+			  width:100%; 
+			  height:88px;
+			  padding:.55em; 
+              padding-top:1.4em;
+			  margin:2% auto ; /* centrage horizontal*/
+			  			  
               /* Pour limiter lataille du conteneur overflow:  auto; sinon il va s'adapter à la taille du contenu */ 
 			  background-color: #e5eecc;
 			  white-space:nowrap;
@@ -51,7 +53,7 @@
 			}		
 		 .boutoyahemnayivawo{
 			   background-color: #cdbe9f; 
-			   height: 40px;   
+			   height: 44px; /*40px  */  
 			   display: block;  
 			   text-align:center;  padding-top: 5px; padding-bottom: 5px; font-size: 15px; font-style: italic; font-family: Times New Roman;  
 			   width: 80%; margin:auto ;  /* centrage horizontal */
@@ -63,14 +65,16 @@
 		/* Le tableau des résultats */	
 		#yivawo  {  
               position: relative;
-              height:59vh !important; /* min-height:59vh 🔍 pour voir que les colonnes ne descendent pas jusqu'au footer <= Bug zonning à corriger rapidement(solution: .aside1, aside2 {height:100%;// aulieu de min-height:100vh}) INCHA ALLAH */
+              height:54.55vh !important; /* min-height:59vh 🔍 pour voir que les colonnes ne descendent pas jusqu'au footer <= Bug zonning à corriger rapidement(solution: .aside1, aside2 {height:100%;// aulieu de min-height:100vh}) INCHA ALLAH */
 			  /* top:52px; left:13px; height:444px; width:539px;  */
-              width:100%;  margin:2% auto ; /* centrage horizontal du .mnayvawo*/			  
+              width:100%;  
+			  margin:2% auto ; /* centrage horizontal du .mnayvawo*/			  
 	          background-color: #e5eecc; 
 	          overflow:  auto;  white-space:nowrap;  display: block; 
 			  box-shadow: 1px 1px 0px 0px #cdbe9f;
 			  border-radius:10px;			  
          }
+
 		 
 		 /* Des couleurs alternées dans les lignes de la table: lectureBD.php*/
 		#yivawo table tr:nth-child(2n+2) td {

@@ -45,7 +45,7 @@ $reponse = $requete; // déjà exécutée ( avec la reqête préparée, pas beso
 
 //3.1 On construit une table d'affichage
 $table='<table class="couleurPoliceTable">'; 
-$table.='<tr class="tetetable" ><th>Nom </th><th> Prenom </th><th> Numéro </th><th> Prefecture </th><th>Imprimer</th><th style="border-radius:8px 0 8px 8px;">Afficher</th> <tr>';
+$table.='<tr class="tetetable"><th>Nom</th><th>Prenom</th><th>Numéro</th><th>Prefecture</th><th><span class="imprm">Imprimer</span></th><th style="border-radius:8px 0 8px 8px;"><span class="affch">Afficher</span></th><tr>';
 while($ligne = $reponse->fetch()){// en utlisant FOREACH ça marche pas .j'sais pas pourquoi
  
  //$table.='<tr><td>'.$ligne["nom"].'</td><td>'.$ligne["prenom"].'</td><td>'.$ligne["acte"].'</td><td>'.$ligne["prefecture"].'</td><td><a href="imprimer.php?n='.$ligne["ID"].'">Imprimer</a></td><td><a href="afficher.php?n='.$ligne["ID"].'" onclick=" window.open(this.href, \'Popup\', \'scrollbars=1,resizable=1,height=409,width=918 ,  top=258, left=175 \'); return false;">Afficher</a></td></tr>';

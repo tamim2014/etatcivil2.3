@@ -5,7 +5,7 @@
  *
  *****************************************************************/
 
-	  /* Serach engine: Refonte du style  */
+	  /* Search engine: Refonte du style  */
 	  	.tablegauche{
 			gap:10px;		    
 			margin-bottom:0; 
@@ -67,3 +67,26 @@
 			border-radius: 4px;
 			transition: background-color 0.2s, box-shadow 0.2s;
 		}
+		
+		/*
+         * Mode responsive
+         * les input et le textarea se sont retrecis
+         *		 
+		 */
+		@media screen and (max-width: 1000px) {
+			form {
+				display: flex;
+				flex-direction: column !important;
+				gap: 10px;
+				width: 100%;
+			}
+			/* Spécifique à lectureBD.php */
+			    .tablegauche-lectureBD tr td input,
+				.tablegauche-lectureBD tr td textarea {
+					width: 70% !important;
+					max-width: 70% !important;
+				}
+		}
+		
+
+

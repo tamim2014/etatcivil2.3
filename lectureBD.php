@@ -21,7 +21,11 @@
 	 <link href="css/dropdown.css"  rel="stylesheet"    />
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />
 	 <link href="css/accordeon2.css" rel="stylesheet" /> 
+	 <link href="css/searchEngine.css"  rel="stylesheet"/>
+	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style"/>
 	 <link href="css/responsivelectureBD.css"  rel="stylesheet"/>
+
+	
 		<!--
 	    ⚠️Attention!
 		⚠️ Dans lectureBD.php, lectureBD2.php: .contenu{ display:flex;} 👈  car il est le bon parent
@@ -52,7 +56,7 @@
 		<div class="colonne_laterale" >
 			<aside class="aside1">
 				<form action ="" method="POST" name="form1" >
-					<table class="tablegauche" style=" height:25em;"> 
+					<table class="tablegauche tablegauche-lectureBD" style=" height:25em;"> 
 						 <caption  style="caption-side:top; box-shadow: 0 20px 65px #cdbe9f inset;  "> 
 							<font color="gray" style="line-height:2;">
 								<h3> UNION DES COMORES  </h3>
@@ -77,13 +81,15 @@
 			<aside class="aside2">
 				<table  class="tabledroite" style="padding-top:0;">
 				    <!-- <caption style="caption-side:top"> <font color="#FFFFFF"><h3> Liste des actes de naissance </h3></caption> -->
-					<tr><td > 
+					<tr><td>
+                         					
                         <div class="mnayvawo">
 						    <button  class="boutoyahemnayivawo">
  							    Actes extraits de la préfecture de:
 								<span id="wilaya_"> <?php  echo  $s; ?></span>
 							</button>   
-						</div>					 
+						</div>
+                         						
 						<div class="line1" style="width:98%; height:5px; margin:auto;"></div>
 						<!-- Conteneur de la table -->
 						<div id="yivawo" class="scrolbar" ></div> 
