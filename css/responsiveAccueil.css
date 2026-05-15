@@ -133,8 +133,8 @@
 			
 			/* remplir l'espace à .colonne_contenu */
 			.colonne_contenu{
-				margin-top:4% !important;
-				margin-bottom:10% !important;
+				margin-top:0 !important;
+				margin-bottom:0 !important;
 			}
 			.aside2{
 				display:grid;
@@ -142,12 +142,12 @@
 			}
 			.tabledroite{
 			    margin:0 ;
-				padding:0;
 				min-height:auto !important;
-				width:94% !important;
-				max-width:94%  !important;
+				width:100vw !important; 
+				max-width:100%  !important;
 				padding-left:.1em;
 				padding-right:.1em;
+				
 		    }
 			/* Le bloc haut: La cellule conteneur du panel */
 			.tabledroite tr td.listemenu{
@@ -155,8 +155,8 @@
 				min-width:92.7vw  !important;
 			}
 			.tabledroite tr td table, #commandePanel {
-				width:94%  !important;
-                max-width:94%  !important;
+				width:100%  !important;
+                max-width:100%  !important;
 				margin:auto;
 			}
 			td.listemenu .blocActes #panel  table tr {
@@ -216,16 +216,24 @@
 			.tabledroite {
 				height: auto !important;
 				min-height:auto;
-				width:94% !important;
-				padding-top:.7em;
-				padding-bottom:.7em;
-				margin:auto;
-				border-radius:8px 8px 10px 10px;
-				
+				width:100% !important;
+				min-width:100% !important;
+				padding-top:.5em;
+				padding-bottom:0em;
+				margin:0 !important;
+				border-radius:8px;
 				box-shadow:
                     0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
                     0px 2px 2px 0px rgba(255, 255, 255, 0.5);
 				
+			}
+			 .colonne_laterale, .colonne_contenu, .aside2{
+				padding:0 !important;
+				background:red !important;
+			}
+			form{
+				gap:0 !important;
+				flex-direction: row !important; /* 👈pour center la table et occuper width 100% */
 			}
 			
 			
@@ -237,7 +245,7 @@
 			.boutonTrier:hover{
 				background:#e5eecc !important; /* #eff ressemble #e5eecc en version plus clair   */
 				margin:0 1em .5em auto;
-				max-width:94% !important;
+				max-width:100% !important;
 			}
 			
 			/*neutraliser le strech sur les elts actif */
@@ -274,7 +282,8 @@
 
 			/* Reajustement d'après test */
 			.tabledroite{
-				margin-top:2.5em;
+				margin-top:0; /* 2.5em */
+				margin-bottom:0;
 			}
 			/* Bloc du haut: Aligner les <span>  */
 			
@@ -353,7 +362,7 @@
 			}
 			/* bloc du bas */
 			.tabledroite tr td table, #commandePanel {
-                max-width:94%  !important;
+                max-width:100%  !important;
 				margin:auto;
 			}
 			
@@ -397,7 +406,7 @@
 				white-space: nowrap; /* évite que le texte coupe */
 			}
 			.tabledroite tr td table, #commandePanel {
-                max-width:94%  !important;
+                max-width:100%  !important;
 				margin:auto;
 			}
 			#commandePanel {

@@ -212,10 +212,17 @@
 			table tr th:last-child {
 				border-radius:0 8px 0 0 !important;
 			}
-			table tr th,
+
+			table tr th{
+				padding-block:0.8rem !important;
+			}
 			table tr td{
 				padding-block:0.8rem !important;
 				/* padding-inline:auto !important; */
+			}
+			
+			table.resultat_moteur tr th{
+				padding-block:0.67rem !important;
 			}
 			table.resultat_moteur{
 				margin-block:3rem;
