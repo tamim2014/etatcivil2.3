@@ -162,9 +162,7 @@ table.officiers tr  th, table.officiers tr  td  {
 }
 .couleurPoliceTableResultat  tr:nth-child(2n+1) td { 
 		 color:#800080;
-		 background: silver !important; /*  #f7f7f   ✍️*/
-		 
-		 
+		 background: #ccd7ff; !important; /* silver ou  #f7f7f   ✍️*/		 
 }
  
  
@@ -172,7 +170,7 @@ table.officiers tr  th, table.officiers tr  td  {
               overflow:  auto; 
 			  white-space:nowrap;
 			  display: block;  
-			}
+}
 
 /*  Reduction hauteur table d'affichage resultat(lectureBD2.php)suite à une action sur le moteur de recherche de la page d'accueil*/
 .color_line_short { position:absolute; z-index:2;  left:310px;  right:40px; top:114px;    height:60px; width:523px;   
