@@ -35,8 +35,7 @@ try {
 <head>
 	 <meta charset="utf-8">
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes"> 
-	 <script src="js/ecritureBD.js"></script>
-	 <title> Acces en Ecriture a la base etatcivil</title>
+	 <title>Rectification</title>
 	 <link href="css/template.css"  rel="stylesheet" type="text/css" >
 	 <link href="css/accueil22.css" rel="stylesheet"/>		
 	 <link href="css/slide.css"     rel="stylesheet"/> 
@@ -46,7 +45,9 @@ try {
 	 <link href="css/ecritureBDmenudroite.css" rel="stylesheet" title="Style" />  <!--  Enleve les debordement❌ Maislaisser l'ancien style des btn dans cette page -->
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
-	 	  
+	 <style>
+		 /* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */
+	 </style>	  
 	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	 <script type="text/javascript">
 	 //affiche l'acte modifié dans la partie droite de la page modifie_.php( OK mais ça sert à rien i fo ouvirere tout ça)
@@ -58,6 +59,7 @@ try {
 			//$('.tab a:first').trigger('click'); // Affiche la page1 par défaut
 		});
 	 </script>
+	 <script src="js/ecritureBD.js"></script>
 </head>
 
 <body>
@@ -127,7 +129,7 @@ try {
 						</tr>
 						<tr>
 						    <td></td>
-							<td><font color="#1D702D"> <b>Centre d'Etat Civil:</b></font></td>
+							<td><font color="##1D702D"> <b>Centre d'Etat Civil:</b></font></td>
 						</tr>
 						<tr>
 							<td>Centre</td> 
@@ -156,7 +158,7 @@ try {
 						 
 						<tr>
 						    <td></td>
-							<td><font color="#1D702D"> <b>Naissance de:</b></font></td>
+							<td><font color="##1D702D"> <b>Naissance de:</b></font></td>
 						</tr>
 						<tr>
 						    <td> Nom </td> 
@@ -168,7 +170,7 @@ try {
 						</tr>
 						<tr>
 						    <td></td>
-							<td><font color="#1D702D"> <b>Pour acte certifi&eacute; <span class="conforme">conforme</span></b></font></td>
+							<td><font color="##1D702D"> <b>Pour acte certifi&eacute; <span class="conforme">conforme</span></b></font></td>
 					    </tr>
 						<tr>
 						    <td> D&eacute;livr&eacute; &agrave; </td>
@@ -200,32 +202,67 @@ try {
 							 <tr> <td> <input type="text" name="naissance_heure"  value="<?php echo $donnees["naissance_heure"];?>" placeholder=" heure" > </td>
 							 <td> <input type="text" name="naissance_minuite" value="<?php echo $donnees["naissance_minuite"];?>" placeholder=" minuite" > </td></tr>
 							
-							 <tr> <td> <input type="text" name="naissance_nom_prenom"  value="<?php echo $donnees["naissance_nom_prenom"];?>" placeholder="est n&eacute;(e)"  ></td></tr>
-							 <tr> <td> <input type="text" name="naissance_lieu"  value="<?php echo $donnees["naissance_lieu"];?>" placeholder=" &agrave;(lieu)"  > </td></tr>
+							 <tr> 
+							      <td> <input type="text" name="naissance_nom_prenom"  value="<?php echo $donnees["naissance_nom_prenom"];?>" placeholder="est n&eacute;(e)"></td>
+							      <td> <input type="text" name="naissance_lieu"  value="<?php echo $donnees["naissance_lieu"];?>" placeholder=" &agrave;(lieu)"></td>
+							 </tr>
 							 <tr> <td> <input type="text" name="naissance_sexe" value="<?php echo $donnees["naissance_sexe"];?>" placeholder=" du sexe"  > </td></tr>
 							 
-							 <tr> <td> <font color="#1D702D"><b>Le p&egrave;re</b></font></td> <td> </td></tr>
-							 <tr> <td> <input type="text" name="pere_nom_prenom"  value="<?php echo $donnees["pere_nom_prenom"];?>" placeholder=" fils(fille) de"     > </td></tr>
-							 <tr> <td> <input type="text" name="pere_datenaisance"  value="<?php echo $donnees["pere_datenaisance"];?>" placeholder=" n&eacute; le"  > </td></tr>
-							 <tr> <td> <input type="text" name="pere_lieunaissance"     value="<?php echo $donnees["pere_lieunaissance"];?>" placeholder=" n&eacute; &agrave;"  >      </td></tr>
-							 <tr> <td> <input type="text" name="pere_profession"      value="<?php echo $donnees["pere_profession"] ;?>" placeholder=" profession "   > </td></tr>
-							 <tr> <td> <input type="text" name="pere_villederesidence"    value="<?php echo $donnees["pere_villederesidence"] ;?>" placeholder=" demeurant &agrave;"  > </td></tr>
+							 <tr> 
+							     <td> <font color="##1D702D"><b>Le p&egrave;re</b></font></td> 
+							     <td> <font color="##1D702D"><b>La m&egrave;re</b></font></td>
+							 </tr>
+								 
+							 </tr>
+							 <tr> 
+							     <td> <input type="text" name="pere_nom_prenom" value="<?php echo $donnees["pere_nom_prenom"];?>" placeholder=" fils(fille) de"> </td>
+							     <td> <input type="text" name="mere_nom_prenom" value="<?php echo $donnees["mere_nom_prenom"];?>"  placeholder=" et de"> </td>
+							 </tr>
+							 <tr> 
+							     <td> <input type="text" name="pere_datenaisance"  value="<?php echo $donnees["pere_datenaisance"];?>" placeholder=" n&eacute; le"> </td>
+							     <td> <input type="text" name="mere_datenaisance"  value="<?php echo $donnees["mere_datenaisance"];?>"  placeholder="n&eacute;e le"> </td>
+							 </tr>
+							 <tr> 
+							     <td> <input type="text" name="pere_lieunaissance" value="<?php echo $donnees["pere_lieunaissance"];?>" placeholder=" n&eacute; &agrave;"> </td>
+							     <td> <input type="text" name="mere_lieunaissance" value="<?php echo $donnees["mere_lieunaissance"];?>"   placeholder=" &agrave;"> </td>
+							 </tr>
+							 <tr> 
+							     <td> <input type="text" name="pere_profession" value="<?php echo $donnees["pere_profession"] ;?>" placeholder="profession"> </td>
+							     <td> <input type="text" name="mere_profession" value="<?php echo $donnees["mere_profession"] ;?>" placeholder=" profession"></td>
+							 </tr>
+							 <tr> 
+							     <td> <input type="text" name="pere_villederesidence" value="<?php echo $donnees["pere_villederesidence"] ;?>" placeholder="demeurant &agrave;"> </td>
+							     <td> <input type="text" name="mere_villederesidenc"  value="<?php echo $donnees["mere_villederesidenc"] ;?>" placeholder=" demeurant &agrave;"> </td>
+							 </tr>
 							
-							<tr><td> <font color="#1D702D"><b>La m&egrave;re</b></font></td> <td> </td></tr>
-							 <tr> <td> <input type="text" name="mere_nom_prenom"            value="<?php echo $donnees["mere_nom_prenom"];?>"  placeholder=" et de"   > </td></tr>
-							 <tr> <td> <input type="text" name="mere_datenaisance"  value="<?php echo $donnees["mere_datenaisance"];?>"  placeholder="n&eacute;e le"     > </td></tr>
-							 <tr> <td> <input type="text" name="mere_lieunaissance"      value="<?php echo $donnees["mere_lieunaissance"];?>"   placeholder=" &agrave;"     > </td></tr>
-							 <tr> <td> <input type="text" name="mere_profession"       value="<?php echo $donnees["mere_profession"] ;?>"    placeholder=" profession"     ></td></tr>
-							 <tr> <td> <input type="text" name="mere_villederesidenc"   value="<?php echo $donnees["mere_villederesidenc"] ;?>" placeholder=" demeurant &agrave;"   > </td></tr>
+					
 							 
-							 <tr><td> <font color="#1D702D"><b>La d&eacute;claration</b></font></td> <td> </td></tr>
-							 <tr> <td> <input type="text" name="declaration_faite_par"   value="<?php echo $donnees["declaration_faite_par"];?>" placeholder=" faite par:"  > </td></tr>
-							 <tr> <td> <input type="text" name="datejugement"   value="<?php echo $donnees["datejugement"];?>" placeholder=" date jugement :"  > </td></tr>
-							 <tr> <td> <input type="text" name="declaration_recue_pa"  value="<?php echo $donnees["declaration_recue_pa"];?>" placeholder=" re&ccedil;ue par"  > </td></tr>
+							 <tr><td> <font color="##1D702D"><b>La d&eacute;claration</b></font></td> <td> </td></tr>
+							 
+							 <tr> 
+							     <td> <input type="text" name="declaration_faite_par"   value="<?php echo $donnees["declaration_faite_par"];?>" placeholder=" faite par:"> </td>
+								 <td ><input class="jugement" type="text"  placeholder="Emetteur jugement"></td>
+							 </tr>
+							 <tr> 
+							     <td> <input type="text" name="declaration_recue_pa"  value="<?php echo $donnees["declaration_recue_pa"];?>" placeholder=" re&ccedil;ue par"> </td>
+								 <td ><input class="jugement" type="text"  placeholder="Titre  recepteur"></td>
+							 </tr>
+							 <tr> 
+							     <td> <input type="text" name="datejugement"   value="<?php echo $donnees["datejugement"];?>" placeholder=" date jugement :"> </td>
+								 <td ><input class="jugement" type="text"  placeholder="Date jugement"></td>
+							 </tr>
 						 </p>
 						 <tr> 
-							 <td><a id="acteAJAX" href="afficher.php?n=<?php echo $donnees["ID"];?> "   onclick=" window.open(this.href, 'Popup', 'scrollbars=1,resizable=1,height=409,width=918 ,  top=258, left=175 '); return false; " ><input type="button"  value="Afficher l'acte" align="center"  style="background-color: #cdbe9f; margin-top:2em;" /></a></td>
-							 <td><a href="imprimer.php?n=<?php echo $donnees["ID"];?> "><input type="button"  value="Imprimer l'acte" align="center"  style="background-color: #cdbe9f; margin-top:2em;"/></a></td>
+							 <td>
+							     <a id="acteAJAX" href="afficher.php?n=<?php echo $donnees["ID"];?> "   onclick=" window.open(this.href, 'Popup', 'scrollbars=1,resizable=1,height=409,width=918 ,  top=258, left=175 '); return false;">
+								    <input type="button"  value="Afficher l'acte" align="center" class="btnOutput"  />
+								 </a>
+							 </td>
+							 <td>
+							    <a href="imprimer.php?n=<?php echo $donnees["ID"];?> ">
+								    <input type="button"  value="Imprimer l'acte" align="center" class="btnOutput" />
+								</a>
+							 </td>
 						 </tr>
 					</table>
 			    </aside>
@@ -234,7 +271,7 @@ try {
 		    <!-- LE PANNEAU DE DROITE :  -->
 		    <div class="colonne_laterale"  style="width: 25%; ">
 				<aside class="aside1" >
-						<table  class="tablemenu" style="height:40em;" > 
+						<table  class="tablemenu" style="min-height:41.835em;" > 
 							<tr><td> 
 								  <?php include("inc/ecriture/ecritureBD_edit_menudroite1.php"); ?>
 							</td></tr>     
@@ -261,6 +298,6 @@ try {
 	// Pourquoi j'ai mis le traitement ici
 	// Parce que sur action="" ça marche pas. 
 	// En haut ça marche pas aussi
-
+	// Probleme: Sur infinity  le traitement est K.O
 	include("backend/modifier_insertionSQL.php");   
 ?>

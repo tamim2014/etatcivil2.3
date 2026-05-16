@@ -120,8 +120,8 @@
 	}
 	
 	@media screen and (max-width: 1000px) {
-		/*  tablegauche: Pour acte certifié conforme*/
-		span.conforme{
+		/*  tablegauche: Pour acte certifié conforme & entete */
+		span.conforme, .en-tete{
 			display:none;
 		}
 		/*  Ajuster l'espace*/
@@ -134,9 +134,6 @@
 	   .menudroiteEdit .kangalaheMenu{
 		   margin-top: 0 !important;			   
 		}
+		.en-tete
 	}
 		
-   /*
-	  Le test qui sauve : tjrs poser ça pour debug
-	  * { outline: 1px solid red; }
-   */

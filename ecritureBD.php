@@ -28,8 +28,7 @@
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
      <style>
-		 /* 🧩 Nettoyage: Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */
-		 
+		 /* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js"></script>
@@ -103,7 +102,7 @@
 						 </tr>
 						 <tr>
 							 <td></td>
-							 <td><font color="#1D702D"> <b>Centre d'Etat Civil:</b></font></td>		
+							 <td><font color="##1D702D"> <b>Centre d'Etat Civil:</b></font></td>		
 						 </tr>
 						 <tr>
 							 <td>Centre</td> 
@@ -118,10 +117,10 @@
 						 <tr><td> Du(date)  </td> <td> <input type="date" name="date_acte" required ></td></tr>
 						 <tr><td></td> <td></td></tr>
 						 
-						 <tr><td> </td><td><font color="#1D702D"> <b>Naissance de:</b></font></td> </tr>
+						 <tr><td> </td><td><font color="##1D702D"> <b>Naissance de:</b></font></td> </tr>
 						 <tr><td> Nom   </td> <td> <input type="text" name="nom" required> </td></tr>
 						 <tr><td> Pr&eacute;nom  </td> <td> <input type="text" name="prenom" required ></td></tr>
-						 <tr><td> </td><td><font color="#1D702D"> <b>Pour acte certifi&eacute; <span class="conforme">conforme</span></b></font></td></tr>
+						 <tr><td> </td><td><font color="##1D702D"> <b>Pour acte certifi&eacute; <span class="conforme">conforme</span></b></font></td></tr>
 						 <tr><td> D&eacute;livr&eacute; &agrave; </td> <td> <input type="text" name="delivre_a" required></td></tr>
 						 <tr><td> Le  </td> <td> <input type="date" name="delivre_le" required></td></tr>
 						 <tr><td> L'an  </td> <td> <input type="text" name="delivre_an"> </td></tr>
@@ -151,26 +150,16 @@
 
 							 <tr> <td> <input type="text" name="naissance_sexe"   placeholder=" du sexe" > </td></tr>
 							 
-							 <tr><td> <font color="#1D702D"><b>Le p&egrave;re</b></font></td><td> <font color="#1D702D"><b>La m&egrave;re</b></font></td> </tr>
+							 <tr><td> <font color="##1D702D"><b>Le p&egrave;re</b></font></td><td> <font color="##1D702D"><b>La m&egrave;re</b></font></td> </tr>
 							  
 							 <tr> <td> <input type="text" name="pere_nom_prenom"  placeholder=" fils(fille) de" >         <td> <input type="text" name="mere_nom_prenom"  placeholder=" et de" > </td> </td></tr>
 							 <tr> <td> <input type="text" name="pere_datenaisance"  placeholder=" n&eacute; le"> </td>    <td> <input type="text" name="mere_datenaisance"  placeholder="n&eacute;e le"  > </td> </tr>
 							 <tr> <td> <input type="text" name="pere_lieunaissance"   placeholder=" n&eacute; &agrave;" > </td>   <td> <input type="text" name="mere_lieunaissance"      placeholder=" &agrave;"> </td></tr>
 							 <tr> <td> <input type="text" name="pere_profession"    placeholder=" profession "   > </td>  <td> <input type="text" name="mere_profession"       placeholder=" profession" ></td></tr>
 							 <tr> <td> <input type="text" name="pere_villederesidence"   placeholder=" demeurant &agrave;"  > </td> <td> <input type="text" name="mere_villederesidenc"   placeholder=" demeurant &agrave;"> </td></tr>
-					
 
 
-							 <!-- <tr><td> <font color="#1D702D"><b>La m&egrave;re</b></font></td> </tr> -->
-							 <!-- <tr> <td> <input type="text" name="mere_nom_prenom"  placeholder=" et de" > </td></tr> -->
-							 <!-- <tr> <td> <input type="text" name="mere_datenaisance"  placeholder="n&eacute;e le"  > </td> </tr> -->
-							 <!-- <tr> <td> <input type="text" name="mere_lieunaissance"      placeholder=" &agrave;"> </td> </tr> -->
-							 <!-- <tr> <td> <input type="text" name="mere_profession"       placeholder=" profession" ></td></tr> -->
-							 <!-- <tr> <td> <input type="text" name="mere_villederesidenc"   placeholder=" demeurant &agrave;"> </td> </tr> -->
-							 
-
-
-							 <tr><td> <font color="#1D702D"><b>La d&eacute;claration</b></font></td> </tr>
+							 <tr><td> <font color="##1D702D"><b>La d&eacute;claration</b></font></td> </tr>
 							 <tr> 
 								 <td> <input type="text" name="declaration_faite_par" placeholder=" faite par:"> </td>
 								 <td ><input class="jugement" type="text"  placeholder="Emetteur jugement"></td>
@@ -198,12 +187,15 @@
 									<input type="button"  value="Afficher l'acte" align="center" class="btnOutput"/>  
 								</a>
 							</td>
-							
 							    <?php 
 							        //if(!isset($donnees["ID"])) $donnees["ID"]=1; 
                                     $id_document = $_SESSION['id_document'] ?? ""; // 🎁
 							    ?>
-							<td> <a  href="imprimer.php?n=<?php echo $id_document; ?> "  ><input type="button"  value="Imprimer l'acte" align="center" class="btnOutput"/></a></td>
+							<td> 
+							   <a href="imprimer.php?n=<?php echo $id_document; ?> ">
+							        <input type="button"  value="Imprimer l'acte" align="center" class="btnOutput"/>
+							    </a>
+							</td>
 						</tr>
 					</table>
 				    <?php
@@ -218,7 +210,7 @@
 			<!-- LE PANNEAU DE DROITE: -->
 			<div class="colonne_laterale" style="width: 25%; ">
 				<aside class="aside1">			    
-		            <table  class="tablemenu" style="min-height:35.75em; " >    
+		            <table  class="tablemenu" style="min-height:35.97em; " >    
 						<tr><td>
 							<?php include("inc/ecriture/ecritureBD_menudroite.php"); ?>
 						</td></tr>
@@ -236,7 +228,7 @@
     </div>
     <!-- css du sticky: en bas de template.css -->
 	<!-- sticky.js : si je le met en haut ça prend pas -->
-    <script src="js/sticky.js"></script>	
+    <!-- <script src="js/sticky.js"></script>  -->	
 </body>
 </html>
 

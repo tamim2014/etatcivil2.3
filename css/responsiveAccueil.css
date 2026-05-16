@@ -227,9 +227,8 @@
                     0px 2px 2px 0px rgba(255, 255, 255, 0.5);
 				
 			}
-			 .colonne_laterale, .colonne_contenu, .aside2{
+			form, .colonne_laterale, .colonne_contenu, .aside2{
 				padding:0 !important;
-				background:red !important;
 			}
 			form{
 				gap:0 !important;

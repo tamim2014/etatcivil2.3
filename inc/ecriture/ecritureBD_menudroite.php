@@ -6,14 +6,13 @@
 					   <input type="button" class="btnHover writeBtn" value="Accueil" />
 					</div>     
 				</a>
-				
-				
+						
 				<div class="kangalaheMenu">			  
 					<input type="submit" class="btnWrite" id="enregistrer" name="Enregistrer" value="Enregistrer"/> 					
 		        </div>
 				
 				<div class="kangalaheMenu">
-				    <a href="#" ><input type="button" class="btnWrite" value="Rectifier" align="center" /></a>
+				    <a href="#"><input type="button" class="btnWrite" value="Rectifier" align="center" /></a>
                 </div>
 			
 				<div class="kangalaheMenu">  
