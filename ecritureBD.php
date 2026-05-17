@@ -175,25 +175,31 @@
 						 </p>
 						<tr> 
 							<td>
-								 <!-- recuperer  une veriable javascripte +actesaisi+  en php -->
+								 <!-- $valeurphp : défini dans backend/ecritureBD_insertionSQL.php -->
 								<?php 
 								    //if(!isset($_SESSION['acte_saisi'])) $valeurphp= $_SESSION['acte_saisi'];   +sieurs 10zaines de jour de galere!!! alors que la solution été si simple! Trouvé vend 25.09.16 à 16h50 à cité des sicience. shukran li l'ALLAH.   
-								    $valeurphp = "";
-									if (!empty($_SESSION['acte_saisi'])) { 
-										$valeurphp = $_SESSION['acte_saisi']; // 🎁
+								    /* 
+									 * 17.05.26
+									 * Pour eviter 2 fichiers output(afficher.php et afficher2.php)
+									 * ✍️On utilise $_SESSION['id_document'] et on redirige vers afficher.php 
+									 * ✍️Aulieu de afficher2.php
+									 * ⚠️La redirection est faite sur inc/ecriture/ecritureBD_menudroite.php
+									 *  afficher2.php devient donc desormais obsolete
+									 *
+									    $valeurphp = "";
+									    if (!empty($_SESSION['acte_saisi'])) { 
+										     $valeurphp = $_SESSION['acte_saisi']; // 
+									    }
+									 *
+									 */
+									$id_document= "";
+									if (!empty($_SESSION['id_document'])) { 
+										$id_document = $_SESSION['id_document']; // 🎁
 									}
 								?>
 								<input type="submit" class="btnOutput" id="enregistrer" name="Enregistrer" value="Enregistrer l'acte"/> 
-								<!--
-								<a id="acteAJAX" href="afficher2.php?n=<?php echo $valeurphp; ?>"   onclick="  window.open(this.href, 'Popup', 'scrollbars=1,resizable=1,height=409,width=918 ,  top=258, left=175 '); return false; " >
-									<input type="button"  value="Afficher l'acte" align="center" class="btnOutput"/>  
-								</a>
-								-->
 							</td>
-							    <?php 
-							        //if(!isset($donnees["ID"])) $donnees["ID"]=1; 
-                                    $id_document = $_SESSION['id_document'] ?? ""; // 🎁
-							    ?>
+
 							<td> 
 							   <a href="imprimer.php?n=<?php echo $id_document; ?> ">
 							        <input type="button"  value="Imprimer l'acte" align="center" class="btnOutput"/>

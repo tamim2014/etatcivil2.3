@@ -92,8 +92,8 @@ $resultat = $req->execute(array(
 	));
 	
 	$id = $conn->lastInsertId(); //⚠
-	$_SESSION['id_document'] = $id;   // 🎁 pour l'impression
-	$_SESSION['acte_saisi'] = $acte; //  🎁 pour l'affichage
+	$_SESSION['id_document'] = $id;   // 🎁 pour l'impression => afficher.php
+	$_SESSION['acte_saisi'] = $acte; //  🎁 c'était pour l'affichage => afficher2.php ( mais maintenant on utilise $id pour l'impression et l'affichage pour avoir un seul fichier output)
 	
 	$req->closeCursor(); 
 

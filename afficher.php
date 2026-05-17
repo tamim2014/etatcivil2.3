@@ -1,8 +1,15 @@
 <?php
 
 require_once 'backend/connection_PDO.php';
+/* 
+ * Transmis par: 
+ * 1) backend/colonne-afficher-naissance.php
+ * 2) inc/backend/ecritureBD_menudroite.php (include de ecritureBD.php depuis le 17.05.26)
+ * 3) inc/backend/ecritureBD_edit_menudroite1.php (include de modifier_.php)
+ *
+ */
 
-if(!isset($_GET['n'])) $_GET['n']=""; // Transmis par 'backend/colonne-afficher-naissance.php'
+if(!isset($_GET['n'])) $_GET['n']=""; 
 
 $id = isset($_GET['n']) ? intval($_GET['n']) : 0;
 

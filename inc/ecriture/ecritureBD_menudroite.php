@@ -8,7 +8,8 @@
 					
 			<div class="kangalaheMenu">			  
 			<!-- <input type="submit" class="btnWrite" id="enregistrer" name="Enregistrer" value="Enregistrer"/> -->
-			<a id="acteAJAX" href="afficher2.php?n=' . $valeurphp . '" onclick="return ouvrirPopupEcritureBD(this);">
+			<!-- ### href="afficher2.php ###  si on utilise  $acte (voir ecritureBD_insertionSQL.php -->
+			<a id="acteAJAX" href="afficher.php?n=' . $id_document . '" onclick="return ouvrirPopupEcritureBD(this);">
 				<input class="btnWrite" type="button" value="Afficher" align="center"/>
 			</a>
 
