@@ -35,7 +35,7 @@ try {
 <head>
 	 <meta charset="utf-8">
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes"> 
-	 <title>Rectification</title>
+	 <title>Rectifications</title>
 	 <link href="css/template.css"  rel="stylesheet" type="text/css" >
 	 <link href="css/accueil22.css" rel="stylesheet"/>		
 	 <link href="css/slide.css"     rel="stylesheet"/> 
