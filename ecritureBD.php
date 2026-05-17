@@ -31,7 +31,7 @@
 		 /* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */
 	 </style>	 
 	 <script src="js/jquery.js"></script>
-	 <script src="js/ecritureBD.js"></script>
+	 <script src="js/ecritureBD.js" defer></script>
 </head>
 
 <body class="page-form">
@@ -183,9 +183,12 @@
 										$valeurphp = $_SESSION['acte_saisi']; // 🎁
 									}
 								?>
+								<input type="submit" class="btnOutput" id="enregistrer" name="Enregistrer" value="Enregistrer l'acte"/> 
+								<!--
 								<a id="acteAJAX" href="afficher2.php?n=<?php echo $valeurphp; ?>"   onclick="  window.open(this.href, 'Popup', 'scrollbars=1,resizable=1,height=409,width=918 ,  top=258, left=175 '); return false; " >
 									<input type="button"  value="Afficher l'acte" align="center" class="btnOutput"/>  
 								</a>
+								-->
 							</td>
 							    <?php 
 							        //if(!isset($donnees["ID"])) $donnees["ID"]=1; 

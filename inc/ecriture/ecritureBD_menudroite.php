@@ -7,7 +7,11 @@
 			</a>
 					
 			<div class="kangalaheMenu">			  
-				<input type="submit" class="btnWrite" id="enregistrer" name="Enregistrer" value="Enregistrer"/> 					
+			<!-- <input type="submit" class="btnWrite" id="enregistrer" name="Enregistrer" value="Enregistrer"/> -->
+			<a id="acteAJAX" href="afficher2.php?n=' . $valeurphp . '" onclick="return ouvrirPopupEcritureBD(this);">
+				<input class="btnWrite" type="button" value="Afficher" align="center"/>
+			</a>
+
 			</div>
 			
 			<div class="kangalaheMenu">

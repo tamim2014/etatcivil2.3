@@ -77,3 +77,12 @@ $(document).ready(function(){
 		});
 });
 *******************/
+
+function ouvrirPopupEcritureBD(lien) {
+	window.open(
+		lien.href,
+		'Popup',
+		'scrollbars=1,resizable=1,height=409,width=918,top=258,left=175'
+	);
+	return false;
+}
