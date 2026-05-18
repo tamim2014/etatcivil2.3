@@ -31,7 +31,10 @@ $donnees = $reponse->fetch();
      <title>Recupere l'identifiant transmis et afffiche les données relatives dans un pop </title>
 	 <link href="css/afficher.css" rel="stylesheet" title="Style" />     
      <style>
-	     input { border:none; }		 
+	     input { border:none; }	
+         /* Sur conseils copilote */
+	     @page { margin: 0; }
+         body { margin: .5em 0 !important; }		 
      </style>
 </head>
 

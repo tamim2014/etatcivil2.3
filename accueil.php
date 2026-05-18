@@ -18,7 +18,7 @@
 	<link href="css/responsiveAccueil.css"  rel="stylesheet"/>
 	
     <!-- ✅ Pour les messages - Boite de dialogue et les Popup -->
-	<script src="js/dialogueBox.js"></script>
+	<script src="js/dialogueBox.js" defer></script>
 	<!-- ✅ Ouverture du panel -->
 	<script src="js/jquery.js"></script>
 

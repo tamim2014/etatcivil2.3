@@ -92,8 +92,9 @@ $resultat = $req->execute(array(
 	));
 	
 	$id = $conn->lastInsertId(); //⚠
-	$_SESSION['id_document'] = $id;   // 🎁 pour l'impression => afficher.php
-	$_SESSION['acte_saisi'] = $acte; //  🎁 c'était pour l'affichage => afficher2.php ( mais maintenant on utilise $id pour l'impression et l'affichage pour avoir un seul fichier output)
+	//Usage dans: ecritureBD.php
+	$_SESSION['id_document'] = $id;   // 🎁 pour l'impression et l'affichage   => output vers afficher.php
+	$_SESSION['acte_saisi'] = $acte; //  🎁 Obsolete: c'était pour l'affichage => afficher2.php ( mais maintenant on utilise $id pour l'impression et l'affichage pour avoir un seul fichier output)
 	
 	$req->closeCursor(); 
 
@@ -102,7 +103,8 @@ $resultat = $req->execute(array(
    // et avant tout y afficher le message de confirmation suivante:
    
     if ($resultat) {
-       $_SESSION['message'] = "Enregistrement effectué avec succès ! ";
+		// Usage dans:  ecritureBD.php
+       $_SESSION['message'] = "Enregistrement effectué avec succès ! "; //🎁
 	} else {
 	  $_SESSION['message']= "Erreur lors de l'enregistrement ! ";
 	}

@@ -86,3 +86,14 @@ function ouvrirPopupEcritureBD(lien) {
 	);
 	return false;
 }
+
+	
+// Fermeture du flash: Message de confirmation de l'enregistrement
+document.addEventListener('click', function(e) {
+	if (e.target.classList.contains('flash-close')) {
+		const flash = e.target.parentElement;
+		flash.style.transition = "opacity 0.4s";
+		flash.style.opacity = "0";
+		setTimeout(() => flash.remove(), 400);
+	}
+});

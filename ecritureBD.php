@@ -28,7 +28,8 @@
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
      <style>
-		 /* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */
+		/* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */	 
+	 
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js" defer></script>
@@ -175,32 +176,18 @@
 						 </p>
 						<tr> 
 							<td>
-								 <!-- $valeurphp : défini dans backend/ecritureBD_insertionSQL.php -->
 								<?php 
-								    //if(!isset($_SESSION['acte_saisi'])) $valeurphp= $_SESSION['acte_saisi'];   +sieurs 10zaines de jour de galere!!! alors que la solution été si simple! Trouvé vend 25.09.16 à 16h50 à cité des sicience. shukran li l'ALLAH.   
-								    /* 
-									 * 17.05.26
-									 * Pour eviter 2 fichiers output(afficher.php et afficher2.php)
-									 * ✍️On utilise $_SESSION['id_document'] et on redirige vers afficher.php 
-									 * ✍️Aulieu de afficher2.php
-									 * ⚠️La redirection est faite sur inc/ecriture/ecritureBD_menudroite.php
-									 *  afficher2.php devient donc desormais obsolete
-									 *
-									    $valeurphp = "";
-									    if (!empty($_SESSION['acte_saisi'])) { 
-										     $valeurphp = $_SESSION['acte_saisi']; // 
-									    }
-									 *
-									 */
 									$id_document= "";
-									if (!empty($_SESSION['id_document'])) { 
-										$id_document = $_SESSION['id_document']; // 🎁
+									if (!empty($_SESSION['id_document'])) {  // 🎁 defini dans backeng/ecritureBD_isertionSQL.php
+										$id_document = $_SESSION['id_document']; 
 									}
 								?>
+							    <!-- ✔️ Btn ENREGISTRER   --> 	
 								<input type="submit" class="btnOutput" id="enregistrer" name="Enregistrer" value="Enregistrer l'acte"/> 
 							</td>
 
 							<td> 
+							   <!--  ✔️ Btn IMPRIMER   -->
 							   <a href="imprimer.php?n=<?php echo $id_document; ?> ">
 							        <input type="button"  value="Imprimer l'acte" align="center" class="btnOutput"/>
 							    </a>
@@ -208,10 +195,13 @@
 						</tr>
 					</table>
 				    <?php
-					    if (!empty($_SESSION['message'])) {
-						    echo "<div style='color:green; text-align:center; font-weight:bold;'>".$_SESSION['message']."</div>";
-						    unset($_SESSION['message']);
-					    }
+					    // Confirmation de l'enregistrement.
+					    // $_SESSION['message']: defini dans backeng/ecritureBD_insertionSQL.php
+						if (!empty($_SESSION['message'])) {
+							echo '<div class="flash-success">'.$_SESSION['message'].'<span class="flash-close">&times;</span></div>';
+							unset($_SESSION['message']);
+						}
+
 					?>
 				</aside>
 				
