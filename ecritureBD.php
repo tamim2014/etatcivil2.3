@@ -201,7 +201,6 @@
 							echo '<div class="flash-success">'.$_SESSION['message'].'<span class="flash-close">&times;</span></div>';
 							unset($_SESSION['message']);
 						}
-
 					?>
 				</aside>
 				

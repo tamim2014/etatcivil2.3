@@ -395,7 +395,7 @@
         
 		
 		/* Responsive mobile */
-		@media (max-width: 600px) {
+		@media (max-width: 768px) {
 			.listemenu .ligne {
 				flex-direction: row; /* on garde label + select sur la même ligne */
 				justify-content: space-between;

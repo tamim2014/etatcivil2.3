@@ -32,9 +32,18 @@ $donnees = $reponse->fetch();
 	 <link href="css/afficher.css" rel="stylesheet" title="Style" />     
      <style>
 	     input { border:none; }	
-         /* Sur conseils copilote */
+		 
+         /* Supprimer les marge */
 	     @page { margin: 0; }
-         body { margin: .5em 0 !important; }		 
+         body { margin: .5em 0 !important; }
+		 
+		 /* Remplire la page */
+         @media (max-width: 768px) {
+			 body{
+				 min-width:98vw !important;
+				 min-height:98vh !important;
+			 }
+		 }		 
      </style>
 </head>
 

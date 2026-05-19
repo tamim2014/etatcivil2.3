@@ -31,7 +31,23 @@
 
 	 //while ($donnees = mysqli_fetch_array($result) )  
      while ($donnees = $stmt->fetch(PDO::FETCH_ASSOC)) { 	 	 
-       $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td><td><a href="modifier_.php?n='.$donnees["ID"].' & nom_='.$donnees["nom"].' & prenom_='.$donnees["prenom"].' & acte_='.$donnees["acte"].'"><span class="desktopText1">Modifier</span><span class="mobilText1">✍️</span></a></td>     
+       // $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td><td><a href="modifier_.php?n='.$donnees["ID"].' & nom_='.$donnees["nom"].' & prenom_='.$donnees["prenom"].' & acte_='.$donnees["acte"].'"><span class="desktopText1">Modifier</span><span class="mobilText1">✍️</span></a></td>     
+	   $table .= '<tr>
+			<td>'.$donnees["ID"].'</td>
+			<td>'.$donnees["nom"].'</td>
+			<td>'.$donnees["prenom"].'</td>
+			<td>'.$donnees["acte"].'</td>
+			<td>
+				<a href="modifier_.php?n='.$donnees["ID"].
+				   '&nom_='.urlencode($donnees["nom"]).
+				   '&prenom_='.urlencode($donnees["prenom"]).
+				   '&acte_='.urlencode($donnees["acte"]).'">
+					<span class="desktopText1">Modifier</span>
+					<span class="mobilText1">✍️</span>
+				</a>
+			</td>
+
+
 	   <td><a href="imprimer.php?n='.$donnees["ID"].'"><span class="desktopText2">Imprimer</span><span class="mobilText2">🖨️</span></a></td>
 	   <td><a id="lien" href="#" onclick="popup_lectureBD2();"><span class="desktopText3">Afficher</span><span class="mobilText3">👁</span></a></td></tr>';
 	   // à utiliser dans include backend/pop.php (ligne4) donc dans  afficherdanspop.php

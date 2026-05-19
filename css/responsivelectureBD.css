@@ -114,7 +114,7 @@
 			
 		/* 🎯 On ajuste les dimensions( surtout .tablegauche) 	*/
 		
-		/* @media (max-width: 1000px) { */
+
 		@media screen and (max-width: 1000px) {
 			.en-tete{ 
 			     display:none;

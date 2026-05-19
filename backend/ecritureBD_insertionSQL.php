@@ -94,7 +94,7 @@ $resultat = $req->execute(array(
 	$id = $conn->lastInsertId(); //⚠
 	//Usage dans: ecritureBD.php
 	$_SESSION['id_document'] = $id;   // 🎁 pour l'impression et l'affichage   => output vers afficher.php
-	$_SESSION['acte_saisi'] = $acte; //  🎁 Obsolete: c'était pour l'affichage => afficher2.php ( mais maintenant on utilise $id pour l'impression et l'affichage pour avoir un seul fichier output)
+	// $_SESSION['acte_saisi'] = $acte;   🎁 Obsolete: c'était pour l'affichage => afficher2.php ( mais maintenant on utilise $id pour l'impression et l'affichage pour avoir un seul fichier output)
 	
 	$req->closeCursor(); 
 

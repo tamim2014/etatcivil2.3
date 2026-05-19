@@ -3,12 +3,13 @@
         
 			<a href="accueil.php" class="linkhome2"> 
 				<div  class="kangalaheMenu">  
-				   <input type="button" class="btnHover writeBtn" value="Accueil"  />
+				   <input type="button" class="btnHover writeBtn" value="Accueil"  /> 
 				</div>     
 			</a>
-			
 			<div class="kangalaheMenu">			  
-				<input type="submit" class="btnWrite" onclick="actenumero();" id="enregistrer" name="Enregistrer" value="Enregistrer"/>
+					<a id="acteAJAX" href="afficher.php?n=' . $donnees["ID"] . '" onclick="return ouvrirPopupEcritureBD(this);">
+						<input class="btnWrite"  type="button"  value="Afficher" align="center"  />
+					</a>
 			 </div>		
 			
 			<div class="kangalaheMenu">

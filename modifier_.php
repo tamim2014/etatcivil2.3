@@ -1,31 +1,38 @@
 <?php
+session_start();
 //1.Construction des variables php, pour recuperer les données transmises par la page "lectureBD.php"
-$id = $_GET["n"];
+$id = $_GET["n"] ?? null;
 
-$nom_=$_GET["nom_"];
-$prenom_=$_GET["prenom_"];
-$acte_=$_GET['acte_'];
+if ($id === null) {
+    echo "<h3 style='color:red'>Erreur : aucun ID fourni.</h3>";
+    exit;
+}
+
+
+$nom_    = $_GET["nom_"]   ?? null;
+$prenom_ = $_GET["prenom_"]?? null;
+$acte_   = $_GET["acte_"]  ?? null;
+
+
 $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></i> </b>  <br><br> <i><b>Nom :</b></i> '.$nom_.' <br> <i><b>Pr&eacute;nom :</b></i> '.$prenom_.' <br> <i><b>Acte num&eacute;ro:</b></i> '.$acte_.'';
 
  // echo '<div class="rappel">'.$rappel.'</div>' ;
 
 
 //2.Requete SQL requete
-/*
-try {
-    $conn = new PDO(
-        'mysql:host=localhost;dbname=etatcivil;charset=utf8',
-        'root',
-        '',
-        array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
-    );
-} catch(Exception $e) {
-    die('Erreur de connexion à la base de données: '.$e->getMessage());
-}
-*/
+
 	require_once 'backend/connection_PDO.php';
+	/*
 	$reponse = $conn->query('SELECT * FROM liste WHERE ID='.$id );
 	$donnees = $reponse->fetch();
+	*/
+	
+	$stmt = $conn->prepare("SELECT * FROM liste WHERE ID = :id");
+	$stmt->execute(['id' => $id]);
+	$donnees = $stmt->fetch();
+
+
+	
     // Je l'ai mis en bas du <html>
 	//include("backend/modifier_insertionSQL.php"); => page blanche
 
@@ -47,6 +54,7 @@ try {
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
 	 <style>
 		 /* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */
+		 
 	 </style>	  
 	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	 <script type="text/javascript">
@@ -59,10 +67,21 @@ try {
 			//$('.tab a:first').trigger('click'); // Affiche la page1 par défaut
 		});
 	 </script>
-	 <script src="js/ecritureBD.js"></script>
+	 <script src="js/ecritureBD.js" defer></script>
 </head>
 
 <body>
+	<?php
+	// Affichage flash de confirmation (definie dans backend/modifier_insertionSQL.php)
+	
+	if (!empty($_SESSION['flash_ready']) && !empty($_SESSION['message'])) {
+		echo '<div class="flash-success">'.$_SESSION['message'].'<span class="flash-close">&times;</span></div>';
+		unset($_SESSION['message']);
+		unset($_SESSION['flash_ready']);
+	}
+	
+	
+	?>
 	<header>
 		<div class="en-tete">
 			<div class="hollowTop"   >				   
@@ -75,7 +94,7 @@ try {
 		</div>
     </header>
 	<div class="contenu">
-		<form action ="" method="post" name="form1" >
+		<form action ="backend/modifier_insertionSQL.php" method="post" name="form1" >
 		  <!-- LE PANNEAU DE GAUCHE :  -->
 		  	<div class="colonne_laterale" style="width: 33%; ">
 			    <aside class="aside1">
@@ -254,9 +273,7 @@ try {
 						 </p>
 						 <tr> 
 							 <td>
-							     <a id="acteAJAX" href="afficher.php?n=<?php echo $donnees["ID"];?> "   onclick=" window.open(this.href, 'Popup', 'scrollbars=1,resizable=1,height=409,width=918 ,  top=258, left=175 '); return false;">
-								    <input type="button"  value="Afficher l'acte" align="center" class="btnOutput"  />
-								 </a>
+				                <input type="submit" class="btnOutput" onclick="actenumero();" id="enregistrer" name="Enregistrer" value="Enregistrer l'acte"/>
 							 </td>
 							 <td>
 							    <a href="imprimer.php?n=<?php echo $donnees["ID"];?> ">
@@ -265,7 +282,9 @@ try {
 							 </td>
 						 </tr>
 					</table>
+
 			    </aside>
+
 			</div>
 
 		    <!-- LE PANNEAU DE DROITE :  -->
@@ -278,7 +297,7 @@ try {
 						</table>
 					     <?php  echo '<div class="rappel">'.$rappel.'</div>' ;   ?>
 				</aside>
-			</div><!-- 2�me div.colonne_laterale -->
+			</div>
 		</form>
 	</div><!-- div.contenu -->
     <div class="footer">
@@ -294,10 +313,3 @@ try {
 	</script>
 </body>
 </html>
-<?php
-	// Pourquoi j'ai mis le traitement ici
-	// Parce que sur action="" ça marche pas. 
-	// En haut ça marche pas aussi
-	// Probleme: Sur infinity  le traitement est K.O
-	include("backend/modifier_insertionSQL.php");   
-?>

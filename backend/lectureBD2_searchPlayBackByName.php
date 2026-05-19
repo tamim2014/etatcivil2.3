@@ -32,15 +32,38 @@
 	 $table.='<tr><th>ID</th><th>Nom</th><th>Prenom</th><th>Acte numero</th><th></th><th></th><th></th></tr>';
 	 //while ($donnees = mysqli_fetch_array($resultNom) ) 
      while ($donnees = $stmt->fetch(PDO::FETCH_ASSOC)) { 	 	 
-       $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td>  
-		   <td><a href=" modifier_.php?n='.$donnees["ID"].' & nom_='.$donnees["nom"].' & prenom_='.$donnees["prenom"].' & acte_='.$donnees["acte"].'"><span class="desktopText1">Modifier</span><span class="mobilText1">✍️</span></a></td>  
-		   <td><a href="imprimer.php?n='.$donnees["ID"].'"><span class="desktopText2">Imprimer</span><span class="mobilText2">🖨️</span></a></td> 
-		   <td>
-				<a href="afficher.php?n='.$donnees["ID"].'" onclick="return ouvrePop(this.href);">
-					<span class="desktopText3">Afficher</span><span class="mobilText3">👁</span></a>
+		$table .= '<tr>
+			<td>'.$donnees["ID"].'</td>
+			<td>'.$donnees["nom"].'</td>
+			<td>'.$donnees["prenom"].'</td>
+			<td>'.$donnees["acte"].'</td>
+
+			<td>
+				<a href="modifier_.php?n='.$donnees["ID"].
+				   '&nom_='.urlencode($donnees["nom"]).
+				   '&prenom_='.urlencode($donnees["prenom"]).
+				   '&acte_='.urlencode($donnees["acte"]).'">
+					<span class="desktopText1">Modifier</span>
+					<span class="mobilText1">✍️</span>
 				</a>
-		   </td>
-	   </tr>';
+			</td>
+
+			<td>
+				<a href="imprimer.php?n='.$donnees["ID"].'">
+					<span class="desktopText2">Imprimer</span>
+					<span class="mobilText2">🖨️</span>
+				</a>
+			</td>
+
+			<td>
+				<a href="afficher.php?n='.$donnees["ID"].'" onclick="return ouvrePop(this.href);">
+					<span class="desktopText3">Afficher</span>
+					<span class="mobilText3">👁</span>
+				</a>
+			</td>
+
+		</tr>';
+
 	   // à utiliser dans backend/pop.php (ligne4) donc dans  afficherdanspop.php
 	   // puisqu'on a courcircuté afficherdanspop.php
 	   // backend/pop.php et cette variables vont à  la poubelle
