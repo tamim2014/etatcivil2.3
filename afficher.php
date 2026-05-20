@@ -13,8 +13,8 @@ if(!isset($_GET['n'])) $_GET['n']="";
 
 $id = isset($_GET['n']) ? intval($_GET['n']) : 0;
 
-if ($id <= 0) {
-    die("ID invalide");
+if($id <= 0) {
+    die("ID invalide : \n <h4>Veuillez saisir le document avant de l'afficher ⚠️</h4>");
 }
 
 $reponse = $conn->prepare("SELECT * FROM liste WHERE ID = ?");

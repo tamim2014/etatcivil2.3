@@ -20,6 +20,11 @@ $id=ltrim($id);
 // catch(Exception $e){die('Erreur de connexion à la base de données: '.$e->getMessage());}
 require_once 'backend/connection_PDO.php';
 
+if($id <= 0) {
+    die("ID invalide : \n <h4>Veuillez saisir le document avant de l'imprimer ⚠️</h4>");
+}
+
+
 $reponse = $conn->query('SELECT * FROM liste WHERE ID='.$id );
 $donnees = $reponse->fetch();
 ?>

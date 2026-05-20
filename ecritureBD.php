@@ -188,9 +188,16 @@
 
 							<td> 
 							   <!--  ✔️ Btn IMPRIMER   -->
+							   <!--
 							   <a href="imprimer.php?n=<?php echo $id_document; ?> ">
 							        <input type="button"  value="Imprimer l'acte" align="center" class="btnOutput"/>
 							    </a>
+								-->
+								
+								<?php $id_js = isset($id_document) ? intval($id_document) : 0; ?>
+								<a href="#" onclick="return verifierAvantImpression(<?php echo $id_js; ?>);">
+									<input type="button" value="Imprimer l'acte" class="btnOutput"/>
+								</a>
 							</td>
 						</tr>
 					</table>
@@ -201,6 +208,7 @@
 							echo '<div class="flash-success">'.$_SESSION['message'].'<span class="flash-close">&times;</span></div>';
 							unset($_SESSION['message']);
 						}
+
 					?>
 				</aside>
 				
@@ -227,6 +235,24 @@
     <!-- css du sticky: en bas de template.css -->
 	<!-- sticky.js : si je le met en haut ça prend pas -->
     <!-- <script src="js/sticky.js"></script>  -->	
+<script>
+function verifierAvantImpression(id) {
+    if (id <= 0) {
+        document.body.insertAdjacentHTML('beforeend', `
+            <div class="alert2">
+                Veuillez saisir le document avant de l'imprimer
+                <span class="flash-close">&times;</span>
+            </div>
+        `);
+        return false; // bloque la redirection
+    }
+
+    // Si l'ID est valide → redirection
+    window.location.href = "imprimer.php?n=" + id;
+    return false;
+}
+</script>
+
 </body>
 </html>
 
