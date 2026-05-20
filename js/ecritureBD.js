@@ -97,3 +97,21 @@ document.addEventListener('click', function(e) {
 		setTimeout(() => flash.remove(), 400);
 	}
 });
+
+// Alert: Saisie avant impression
+
+function verifierAvantImpression(id) {
+    if (id <= 0) {
+        document.body.insertAdjacentHTML('beforeend', `
+            <div class="alert2">
+                Veuillez saisir le document avant de l'imprimer
+                <span class="flash-close">&times;</span>
+            </div>
+        `);
+        return false; // bloque la redirection
+    }
+
+    // Si l'ID est valide → redirection
+    window.location.href = "imprimer.php?n=" + id;
+    return false;
+}

@@ -136,20 +136,27 @@
 				margin-top: 2em;			   
 			}
 			
-		    /* 🧩 Message Flash: Confirmation de l'enregistrement */
-			.flash-success {
+		    /* 🧩 Message Flash: Confirmation de l'enregistrement - Btn Enregistrer */
+			.flash-success, .alert2 {
 				position: fixed;
 				bottom: 0;
 				left: 0;
 				width: 100%;
-				background: #d4edda;
-				color: #155724;
 				padding: 15px 20px;
-				border-top: 4px solid #28a745;
 				font-weight: bold;
 				text-align: center;
 				box-shadow: 0 -2px 6px rgba(0,0,0,0.15);
 				z-index: 9999;
+				
+				background: #d4edda;
+				color: #155724;
+				border-top: 4px solid #28a745;
+			}
+			/* Btn Imprimer: Cas document vide */
+			.alert2 {
+				background-color: #ffdddd;
+				color: #a10000;
+				border-top: 4px solid #ff9999; 
 			}
 
 			/* La petite croix à droite */
@@ -168,28 +175,12 @@
 			.flash-close:hover {
 				opacity: 1;
 				color: #700000;
-				background: #a71d2a;
 			}
-			/* Sur le bouton imprimer */
-			.alert2 {
-				position: fixed;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				background-color: #ffdddd;
-				color: #a10000;
-				padding: 15px 20px;
-				/* border-top: 4px solid #28a745; */
-				border-top: 4px solid #ff9999; 
-				font-weight: bold;
-				text-align: center;
-				box-shadow: 0 -2px 6px rgba(0,0,0,0.15);
-				z-index: 9999;
-			}
+
 
 			
 			@media (max-width: 768px) {
-				.flash-success {
+				.flash-success, .alert2 {
 					padding: 15px 20px 15px 4px;
 					text-align: left;
 				}
