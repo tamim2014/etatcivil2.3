@@ -256,14 +256,22 @@
 			}
 			#yivawo{
 				border-radius:0 0 8px 8px;
-				margin-top:0;
-			}
-			table.resultat_moteur tr th{
-				padding-block:0.67rem !important;
+				margin-top:0 !important; /* pour line1 */ 
 			}
 			table.resultat_moteur{
 				margin-block:3rem;
 			}
+			table.resultat_moteur tr th{
+				padding-block:0.67rem !important;
+			}
+			table.resultat_moteur tr th:first-child,
+			table.resultat_moteur tr td:first-child{
+				display:none; /* On vire ID   */ 
+			}
+			table.resultat_moteur tr th:nth-child(2){
+				border-radius:8px 0 0 0 !important;
+			}
+
 			/*
 			 * Que ce qui fait l'incision?
 			 * C'est la deffirence de box-shadow
