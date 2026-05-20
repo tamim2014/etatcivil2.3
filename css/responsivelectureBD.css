@@ -236,15 +236,28 @@
 			/* 
 			 * lectureBD2/tabledroite:
 			 * Le contrôle de l'espace vertical est là 
-			 * Pour accueil: ça se fait sur les margin-block de .tabledroite
+			 * Pour accueil: ça se fait sur les padding-block de .tabledroite
 			 */
 			.mnayvawo:first-child {
-				margin-top:.2em; /*🎯 agit sur lectureBD aussi*/
+				margin-top:.2em !important; /*🎯 agit sur lectureBD aussi*/
+			    margin-bottom:0 !important; /* pour line1 */ 
+				border-radius:8px 8px 0 0;
 			}
 			.mnayvawo:last-child {
-				margin-bottom:0; /*🎯*/
+				margin-bottom:0 !important; /*🎯*/
+				margin-top:0 !important; /* pour line1 */ 
+				border-radius:0 0 8px 8px;
 			}
 			/* Fin contôle espacement vertical tabledroite */
+			.line1{
+				width:100%;
+				margin:0;
+				border-radius:0;
+			}
+			#yivawo{
+				border-radius:0 0 8px 8px;
+				margin-top:0;
+			}
 			table.resultat_moteur tr th{
 				padding-block:0.67rem !important;
 			}
