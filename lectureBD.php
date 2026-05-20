@@ -77,7 +77,7 @@
 			</aside>
 		</div>
 		<!-- LE PANNEAU DE DROITE :  -->
-		<div class="colonne_contenu" style="padding:0;">
+		<div class="colonne_contenu" style="padding:0; ">
 			<aside class="aside2">
 				<table  class="tabledroite" style="padding-top:0;">
 				    <!-- <caption style="caption-side:top"> <font color="#FFFFFF"><h3> Liste des actes de naissance </h3></caption> -->

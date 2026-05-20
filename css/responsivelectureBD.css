@@ -136,7 +136,10 @@
 			 * .mnayvawo{ padding:5.8em; } le coupable
 			 *  Solution: j'ajoute la classe .mnayvawo2 pour pas impacter lectureBD.php
 			 */
-			 .mnayvawo2{ padding:1em 1.2em !important; }
+			 .mnayvawo2{ 
+			    padding:1em 1.2em !important;
+               			
+			 }
 			 /* 
 			  *Problème: Débordement tabledroite dans lectureBD.php si table ouverte
               * On remonte à lectureBD2_searchPlayBack.php		  
@@ -190,13 +193,14 @@
             .colonne_contenu, .aside2, .tabledroite, tbody tr td {
 				height:auto !important;
 			} 
+
 			
 			.tabledroite {
 				height: auto !important;
 				min-height: auto;
 				width: 100% !important;
-				padding-top: .7em; 
-				padding-bottom: .7em;
+				padding-top: 7em; 
+				padding-bottom: 7em;
 				margin: auto;
 				border-radius: 8px;
 				box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5);
@@ -216,15 +220,48 @@
 			table tr th{
 				padding-block:0.8rem !important;
 			}
+			/* lectureBD/tabledroite:le contrôle de l'espace vertical est là */
 			table tr td{
+				/* 
+				  C'est ce qui donne l'espace en haut et en bas
+				  de table droite
 				padding-block:0.8rem !important;
-				/* padding-inline:auto !important; */
+				*/
+				padding-block:0 !important;
 			}
-			
+			td, th {
+				padding:0;
+			}
+
+			/* 
+			 * lectureBD2/tabledroite:
+			 * Le contrôle de l'espace vertical est là 
+			 * Pour accueil: ça se fait sur les margin-block de .tabledroite
+			 */
+			.mnayvawo:first-child {
+				margin-top:.2em; /*🎯 agit sur lectureBD aussi*/
+			}
+			.mnayvawo:last-child {
+				margin-bottom:0; /*🎯*/
+			}
+			/* Fin contôle espacement vertical tabledroite */
 			table.resultat_moteur tr th{
 				padding-block:0.67rem !important;
 			}
 			table.resultat_moteur{
 				margin-block:3rem;
 			}
+			/*
+			 * Que ce qui fait l'incision?
+			 * C'est la deffirence de box-shadow
+			 * .tablegauche { box-shadow: 0 0 65px #cdbe9f inset;}
+			 * .tabledroite{ la suivante }
+			 */
+    
+			.tabledroite {
+			    box-shadow:
+                    0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+                    0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+			}
+
 		}

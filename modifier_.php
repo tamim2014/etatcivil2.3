@@ -74,13 +74,11 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 	<?php
 	// Affichage flash de confirmation (definie dans backend/modifier_insertionSQL.php)
 	
-	if (!empty($_SESSION['flash_ready']) && !empty($_SESSION['message'])) {
-		echo '<div class="flash-success">'.$_SESSION['message'].'<span class="flash-close">&times;</span></div>';
-		unset($_SESSION['message']);
-		unset($_SESSION['flash_ready']);
-	}
-	
-	
+		if (!empty($_SESSION['flash_ready']) && !empty($_SESSION['message'])) {
+			echo '<div class="flash-success">'.$_SESSION['message'].'<span class="flash-close">&times;</span></div>';
+			unset($_SESSION['message']);
+			unset($_SESSION['flash_ready']);
+		}
 	?>
 	<header>
 		<div class="en-tete">

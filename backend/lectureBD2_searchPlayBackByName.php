@@ -10,7 +10,7 @@
  *
  */
     // ✅ 1. On recupere le filtre(saisie): Transmis par "backend/serchEngine.php"
-    if(!isset($_GET['num'])) $_GET['num']="";    $num=$_GET['num']; //acte ❌ pas la peine ici car on traite seulement ne nom
+    // if(!isset($_GET['num'])) $_GET['num']="";    $num=$_GET['num']; acte ❌ pas la peine ici car on traite seulement ne nom
 	if(!isset($_GET['nom'])) $_GET['nom']="";     $nom=$_GET['nom'];//$nom = mysqli_real_escape_string($conn, $_GET['nom']);
     
 	
