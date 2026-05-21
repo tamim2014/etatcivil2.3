@@ -28,7 +28,9 @@ $donnees = $reponse->fetch();
 <html>
 <head>
      <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
-     <title>Recupere l'identifiant transmis et afffiche les données relatives dans un pop </title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes"> -->
+     
+	 <title>Recupere l'identifiant transmis et afffiche les données relatives dans un pop </title>
 	 <link href="css/afficher.css" rel="stylesheet" title="Style" />     
      <style>
 	     input { border:none; }	

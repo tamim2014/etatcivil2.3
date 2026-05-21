@@ -78,14 +78,7 @@ $(document).ready(function(){
 });
 *******************/
 
-function ouvrirPopupEcritureBD(lien) {
-	window.open(
-		lien.href,
-		'Popup',
-		'scrollbars=1,resizable=1,height=409,width=918,top=258,left=175'
-	);
-	return false;
-}
+
 
 	
 // Fermeture du flash: Message de confirmation de l'enregistrement
@@ -104,7 +97,7 @@ function verifierAvantImpression(id) {
     if (id <= 0) {
         document.body.insertAdjacentHTML('beforeend', `
             <div class="alert2">
-                Veuillez saisir le document avant de l'imprimer
+                Veuillez saisir le document avant de l'imprimer⚠️
                 <span class="flash-close">&times;</span>
             </div>
         `);
@@ -115,3 +108,58 @@ function verifierAvantImpression(id) {
     window.location.href = "imprimer.php?n=" + id;
     return false;
 }
+
+// Alert: Affichage doc vide
+/*
+function verifierAvantAffichage(id) {
+    if (id <= 0) {
+        document.body.insertAdjacentHTML('beforeend', `
+            <div class="alert2">
+                Veuillez saisir le document avant de l'afficher⚠️
+                <span class="flash-close">&times;</span>
+            </div>
+        `);
+        return false; 
+    }  
+    window.location.href = "afficher.php?n=" + id;
+    return false;
+}
+*/
+
+function verifierAvantAffichage(id) {
+    if (id <= 0) {
+        document.body.insertAdjacentHTML('beforeend', `
+            <div class="alert2">
+                Veuillez saisir le document avant de l'afficher ⚠️
+                <span class="flash-close">&times;</span>
+            </div>
+        `);
+        return false;
+    }
+
+    return true; // IMPORTANT : pas de redirection ici
+}
+
+
+// Le pop
+function ouvrirPopupEcritureBD(lien) {
+	window.open(
+		lien.href,
+		'Popup',
+		'scrollbars=1,resizable=1,height=409,width=918,top=258,left=175'
+	);
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

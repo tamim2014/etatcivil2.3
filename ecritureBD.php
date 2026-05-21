@@ -29,7 +29,7 @@
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
      <style>
 		/* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */	 
-	 
+
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js" defer></script>
@@ -222,6 +222,23 @@
 			<span>Etat civil</span>
 		</p>
     </div>
+	<!-- Nouveau popup    -->
+	<div id="popupModal" class="modal">
+		<div class="modal-content">
+			<span class="modal-close">&times;</span>
+			<span class="modal-fullscreen">⛶</span>
+            <!-- entete du pop -->
+			<div class="modal-header">
+				<span id="popupTitle">Chargement…</span>
+			</div>
+            <!-- Loader doit être DANS modal-content -->
+			<div id="popupLoader" class="loader"></div>
+			 <!-- ############# -->
+			<iframe id="popupFrame" src="" frameborder="0"></iframe>
+		</div>
+	</div>
+    <script src="js/nouveaupop.js"></script>
+    <link href="css/nouveaupop.css"  rel="stylesheet"    />	
 </body>
 </html>
 
