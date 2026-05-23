@@ -1,4 +1,5 @@
 <?php
+   //session_start(); // Pour le message confirmation suppression // Pas la peine car searchMessages.php a démarré une session
    include("backend/searchMessages.php"); 	
 ?>
 
@@ -16,6 +17,7 @@
 	<link href="css/searchEngine.css"  rel="stylesheet"/>
 	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style"/>
 	<link href="css/responsiveAccueil.css"  rel="stylesheet"/>
+
 	
     <!-- ✅ Pour les messages - Boite de dialogue et les Popup -->
 	<script src="js/dialogueBox.js" defer></script>
@@ -25,7 +27,15 @@
 	<!-- <script src="js/lectureBD.js"></script> -->
 </head>
 
-<body >
+<body>
+    <!-- Confirmation de la suppression de document  -->
+	<?php
+		// $_SESSION['messageDelete']: defini dans backeng/supprimer.php
+		if (!empty($_SESSION['messageDelete'])) {
+			echo '<div class="flash-success">'.$_SESSION['messageDelete'].'<span class="flash-close">&times;</span></div>';
+			unset($_SESSION['messageDelete']);
+		}
+	?>
     <header>
 		<div class="en-tete">
 			<div class="hollowTop"   >				   
@@ -83,6 +93,16 @@
 			<span>Etat civil</span>
 		</p>
     </div>
+	<!--  Alert de précaution avant suppression   --->
+	<div id="confirmModal" class="modal">
+		<div class="modal-content">
+			<p>Vous confirmez la suppression ?</p>
+			<div class="btns">
+				<button id="btnOk">OK</button>
+				<button id="btnCancel">Annuler</button>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
 

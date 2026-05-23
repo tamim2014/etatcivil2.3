@@ -76,7 +76,7 @@
 			-->
 		</div>
 		
-		<!-- ✅ Pour les messages - Boite de dialogue -->
+		<!-- ✅ Pour les messages - Boite de dialogue sur les btn Supprimer/Rectifier -->
 		<div id="dialogBox">
 			<div id="dialogContent">
 				<p id="dialogMessage"></p>

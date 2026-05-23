@@ -23,3 +23,42 @@ function ouvrePop(url) {
 	);
 	return false;
 }
+/* #########################################################
+ * 
+ * Accueil.php 👉 table backend/colonne_supprimer_acte.php 
+ * Gestion du Bouton 🗑️  ( dernière colonne de la table)
+ * 
+ */
+ 
+//1. Alerte de précaution avant suppression(Btn OK/Annuler): Pas besoin de cette fonction pour une alet normal
+
+
+function confirmerSuppression(id) {
+    const modal = document.getElementById("confirmModal");
+    modal.style.display = "flex";
+
+    document.getElementById("btnOk").onclick = function() {
+        window.location.href = "backend/supprimer.php?n=" + id;
+    };
+
+    document.getElementById("btnCancel").onclick = function() {
+        modal.style.display = "none";
+    };
+}
+
+
+
+
+// 2.Fermeture du flash: Message de confirmation de la suppression
+document.addEventListener('click', function(e) {
+	if (e.target.classList.contains('flash-close')) {
+		const flash = e.target.parentElement;
+		flash.style.transition = "opacity 0.4s";
+		flash.style.opacity = "0";
+		setTimeout(() => flash.remove(), 400);
+	}
+});
+
+
+
+

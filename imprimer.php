@@ -33,14 +33,26 @@ $donnees = $reponse->fetch();
 <html>
 <head>
      <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes">
+	 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes"> -->
 	 <title>Recupere l'identifiant transmis et l'afffiche dans un pop </title>
 	 <link href="css/afficher.css" rel="stylesheet" title="Style" /> 
      <style>
-	     input { border:none; }		 
+	     input { border:none; }	
+         
+         /* Supprimer les marge */
+	     @page { margin: 0; }
+         body { margin: .5em 0 0 0 !important; }
+		 
+		 /* Remplire la page */
+         @media (max-width: 768px) {
+			 body{
+				 min-width:98vw !important;
+				 min-height:98vh !important;
+			 }
+		 }		 
      </style>	 
 </head>
-<!-- l'impression se fait par l'attribut onLoad de body - il reste le test et le reajustement CSS3 selon le resultat du  test-->
+<!-- Tasks: tests et le reajustement CSS3 selon le resultat des  tests -->
 <body onLoad="window.print()">
 <div id="wrap">
 
