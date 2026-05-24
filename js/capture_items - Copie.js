@@ -43,7 +43,6 @@
 		
 		
 		// lectureBD.php-> include("inc/lecture/topMenu.php"); ⚠️voir ligne 116
-		/*
 		function captureSousMenu(prfctr){ // prfctr=prefecture selectionnee dans le sous-menu
             if (prfctr == "") { 
 			     document.getElementById("yivawo").innerHTML = ""; return; 
@@ -61,41 +60,24 @@
 				};
             }
         }
-		*/
-		
-		// Version qui cache colonne_contenu sur mobile
-		function captureSousMenu(prfctr){ 
-			if (prfctr == "") { 
-				document.getElementById("yivawo").innerHTML = ""; 
-				$(".colonne_contenu").removeClass("visible"); // on recache tout
-				return; 
-			} else { 
-				instanceXMLHttpRequest(); // instance XMLHttpRequest for IE7+
-				
-				// 1. Connexion au backend
-				xmlhttp.open("GET", "backend/lectureBD_afficherNaissance.php?pr=" + prfctr, true);
-
-				// 2. Envoi
-				xmlhttp.send(); 
-
-				// 3. Réception
-				xmlhttp.onreadystatechange = function() { 
-					if (xmlhttp.readyState == 4 && xmlhttp.status == 200) { 
-
-						document.getElementById("yivawo").innerHTML = xmlhttp.responseText;
-
-						// 👉 Vérifier si la réponse contient quelque chose
-						if ($.trim($("#yivawo").html()) !== "") {
-							$(".colonne_contenu").addClass("visible");   // on affiche
-						} else {
-							$(".colonne_contenu").removeClass("visible"); // on cache si vide
-						}
-					}
-				};
-			}
+		/* la mm fonction avec fetch
+		function captureSousMenu(prfctr) { 
+			const cible = document.getElementById("yivawo");
+			if(prfctr === ""){ cible.innerHTML=""; return; }
+			fetch(`backend/lectureBD_afficherNaissance.php?pr=${encodeURIComponent(prfctr)}`)
+				.then(response => {
+					if (!response.ok) { throw new Error("Erreur r�seau : " + response.status }
+					return response.text();
+				})
+				.then(data => {
+					cible.innerHTML = data;
+					// activerPopup(); // si tu veux le remettre
+				})
+				.catch(error => {
+					console.error("Erreur AJAX :", error); cible.innerHTML = "<p>Une erreur est survenue.</p>";
+				});
 		}
-
-	
+        */	
 
 		
 	$(document).ready(function(){

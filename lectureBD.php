@@ -22,6 +22,7 @@
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />
 	 <link href="css/accordeon2.css" rel="stylesheet" /> 
 	 <link href="css/searchEngine.css"  rel="stylesheet"/>
+	 <link href="css/nettoyageLectureBD.css" rel="stylesheet" />
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style"/>
 	 <link href="css/responsivelectureBD.css"  rel="stylesheet"/>
 
@@ -32,6 +33,14 @@
         ⚠️ Dans les autres pages:	form { display:flex;} 👈  car les colonne_laterale, colonne_contenu sont dans form	
 		🎁 Flexbox: On remplace "float:left" sur les contenu par "display:flex" sur le conteneur 
 	     -->
+		 
+	 <style>
+
+
+
+	 </style>
+
+		 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/capture_items.js"></script>  <!--  <script src="js/acteOutSlide.js"></script> -->
 	 <script src="js/lectureBD.js"></script>
@@ -42,35 +51,34 @@
     <header>
 		<div class="en-tete">	
 			<div class="hollowTop"   >				   
-			   <input type=image src="img/drapeau.png" align="left" class="flag" style="width:30%; height:100%; filter:brightness(80%);" />
-			   <p class="text_header" style="padding-left:50%;">OFFICE   <br> D'&Eacute;TAT CIVIL </p>			  
+			   <input type=image src="img/drapeau.png" align="left" class="flag"  />
+			   <p class="text_header" >OFFICE   <br> D'&Eacute;TAT CIVIL </p>			  
 			</div> 				
 		</div>		
 		<div class="menu topnav"  id="myTopnav"> 
-				<!-- include("inc/accueil/accueil_menucentral.php"); --> 
 				<?php include("inc/lecture/topMenu.php"); ?> 
 		</div>
     </header>
-    <div class="contenu" style="display:flex; margin-bottom:0;"> <!-- 🎁 FlexBox: on remplace float:left sur les contenu par display:flex sur le conteneur  -->
+    <div class="contenu" > <!-- 🎁 FlexBox: on remplace float:left sur les contenu par display:flex sur le conteneur  -->
 		<!-- LE PANNEAU DE GAUCHE :  -->
 		<div class="colonne_laterale" >
 			<aside class="aside1">
 				<form action ="" method="POST" name="form1" >
 					<table class="tablegauche tablegauche-lectureBD" style=" height:25em;"> 
-						 <caption  style="caption-side:top; box-shadow: 0 20px 65px #cdbe9f inset;  "> 
-							<font color="gray" style="line-height:2;">
+						 <caption> 
+							<font color="gray">
 								<h3> UNION DES COMORES  </h3>
 								<h6> Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement  </h6>
 								<h4> MINISTERE DE L'INTERIEUR  </h4>
 							</font>
-							<img src="img/armoirie.png" style="z-index:3;  margin-left:40%; margin-right:40%; width:20%;  "  />
+							<img src="img/armoirie.png"/>
 						 </caption>
 						 <tr > <td id="recherchedocument">RECHERCHE DE DOCUMENT</td></tr>
 						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> number<br/> <input style="width:50%;" id="recherchenum" type="text" name="acte_" pattern=".{1,}"  > </td></tr> 
 						 <tr><td> <font color="#cdbe9f"><b>Search by</b></font> name    <br/> <input style="width:50%;" id="recherchenom" type="text" name="nom_"  > </td></tr>
 						 <tr><td style="padding-top:1em;">
 							 <textarea class="t_area" style="font-size:1em" name="myTextBox" cols="24" rows="4"> <?php echo $message; ?> </textarea>
-						 <br/><input class="btnHover" type="submit" name="envoie" value="Chercher"  style="background:transparent ; color:#111; padding:.3em 3.3em; margin:1em auto; " />
+						 <br/><input class="btnHover" type="submit" name="envoie" value="Chercher"/>
 						 </td></tr>
 					</table>
 				</form>
@@ -80,9 +88,7 @@
 		<div class="colonne_contenu" style="padding:0; ">
 			<aside class="aside2">
 				<table  class="tabledroite" style="padding-top:0;">
-				    <!-- <caption style="caption-side:top"> <font color="#FFFFFF"><h3> Liste des actes de naissance </h3></caption> -->
 					<tr><td>
-                         					
                         <div class="mnayvawo">
 						    <button  class="boutoyahemnayivawo">
  							    Actes extraits de la préfecture de:
@@ -90,13 +96,11 @@
 							</button>   
 						</div>
                          						
-						<div class="line1" style="width:98%; height:5px; margin:auto;"></div>
+						<div class="line1"></div>
 						<!-- Conteneur de la table -->
 						<div id="yivawo" class="scrolbar" ></div> 
 					 </td></tr>
 				</table>
-				<!-- Suppression sous-menu personnalisé(Remplacé par sous-menus de l'accrdéon du topnav) -->  
-		        <!-- include("inc/lecture/sousmenu.php"); --> 
             </aside>
         </div>			
 	</div> <!-- fin  <div class="contenu"  >  -->

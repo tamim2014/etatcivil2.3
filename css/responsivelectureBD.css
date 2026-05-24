@@ -286,3 +286,14 @@
 			}
 
 		}
+
+       /* Cacher .tabledroite et ses conteneurs sur mobile */
+	   
+	   	@media (max-width: 768px) {
+			.colonne_contenu {
+				display: none;
+			}
+			.colonne_contenu.visible {
+				display: block;
+			}
+		}
