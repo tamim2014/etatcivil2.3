@@ -216,6 +216,13 @@
 			table tr th:last-child {
 				border-radius:0 8px 0 0 !important;
 			}
+			/* lectureBD.php/.tabledroite: Enlever les border-radius sur mobile */
+			table.couleurPoliceTable tr th:first-child,
+			table.couleurPoliceTable tr th:last-child{
+			 border-radius:0 !important;	
+			}
+
+			
 
 			table tr th{
 				padding-block:0.8rem !important;

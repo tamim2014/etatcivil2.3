@@ -25,22 +25,12 @@
 	 <link href="css/nettoyageLectureBD.css" rel="stylesheet" />
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style"/>
 	 <link href="css/responsivelectureBD.css"  rel="stylesheet"/>
-
-	
 		<!--
 	    ⚠️Attention!
 		⚠️ Dans lectureBD.php, lectureBD2.php: .contenu{ display:flex;} 👈  car il est le bon parent
         ⚠️ Dans les autres pages:	form { display:flex;} 👈  car les colonne_laterale, colonne_contenu sont dans form	
 		🎁 Flexbox: On remplace "float:left" sur les contenu par "display:flex" sur le conteneur 
 	     -->
-		 
-	 <style>
-
-
-
-	 </style>
-
-		 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/capture_items.js"></script>  <!--  <script src="js/acteOutSlide.js"></script> -->
 	 <script src="js/lectureBD.js"></script>
