@@ -63,11 +63,12 @@
         }
 		*/
 		
-		// Version qui cache colonne_contenu sur mobile
+		
+		// Redefinition: Version qui cache colonne_contenu sur mobile
 		function captureSousMenu(prfctr){ 
 			if (prfctr == "") { 
 				document.getElementById("yivawo").innerHTML = ""; 
-				$(".colonne_contenu").removeClass("visible"); // on recache tout
+				$(".colonne_contenu1").removeClass("visible"); // on recache tout
 				return; 
 			} else { 
 				instanceXMLHttpRequest(); // instance XMLHttpRequest for IE7+
@@ -86,9 +87,9 @@
 
 						// 👉 Vérifier si la réponse contient quelque chose
 						if ($.trim($("#yivawo").html()) !== "") {
-							$(".colonne_contenu").addClass("visible");   // on affiche
+							$(".colonne_contenu1").addClass("visible");   // on affiche
 						} else {
-							$(".colonne_contenu").removeClass("visible"); // on cache si vide
+							$(".colonne_contenu1").removeClass("visible"); // on cache si vide
 						}
 					}
 				};

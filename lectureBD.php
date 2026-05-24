@@ -75,7 +75,7 @@
 			</aside>
 		</div>
 		<!-- LE PANNEAU DE DROITE :  -->
-		<div class="colonne_contenu" style="padding:0; ">
+		<div class="colonne_contenu colonne_contenu1" style="padding:0; ">
 			<aside class="aside2">
 				<table  class="tabledroite" style="padding-top:0;">
 					<tr><td>

@@ -216,6 +216,7 @@
 			table tr th:last-child {
 				border-radius:0 8px 0 0 !important;
 			}
+			
 			/* lectureBD.php/.tabledroite: Enlever les border-radius sur mobile */
 			table.couleurPoliceTable tr th:first-child,
 			table.couleurPoliceTable tr th:last-child{
@@ -297,10 +298,10 @@
        /* Cacher .tabledroite et ses conteneurs sur mobile */
 	   
 	   	@media (max-width: 768px) {
-			.colonne_contenu {
+			.colonne_contenu1 {
 				display: none;
 			}
-			.colonne_contenu.visible {
+			.colonne_contenu1.visible {
 				display: block;
 			}
 		}
