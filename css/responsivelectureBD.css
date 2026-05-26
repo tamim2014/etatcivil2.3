@@ -298,10 +298,10 @@
        /* Cacher .tabledroite et ses conteneurs sur mobile */
 	   
 	   	@media (max-width: 768px) {
-			.colonne_contenu1 {
+			.colonne_contenu_cacher_mobil {
 				display: none;
 			}
-			.colonne_contenu1.visible {
+			.colonne_contenu_cacher_mobil.visible {
 				display: block;
 			}
 		}

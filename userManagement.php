@@ -1,47 +1,58 @@
 <?php
-    include("backend/authentification.php"); // pas despace sinon ça plante en ligne 
+
+     //include("backend/authentification.php"); //❌ Separation of Concerns
+	 
+     // empêcher l’accès direct par URL
+	 session_start();
+	 require_once 'backend/connection_mysqli.php';
+	 include("backend/url_access_guard.php");
 
     // ✅ 1. Ajouter un utilisateur
 	
-	if (isset($_POST['ajouter'])) {
+if (isset($_POST['ajouter'])) {
 
-		$pseudo = mysqli_real_escape_string($conn, $_POST['pseudo']);
-		$mdp    = mysqli_real_escape_string($conn, $_POST['mdp']);
-		$roles   = mysqli_real_escape_string($conn, $_POST['roles']);
+    $pseudo = mysqli_real_escape_string($conn, $_POST['pseudo']);
+    $mdp    = mysqli_real_escape_string($conn, $_POST['mdp']);
+    $roles  = mysqli_real_escape_string($conn, $_POST['roles']);
 
-		if (!empty($pseudo) && !empty($mdp)) {
+    if (!empty($pseudo) && !empty($mdp)) {
 
-			// Vérifier si le pseudo existe déjà
-			$check = "SELECT * FROM listeofficiers WHERE pseudo = '$pseudo'";
-			$res = mysqli_query($conn, $check);
+        // Vérifier si le pseudo existe déjà
+        $check = "SELECT * FROM listeofficiers WHERE pseudo = '$pseudo'";
+        $res = mysqli_query($conn, $check);
 
-			if (mysqli_num_rows($res) > 0) {
+        if (mysqli_num_rows($res) > 0) {
 
-				echo "
-					<div class='alert'>
-						⚠️ Ce login existe déjà !
-						<span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
-					</div>
-					";
-			} else {
+            echo "
+                <div class='alert'>
+                    ⚠️ Ce login existe déjà !
+                    <span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+                </div>
+            ";
 
-				// Insertion uniquement si le login n'existe pas
-				$sql = "INSERT INTO listeofficiers (pseudo, motdepasse, roles)
-						VALUES ('$pseudo', '$mdp', '$roles')";
+        } else {
 
-				if (mysqli_query($conn, $sql)) {
-					echo "
-					<div class='alert' style='color:green' >
-						⚠️ Utilisateur ajouté avec succès !
-						<span  class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
-					</div>
-					";
-				} else {
-					echo "<p style='color:red; text-align:center;'>Erreur lors de l'ajout.</p>";
-				}
-			}
-		}
-	}
+            // 🔐 Hachage du mot de passe AVANT insertion
+            $passwordHash = password_hash($mdp, PASSWORD_DEFAULT);
+
+            // Insertion avec mot de passe haché: Uniquement si le login n'existe pas
+            $sql = "INSERT INTO listeofficiers (pseudo, motdepasse, roles)
+                    VALUES ('$pseudo', '$passwordHash', '$roles')";
+
+            if (mysqli_query($conn, $sql)) {
+                echo "
+                <div class='alert' style='color:green'>
+                    ✔️ Utilisateur ajouté avec succès !
+                    <span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+                </div>
+                ";
+            } else {
+                echo "<p style='color:red; text-align:center;'>Erreur lors de l'ajout.</p>";
+            }
+        }
+    }
+}
+
 	
 	// ⛔ 2. Suprimer un utilisateur
 		if (isset($_POST['supprimer'])) {
@@ -82,6 +93,7 @@
 		}
 		
 	// 👁️ 3. Afficher tous les utilisateurs( officiers d'état civil)
+	    require_once 'backend/connection_mysqli.php';
 	    $officiers = "SELECT * FROM listeofficiers";
 	    $resultat = mysqli_query($conn, $officiers);
 ?>

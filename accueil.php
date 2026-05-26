@@ -1,5 +1,12 @@
 <?php
-   //session_start(); // Pour le message confirmation suppression // Pas la peine car searchMessages.php a démarré une session
+   session_start(); // Pour le message confirmation suppression // Pas la peine car searchMessages.php a démarré une session
+
+
+
+   // Empêcher l’accès direct par URL
+   include("backend/url_access_guard.php");
+   
+   // Messages du search engine
    include("backend/searchMessages.php"); 	
 ?>
 

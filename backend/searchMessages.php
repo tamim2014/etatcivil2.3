@@ -17,7 +17,10 @@
  *
  */
 
-session_start();
+	if (session_status() === PHP_SESSION_NONE) {
+		session_start();
+	}
+
   //require_once 'connection_mysqli.php';
    require_once 'connection_PDO.php';
   
