@@ -1,7 +1,13 @@
 
 <?php 
   //session_start();  backend/searcheEngin demarre déjà une session
+ 
+   // Empêcher l’accès direct par URL
+   include("backend/url_access_guard.php");
+
+  // Messages du search engine
   include("backend/searchMessages.php");
+  
   // c'la valeur capturée par capture_items.js et transmis à lectureBD_aficherNaissance.php
   if(!isset($_SESSION["pref"])) $_SESSION["pref"]=""; $s=$_SESSION["pref"]; 
   
@@ -35,6 +41,7 @@
 	 <script src="js/capture_items.js"></script>  <!--  <script src="js/acteOutSlide.js"></script> -->
 	 <script src="js/lectureBD.js"></script>
 	 <script src="js/moteurJquery.js"> </script><!--Exclusivement sur cette page! Pour le menu accordeon du topnav-les préfectures...( moteur un peu vieux mais il tourne) --> 
+     <script src="js/logout.js" defer></script>
 </head>
 
 <body>
@@ -101,8 +108,22 @@
 			<span>Etat civil</span>
 		</p>
     </div>
-    <!-- <div class="mnayvawo">  <button  class="boutoyahemnayivawo"> Actes extraits de la pr&eacute;fecture de:<span id="wilaya_" style="color:#000066;  font-size: 17px; font-style: italic; font-family: \"Times New Roman\", Georgia, Serif;" > <?php  echo  $s; ?></span> </button>   </div>  -->
-<body>
+	<!-- Alert de précaution avant logout -->
+	<div id="popupLogout" class="popup-overlay">
+		<div class="popup-box">
+			<h2>Demande de confirmation</h2>
+
+			<p><b>Vous êtes sur le point de quitter votre espace.</b></p>
+			<p>Pour y accéder de nouveau, vous devrez vous authentifier.</p>
+			<p>Êtes-vous sûr de vouloir continuer ?</p>
+
+			<div class="popup-buttons">
+				<button class="btn-cancel" onclick="fermerPopupLogout()">Annuler</button>
+				<button class="btn-confirm" onclick="confirmerLogout()">Me déconnecter</button>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
 
 

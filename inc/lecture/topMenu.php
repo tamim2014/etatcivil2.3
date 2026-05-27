@@ -1,5 +1,5 @@
 <?php
- echo '<ul style="margin-left:28%;"> 
+ echo '<ul style="margin-left:32%;"> <!-- 28% -->
 	  <li class="dropdown" >
 		<button class="dropbtn btnHover btn-accueil"><a  href="accueil.php">Accueil</a></button>
       </li>	  
@@ -61,8 +61,10 @@
 		   <a href="#">Nouvel Acte de dec&egrave;s </a>
 		   <a href="#">Liste Acte de dec&egrave;s </a>
 		 </div>	
-         		 
 	   </li>
+	   <li class="logout-icon">
+          <a href="#" onclick="ouvrirPopupLogout(event)">👤</a>
+       </li>
 	</ul> 	   
 ';
  
