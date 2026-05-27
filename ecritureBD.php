@@ -242,7 +242,7 @@
 		</div>
 	</div>
 	
-	<!-- Alert logout -->
+	<!-- Alert de précaution avant logout -->
 	<div id="popupLogout" class="popup-overlay">
 		<div class="popup-box">
 			<h2>Demande de confirmation</h2>

@@ -32,10 +32,11 @@
 		   <a href="#">Nouvel Acte de dec&egrave;s </a>
 		   <a href="#">Liste Acte de dec&egrave;s </a>
 		 </div>	
-         		 
 	   </li>
+	   <li class="logout-icon">
+          <a href="#" onclick="ouvrirPopupLogout(event)">👤</a>
+       </li>
 	</ul> 
-	   
 ';
  
 ?>

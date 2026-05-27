@@ -41,8 +41,6 @@
 	   <li class="logout-icon">
           <a href="#" onclick="ouvrirPopupLogout(event)">👤</a>
        </li>
-
-
 	</ul> 
 ';
 ?>

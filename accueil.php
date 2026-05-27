@@ -31,7 +31,7 @@
 	<!-- ✅ Ouverture du panel -->
 	<script src="js/jquery.js"></script>
 
-	<!-- <script src="js/lectureBD.js"></script> -->
+   <script src="js/logout.js" defer></script>
 </head>
 
 <body>
@@ -107,6 +107,21 @@
 			<div class="btns">
 				<button id="btnOk">OK</button>
 				<button id="btnCancel">Annuler</button>
+			</div>
+		</div>
+	</div>
+	<!-- Alert de précaution avant logout -->
+	<div id="popupLogout" class="popup-overlay">
+		<div class="popup-box">
+			<h2>Demande de confirmation</h2>
+
+			<p><b>Vous êtes sur le point de quitter votre espace.</b></p>
+			<p>Pour y accéder de nouveau, vous devrez vous authentifier.</p>
+			<p>Êtes-vous sûr de vouloir continuer ?</p>
+
+			<div class="popup-buttons">
+				<button class="btn-cancel" onclick="fermerPopupLogout()">Annuler</button>
+				<button class="btn-confirm" onclick="confirmerLogout()">Me déconnecter</button>
 			</div>
 		</div>
 	</div>

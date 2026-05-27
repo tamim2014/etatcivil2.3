@@ -50,8 +50,31 @@
 	}
 	
 /* 🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩   */
+
+/* 🧩 logout */
+
+.logout-icon{
+	 padding:.5rem !important;
+ }
+ 
+@media (min-width: 900px) {
+	.logout-icon{
+		  float:right; 
+		  margin:2em 1.75em auto auto;
+	}
+}
+
+/* Reajustement après test mobil */
+
+@media (max-width: 768px) {
+	.logout-icon{
+		padding:.5em !important;
+	}
+}
+
+
 	
-/* Alert logout  */
+/* 🧩 Alert avant logout  */
 
 /* Fond sombre */
 .popup-overlay {

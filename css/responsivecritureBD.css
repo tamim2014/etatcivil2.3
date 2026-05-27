@@ -134,30 +134,13 @@
 	   .menudroiteEdit .kangalaheMenu{
 		   margin-top: 0 !important;			   
 		}
-		.en-tete
-	}
-	
-	
-	/* logout */
-	
-	 .logout-icon{
-		 padding:.5rem !important;
-	 }
-	 
-	@media (min-width: 900px) {
-		.logout-icon{
-			  float:right; 
-			  margin:2em 1.75em auto auto;
+		.en-tete{
+
 		}
 	}
 	
-	/* Reajustement après test mobil */
 	
-	@media (max-width: 768px) {
-		.logout-icon{
-			padding:.5em !important;
-		}
-	}
+
 	
 		
 
