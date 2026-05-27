@@ -1,5 +1,9 @@
 <?php 
    session_start();  //echo "Acte<br>".$_SESSION["showInPop"]; 
+   
+   // Empêcher l’accès direct par URL
+   include("backend/url_access_guard.php");
+   
   /*
    * Cet include etait en bas: sous </htmtl>
    * Mais en bas il provoque une remontée du footer
@@ -29,7 +33,6 @@
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
      <style>
 		/* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */	 
-
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js" defer></script>

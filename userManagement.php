@@ -2,9 +2,11 @@
 
      //include("backend/authentification.php"); //❌ Separation of Concerns
 	 
-     // empêcher l’accès direct par URL
+     
 	 session_start();
 	 require_once 'backend/connection_mysqli.php';
+	 
+	 // empêcher l’accès direct par URL
 	 include("backend/url_access_guard.php");
 
     // ✅ 1. Ajouter un utilisateur

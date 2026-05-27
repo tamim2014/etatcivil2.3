@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+// Empêcher l’accès direct par URL
+include("backend/url_access_guard.php");
+
 //1.Construction des variables php, pour recuperer les données transmises par la page "lectureBD.php"
 $id = $_GET["n"] ?? null;
 

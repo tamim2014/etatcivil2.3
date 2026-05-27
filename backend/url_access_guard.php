@@ -14,7 +14,8 @@
 
      if (!isset($_SESSION['user_id'])) {
         // header("Location: index.php"); // le log se fait dans index.php/ pas de login.php
-       header("Location: ../index.php");
+       //header("Location: ../index.php");
+	   header("Location: index.php");
         exit();
      }
  

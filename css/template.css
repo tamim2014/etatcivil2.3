@@ -25,11 +25,24 @@ body {
     margin-top: -16px;
     text-align: center;
 }
+
+
+
+
 .menu li {
+	list-style:none;	
     display:inline-block;
-    padding:14px 16px;/* padding:20px; */
-    list-style:none;
+    padding:14px 16px;  
 }
+
+
+
+
+
+
+
+
+
 .menu a {
     color:#000;
     text-decoration: none;

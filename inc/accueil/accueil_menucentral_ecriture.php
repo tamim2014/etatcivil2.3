@@ -1,6 +1,7 @@
 <?php
  echo '
-	<ul style="margin-left:5%;">
+    <!-- <ul style="margin-left:5%;"> -->
+    <ul style="margin-left:12.9%;">
 	  <li class="dropdown" >
 		<button class="dropbtn btnHover btn-accueil"><a href="accueil.php">Accueil</a></button>
     </li>	  
@@ -32,6 +33,11 @@
 		   <a href="#">Liste Acte de dec&egrave;s </a>
 		 </div>	
 	   </li>
+
+	   <li class="logout-icon">
+		   <a href="/etatcivil2.3/backend/logout.php" title="Déconnecter">👤</a>
+	   </li>
 	</ul> 
+    
 ';
 ?>
