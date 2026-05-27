@@ -32,10 +32,11 @@
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
      <style>
-		/* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */	 
+		/* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */	 		
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js" defer></script>
+	 <script src="js/logout.js" defer></script>
 </head>
 
 <body class="page-form">
@@ -240,6 +241,23 @@
 			<iframe id="popupFrame" src="" frameborder="0"></iframe>
 		</div>
 	</div>
+	
+	<!-- Alert logout -->
+	<div id="popupLogout" class="popup-overlay">
+		<div class="popup-box">
+			<h2>Demande de confirmation</h2>
+
+			<p><b>Vous êtes sur le point de quitter votre espace.</b></p>
+			<p>Pour y accéder de nouveau, vous devrez vous authentifier.</p>
+			<p>Êtes-vous sûr de vouloir continuer ?</p>
+
+			<div class="popup-buttons">
+				<button class="btn-cancel" onclick="fermerPopupLogout()">Annuler</button>
+				<button class="btn-confirm" onclick="confirmerLogout()">Me déconnecter</button>
+			</div>
+		</div>
+	</div>
+		
     <script src="js/nouveaupop.js"></script>
     <link href="css/nouveaupop.css"  rel="stylesheet"    />	
 </body>

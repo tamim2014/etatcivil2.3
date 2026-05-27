@@ -33,11 +33,16 @@
 		   <a href="#">Liste Acte de dec&egrave;s </a>
 		 </div>	
 	   </li>
-
+       <!--
 	   <li class="logout-icon">
 		   <a href="/etatcivil2.3/backend/logout.php" title="Déconnecter">👤</a>
 	   </li>
+	   -->
+	   <li class="logout-icon">
+          <a href="#" onclick="ouvrirPopupLogout(event)">👤</a>
+       </li>
+
+
 	</ul> 
-    
 ';
 ?>

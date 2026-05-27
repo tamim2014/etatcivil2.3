@@ -139,6 +139,7 @@
 	
 	
 	/* logout */
+	
 	 .logout-icon{
 		 padding:.5rem !important;
 	 }
@@ -149,4 +150,14 @@
 			  margin:2em 1.75em auto auto;
 		}
 	}
+	
+	/* Reajustement après test mobil */
+	
+	@media (max-width: 768px) {
+		.logout-icon{
+			padding:.5em !important;
+		}
+	}
+	
 		
+

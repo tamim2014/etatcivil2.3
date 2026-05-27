@@ -72,6 +72,7 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 		});
 	 </script>
 	 <script src="js/ecritureBD.js" defer></script>
+	 <script src="js/logout.js" defer></script>
 </head>
 
 <body>
@@ -308,6 +309,25 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 			<span>Etat civil</span>
 		</p>
     </div>
+	
+	<!-- Alert logout -->
+	<div id="popupLogout" class="popup-overlay">
+		<div class="popup-box">
+			<h2>Demande de confirmation</h2>
+
+			<p><b>Vous êtes sur le point de quitter votre espace.</b></p>
+			<p>Pour y accéder de nouveau, vous devrez vous authentifier.</p>
+			<p>Êtes-vous sûr de vouloir continuer ?</p>
+
+			<div class="popup-buttons">
+				<button class="btn-cancel" onclick="fermerPopupLogout()">Annuler</button>
+				<button class="btn-confirm" onclick="confirmerLogout()">Me déconnecter</button>
+			</div>
+		</div>
+	</div>
+	
+	
+	
 	<script>		
 		document.getElementByClassName("rediriger").addEventListener("click", function() {
 			 document.location.replace("accueil.php");
