@@ -66,6 +66,33 @@
 	-khtml-border-radius:8px;
 }
 
+
+/* ########################################################################### 
+ * ✔️ Séparer l'acte de naissance dans le panel  
+ * ✔️ Regrouper les 3 autres actes ( leurs panels n'existes pas encore) - Avenant au contrat INCHA ALLAH
+ *  
+ * Le contrat initial couvre seulement les actes de naissances
+ * Des avenants viendront étendre le périmètre du projet sur les 3 lots supplémentaires:
+ * ✅ Les acte de mariage
+ * ✅ Les acte de divorce
+ * ✅ Les acte de décès
+ *
+ *  INCHA ALLAH
+ */
+ 
+.blocActes #panel:nth-child(2){
+	border-bottom:solid 1px #c3c3c3 !important;
+}
+.blocActes #panel:nth-child(4),
+.blocActes #panel:nth-child(6),
+.blocActes #panel:nth-child(8){
+	border-bottom:none !important;	
+}
+.blocActes{
+	margin-bottom:.7em !important;
+}
+/* #################################################################################  */
+
 /* table du panel: Afficher  */
 #panel table.couleurPoliceTable tr:nth-child(2n+2) td {
     color:Peru ;

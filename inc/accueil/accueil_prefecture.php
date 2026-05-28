@@ -19,6 +19,8 @@
 	  <link href="css/slide.css" rel="stylesheet" title="Style_du_Slide_pageDaccueil" />
 	  <link href="css/prefecture.css" rel="stylesheet" title="boutons_Sous_Le_Slide" />
 	  <link href="css/commandes_panel.css" rel="stylesheet"  /> 
+	  
+	  
 	  <!-- Bloc haut du panel de commande -->
 	  <!-- 
 	   --   On choisi la prefecture pour afficher sa table relatif sdans le panel 
@@ -33,25 +35,45 @@
 		</table>
 		--
 		-->
+		
+		
+		
+		<!-- 
+		 * ✔️ Séparer l'acte de naissance dans le panel  
+		 * ✔️ Regrouper les 3 autres actes ( leurs panels n'existent pas encore) - Avenant au contrat INCHA ALLAH
+		 * 
+         * cf. slide.css
+         *		 
+		 * Le contrat initial couvre seulement les actes de naissances
+		 * Des avenants viendront étendre le périmètre du projet sur les 3 lots supplémentaires:
+		 * ✅ Les acte de mariage
+		 * ✅ Les acte de divorce
+		 * ✅ Les acte de décès
+		 *
+		 *  INCHA ALLAH
+		 */
+		 -->
+		
 		<table class="flip" >
 		    <tr>
 				<td class="listemenu" id="flip">
 					<div class="blocActes">
-						<div class="ligne">
+						<div class="ligne" >
 							<span>Acte de naissance</span>
 							<?php include("inc/accueil/accueil_choisir_naissance.php"); ?>
-							
 						</div>
-						<div id="panel" class="scrolbar"></div>
+						<div id="panel" class="scrolbar" ></div>
 
 						<div class="ligne">
 							<span class="mariage">Acte de mariage</span>
 							<?php include("inc/accueil/accueil_choisir_mariage.php"); ?>
 						</div>
+						
 						<div class="ligne">
 							<span class="divorce">Acte de divorce</span>
 							<?php include("inc/accueil/accueil_choisir_divorce.php"); ?>
 						</div>
+						
 						<div class="ligne">
 							<span class="deces">Acte de décès</span>
 							<?php include("inc/accueil/accueil_choisir_deces.php"); ?>
