@@ -8,7 +8,7 @@
 		<div class="dropdown-content droplectureBD">
 			<div id="aside"  > 
 				<ul class="navigation"  >	
-					<li class="toggleSubMenu"><span>Grande-Comores</span>
+					<li class="toggleSubMenu"><span class="huit">Grande-Comores</span>
 						<ul class="subMenu">
 						  <li><a href="#" class="island1">Moroni-Bambao</a></li>
 						  <li><a href="#" class="island1">Hambou</a></li>
@@ -20,7 +20,7 @@
 						  <li><a href="#" class="island1">Itsandra-Hamanvou</a></li>
 						</ul>
 					</li>				
-					<li class="toggleSubMenu"><span>Anjouan</span>
+					<li class="toggleSubMenu"><span class="quatre">Anjouan</span>
 						  <ul class="subMenu">						
 							<li><a href="#" class="island1">Mutsamudu</a></li>
 							<li><a href="#" class="island1">Ouani</a></li>
@@ -28,7 +28,7 @@
 							<li><a href="#" class="island1">Sima</a></li>
 						  </ul>
 					</li>
-					<li class="toggleSubMenu"><span>Moheli</span>
+					<li class="toggleSubMenu"><span class="trois">Moheli</span>
 						  <ul class="subMenu" >						
 							<li><a href="#" class="island1">Fomboni</a></li>
 							<li><a href="#" class="island1">Nioumachoi</a></li>
@@ -63,7 +63,7 @@
 		 </div>	
 	   </li>
 	   <li class="logout-icon">
-          <a href="#" onclick="ouvrirPopupLogout(event)">👤</a>
+          <a href="#"  onclick="ouvrirPopupLogout(event)">👤</a>
        </li>
 	</ul> 	   
 ';

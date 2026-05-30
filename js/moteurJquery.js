@@ -9,11 +9,23 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
     $(document).ready(function(){
 		$(".navigation ul.subMenu").hide();
-		// On sélectionne tous les items de liste portant la classe "toggleSubMenu" et on remplace l'élément span qu'ils contiennent par un lien 
-		$(".navigation li.toggleSubMenu span").each( function () {
+		// On sélectionne les items  portant la classe "toggleSubMenu"
+		// et on remplace l'élément span qu'ils contiennent par un lien portant un title
+
+		$(".navigation li.toggleSubMenu span.huit").each( function () {
 			// On stocke le contenu du span :
-			var TexteSpan = $(this).text();
-			$(this).replaceWith('<a href="" title="Afficher le sous-menu">' + TexteSpan + '<\/a>') ;
+		   	var TexteSpan1 = $(this).text();
+			$(this).replaceWith('<a href="" title="Huit préfectures">' + TexteSpan1 + '<\/a>') ;
+		} ) ;
+		$(".navigation li.toggleSubMenu span.quatre").each( function () {
+		   	var TexteSpan2 = $(this).text();
+			$(this).replaceWith('<a href="" title="Quatre préfectures">' + TexteSpan2 + '<\/a>') ;
+			
+		} ) ;
+		$(".navigation li.toggleSubMenu span.trois").each( function () {
+		   	var TexteSpan3 = $(this).text();
+			$(this).replaceWith('<a href="" title="Trois préfectures">' + TexteSpan3 + '<\/a>') ;
+			
 		} ) ;
 
 		// On modifie l'évènement "click" sur les liens dans les items de liste qui portent la classe "toggleSubMenu" :

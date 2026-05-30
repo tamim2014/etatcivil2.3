@@ -32,7 +32,7 @@
 		a:hover { opacity: .7;   }
 		.navigation a, .navigation span {
 		  display: block;		  
-		  color:  #c4c4c4; 
+		  color: #dcecea; /* ⚠️ voir .dropdown-content a{ { dans dropdown.css } */
 		  text-decoration: none;
 		}
 		
@@ -137,9 +137,7 @@
 	  
 	}
 	
-	.footer {
-		 margin-top:0;
-	} 
+	.footer {margin-top:0;} 
 }
 
 
