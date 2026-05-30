@@ -129,7 +129,7 @@
 			<aside class="aside2">
 				<table  class="tabledroite" style="padding-top:0;">
 					 <tr><td > 
-                         <div class="mnayvawo" style="height:auto;">
+                         <div class="mnayvawo mnayvawoResult" style="height:auto;">
 						        <button  class="boutoyahemnayivawo"> 
 							        Acte extrait de la préfecture de:
 									<span id="wilaya_"> <?php  echo  $p; ?> </span>

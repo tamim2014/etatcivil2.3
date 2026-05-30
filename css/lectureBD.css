@@ -55,13 +55,26 @@
 			   background-color: #cdbe9f; 
 			   height: 44px; /*40px  */  
 			   display: block;  
-			   text-align:center;  padding-top: 5px; padding-bottom: 5px; font-size: 15px; font-style: italic; font-family: Times New Roman;  
-			   width: 80%; margin:auto ;  /* centrage horizontal */
+			   text-align:center; 
+			   padding-top: 5px; 
+			   padding-bottom: 5px; 
+			   font-size: 15px; font-style: italic; font-family: Times New Roman;  
+			   margin:auto ;  /* centrage horizontal */
+			   width: 80%; 
 			   border-radius:6px;             			   
 			   box-shadow:
                           0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
                            0px 2px 2px 0px rgba(255, 255, 255, 0.5);
 		  }
+		  .mnayvawoResult .boutoyahemnayivawo{
+			  margin-bottom:2%;
+		  }
+		  
+		  
+		  
+		  
+		  
+		  
 		/* Le tableau des résultats */	
 		#yivawo  {  
               position: relative;
@@ -74,6 +87,28 @@
 			  box-shadow: 1px 1px 0px 0px #cdbe9f;
 			  border-radius:10px;			  
          }
+		 
+		
+		 /* lectureBD: Mise à jour contenu colonne de droite: .mnayvawo, .line1, #yivawo  */
+		 .mnayvawo:first-child{
+			 border-radius: 8px 8px 0 0;
+			 margin-bottom:0;
+		 }
+		 .line1{
+			 margin-block:0 !important;
+			 width:100% !important;
+			 border-radius:0;
+		 }
+		 #yivawo{
+			border-radius: 0 0 8px 8px; 
+			margin-top:0 !important;
+			height:60vh !important;
+		 }
+		
+		/* FIN Mise à jour contenu colonne de droite: .mnayvawo, .line1, #yivawo */ 
+		 
+		 
+		 
 
 		 
 		 /* Des couleurs alternées dans les lignes de la table: lectureBD.php*/
@@ -85,6 +120,8 @@
 				-moz-border-radius:4px;
                 -khtml-border-radius:4px;
         }
+		
+
 		
 	    table.color_line_middle tr  th {
 			    border-radius:1px;
