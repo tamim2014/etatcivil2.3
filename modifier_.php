@@ -4,6 +4,12 @@ session_start();
 // Empêcher l’accès direct par URL
 include("backend/url_access_guard.php");
 
+// Empêcher l'accès aux officiers non "admin"
+if ($_SESSION["user_role"] !== "admin") {
+    exit("Accès refusé.");
+}
+
+
 //1.Construction des variables php, pour recuperer les données transmises par la page "lectureBD.php"
 $id = $_GET["n"] ?? null;
 

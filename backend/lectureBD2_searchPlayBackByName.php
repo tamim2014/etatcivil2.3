@@ -7,7 +7,7 @@
  * ✅ 2. On fait un select(from liste) par ce filtre  
  * ✅ 3. Récupération des données dans 🎁$donnees: 
  *       Pour affichage du resultat dans une table
- *
+ * ✅ 4. Gestion des droits utilisateurs sur la fonction Rectifier
  */
     // ✅ 1. On recupere le filtre(saisie): Transmis par "backend/serchEngine.php"
     // if(!isset($_GET['num'])) $_GET['num']="";    $num=$_GET['num']; acte ❌ pas la peine ici car on traite seulement ne nom
@@ -39,10 +39,12 @@
 			<td>'.$donnees["acte"].'</td>
 
 			<td>
-				<a href="modifier_.php?n='.$donnees["ID"].
-				   '&nom_='.urlencode($donnees["nom"]).
-				   '&prenom_='.urlencode($donnees["prenom"]).
-				   '&acte_='.urlencode($donnees["acte"]).'">
+				<a href="#"
+				   onclick="verifierDroitEtModifier(\'modifier_.php?n=' . $donnees['ID'] .
+					   '&nom_=' . urlencode($donnees['nom']) .
+					   '&prenom_=' . urlencode($donnees['prenom']) .
+					   '&acte_=' . urlencode($donnees['acte']) .
+				   '\'); return false;">
 					<span class="desktopText1">Modifier</span>
 					<span class="mobilText1">✍️</span>
 				</a>
@@ -70,6 +72,12 @@
 	   $_SESSION['identifiant']= $donnees['ID']; 
 	 } 
      $table.='</table>'; 
+	 ?>
+	<script>
+		const USER_ROLE = "<?= $_SESSION['user_role'] ?>";
+		const USER_PSEUDO = "<?= $_SESSION['pseudo'] ?>";
+	</script>
+	<?php
      echo $table;
  
 	  //mysqli_close($conn);

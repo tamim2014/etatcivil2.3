@@ -5,6 +5,7 @@
 	// Empêcher l’accès direct par URL
     include("backend/url_access_guard.php");
 	
+	
 	// Messages du search engine
 	include("backend/searchMessages.php"); // c'est une connection pdo ici  qui m'oblige à convertir 3 fichiers
 
@@ -81,6 +82,7 @@
 	 -->
 	 <script src="js/jquery.js"></script>
 	 <script src="js/capture_items.js"></script> <!-- ça n'a rien à faire là ! -->
+	 <script src="js/dialogueBox.js" defer></script> <!-- Gestion des droits sur le bouton "Rectifier" ! -->
 	 <script src="js/lectureBD.js"></script>
 	 <script src="js/logout.js" defer></script>
 </head>
@@ -135,7 +137,7 @@
 									<span id="wilaya_"> <?php  echo  $p; ?> </span>
 								</button>
 						 </div>					 
-						 <div class="line1" style="width:98%; height:5px; margin:auto;"></div>
+						 <div class="line1 line1Result" style="width:98%; height:5px; margin:auto;"></div>
 
 						 <div class="mnayvawo mnayvawo2 scrolbar scrolbarSearch">
                             <?php 
@@ -166,7 +168,7 @@
 			<span>Etat civil</span>
 		</p>
     </div>
-    <!-- Alert de précaution avant logout -->
+    <!--✅ Alert de précaution avant logout -->
 	<div id="popupLogout" class="popup-overlay">
 		<div class="popup-box">
 			<h2>Demande de confirmation</h2>
@@ -179,6 +181,13 @@
 				<button class="btn-cancel" onclick="fermerPopupLogout()">Annuler</button>
 				<button class="btn-confirm" onclick="confirmerLogout()">Me déconnecter</button>
 			</div>
+		</div>
+	</div>
+	<!-- ✅ Alert - Boite de dialogue sur les btn "Rectifier" -->
+	<div id="dialogBox">
+		<div id="dialogContent">
+			<p id="dialogMessage"></p>
+			<button onclick="closeDialog()">OK</button>
 		</div>
 	</div>
 </body>

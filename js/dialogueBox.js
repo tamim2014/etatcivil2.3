@@ -1,7 +1,7 @@
 /*
  * 09.04.2026
  * Gere les message des bouton(Supprimer,Rectifier) dans la page accueil.php 
- *
+ * Gere le message du bouton "Rectifier" dans résultat de recherche: lectureBD2.php
  */
 function showDialog(msg) {
 	console.log(msg);
@@ -58,6 +58,21 @@ document.addEventListener('click', function(e) {
 		setTimeout(() => flash.remove(), 400);
 	}
 });
+
+// lectureBD2(Résultas de recherche): Gestion des droits sur le fonction "Rectifier"
+
+function verifierDroitEtModifier(url) {
+
+    if (USER_ROLE !== "admin") {
+        showDialog("M. <b>" + USER_PSEUDO + "</b> ! Vous n'avez pas les droits de <b>modifier</b> un acte.");
+        return;
+    }
+
+    // Admin → OK : Autorisé → redirection
+    window.location.href = url;
+}
+
+
 
 
 
