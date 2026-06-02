@@ -49,8 +49,18 @@
 			  background-color: #E8E4D8; /* #E8E4D8; #e5eecc; */
 			  white-space:nowrap;
 			  z-index:2; 
-			  box-shadow: 1px 1px 0px 0px #c3c3c3;  /*⚠️ #c3c3c3; joue aussi le rôle de border  */
 			  border-radius:8px;
+			/*  box-shadow: 1px 1px 0px 0px #c3c3c3;  ⚠️ #c3c3c3; joue aussi le rôle de border  */
+			 
+
+            /* Effet  relief: Par hazard, le 02.062026 */
+			box-shadow:
+			inset 1px 1px 2px rgba(255,255,255,0.85),
+			inset -1px -1px 2px rgba(0,0,0,0.25);
+			border: 1px solid rgba(0,0,0,0.05);
+
+
+			 
 			}		
 		 .boutoyahemnayivawo{
 			   background-color: #cdbe9f; 
@@ -85,8 +95,18 @@
 			  margin:2% auto ; /* centrage horizontal du .mnayvawo*/			  
 	          background-color: #E8E4D8; /* #E8E4D8; #e5eecc; */
 	          overflow:  auto;  white-space:nowrap;  display: block; 
-			  box-shadow: 1px 1px 0px 0px #cdbe9f;
-			  border-radius:10px;			  
+			  border-radius:10px;	
+			 /* box-shadow: 1px 1px 0px 0px #cdbe9f; */
+			 
+			/* Effet  relief: Par hazard, le 02.062026 */
+			box-shadow:
+			inset 1px 1px 2px rgba(255,255,255,0.85),
+			inset -1px -1px 2px rgba(0,0,0,0.25);
+			border: 1px solid rgba(0,0,0,0.05); 
+			 
+			
+			 
+			  		  
          }
 		 
 		
