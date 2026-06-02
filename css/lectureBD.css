@@ -22,9 +22,10 @@
 		
 		
 /* ############################################################################################# */		
-				
-		.panel3  { /* panel yahé sous-sous-menu de  à droite   - contient les préfectures Moroni-bambao ,Hambou, ...etc*/
-		     list-style:none; text-align:center;
+		/* .panel3 : je pense que c'est l'ancien menu aussi mais j'suis pas encore sûr - à vérifier	*/	
+		.panel3  { /* panel yahé sous-sous-menu de ...  à droite   - contient les préfectures Moroni-bambao ,Hambou, ...etc */
+		     list-style:none; 
+			 text-align:center;
 			 display: none; 
 			 color: ; 
 		     background-color: silver; 
@@ -44,12 +45,12 @@
               padding-top:1.4em;
 			  margin:2% auto ; /* centrage horizontal*/
 			  			  
-              /* Pour limiter lataille du conteneur overflow:  auto; sinon il va s'adapter à la taille du contenu */ 
-			  background-color: #e5eecc;
+              /* Pour limiter la taille du conteneur overflow:  auto; sinon il va s'adapter à la taille du contenu */ 
+			  background-color: #E8E4D8; /* #E8E4D8; #e5eecc; */
 			  white-space:nowrap;
 			  z-index:2; 
-			  box-shadow: 1px 1px 0px 0px green;
-			  border-radius:8px;			  
+			  box-shadow: 1px 1px 0px 0px #c3c3c3;  /*⚠️ #c3c3c3; joue aussi le rôle de border  */
+			  border-radius:8px;
 			}		
 		 .boutoyahemnayivawo{
 			   background-color: #cdbe9f; 
@@ -82,7 +83,7 @@
 			  /* top:52px; left:13px; height:444px; width:539px;  */
               width:100%;  
 			  margin:2% auto ; /* centrage horizontal du .mnayvawo*/			  
-	          background-color: #e5eecc; 
+	          background-color: #E8E4D8; /* #E8E4D8; #e5eecc; */
 	          overflow:  auto;  white-space:nowrap;  display: block; 
 			  box-shadow: 1px 1px 0px 0px #cdbe9f;
 			  border-radius:10px;			  

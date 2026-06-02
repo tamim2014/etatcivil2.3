@@ -59,12 +59,12 @@ document.addEventListener('click', function(e) {
 	}
 });
 
-// lectureBD2(Résultas de recherche): Gestion des droits sur le fonction "Rectifier"
+// lectureBD2(Résultats de recherche): Gestion des droits sur le fonction "Rectifier"
 
 function verifierDroitEtModifier(url) {
 
     if (USER_ROLE !== "admin") {
-        showDialog("M. <b>" + USER_PSEUDO + "</b> ! Vous n'avez pas les droits de <b>modifier</b> un acte.");
+        showDialog("M. <b>" + USER_PSEUDO + "</b> !<br> Vous n'avez pas les droits de <b>modifier un acte</b>.");
         return;
     }
 

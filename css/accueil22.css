@@ -372,9 +372,9 @@ border-radius:20px;
 }
 /* styler un peu le bouton OK */
 #dialogContent button {
-	padding: 10px 25px;        /* plus de padding */
-	border: 1px solid #555;    /* bordure fine */
-	background: #74AFAD;      /* #0078D7; bleu style Windows */
+	padding: 10px 25px;       
+	border: 1px solid #4A7F7D; /*  #c3c3c3*/
+	background: #74AFAD;      /* #0078D7; bleu style Windows | #74AFAD; bleu-vert(teal) */
 	color: white;
 	border-radius: 4px;
 	cursor: pointer;

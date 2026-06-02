@@ -6,12 +6,12 @@ body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
     line-height: 1.5;
-    background: #ECECEA;
+    background: #ECECEA; 
 }
 
 /* Style en-tête */
 .en-tete{
-    background-color: #558C89; /*   ✍️*/
+    background-color: #558C89; /* #558C89;   ✍️*/
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;

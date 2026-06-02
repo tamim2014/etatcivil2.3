@@ -1,7 +1,7 @@
 
 #panel, #flip {
     text-align: center;
-    background-color: #e5eecc;
+    background-color: #E8E4D8; /*🎯 #e5eecc; #e9eddc; ||| #E3EBEA; #E6EAE5; #E8E4D8;  */
     border: solid 1px #c3c3c3;
 	border-radius:8px;
 	-webkit-border-radius:8px;
@@ -108,7 +108,7 @@
 
 #commandePanel  {
 	
-    background-color: #e5eecc;
+    background-color: #E8E4D8; /* 🎯 #e5eecc; #e9eddc; ||| #E3EBEA; #E6EAE5; #E8E4D8;*/
     border: solid 1px #c3c3c3;
 	border-bottom:solid 1px #c3c3c3;
 	padding-bottom:1px;
@@ -240,7 +240,7 @@ tr
 		 }			
 		#commandePanel a input{	
 			padding:1em;
-			background: #e5eecc;
+			background: #E8E4D8; /* 🎯 #e5eecc; #e9eddc; ||| #E3EBEA; #E6EAE5; #E8E4D8; */
 			color: #111;
 			border-radius: 5px;
 			text-decoration: none;
@@ -252,7 +252,7 @@ tr
 			 line-height:3; /* separe les btn */
         }
 		#commandePanel a input:hover{
-			background-color:#e9eddc !important;   /* :#edf3dc;  #eef2e3; ou #ececec; sinon le marron revient au bord */
+			background-color:#e9eddc !important;   /* 🎯#e9eddc 🎯   #edf3dc;  #eef2e3; ou #ececec; sinon le marron revient au bord */
 			border-color:#b8bea8;
 			padding:18px 14px 18px 14px !important;
             margin-top:.4em;			

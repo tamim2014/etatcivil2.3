@@ -1,6 +1,12 @@
 <?php
  session_start(); // Pour le message confirmation suppression
  
+ // Empêcher l'accès aux officiers non "admin"
+ if ($_SESSION["user_role"] !== "admin") {
+    exit("Accès refusé.");
+ }
+ 
+ 
  $id = $_GET["n"];
  //1.Connexion: include("connection_mysqli.php");
  require_once 'connection_mysqli.php';
