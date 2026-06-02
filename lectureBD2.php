@@ -133,7 +133,7 @@
 					 <tr><td > 
                          <div class="mnayvawo mnayvawoResult" style="height:auto;">
 						        <button  class="boutoyahemnayivawo"> 
-							        Acte extrait de la préfecture de:
+							        Acte(s) extrait(s) de la préfecture de:
 									<span id="wilaya_"> <?php  echo  $p; ?> </span>
 								</button>
 						 </div>					 

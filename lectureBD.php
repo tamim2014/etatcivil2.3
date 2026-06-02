@@ -88,7 +88,7 @@
 					<tr><td>
                         <div class="mnayvawo">
 						    <button  class="boutoyahemnayivawo">
- 							    Actes extraits de la préfecture de:
+ 							    Acte(s) extrait(s) de la préfecture de:
 								<span id="wilaya_"> <?php  echo  $s; ?></span>
 							</button>   
 						</div>

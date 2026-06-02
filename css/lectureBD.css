@@ -63,7 +63,7 @@
 			 
 			}		
 		 .boutoyahemnayivawo{
-			   background-color: #cdbe9f; 
+			   
 			   height: 44px; /*40px  */  
 			   display: block;  
 			   text-align:center; 
@@ -72,10 +72,20 @@
 			   font-size: 15px; font-style: italic; font-family: Times New Roman;  
 			   margin:auto ;  /* centrage horizontal */
 			   width: 80%; 
-			   border-radius:6px;             			   
+			   border-radius:6px; 
+			   /*
+               background-color: #cdbe9f ; 			   
 			   box-shadow:
                           0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
                            0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+			   
+			   /* Model master handi: Sans box-shadow */
+                border: 2px solid gray;
+				background-color: white;
+				border-bottom: 0;
+				border-right: 0;				
+						   
+						   
 		  }
 		  .mnayvawoResult .boutoyahemnayivawo{
 			  margin-bottom:2%;
