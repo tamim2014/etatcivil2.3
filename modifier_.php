@@ -64,7 +64,11 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
 	 <style>
 		 /* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */
-		 
+		
+        /* specifique à cette page : Le gris-beige fatigue les yeux à la saisie */
+        body, .tabledroite{
+			background:#ECECEA;
+		}		
 	 </style>	  
 	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	 <script type="text/javascript">

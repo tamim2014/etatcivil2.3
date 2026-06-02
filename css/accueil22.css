@@ -272,7 +272,7 @@ button      {
 	min-height:33.5em; /* ⚠️  */
 	/* box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;  */
 	
-	background: #ECECEA;
+	background: #E8E4D8; /* #ECECEA;  */
 }
 
 .listemenu{ line-height: 1.8; }
@@ -345,7 +345,7 @@ border-radius:20px;
 
 
 .btnHover:hover{
-	background-color: #cdbe7f !important;  
+	background-color: transparent !important; /* #cdbe7f  */ 
 	border-radius:2px;			
 	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 0px 2px 2px 0px rgba(255, 255, 255, 0.5);                   
 }

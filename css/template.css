@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
     line-height: 1.5;
-    background: #ECECEA; 
+    background: #E8E4D8; /* #ECECEA;  #E8E4D8;  */
 }
 
 /* Style en-tête */
@@ -77,7 +77,6 @@ body {
     width: 68%;
   /*  float: left; ✍️*/
     padding: 25px 20px;
-    background: white;
 }
 
 
@@ -88,7 +87,7 @@ body {
 
 .colonne_laterale aside {
 	/* à supprimer ces 2 première proprietés  ✍️ */
-    background:inherit;    
+    background:inherit;  /*  */  
     padding:15px;
 	padding-top:0 !important;
 	
@@ -165,12 +164,13 @@ img {
  
 
   aside.aside1, aside.aside2{
-	 height:100% !important;  /* ⚠️ virer l'espace vide en bas */
-	 background:#ECECEA  !important; 
-	 box-shadow: 0 0 65px #cdbe9f inset !important;
+	 height:100% !important;  /* ⚠️⚠️⚠️ virer l'espace vide en bas  de .aside1🎯 */
+	 background: #ECECEA !important; /* #ECECEA */
+	 box-shadow: 0 0 65px #cdbe9f inset !important; 
   }
   aside.aside2{
 	  box-shadow:none !important;
+	  height:auto !important; /* ⚠️⚠️⚠️ virer l'espace vide en bas  de .aside2🎯 */
   }
   
   .tablegauche{ 

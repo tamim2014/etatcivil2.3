@@ -83,9 +83,9 @@
 				</aside>
 			</div>
 			<!-- LE PANNEAU DE DROITE : Recher des document par liste déroulante -->
-			<div class="colonne_contenu" style="padding:0;">
-				<aside class="aside2">
-					<table  class="tabledroite" >
+			<div class="colonne_contenu" style="padding:0; ">
+				<aside class="aside2" >
+					<table  class="tabledroite">
 			            <tr><td class="listemenu">
  						    <?php include("inc/accueil/accueil_prefecture.php"); ?> 
 						</td></tr> 
