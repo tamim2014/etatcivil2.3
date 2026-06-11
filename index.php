@@ -16,6 +16,45 @@
 	<link href="css/factorisation.css"  rel="stylesheet"/> <!-- ⚠️ On nettoie les elts pour factoriser ici  --> 
 	<link href="css/flextablegauche.css"  rel="stylesheet" />  
 	<link href="css/responsive.css"  rel="stylesheet"    />
+	<style>
+	    .t_area{
+			    /* padding-top:1.1em; */
+			    background-color: white;
+				/* virer la poignée de redimensionnement */
+				resize:none;
+				
+				
+				/* Template creux - master handi: Sans box-shadow 				
+					border: 2px solid gray;
+					border-bottom: 0;
+					border-right: 0;
+				*/
+				
+				/* Template  box-shadow 
+				   box-shadow :inset 0 2px 4px rgba(0,0,0,.15);
+				*/
+				
+							
+				/* ********** Template Appli CORAN: OK pour un conteneur sombre **********************  
+				    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset, 
+					0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+                    border: 1px solid #8c8b8b; 
+				*/
+
+                /* ********** Template creux sobre **********************  */
+				 box-shadow :
+				         inset 0 2px 4px rgba(0,0,0,.12),
+				         inset 0 -1px 1px rgba(255,255,255,.5);				
+
+		}
+        @media (max-width: 768px) {
+            .t_area{
+                padding:1em;
+                font-size:0.82rem !important;
+                color:black !important;
+            }
+        }
+	</style>
 
 	<script src="js/jquery.js"></script>
 </head>
@@ -25,7 +64,7 @@
 		<div class="en-tete">
 			<div class="hollowTop"   >				   
 			   
-			   <input class="flag" type=image src="img/drapeau.png" align="left"/>
+			   <input class="flag" type="image" src="img/drapeau.png" align="left"/>
 			   <p class="text_header">OFFICE  D'&Eacute;TAT CIVIL </p>			  
 			</div> 
 		</div>		

@@ -50,7 +50,7 @@
 	<header>
 		<div class="en-tete">
 			<div class="hollowTop"   >				   
-			   <input type=image src="img/drapeau.png" align="left" class="flag" />
+			   <input type="image" src="img/drapeau.png" align="left" class="flag" />
 			   <p class="text_header" style="padding-left:23%;">OFFICE   <br> D'&Eacute;TAT CIVIL </p>			  
 			</div> 
 		</div>		
@@ -71,7 +71,7 @@
 								<h6> Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement </h6>
 								<h4> MINISTERE DE L'INTERIEUR  </h4>
 							</font>
-							<img src="img/armoirie.png"  style="z-index:3;   margin-left:40%; margin-right:40%; width:20%;"/>
+						    <img src="img/armoirie.png"  style="z-index:3;   margin-left:40%; margin-right:40%; width:20%;"/> 
 						 </caption>	  
 						 <tr>
 						   <td><br> Pr&eacute;fecture: </td>

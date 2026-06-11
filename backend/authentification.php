@@ -6,7 +6,7 @@ require_once 'backend/connection_mysqli.php';
 $login = $_POST['pseudo_'] ?? '';
 $mdp   = $_POST['motdepasse_'] ?? '';
 
-$message = 'Veuillez vous identifier dans les deux champs ci-dessus';
+$message = 'Veuillez vous identifier sur les deux champs ci-dessus';
 
 // Vérification des champs vides
 if (isset($_POST["envoie"])) {

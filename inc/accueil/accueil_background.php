@@ -3,7 +3,7 @@
 <table class="closeUpperMargin"   ><tr><td>  </td></tr></table><!--rempli la marge du borne sup -->
 <table class="hollowTop"   >
   <tr><td >  
-     <input type=image src="img/drapeau.png" align="left" class="flag" />
+     <input type="image" src="img/drapeau.png" align="left" class="flag" />
   </td>
   <td></td><td></td> 
   <td style="padding-top:3.125em; padding-left:9.9em; color: #FFFFFF;" > <h3> OFFICE   </h3></td><td></td><td></td><td></td><td></td><td></td><td></td> 

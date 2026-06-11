@@ -24,6 +24,11 @@
 	<link href="css/searchEngine.css"  rel="stylesheet"/>
 	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style"/>
 	<link href="css/responsiveAccueil.css"  rel="stylesheet"/>
+		<style>
+	    select{
+				border: 1px solid #bbb; /* #bbb; #8c8b8b;  */
+		}
+		</style>
 
 	
     <!-- ✅ Pour les messages - Boite de dialogue et les Popup -->
@@ -45,8 +50,8 @@
 	?>
     <header>
 		<div class="en-tete">
-			<div class="hollowTop"   >				   
-			   <input type=image src="img/drapeau.png" align="left" class="flag" style="width:30%; height:100%; filter:brightness(80%);" />
+			<div class="hollowTop">				   
+			   <input type="image" src="img/drapeau.png" align="left" class="flag" style="width:30%; height:100%; filter:brightness(80%);" />
 			   <p class="text_header" style="padding-top:2%; padding-left:45%;">OFFICE    D'&Eacute;TAT CIVIL </p>			  
 			</div> 
 		</div>		
@@ -57,7 +62,7 @@
     <div class="contenu" style="margin-bottom:0;">
 	    <form action ="" method="POST" name="form1" >
 			<!-- LE PANNEAU DE GAUCHE : Recher des document par numero ou nom -->
-			<div class="colonne_laterale" style=" margin-bottom:0; padding-bottom:0; height:auto;">
+			<div class="colonne_laterale" style=" margin-bottom:0; padding-bottom:0; height:auto;  ">
 				<aside class="aside1">
 					<table class="tablegauche" style="margin-bottom:0; padding-bottom:0; height:24em; "  > <!-- height:24em;  -->
 					    <!-- <caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;  ">  -->

@@ -47,8 +47,8 @@
 <body>
     <header>
 		<div class="en-tete">	
-			<div class="hollowTop"   >				   
-			   <input type=image src="img/drapeau.png" align="left" class="flag"  />
+			<div class="hollowTop"   >
+               <input class="flag" type="image" src="img/drapeau.png" align="left"/>			
 			   <p class="text_header" >OFFICE   <br> D'&Eacute;TAT CIVIL </p>			  
 			</div> 				
 		</div>		

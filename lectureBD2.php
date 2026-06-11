@@ -91,7 +91,7 @@
     <header>
 		<div class="en-tete">	
 			<div class="hollowTop"   >				   
-			   <input type=image src="img/drapeau.png" align="left" class="flag" style="width:30%; height:100%; filter:brightness(80%);" />
+			   <input type="image" src="img/drapeau.png" align="left" class="flag" style="width:30%; height:100%; filter:brightness(80%);" />
 			   <p class="text_header" style="padding-left:50%;">OFFICE   <br> D'&Eacute;TAT CIVIL </p>			  
 			</div> 				
 		</div>		

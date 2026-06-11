@@ -126,7 +126,7 @@ if (isset($_POST['ajouter'])) {
     <header  >
 		<div class="en-tete">
 			<div class="hollowTop"   >				   
-			   <input type=image src="img/drapeau.png" align="left" class="flag"  />
+			   <input type="image" src="img/drapeau.png" align="left" class="flag"  />
 			   <p class="text_header">OFFICE D'&Eacute;TAT CIVIL </p>			  
 			</div> 
 		</div>		
