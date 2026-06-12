@@ -1,24 +1,24 @@
 <?php
 
-     //include("backend/authentification.php"); //❌ Separation of Concerns
+     include("backend/authentification.php"); 
 	 
      
-	 session_start();
+	 //session_start();
 	 require_once 'backend/connection_mysqli.php';
 	 
 	 // empêcher l’accès direct par URL
 	 include("backend/url_access_guard.php");
 
-// ✅ 1. Ajouter un utilisateur
+    // ✅ 1. Ajouter un utilisateur
+	
 if (isset($_POST['ajouter'])) {
 
-    $pseudo     = mysqli_real_escape_string($conn, $_POST['pseudo']);
-    $mdp        = mysqli_real_escape_string($conn, $_POST['mdp']);
-    $roles      = mysqli_real_escape_string($conn, $_POST['roles']);
-    $prefecture = mysqli_real_escape_string($conn, $_POST['prefecture']);
-    $email      = mysqli_real_escape_string($conn, $_POST['mail']);
+    $pseudo = mysqli_real_escape_string($conn, $_POST['pseudo']);
+    $mdp    = mysqli_real_escape_string($conn, $_POST['mdp']);
+    $roles  = mysqli_real_escape_string($conn, $_POST['roles']);
+    $confirmer  = mysqli_real_escape_string($conn, $_POST['confirmer']);
 
-    if (!empty($pseudo) && !empty($mdp)) {
+    if (!empty($mdp) && !empty($confirmer)) {
 
         // Vérifier si le pseudo existe déjà
         $check = "SELECT * FROM listeofficiers WHERE pseudo = '$pseudo'";
@@ -38,9 +38,9 @@ if (isset($_POST['ajouter'])) {
             // 🔐 Hachage du mot de passe AVANT insertion
             $passwordHash = password_hash($mdp, PASSWORD_DEFAULT);
 
-            // Insertion avec les nouveaux champs
-            $sql = "INSERT INTO listeofficiers (pseudo, motdepasse, roles, prefecture, email)
-                    VALUES ('$pseudo', '$passwordHash', '$roles', '$prefecture', '$email')";
+            // Insertion avec mot de passe haché: Uniquement si le login n'existe pas
+            $sql = "INSERT INTO listeofficiers (pseudo, motdepasse, roles)
+                    VALUES ('$pseudo', '$passwordHash', '$roles')";
 
             if (mysqli_query($conn, $sql)) {
                 echo "
@@ -56,50 +56,10 @@ if (isset($_POST['ajouter'])) {
     }
 }
 
-
 	
-	// ⛔ 2. Suprimer un utilisateur
-		if (isset($_POST['supprimer'])) {
-			$pseudo_del = mysqli_real_escape_string($conn, $_POST['pseudo_del']);
-			if (!empty($pseudo_del)) {
-				$check = "SELECT * FROM listeofficiers WHERE pseudo = '$pseudo_del'";
-				$res = mysqli_query($conn, $check);
 
-				if (mysqli_num_rows($res) == 0) {
-					
-					echo "
-						<div class='alert'>
-							⚠️ Ce login n'existe pas !
-							<span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
-						</div>
-					";
-
-				} else {
-					
-					$sql = "DELETE FROM listeofficiers WHERE pseudo = '$pseudo_del'";
-                    
-					if (mysqli_query($conn, $sql)) {
-						
-						echo "
-						<div class='alert' style='color:green' >
-						   ⚠️ Utilisateur supprimé avec succès !
-						   <span  class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
-					    </div>
-						";
-						
-					} else {
-						echo "<p style='color:red; text-align:center;'>Erreur lors de la suppression.</p>";
-					}
-					
-				}
-				
-			}
-		}
 		
-	// 👁️ 3. Afficher tous les utilisateurs( officiers d'état civil)
-	    require_once 'backend/connection_mysqli.php';
-	    $officiers = "SELECT * FROM listeofficiers";
-	    $resultat = mysqli_query($conn, $officiers);
+
 ?>
 
 
@@ -118,6 +78,7 @@ if (isset($_POST['ajouter'])) {
 	<link href="css/flextablegauche.css"  rel="stylesheet" />
 	<link href="css/usermanagement.css"  rel="stylesheet" /> <!-- ⚠️ specifique à cette page -->
 	<link href="css/responsive.css"  rel="stylesheet"/>
+
 	
 	<script src="js/jquery.js"></script><!-- pourquoi? -->
 </head>
@@ -179,96 +140,24 @@ if (isset($_POST['ajouter'])) {
 		</form>
 		<!-- LE PANNEAU DE DROITE -->
 		<div class="colonne_contenu" style="text-align:center; background:inherit; ">
-		    <h1>User management</h1>
+		    <h1>Réinitialisation</h1>
 			<div class="form-container form1">
-				<h2>Ajouter un officier d'état civil</h2>
+				<h2>Réinitialiser le mot de passe</h2>
 				<form method="POST" action="userManagement.php">
+
 					<div class="form-group">
-						<label for="pseudo">Nom d'utilisateur</label>
-						<input type="text" id="pseudo" name="pseudo" required>
-					</div>
-					<div class="form-group">
-						<label for="mdp">Mot de passe</label>
+						<label for="mdp">Nouveau mot de passe</label>
 						<input type="password" id="mdp" name="mdp" required>
 					</div>
 					<div class="form-group">
-						<label for="roles">roles (optionnel)</label>
-						<input type="text" id="roles" name="roles">
+						<label for="confirmer">Confirmer</label>
+						<input type="password" id="confirmer" name="confirmer" required>
 					</div>
-					<div class="form-group">
-						<label for="prefecture">Prefecture</label>
-						<!-- <input type="text" id="prefecture" name="prefecture" required> -->
-						<select  name="prefecture" id="prefecture" required >
-							 <optgroup label="Ngazidja"> 
-								 <option>Moroni-Bambao </option>
-								 <option>Hambou </option> 
-								 <option>Mbadjini-Ouest </option>
-								 <option>Mbadjini-Est </option>
-								 <option>Oichili-Dimani </option>  
-								 <option>Hamahamet-Mboinkou </option>  
-								 <option>Mitsamiouli-Mboude </option> 
-								 <option>Itsandra-Hamanvou </option>
-							 </optgroup>
-								 <optgroup label="Moheli">      
-								 <option>Fomboni </option>
-								 <option>Nioumachoi </option> 
-								 <option>Djando </option>
-							 </optgroup>
-							 <optgroup label="Anjouan">           
-								 <option>Mutsamudu </option>
-								 <option>Ouani </option> 
-								 <option>Domoni </option>
-								 <option>Mremani </option>
-								 <option>Sima </option>  
-							 </optgroup>
-						</select>
-					</div>
-					<div class="form-group">
-						<label for="mail">Adresse mail</label>
-						<input type="email" id="mail" name="mail" required>
-					</div>
+
 
 					<button type="submit" name="ajouter" class="btn-submit">Ajouter</button>
 				</form>
 			</div>
-			<div class="form-container">
-				<h2>Supprimer un officier</h2>
-
-				<form method="POST" action="userManagement.php">
-				
-					<div class="form-group">
-						<label for="pseudo_del">Nom d'utilisateur</label>
-						<input type="text" id="pseudo_del" name="pseudo_del" required>
-					</div>
-
-					<button type="submit" name="supprimer" class="btn-delete">Supprimer</button>
-				</form>
-			</div>
-			<!-- liste roles -->
-			<div class="form-container table1">
-			  	<h2>Liste des officiers</h2>
-				<table class="officiers scrolbar" cellpadding="5" style="border:1px solid #c4c4c4;">
-					<tr>
-						<th>ID</th>
-						<th>Pseudo</th>
-						<th>Roles</th>
-						<th>Prefecture</th>
-						<th>Logs</th>
-					</tr>
-					<?php
-						while($ligne = $resultat->fetch_assoc()){
-							echo "
-							<tr>
-									<td>".$ligne['ID']."</td>
-									<td>".$ligne['pseudo']."</td>
-									<td>".$ligne['roles']."</td>
-									<td>".$ligne['prefecture']."</td>
-									<td></td>
-							</tr>";
-						}
-					?>
-				</table>
-		    </div>  	
 		</div>
     </div>  <!-- Fin div.contenu --> 
 	

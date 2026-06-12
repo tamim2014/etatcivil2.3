@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `listeofficiers` (
 	`ID` INT(10) NOT NULL AUTO_INCREMENT,
-	`pseudo` VARCHAR(30) NOT NULL COLLATE 'utf8mb3_unicode_ci',
+	`pseudo` VARCHAR(255) NOT NULL COLLATE 'utf8mb3_unicode_ci',
 	`motdepasse` VARCHAR(30) NOT NULL COLLATE 'utf8mb3_unicode_ci',
 	`roles` VARCHAR(30) NULL DEFAULT NULL COLLATE 'utf8mb3_unicode_ci',
 	PRIMARY KEY (`ID`) USING BTREE
@@ -33,6 +33,14 @@ COLLATE='utf8mb3_unicode_ci'
 ENGINE=MyISAM
 AUTO_INCREMENT=10
 ;
+
+-- Mise à jour de la table: Ajout des champs "prefecture", "email"
+
+ALTER TABLE listeofficiers
+ADD COLUMN prefecture VARCHAR(50) NULL AFTER roles,
+ADD COLUMN email VARCHAR(100) NULL AFTER prefecture;
+
+
 
 
 
