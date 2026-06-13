@@ -38,6 +38,9 @@ if (!empty($login) && !empty($mdp)) {
         $_SESSION['user_id']    = $row['ID'];
         $_SESSION['pseudo']     = $row['pseudo'];
         $_SESSION['user_role']  = $row['roles'];
+        $_SESSION["email"] = $row["email"]; // ← celui-là est crucial
+
+		
 
         // Redirection selon le rôle
         if ($row['roles'] === "usermanagement") {

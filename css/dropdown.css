@@ -153,5 +153,92 @@
 .popup-box h2{
 	margin-bottom:1em;
 }
-	
+
+/* 🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩   */
+
+/* 
+ * Garge-Les-Gonesse
+ * Samedi 13.06.2026
+ * Rénitialisation mot de passe:
+ * Popup flottant sous l’icône 👤
+ */
+ 
+.logout-icon {
+	position: relative;
+}
+
+.popup-compte {
+	display: none;
+	position: absolute;
+	top: 35px;
+	right: 0; /* Desktop = droite */
+	background: white;
+	padding: 10px;
+	border-radius: 6px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+	z-index: 9999;
+}
+
+.popup-content-compte button {
+	cursor: pointer;
+}
+
+.popup-content-compte button {
+	cursor: pointer;
+	transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.popup-content-compte button:hover {
+	transform: translateY(-2px) scale(1.02);
+	box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+	background-color: rgba(0,0,0,0.03); /* léger voile premium */
+}
+
+
+
+
+button.reinit{
+	border:none;
+	background:none;
+}
+
+/* Aligner à gauche */
+/* --- POPUP CONTENT (DESKTOP) --- */
+.popup-content-compte {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;   /* aligné à gauche */
+	justify-content: flex-start;
+	text-align: left;          /* au cas où un héritage centre le texte */
+	gap: 10px;
+}
+
+
+
+.popup-compte {
+	min-width: 220px;   /* largeur minimale */
+	max-width: 260px;   /* largeur maximale */
+}
+
+
+.popup-compte.open {
+	display: block;
+}
+
+@media (max-width: 786px) {
+	.popup-compte {
+		right: auto;
+		left: 0; /* Mobile = gauche */
+	}
+}
+
+@media (max-width: 786px) {
+	.popup-content-compte {
+		display: flex;
+		flex-direction: column;      /* vertical */
+		align-items: flex-start;     /* aligné à gauche */
+		justify-content: flex-start; /* pas centré */
+		gap: 10px;                   /* petit espace entre les boutons */
+	}
+}
 	

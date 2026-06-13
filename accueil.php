@@ -7,7 +7,11 @@
    include("backend/url_access_guard.php");
    
    // Messages du search engine
-   include("backend/searchMessages.php"); 	
+   include("backend/searchMessages.php");
+
+   // TEMPORAIRE
+   //var_dump($_SESSION['email']);
+   
 ?>
 
 <!DOCTYPE html>
@@ -25,9 +29,9 @@
 	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style"/>
 	<link href="css/responsiveAccueil.css"  rel="stylesheet"/>
 		<style>
-	    select{
-				border: 1px solid #bbb; /* #bbb; #8c8b8b;  */
-		}
+			select{
+					border: 1px solid #bbb; /* #bbb; #8c8b8b;  */
+			}
 		</style>
 
 	
