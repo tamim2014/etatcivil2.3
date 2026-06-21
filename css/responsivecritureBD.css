@@ -139,6 +139,27 @@
 		}
 	}
 	
+	.margeSection{
+		padding-top:2em;
+	}
+	/* Alignement des Panneaux emboités: colonnes1 et 3  */
+	.ajustement{
+		color:transparent;
+	}
+	@media screen and (max-width: 786px) {
+	    .ajustement{
+			display:none;
+		}
+		/* colonne centrale */
+		.colonne_contenu{ 
+		  margin-top:0 !important;
+		  padding-top:0 !important;
+		}
+		.margeSection{
+			padding-top:0;
+		}
+	}
+	
 	
 
 	

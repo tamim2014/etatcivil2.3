@@ -17,7 +17,7 @@
 
 
 //2.Récupération des données de la base(par construction d'une variables php de stockage tampon)
-$R=mysqli_query($conn , "SELECT * FROM  liste WHERE prefecture='".$_SESSION["v"]."'  ORDER BY nom     ") or exit(mysql_error($conn ));
+$R=mysqli_query($conn , "SELECT * FROM  liste WHERE prefecture='".$_SESSION["v"]."'  ORDER BY nom  ") or exit(mysql_error($conn ));
 /*
 ET pour ceux qui ont le même nom de famille, les trier par ordre décroissant d’âge par exemple.
 Ou selon la date d'enregistrement de l'acte

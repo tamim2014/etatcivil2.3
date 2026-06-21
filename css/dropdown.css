@@ -210,7 +210,10 @@ button.reinit{
 	align-items: flex-start;   /* aligné à gauche */
 	justify-content: flex-start;
 	text-align: left;          /* au cas où un héritage centre le texte */
-	gap: 10px;
+	gap: 20px;
+	padding-block:1em;
+	line-height:3;
+	 
 }
 
 

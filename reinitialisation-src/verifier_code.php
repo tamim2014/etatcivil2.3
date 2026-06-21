@@ -2,12 +2,12 @@
 session_start();
 require_once 'backend/connection_mysqli.php';
 
-/*
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header("Location: saisir_code.php?error=1");
     exit;
 }
-*/
+
 
 
 // Vérifier que l'utilisateur est connecté

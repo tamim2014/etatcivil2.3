@@ -3,7 +3,7 @@
 		* Solution jQuery
 		*
 		*  Normalement un lien href renvoie vers une nouvelle page! 
-		*  Ici, on veut que le href renvoie la page dans  la m�me page source: Notamment dan un panel
+		*  Ici, on veut que le href renvoie la page dans  la mm page source: Notamment dan un panel
         *	
         *
         *  intercepter un clic, emp�cher la navigation, charger du contenu dans un panel.		
@@ -18,14 +18,14 @@
 				  // On charge une table en fonction du bouton ET DE LA PREFECTURE CAPTURE
 				  $('a#rectif, a#zima , a#print_ , a#trier ').click(function(e){ 
                        $('#panel').load($(this).attr('href')); // appel le fichier  <a id="zima"  href="backend/colonne_supprimer_acte.php" > par exemple
-                       e.preventDefault();//Tr�s important.Sinon redirection dans une autre page
+                       e.preventDefault();//Empecher la navigation. important! Sinon redirection dans une autre page
                   });
-                 //$('.tab a:first').trigger('click'); // Affiche la page1 par d�faut
+                 //$('.tab a:first').trigger('click'); // Affiche la page1 par defaut
             });
 	
 
 	
-	// Solution AJAX pour la modifiaction(affichage) de la 5�me colonne du slide : page d'acceuil (include prefecture.php)
+	// Solution AJAX pour la modifiaction(affichage) de la 5eme colonne du slide : page d'acceuil (include prefecture.php)
      // Ce code je l'ai mis dans le fichier accueil_liens_colonne4.js   
 		
 		/****************************

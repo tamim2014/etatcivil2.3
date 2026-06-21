@@ -111,7 +111,7 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 		  <!-- LE PANNEAU DE GAUCHE :  -->
 		  	<div class="colonne_laterale" style="width: 33%; ">
 			    <aside class="aside1">
-					<table class="tablegauche"  name="listes" style="height:30em; padding:1em inherit; " >
+					<table class="tablegauche"  name="listes" style="height:30em; padding:1em inherit;">
 						<caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;    "> 
 							<font color="gray" style="line-height:2;">
 								<h3> UNION DES COMORES  </h3>
@@ -238,7 +238,10 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 							      <td> <input type="text" name="naissance_nom_prenom"  value="<?php echo $donnees["naissance_nom_prenom"];?>" placeholder="est n&eacute;(e)"></td>
 							      <td> <input type="text" name="naissance_lieu"  value="<?php echo $donnees["naissance_lieu"];?>" placeholder=" &agrave;(lieu)"></td>
 							 </tr>
-							 <tr> <td> <input type="text" name="naissance_sexe" value="<?php echo $donnees["naissance_sexe"];?>" placeholder=" du sexe"  > </td></tr>
+							 <tr> 
+							     <td> <input type="text" name="naissance_sexe" value="<?php echo $donnees["naissance_sexe"];?>" placeholder=" du sexe"  > </td>
+							     <td></td>
+							 </tr>
 							 
 							 <tr> 
 							     <td> <font color="##1D702D"><b>Le p&egrave;re</b></font></td> 
@@ -269,7 +272,10 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 							
 					
 							 
-							 <tr><td> <font color="##1D702D"><b>La d&eacute;claration</b></font></td> <td> </td></tr>
+							 <tr>
+							    <td> <font color="##1D702D"><b>La d&eacute;claration</b></font></td> 
+								<td> </td>
+							 </tr>
 							 
 							 <tr> 
 							     <td> <input type="text" name="declaration_faite_par"   value="<?php echo $donnees["declaration_faite_par"];?>" placeholder=" faite par:"> </td>
@@ -308,7 +314,7 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 								  <?php include("inc/ecriture/ecritureBD_edit_menudroite1.php"); ?>
 							</td></tr>     
 						</table>
-					     <?php  echo '<div class="rappel">'.$rappel.'</div>' ;   ?>
+					    <?php  echo '<div class="rappel">'.$rappel.'</div>'; ?>
 				</aside>
 			</div>
 		</form>

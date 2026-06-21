@@ -21,7 +21,6 @@ $reponse = $conn->prepare("SELECT * FROM liste WHERE ID = ?");
 $reponse->execute([$id]);
 $donnees = $reponse->fetch();
 
-
 ?>
 
 <!DOCTYPE html>

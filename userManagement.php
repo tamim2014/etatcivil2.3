@@ -1,9 +1,9 @@
 <?php
 
-     //include("backend/authentification.php"); //❌ Separation of Concerns
+     include("backend/authentification.php"); //❌ Separation of Concerns - ça ne doit pas être là
 	 
-     
-	 session_start();
+	 //session_start();
+	 
 	 require_once 'backend/connection_mysqli.php';
 	 
 	 // empêcher l’accès direct par URL

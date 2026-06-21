@@ -54,7 +54,7 @@
 		 */
 		 -->
 		
-		<table class="flip" >
+		<table class="flip">
 		    <tr>
 				<td class="listemenu" id="flip">
 					<div class="blocActes">
@@ -86,6 +86,10 @@
 		<!-- Bloc bas: le petit menu sous le panel [qui appelle une nouvelle table: voir la 5ème colonne du slide]-->
 		<div id="commandePanel" >
 			<!-- Solution jQuery -->
+			<!-- On ne tranmet rien sur l'url:
+       			 $_SESSION["v"] servira de filtre.
+			     Elle contient la prefecture choisie dans inc/accueil/accueil_choisir_naissance.php 
+			-->
 			<a id="zima"    href="backend/colonne_supprimer_acte.php"> <input type="button"  value="Supprimer"  class="boutonSupprimer"/></a> 
 			<a id="rectif"  href="backend/colonne_rectifier_acte.php"> <input type="button"  value="Rectifier"  class="boutonRectifier"/></a>
 			<a id="print_"  href="backend/colonne_imprimer_acte.php" >  <input type="button"  value="Imprimer"    class="boutonImprimer"/></a> 

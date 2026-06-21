@@ -9,8 +9,15 @@
 // NOUS SOMMES CÔTE backend
 session_start();
 //Défintion des varibles: ATTENTION "  LE FAIRE TOUJOURS AVANT LA CONNEXION"
+
+
+/*
+ * Réception du filtre "prefecture" 
+ * transmis par la fonction AJAX showActeLinkSlide(str) . 
+ * fonction obsolete remplacée par captureCombo(str)
+ */
 if(!isset($_GET["p"])) $_GET["p"]=""; 
-$p = $_GET['p']; // Réception de la prefecture transmis par la fonction AJAX showActeLinkSlide(str) . str est chaine de caractere qui désigne la préfecture choisie par l'utilistateur
+$p = $_GET['p']; 
 
 //1.Connexion
 require_once 'connection_mysqli.php';

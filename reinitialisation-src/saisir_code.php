@@ -114,9 +114,7 @@ if (!isset($_SESSION['user_id'])) {
     <form method="POST" action="verifier_code.php">
         <input type="text" name="code" placeholder="Code reçu" required>
         <button type="submit">Valider</button>
-	
 		<a href="envoyer_code.php" class="btn-renvoyer">Renvoyer le code</a>
-      
     </form>
      <?php
     if (isset($_GET['error'])) {

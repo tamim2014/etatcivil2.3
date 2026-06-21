@@ -62,9 +62,9 @@
 		<form action ="backend/ecritureBD_insertionSQL.php" method="post" name="form1" >
 			<!-- LE PANNEAU DE GAUCHE :  -->
 			<div class="colonne_laterale" style="width: 33%;  " >
-				<aside class="aside1" style="padding:0 !important;  " >			    
+				<aside class="aside1">			    
 		            <!-- ❌ include("inc/ecriture/ecritureBD_panodegauche.php"); ❌ ça donne un espace fantôme en haut -->
-					  <table class="tablegauche"  name="listes" style="margin:0 !important;"> 
+					  <table class="tablegauche"  name="listes" style="height:30em; padding:1em inherit;"> 
 						  <caption  style="caption-side:top; box-shadow: 0 40px 65px #cdbe9f inset; "> 
 							<font color="gray" style="line-height:2;">
 								<h3> UNION DES COMORES  </h3>
@@ -141,7 +141,7 @@
                 </aside>
 			</div><!--  fin colone_leterale -->
 			 <!-- LE PANNEAU CENTRAL   -->
-            <div class="colonne_contenu" style="padding:0; width: 40%;">
+            <div class="colonne_contenu" style="padding:0; width:40%;">
 			     <aside class="aside2">
 					<table class="tabledroite showacte"  >
 					    <!-- <p class="showacte">  Pour afficher l'acte modifiÃ© dans la partie droite de la page modifie_.php  -->
@@ -159,9 +159,15 @@
 							     <td> <input type="text" name="naissance_lieu"  placeholder=" &agrave;(lieu)" > </td>
 							 </tr>
 
-							 <tr> <td> <input type="text" name="naissance_sexe"   placeholder=" du sexe" > </td></tr>
+							 <tr> 
+							    <td> <input type="text" name="naissance_sexe"   placeholder=" du sexe" > </td>
+							    <td></td>
+							 </tr>
 							 
-							 <tr><td> <font color="##1D702D"><b>Le p&egrave;re</b></font></td><td> <font color="##1D702D"><b>La m&egrave;re</b></font></td> </tr>
+							 <tr >
+							     <td class="margeSection"> <font color="##1D702D"><b>Le p&egrave;re</b></font></td>
+								 <td class="margeSection"> <font color="##1D702D"><b>La m&egrave;re</b></font></td> 
+							 </tr>
 							  
 							 <tr> <td> <input type="text" name="pere_nom_prenom"  placeholder=" fils(fille) de" >         <td> <input type="text" name="mere_nom_prenom"  placeholder=" et de" > </td> </td></tr>
 							 <tr> <td> <input type="text" name="pere_datenaisance"  placeholder=" n&eacute; le"> </td>    <td> <input type="text" name="mere_datenaisance"  placeholder="n&eacute;e le"  > </td> </tr>
@@ -170,7 +176,10 @@
 							 <tr> <td> <input type="text" name="pere_villederesidence"   placeholder=" demeurant &agrave;"  > </td> <td> <input type="text" name="mere_villederesidenc"   placeholder=" demeurant &agrave;"> </td></tr>
 
 
-							 <tr><td> <font color="##1D702D"><b>La d&eacute;claration</b></font></td> </tr>
+							 <tr>
+							      <td class="margeSection"> <font color="##1D702D"><b>La d&eacute;claration</b></font></td> 
+							      <td class="margeSection"> </td> 
+							 </tr>
 							 <tr> 
 								 <td> <input type="text" name="declaration_faite_par" placeholder=" faite par:"> </td>
 								 <td ><input class="jugement" type="text"  placeholder="Emetteur jugement"></td>
@@ -217,11 +226,19 @@
 			<!-- LE PANNEAU DE DROITE: -->
 			<div class="colonne_laterale" style="width: 25%; ">
 				<aside class="aside1">			    
-		            <table  class="tablemenu" style="min-height:35.97em; " >    
+		            <table  class="tablemenu" style="min-height:41.835em;">    
 						<tr><td>
 							<?php include("inc/ecriture/ecritureBD_menudroite.php"); ?>
 						</td></tr>
 					</table>
+					<!-- Alignement des Panneaux emboités: colonnes1 et 3 -->
+					<div class="rappel ajustement"> 
+					    Formulaire sur panneau coulissant,<br>
+					    Interface à volet coulissant,<br>
+						Emboitement de section,<br>
+					    Panneaux emboités, Telescopique2 ou 3 ...<br>
+						"L'effet doit servir l'usage". Sinon ça fait GADGET!<br>
+					</div>
             	</aside>
 			</div>
 		</form>	

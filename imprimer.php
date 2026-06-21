@@ -171,15 +171,10 @@ $donnees = $reponse->fetch();
 			
 			   <input type="text"  style="margin-left:-95px; margin-bottom:0;"  value="<?php echo $donnees["prenom"];?>">
 			   <hr style="margin-top:0;" /><br>
-			   
-			
-
 	  </td>
-	  
-     
    </tr>
    
-   <tr height="20px">             <td  rowspan="2">
+   <tr height="20px"><td  rowspan="2">
          <p align="left">
 	    <div style="margin-left:10px; line-height:0;">
 		  
@@ -219,15 +214,8 @@ $donnees = $reponse->fetch();
 		 </p>
 		 </div>
 		 <p > <h4  align="center"> L'officier de l'Etat Civil:</h4></p>
-		 
-	  
 	  </td>
-	  
-	  
-
    </tr>
-   
-
 </table>
 </div>
 </body>
