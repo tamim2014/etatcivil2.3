@@ -1,3 +1,5 @@
+reinitialisation-src
+
 reinitialisation-src/envoyer_code.php
 
 reinitialisation-src/readme.txt
