@@ -43,7 +43,7 @@
 
 			<div id="popupCompte" class="popup-compte">
 				<div class="popup-content-compte">
-					<button class="reinit" onclick="window.location.href=\'envoyer_code.php\'">
+					<button class="reinit" onclick="window.location.href=\'reinitialisation/envoyer_code.php\'">
 						⚙️ Réinitialiser le mot de passe
 					</button>
 

@@ -32,7 +32,6 @@ function ouvrePop(url) {
  
 //1. Alerte de précaution avant suppression(Btn OK/Annuler): Pas besoin de cette fonction pour une alet normal
 
-
 function confirmerSuppression(id) {
     const modal = document.getElementById("confirmModal");
     modal.style.display = "flex";

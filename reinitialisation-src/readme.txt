@@ -14,8 +14,10 @@ Si ton fichier est déjà dans l’historique(suivi par github), Git va continue
 
 ➡️ Donc tu dois le retirer du suivi sans le supprimer du disque :
 
-git rm --cached envoyer_code.php
-git commit -m "Ignore envoyer_code.php"
+1.1 Fais un fichier .gitignore à la racine et liste le dedans: touch .gitignore
+
+1.2 git rm --cached envoyer_code.php
+1.3 git commit -m "Ignore envoyer_code.php"
 
 
 2) Comment le virer de github (historique depot distant)?

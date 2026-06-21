@@ -109,7 +109,7 @@
 			<span>Etat civil</span>
 		</p>
     </div>
-	<!--  Alert de précaution avant suppression   --->
+	<!--  Alert de précaution avant suppression   -->
 	<div id="confirmModal" class="modal">
 		<div class="modal-content">
 			<p>Vous confirmez la suppression ?</p>
