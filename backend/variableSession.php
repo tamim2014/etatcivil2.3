@@ -19,13 +19,13 @@ $_SESSION["email"] = $row["email"]; // ← celui-là est crucial
 
 
 // set in: backend/colonne_afficher_naissance.php (filtre "prefecture")   
-// get in: backend/colonne_suppprimer_acte.php, colonne_rectifier_acte.php, colonne_suppprimer_acte.php, colonne_imprimer_acte.php, trier.php
+// get in: backend/colonne_suppprimer_acte.php, colonne_rectifier_acte.php,  colonne_imprimer_acte.php, trier.php
 $_SESSION["v"]= $p; 
 
 
 // set in: backend/supprimer.php
 // get in: accueil.php 
-$_SESSION['messageDelete'] = "Suppression effectuée avec succès ⚠️ "; 
+$_SESSION['messageDelete'] = "Suppression effectuée avec succès⚠️"; 
 
 
 // Obsolete
