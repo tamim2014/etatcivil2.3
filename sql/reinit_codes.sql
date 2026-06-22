@@ -11,7 +11,7 @@
 -- Généré le :  Vendredi 12 Juin 2026
 -- La renommer en reinit_codes (plus parlant)
 
-CREATE TABLE reset_codes (
+CREATE TABLE reinit_codes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     code VARCHAR(10) NOT NULL,
