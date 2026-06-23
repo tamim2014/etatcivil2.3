@@ -53,6 +53,7 @@
 
 			}
 			
+			
 			@media screen and (max-width: 600px) {
 
 				/* cacher tous les li sauf le dernier */
@@ -65,17 +66,6 @@
 					display: block;
 				}
 			}
-
-			
-			
-			
-			
-
-
-
-
-			
-			
 		</style>
 
 	
@@ -180,16 +170,11 @@
 	</div>
 	<script>
 		function ouvrirMenu() {
-		  /*
-		  var x = document.getElementById("hamburguer");
-		  x.style.display = "block";
-		  */
-           var x = document.querySelectorAll("#hamburguer li");
-            x.forEach(li => li.classList.add("show"));
-        }
-
-
-		
+			var items = document.querySelectorAll("#hamburguer li:not(:last-child)");
+			items.forEach(li => {
+				li.classList.toggle("show");
+			});
+		}
 	</script>
 </body>
 </html>
