@@ -1,5 +1,5 @@
 <?php
- echo '<ul style="margin-left:32%;"> <!-- 28% -->
+ echo '<ul style="margin-left:32%;" id="hamburguer"> <!-- 28% -->
 	  <li class="dropdown" >
 		<button class="dropbtn btnHover btn-accueil"><a  href="accueil.php">Accueil</a></button>
       </li>	  
@@ -62,9 +62,28 @@
 		   <a href="#">Liste Acte de dec&egrave;s </a>
 		 </div>	
 	   </li>
+	   <!--
 	   <li class="logout-icon">
           <a href="#"  onclick="ouvrirPopupLogout(event)">👤</a>
        </li>
+	   -->
+	   <li class="logout-icon">
+			<a href="#" id="btnCompte" >👤</a>
+
+			<div id="popupCompte" class="popup-compte">
+				<div class="popup-content-compte">
+					<button class="reinit" onclick="window.location.href=\'reinitialisation/envoyer_code.php\'">
+						⚙️ Réinitialiser le mot de passe
+					</button>
+
+					<button class="reinit" onclick="ouvrirPopupLogout(event)">
+						🚪↩️ Déconnexion
+					</button>
+				</div>
+			</div>
+			
+			<a href="javascript:void(0);" style="font-size:15px;" class="troisBarres" onclick="ouvrirMenu();">&#9776; </a>
+		</li>
 	</ul> 	   
 ';
  

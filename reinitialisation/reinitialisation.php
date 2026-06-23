@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes">
     <title>Réinitialisation du mot de passe</title>
     <style>
         body { font-family: Arial; background: #f5f5f5; }

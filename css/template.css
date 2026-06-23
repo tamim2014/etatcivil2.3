@@ -18,7 +18,9 @@ body {
     color: white;
     position: relative;    
 }
-/* topNav */
+
+/* ##################   topNav ############################ */
+
 .menu{
     background-color: #74AFAD; /*  ✍️*/
     /* Essai  */
@@ -26,21 +28,11 @@ body {
     text-align: center;
 }
 
-
-
-
 .menu li {
 	list-style:none;	
     display:inline-block;
     padding:14px 16px;  
 }
-
-
-
-
-
-
-
 
 
 .menu a {
@@ -54,7 +46,13 @@ body {
     color:#ECECEA;
 }
 
+#myTopnav{
+	z-index:3;
+	box-shadow: 0 20px 65px #cdbe9f inset;
+}
 
+
+/* ####################### div.contenu ##########################  */
 
 
 .colonne_laterale {
@@ -149,9 +147,7 @@ img {
 	top: 0;
 	width: 100%;
 }
-#myTopnav{
-	z-index:3;
-}
+
 
 /* ################ TASKS: COMPLEMENT DE ZONNING(Virer l'espace vide en bas=> remplir donc, toute la hauteur de la page) ###########################################  */ 
   

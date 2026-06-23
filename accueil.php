@@ -8,10 +8,7 @@
    
    // Messages du search engine
    include("backend/searchMessages.php");
-
-   // TEMPORAIRE
-   //var_dump($_SESSION['email']);
-   
+  
 ?>
 
 <!DOCTYPE html>
@@ -28,45 +25,11 @@
 	<link href="css/searchEngine.css"  rel="stylesheet"/>
 	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style"/>
 	<link href="css/responsiveAccueil.css"  rel="stylesheet"/>
-		<style>
-			select{
-			   border: 1px solid #bbb; /* #bbb; #8c8b8b;  */
-			}
-			
-			/* Responsive topMenu:Ouverture/Fermeture avec ☰ */
-			
-			
-			.troisBarres {
-			  display: none;
-			}
-			@media screen and (max-width: 600px) {
-             /*   ul#hamburguer li:not(:last-child){  display: none; }  */
-				.logout-icon{  padding-top:1.5em !important; }
-				.popup-compte {  top:50px; }
-				
-				/* Aligner ☰ à droite */
-				  a.troisBarres {
-					float: right;
-					display: block;
-				}
-				
-
-			}
-			
-			
-			@media screen and (max-width: 600px) {
-
-				/* cacher tous les li sauf le dernier */
-				ul#hamburguer li:not(.show):not(:last-child) {
-					display: none;
-				}
-
-				/* quand un li reçoit .show → il devient visible */
-				ul#hamburguer li.show {
-					display: block;
-				}
-			}
-		</style>
+	<style>
+		select{
+		   border: 1px solid #bbb; /* #bbb; #8c8b8b;  */
+		}
+	</style>
 
 	
     <!-- ✅ Pour les messages - Boite de dialogue et les Popup -->
@@ -168,14 +131,6 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		function ouvrirMenu() {
-			var items = document.querySelectorAll("#hamburguer li:not(:last-child)");
-			items.forEach(li => {
-				li.classList.toggle("show");
-			});
-		}
-	</script>
 </body>
 </html>
 

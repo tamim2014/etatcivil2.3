@@ -21,4 +21,11 @@
 			document.getElementById("popupCompte").classList.toggle("open");
 		}); 
 	
-    
+    /* 🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩   */
+	
+		function ouvrirMenu() {
+			var items = document.querySelectorAll("#hamburguer li:not(:last-child)");
+			items.forEach(li => {
+				li.classList.toggle("show");
+			});
+		}
