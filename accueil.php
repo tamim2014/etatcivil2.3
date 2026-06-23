@@ -30,8 +30,52 @@
 	<link href="css/responsiveAccueil.css"  rel="stylesheet"/>
 		<style>
 			select{
-					border: 1px solid #bbb; /* #bbb; #8c8b8b;  */
+			   border: 1px solid #bbb; /* #bbb; #8c8b8b;  */
 			}
+			
+			/* Responsive topMenu:Ouverture/Fermeture avec ☰ */
+			
+			
+			.troisBarres {
+			  display: none;
+			}
+			@media screen and (max-width: 600px) {
+             /*   ul#hamburguer li:not(:last-child){  display: none; }  */
+				.logout-icon{  padding-top:1.5em !important; }
+				.popup-compte {  top:50px; }
+				
+				/* Aligner ☰ à droite */
+				  a.troisBarres {
+					float: right;
+					display: block;
+				}
+				
+
+			}
+			
+			@media screen and (max-width: 600px) {
+
+				/* cacher tous les li sauf le dernier */
+				ul#hamburguer li:not(.show):not(:last-child) {
+					display: none;
+				}
+
+				/* quand un li reçoit .show → il devient visible */
+				ul#hamburguer li.show {
+					display: block;
+				}
+			}
+
+			
+			
+			
+			
+
+
+
+
+			
+			
 		</style>
 
 	
@@ -134,6 +178,19 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		function ouvrirMenu() {
+		  /*
+		  var x = document.getElementById("hamburguer");
+		  x.style.display = "block";
+		  */
+           var x = document.querySelectorAll("#hamburguer li");
+            x.forEach(li => li.classList.add("show"));
+        }
+
+
+		
+	</script>
 </body>
 </html>
 

@@ -1,10 +1,10 @@
 <?php
  echo '
   
-	<ul style="margin-left:28%;">
-	  <li class="dropdown" >
+	<ul style="margin-left:28%;" id="hamburguer">
+	  <li class="dropdown"  >
 		<button class="dropbtn btnHover btn-accueil"><a  href="accueil.php">Accueil</a></button>
-    </li>	  
+      </li>	  
 	  <li class="dropdown" >
 		<button class="dropbtn"> Acte de naissance</button>
 		<div class="dropdown-content">
@@ -33,11 +33,7 @@
 		   <a href="#">Liste Acte de dec&egrave;s </a>
 		 </div>	
 	   </li>
-	   <!-- ⚙️
-	   <li class="logout-icon">
-          <a href="#" onclick="ouvrirPopupLogout(event)">👤</a>
-       </li>
-	   -->
+
 		<li class="logout-icon">
 			<a href="#" id="btnCompte" >👤</a>
 
@@ -52,10 +48,11 @@
 					</button>
 				</div>
 			</div>
+			
+			<a href="javascript:void(0);" style="font-size:15px;" class="troisBarres" onclick="ouvrirMenu();">&#9776; </a>
 		</li>
-
-
 	</ul> 
+	
 ';
  
 ?>
