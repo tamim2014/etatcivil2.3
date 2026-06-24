@@ -3,7 +3,7 @@ session_start();
 
 // Si l'utilisateur n'est pas connecté → retour login
 if (!isset($_SESSION['user_id'])) {
-    header("Location: authentification.php");
+    header("Location: ../backend/authentification.php");
     exit;
 }
 
@@ -19,7 +19,7 @@ if (!isset($_SESSION['user_id'])) {
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f5f5f5;
+            background: #E8E4D8; /* #f5f5f5; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,11 +45,12 @@ if (!isset($_SESSION['user_id'])) {
             margin-top: 15px;
             border-radius: 5px;
             border: 1px solid #aaa;
+			font-size: 22px;
         }
         button {
             margin-top: 20px;
             padding: 10px 20px;
-            background: #007bff;
+            background: #558C89; /* #007bff; */
             color: white;
             border: none;
             border-radius: 5px;
@@ -68,7 +69,7 @@ if (!isset($_SESSION['user_id'])) {
 			display: inline-block;
 			margin-top: 10px;
 			padding: 10px 20px;
-			background: #ffc107;
+			background: #74AFAD; /* #ffc107; */
 			color: black;
 			text-decoration: none;
 			border-radius: 5px;

@@ -37,14 +37,14 @@
 		<li class="logout-icon">
 			<a href="#" id="btnCompte" >👤</a>
 
-			<div id="popupCompte" class="popup-compte">
+			<div id="popupCompte" class="popup-compte" >
 				<div class="popup-content-compte">
-					<button class="reinit" onclick="window.location.href=\'reinitialisation/envoyer_code.php\'">
+					<button class="reinit"  onclick="window.location.href=\'reinitialisation/envoyer_code.php\'">
 						⚙️ Réinitialiser le mot de passe
 					</button>
 
 					<button class="reinit" onclick="ouvrirPopupLogout(event)">
-						🚪↩️ Déconnexion
+						↩️ Déconnexion
 					</button>
 				</div>
 			</div>

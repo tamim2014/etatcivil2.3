@@ -189,15 +189,13 @@
 .popup-content-compte button:hover {
 	transform: translateY(-2px) scale(1.02);
 	box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-	background-color: rgba(0,0,0,0.03); /* léger voile premium */
 }
-
-
-
 
 button.reinit{
 	border:none;
 	background:none;
+	font-size:1.1rem;
+	padding-right:.5rem;
 }
 
 /* Aligner à gauche */
@@ -217,8 +215,8 @@ button.reinit{
 
 
 .popup-compte {
-	min-width: 220px;   /* largeur minimale */
-	max-width: 260px;   /* largeur maximale */
+	min-width: 280px;   /* 220px; largeur minimale */
+	max-width: 300px;   /* 260px;largeur maximale */
 }
 
 
@@ -230,6 +228,8 @@ button.reinit{
 	.popup-compte {
 		right: auto;
 		left: 0; /* Mobile = gauche */
+	    min-width: 260px;   /* 220px; largeur minimale */
+	    max-width: 300px;   /* 260px;largeur maximale */
 	}
 }
 

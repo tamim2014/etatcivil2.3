@@ -43,19 +43,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
     <title>Réinitialisation du mot de passe</title>
     <style>
-        body { font-family: Arial; background: #f5f5f5; }
-        .box {
-            width: 350px;
-            margin: 80px auto;
-            padding: 25px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px #ccc;
-            text-align: center;
-        }
+	    html, body {
+			overflow-x: hidden;
+		}
+
+        body { 
+		   font-family: Arial; 
+		   background: #E8E4D8; /* #f5f5f5; */
+		}
+		.box {
+			max-width: 350px;
+			width: 90%;
+			margin: 80px auto;
+			padding: 25px;
+			padding-right: 35px; /*  ← espace réservé pour le X */
+			background: white;
+			border-radius: 8px;
+			box-shadow: 0 0 10px #ccc;
+			text-align: center;
+			position: relative; /* ← OBLIGATOIRE */
+		}
+		/* Version mobile : on ajoute un coussin pour le X */
+		@media (max-width: 600px) {
+			.box {
+				padding-right: 45px; 
+			}
+		}
+
         input {
             width: 90%;
             padding: 10px;
@@ -65,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         button {
             margin-top: 20px;
             padding: 10px 20px;
-            background: #28a745;
+            background: #558C89; /* #28a745; */
             color: white;
             border: none;
             cursor: pointer;
@@ -75,11 +94,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             color: red;
             margin-top: 15px;
         }
+		/* Style pour la croix (propre, moderne, UX-friendly)   */
+		.close-btn {
+			position: absolute;
+			top: 10px;
+			right: 20px;
+			font-size: 24px;
+			color: #333;
+			text-decoration: none;
+			font-weight: bold;
+			cursor: pointer;
+			z-index: 9999; /* ← LA LIGNE QUI RÈGLE TOUT */
+		}
+		@media (max-width: 600px) {
+			.close-btn {
+				padding-right: 40px; 
+			}
+		}
+
+
+
+		.close-btn:hover {
+			color: #000;
+		}
     </style>
 </head>
 <body>
 
 <div class="box">
+    <a href="../index.php" class="close-btn">×</a>
     <h2>Nouveau mot de passe</h2>
 
     <?php if (!empty($error)): ?>

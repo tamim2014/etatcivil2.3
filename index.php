@@ -20,9 +20,9 @@
 	    .t_area{
 			    /* padding-top:1.1em; */
 			    background-color: white;
-				/* virer la poignée de redimensionnement */
+				/* virer la poignée de redimensionnement 
 				resize:none;
-				
+				*/
 				
 				/* Template creux - master handi: Sans box-shadow 				
 					border: 2px solid gray;
@@ -41,11 +41,11 @@
                     border: 1px solid #8c8b8b; 
 				*/
 
-                /* ********** Template creux sobre **********************  */
+                /* ********** Template creux sobre **********************  
 				 box-shadow :
 				         inset 0 2px 4px rgba(0,0,0,.12),
 				         inset 0 -1px 1px rgba(255,255,255,.5);				
-
+                */
 		}
         @media (max-width: 768px) {
             .t_area{
@@ -90,7 +90,7 @@
 						 <tr><td> <font color="#cdbe9f"><b>Entrer votre</b></font> login<br/> <input type="text"   id="login_"  name="pseudo_" > </td></tr> 
 						 <tr><td> <font color="#cdbe9f"><b>Votre</b></font> mot de passe<br/> <input type="password"  id="pswd_"   name="motdepasse_"> </td></tr>
 						 <tr ><td style="padding-top:1em;">
-							 <textarea  class="t_area" > <?php echo $message; ?> </textarea>
+							 <textarea  class="t_area" style="color:black !important;"> <?php echo $message; ?> </textarea>
 						 <br/><input id="valider_" type="submit" class="submit btnHover" value="Valider"   name="envoie"/>
 						 </td></tr>
 					</table>
