@@ -117,9 +117,35 @@ if (isset($_POST['ajouter'])) {
 	<link href="css/factorisation.css"  rel="stylesheet"/>
 	<link href="css/flextablegauche.css"  rel="stylesheet" />
 	<link href="css/usermanagement.css"  rel="stylesheet" /> <!-- ⚠️ specifique à cette page -->
+	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style"/>
 	<link href="css/responsive.css"  rel="stylesheet"/>
 	
-	<script src="js/jquery.js"></script><!-- pourquoi? -->
+	
+	
+	<style>
+	  /* responsive_menucentrale_login : à mettre après responsive.css*/
+	  @media screen and (max-width: 1000px) {
+		  .en-tete{
+			  display:none;
+		  }
+		  #myTopnav{ 
+			   display:block;  
+		  }
+		  .colonne_contenu{
+			padding-top:0 !important;  
+		  }
+		  h1.titreUM{
+			  margin-top:0;
+			  padding-top:0 !important;
+		  }
+
+	  }
+	  
+	</style>
+	
+	<script src="js/jquery.js"></script>
+	<!-- ✅ Déconnection -->
+    <script src="js/logout.js" defer></script>
 </head>
 
 <body >
@@ -179,7 +205,7 @@ if (isset($_POST['ajouter'])) {
 		</form>
 		<!-- LE PANNEAU DE DROITE -->
 		<div class="colonne_contenu" style="text-align:center; background:inherit; ">
-		    <h1>User management</h1>
+		    <h1 class="titreUM">User management</h1>
 			<div class="form-container form1">
 				<h2>Ajouter un officier d'état civil</h2>
 				<form method="POST" action="userManagement.php">
@@ -193,7 +219,12 @@ if (isset($_POST['ajouter'])) {
 					</div>
 					<div class="form-group">
 						<label for="roles">roles (optionnel)</label>
-						<input type="text" id="roles" name="roles">
+						<!-- <input type="text" id="roles" name="roles"> -->
+						<select  name="roles" id="roles">
+						 	<option></option>
+							<option>admin</option> 
+							<option>usermanagement</option>
+						</select>
 					</div>
 					<div class="form-group">
 						<label for="prefecture">Prefecture</label>
@@ -278,6 +309,21 @@ if (isset($_POST['ajouter'])) {
 			<span>Etat civil</span>
 		</p>
     </div>
+	<!-- Alert de précaution avant logout -->
+	<div id="popupLogout" class="popup-overlay">
+		<div class="popup-box">
+			<h2>Demande de confirmation</h2>
+
+			<p><b>Vous êtes sur le point de quitter votre espace.</b></p>
+			<p>Pour y accéder de nouveau, vous devrez vous authentifier.</p>
+			<p>Êtes-vous sûr de vouloir continuer ?</p>
+
+			<div class="popup-buttons">
+				<button class="btn-cancel" onclick="fermerPopupLogout()">Annuler</button>
+				<button class="btn-confirm" onclick="confirmerLogout()">Me déconnecter</button>
+			</div>
+		</div>
+	</div>
     <!-- css du sticky: en bas de usermanagement.css --> 	
 	<script src="js/sticky.js"></script>
 </body>

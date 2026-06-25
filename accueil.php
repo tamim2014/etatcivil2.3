@@ -36,8 +36,8 @@
 	<script src="js/dialogueBox.js" defer></script>
 	<!-- ✅ Ouverture du panel -->
 	<script src="js/jquery.js"></script>
-
-   <script src="js/logout.js" defer></script>
+    <!-- ✅ Déconnection -->
+    <script src="js/logout.js" defer></script>
 </head>
 
 <body>

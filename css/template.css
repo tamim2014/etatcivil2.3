@@ -48,7 +48,13 @@ body {
 
 #myTopnav{
 	z-index:3;
-	box-shadow: 0 20px 65px #cdbe9f inset;
+	/* box-shadow: 0 20px 65px #cdbe9f inset; */
+}
+
+@media (max-width: 768px) {
+	#myTopnav{
+		box-shadow: 0 20px 65px #cdbe9f inset;
+	}
 }
 
 

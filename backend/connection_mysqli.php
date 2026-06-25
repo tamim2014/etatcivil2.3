@@ -12,7 +12,14 @@
     $BD_base = "etatcivil";
 	$message='';
 	
-	$conn = mysqli_connect($BD_backend,$BD_utilisateur,'',$BD_base)or die('Erreur de connection :'.mysqli_error());
+	//$conn = mysqli_connect($BD_backend,$BD_utilisateur,'',$BD_base) or die('Erreur de connection :'.mysqli_error());
+	
+	$conn = mysqli_connect($BD_backend, $BD_utilisateur, '', $BD_base);
+
+	if (!$conn) {
+		die("Erreur de connexion à la base de données.");
+	}
+
 	$conn->set_charset("utf8");
 /*
 $conn=mysql_connect('localhost','root', '') ;
