@@ -120,7 +120,14 @@ if (isset($_POST['ajouter'])) {
 	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style"/>
 	<link href="css/responsive.css"  rel="stylesheet"/>
 	<link href="css/responsiveUsermanagement.css"  rel="stylesheet"/>
-
+    <style>
+       @media screen and (max-width: 786px) {
+		   .t_area{
+			   padding-top:1em;
+			   color:#000 !important;
+		   }
+	   }
+	</style>
 	
 	<script src="js/jquery.js"></script>
 	<!-- ✅ Déconnection -->
@@ -168,7 +175,7 @@ if (isset($_POST['ajouter'])) {
 						 <tr><td> <font color="#cdbe9f"><b>Entrer votre</b></font> login<br/> <input type="text"   id="login_"  name="pseudo_" > </td></tr> 
 						 <tr><td> <font color="#cdbe9f"><b>Votre</b></font> mot de passe<br/> <input type="password"  id="pswd_"   name="motdepasse_"> </td></tr>
 						 <tr ><td style="padding-top:1em;">
-							 <textarea style="font-size:1em; " class="t_area" name="myTextBox"> Veuillez saisir vos identifiants </textarea>
+							 <textarea style="font-size:1em; color:#000 !important; " class="t_area" name="myTextBox"> Veuillez saisir vos identifiants </textarea>
 						 <br/><input id="valider_" type="submit" class="submit btnHover" value="Valider"   name="envoie"/>
 						 </td></tr>
 					</table>					 

@@ -20,6 +20,7 @@
 	    .t_area{
 			    /* padding-top:1.1em; */
 			    background-color: white;
+				color:#000 !important;
 				/* virer la poignée de redimensionnement 
 				resize:none;
 				*/
@@ -51,7 +52,7 @@
             .t_area{
                 padding:1em;
                 font-size:0.82rem !important;
-                color:black !important;
+                color:#000 !important;
             }
         }
 	</style>
@@ -90,7 +91,7 @@
 						 <tr><td> <font color="#cdbe9f"><b>Entrer votre</b></font> login<br/> <input type="text"   id="login_"  name="pseudo_" > </td></tr> 
 						 <tr><td> <font color="#cdbe9f"><b>Votre</b></font> mot de passe<br/> <input type="password"  id="pswd_"   name="motdepasse_"> </td></tr>
 						 <tr ><td style="padding-top:1em;">
-							 <textarea  class="t_area" style="color:black !important;"> <?php echo $message; ?> </textarea>
+							 <textarea  class="t_area" style="color:#000 !important;"> <?php echo $message; ?> </textarea>
 						 <br/><input id="valider_" type="submit" class="submit btnHover" value="Valider"   name="envoie"/>
 						 </td></tr>
 					</table>
