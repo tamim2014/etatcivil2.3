@@ -22,9 +22,9 @@
 			    background-color: white;
 				
 				color:#000 !important;				
-				-webkit-text-fill-color: red !important;
+				-webkit-text-fill-color: #000 !important;
 				/* 
-				  virer la poignée de redimensionnement 
+				  virer la poignée de #000imensionnement 
 				   resize:none;
 				*/
 
