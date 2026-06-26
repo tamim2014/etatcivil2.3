@@ -119,29 +119,8 @@ if (isset($_POST['ajouter'])) {
 	<link href="css/usermanagement.css"  rel="stylesheet" /> <!-- ⚠️ specifique à cette page -->
 	<link href="css/responsiveTopnav.css" rel="stylesheet" title="Style"/>
 	<link href="css/responsive.css"  rel="stylesheet"/>
-	
-	
-	
-	<style>
-	  /* responsive_menucentrale_login : à mettre après responsive.css*/
-	  @media screen and (max-width: 1000px) {
-		  .en-tete{
-			  display:none;
-		  }
-		  #myTopnav{ 
-			   display:block;  
-		  }
-		  .colonne_contenu{
-			padding-top:0 !important;  
-		  }
-		  h1.titreUM{
-			  margin-top:0;
-			  padding-top:0 !important;
-		  }
+	<link href="css/responsiveUsermanagement.css"  rel="stylesheet"/>
 
-	  }
-	  
-	</style>
 	
 	<script src="js/jquery.js"></script>
 	<!-- ✅ Déconnection -->

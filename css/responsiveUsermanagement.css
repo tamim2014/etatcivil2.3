@@ -1,0 +1,57 @@
+/*
+ * Garges-les-gonesse
+ * Vendredi 26.06.26
+ *
+ * Fichiers cibles:
+ * Pach sur userManagement.php
+ *
+
+ *
+ */
+
+	/* à mettre après responsive.css*/
+	@media screen and (max-width: 768px) {
+		/* 🟦 1. UN tonav VICIEUX */
+		
+		  .en-tete{
+			  display:none;
+		  }
+		  #myTopnav{ 
+			   display:block;  
+		  }
+		  
+		  
+		/* 🟦 2. UN MARGIN TRES BIZARE   */
+		
+		  /* ⚠️sortir .colonne_contenu en dessous de "formSource */
+		 .colonne_contenu h1{
+			margin-top:71.71% !important;
+		 }
+
+		/* 🟦 3. UNE TABLE CAPRICIEUSE */
+		
+		  /* la table depasse à droite ? 
+		   * si les champs sont longs comme "Moroni-Bambao"
+		   * Comment faire?
+		   *⭐ La “recette aux 3 épices”
+		   */
+		    /* ✔️ 1. Le conteneur doit scroller horizontalement  */
+			.table1 {
+				overflow-x: auto;
+				width: 100%;
+			}
+			/* ✔️ 2. la table doit se comporter comme un bloc flexible */
+			table.officiers {
+				width: 100%;
+				border-collapse: collapse;
+				table-layout: auto;
+			}
+			/* ✔️ 3.Les cellules doivent pouvoir se casser  */
+			table.officiers th,
+			table.officiers td {
+				white-space: normal !important;
+				overflow-wrap: break-word !important;
+				word-break: break-word !important;
+				max-width: 120px; /* optionnel mais très efficace */
+			}
+	  }
