@@ -46,9 +46,9 @@
 					<button class="reinit" onclick="window.location.href=\'reinitialisation/envoyer_code.php\'">
 						⚙️ Réinitialiser le mot de passe
 					</button>
-
+                    <hr style="width:80%; margin-inline:auto; ">
 					<button class="reinit" onclick="ouvrirPopupLogout(event)">
-						🚪↩️ Déconnexion
+						🔒 Déconnexion <!-- 🔌 -->
 					</button>
 				</div>
 			</div>
