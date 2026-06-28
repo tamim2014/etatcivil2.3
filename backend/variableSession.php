@@ -14,13 +14,19 @@ $_SESSION['pseudo'] = $row['pseudo'];
 $_SESSION['user_role']  = $row['roles'];
 
 // set in: backend/authentification.php
+// get in: backend/colonne_afficher_naissance.php, backend/lectureBD_afficherNaissance.php, Le moteur de recherche, backend/ecritureBD_insertionSQL.php, backend/modifier_insertionSQL.php
+$_SESSION["prefecture"] = $row["prefecture"]; // ← restriction d'accès aux données
+
+
+
+// set in: backend/authentification.php
 // get in: envoyer_code.php
 $_SESSION["email"] = $row["email"]; // ← celui-là est crucial
 
 
 // set in: backend/colonne_afficher_naissance.php (filtre "prefecture")   
 // get in: backend/colonne_suppprimer_acte.php, colonne_rectifier_acte.php,  colonne_imprimer_acte.php, trier.php
-$_SESSION["v"]= $p; 
+$_SESSION["v"]= $p; // ← celui-là est crucial
 
 
 // set in: backend/supprimer.php

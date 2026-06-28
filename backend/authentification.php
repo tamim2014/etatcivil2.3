@@ -39,6 +39,7 @@ if (!empty($login) && !empty($mdp)) {
         $_SESSION['pseudo']     = $row['pseudo'];
         $_SESSION['user_role']  = $row['roles'];
         $_SESSION["email"] = $row["email"]; // ← celui-là est crucial
+        $_SESSION["prefecture"] = $row["prefecture"]; // ← restriction d'accès aux données
 
 		
 
