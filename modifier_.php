@@ -244,8 +244,8 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 							 </tr>
 							 
 							 <tr> 
-							     <td> <font color="##1D702D"><b>Le p&egrave;re</b></font></td> 
-							     <td> <font color="##1D702D"><b>La m&egrave;re</b></font></td>
+							     <td class="margeSection"> <font color="##1D702D"><b>Le p&egrave;re</b></font></td> 
+							     <td class="margeSection"> <font color="##1D702D"><b>La m&egrave;re</b></font></td>
 							 </tr>
 								 
 							 </tr>
@@ -273,8 +273,8 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 					
 							 
 							 <tr>
-							    <td> <font color="##1D702D"><b>La d&eacute;claration</b></font></td> 
-								<td> </td>
+							    <td class="margeSection"> <font color="##1D702D"><b>La d&eacute;claration</b></font></td> 
+								<td class="margeSection"> </td>
 							 </tr>
 							 
 							 <tr> 
