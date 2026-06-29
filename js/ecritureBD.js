@@ -15,6 +15,21 @@ function instanceAJAX() {
                     alert("Votre navigateur n'est pas compatible avec AJAX..."); 
                 }*/
 		}
+		
+/* Contrôle d'accès:  "non-admin" reste sur sa prefecture d'affectation  */
+function control(select) {
+
+    let role = select.dataset.role;
+    let prefAutorisee = select.dataset.pref;
+
+    if (role !== "admin") {
+        if (select.value !== prefAutorisee) {
+            alert("La préfecture saisie est différente de votre centre d'affectation !");
+            select.value = prefAutorisee;
+        }
+    }
+}
+		
 
 /* ACCES AU backend(pour lire les fichier .txt)*/
 function changement(prefecture){//list1 
