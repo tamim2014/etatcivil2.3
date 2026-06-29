@@ -33,8 +33,33 @@ require_once  'connection_PDO.php';
 // ❌ LE PROBLEME2: Risque d'une injection SQL. Aujourd’hui, c’est totalement interdit.
 // ✅SOLUTION => utiliser une requête préparée :
 
+
+/**Version1:❌
 $requete = $conn->prepare("SELECT * FROM liste WHERE prefecture = :pr");
 $requete->execute(['pr' => $pr]);
+*/
+
+//Version2: ✅ Restriction d'accès aux données: Chaque officier accède seulement à sa prefecture
+if ($_SESSION['user_role'] !== 'admin') {
+	// Si ce n'est pas un admin: On force la prefecture(on la restreint à une seule valeur possible)
+	$prefUnique = $_SESSION['prefecture'];
+	$requete = $conn->prepare("SELECT * FROM liste WHERE prefecture = :prefUnique");
+	$requete->execute(['prefUnique' => $prefUnique]);
+	// Message
+	if($pr !== $prefUnique){
+		echo'
+			<button  class="boutoyahemnayivawo" style="margin-top:5em;">
+				Accès restreint à la préfecture de:
+				<b id="prefectureUnique">'.$prefUnique.'</b>
+			</button>   
+		';
+		exit;
+	}
+} else {
+	$requete = $conn->prepare("SELECT * FROM liste WHERE prefecture = :pr");
+	$requete->execute(['pr' => $pr]);
+}
+
 
 
 //La connaissance vient de l'expérience.Le reste n'est que information

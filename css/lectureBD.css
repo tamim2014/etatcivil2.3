@@ -223,6 +223,7 @@
 		 
 		 
 		/* Affichage de la prefecture(en haut de la table): lectureBD.php, lectureBD2.php */
+		#prefectureUnique,
 		#wilaya_{
 			color:#000066;  
 			font-size: 17px; 

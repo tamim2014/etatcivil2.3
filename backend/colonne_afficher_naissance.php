@@ -22,10 +22,6 @@ $p = $_GET['p'];
 //1.Connexion
 require_once 'connection_mysqli.php';
 
-
-
-
-
 //2.Récupération des données de la base(par construction d'une variables php de stockage tampon)  
 
 // $R=mysqli_query($conn, "SELECT * FROM  liste WHERE prefecture='".$p."' ") or exit(mysql_error($conn ));
@@ -37,19 +33,12 @@ if ($_SESSION['user_role'] !== 'admin') {
 	$R=mysqli_query($conn, "SELECT * FROM  liste WHERE prefecture='".$prefUnique."' ") or exit(mysql_error($conn ));
     // Message
     if($p !== $prefUnique){
-		$p = "";
 		echo "Accès restreint à la préfecture de: <b>".$prefUnique."</b>";
 		exit;
 	}
 } else {
 	$R=mysqli_query($conn, "SELECT * FROM  liste WHERE prefecture='".$p."' ") or exit(mysql_error($conn ));
 }
-
-
-
-
-
-
 
 
 //3.Affichage
