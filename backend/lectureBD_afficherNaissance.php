@@ -39,7 +39,7 @@ $requete = $conn->prepare("SELECT * FROM liste WHERE prefecture = :pr");
 $requete->execute(['pr' => $pr]);
 */
 
-//Version2: ✅ Restriction d'accès aux données: Chaque officier accède seulement à sa prefecture
+//Version2: ✅ Restriction d'accès aux données: Un officier est restreint à sa préfecture d'affectation
 if ($_SESSION['user_role'] !== 'admin') {
 	// Si ce n'est pas un admin: On force la prefecture(on la restreint à une seule valeur possible)
 	$prefUnique = $_SESSION['prefecture'];
