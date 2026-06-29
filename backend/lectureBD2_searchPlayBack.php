@@ -9,23 +9,55 @@
  *       Pour affichage du resultat dans une table
  * ✅ 4. Gestion des droits utilisateurs sur la fonction Rectifier
  */
-
+   // session_start(); // pour la restriction d'accès aux données
  
     // ✅ 1. On recupere le filtre(saisie): Transmis par "backend/serchEngine.php"
     if(!isset($_GET['num'])) $_GET['num']="";    $num=$_GET['num']; //acte
 	if(!isset($_GET['nom'])) $_GET['nom']="";     $nom=$_GET['nom'];// ❌ Pas la peine ici car on traite seulement le numero
    
     // ✅ 2. On fait un select(from liste) par ce filtre 
-    /** mysqli
+    /** Version1: mysqli ❌
     $requete = "SELECT * FROM liste WHERE acte=".$num ;  
 	$result = mysqli_query($conn,$requete);
     */
-	//pdo
+	
+	/**Version2:pdo 
 	$sql = "SELECT * FROM liste WHERE acte = :num";
 	$stmt = $conn->prepare($sql);
 	$stmt->execute([  // Exécution avec paramètre sécurisé
 		'num' => $num
 	]);
+	*/
+	
+	//Version3(pdo): ✅ Restriction d'accès aux données: Un officier est restreint à sa préfecture d'affectation
+	if ($_SESSION['user_role'] !== 'admin') {
+		$prefUnique = $_SESSION['prefecture'];
+		$sql = "SELECT * FROM liste WHERE acte = :num AND prefecture = :prefUnique ";
+		$stmt = $conn->prepare($sql);
+		$stmt->execute([ 'num' => $num, 'prefUnique' => $prefUnique ]);
+		// Message
+		if($p !== $prefUnique){
+			//echo "Accès restreint à la préfecture de: <b>".$prefUnique."</b>";
+			echo'
+				<button  class="boutoyahemnayivawo messageResultRestriction">
+					<span>
+					    Recherche limitée à la préfecture de:
+					    <b id="prefectureUnique">'.$prefUnique.'</b> &#46;
+				    </span><br><br>	
+					<span> 
+					    Aucun document relatif au numéro <b id="prefectureUnique">'.$num.'</b>,<br> n&apos; y est trouvé !  
+					</span>
+				</button>   
+			';
+			exit;
+		}
+	} else {
+		$sql = "SELECT * FROM liste WHERE acte = :num";
+		$stmt = $conn->prepare($sql);
+		$stmt->execute([ 'num' => $num ]);
+	}
+	
+	
 	
 	
     // ✅ 3. Récupération des données dans 🎁$donnees: Pour affichage du resultat dans une table 

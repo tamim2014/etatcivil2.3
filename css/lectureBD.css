@@ -90,7 +90,17 @@
 		  .mnayvawoResult .boutoyahemnayivawo{
 			  margin-bottom:2%;
 		  }
-		  
+		  .messageResultRestriction{
+			padding-block:1em; 
+			min-height:15vh; 
+			overflow-wrap: break-word; 
+			word-break: break-word;  
+		  }
+		  @media screen and (max-width: 768px) {
+			.messageResultRestriction{
+				padding:1em;
+			}  
+		  }
 		  
 		  
 		  
