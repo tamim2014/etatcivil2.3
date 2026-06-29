@@ -15,17 +15,50 @@
     
 	
 	// ✅ 2. On fait un select(from liste) par ce filtre 
-    //Pourquoi ne pas faire dans un seul fichier: $requete = "SELECT * FROM liste WHERE acte=".$num." OR  nom=$nom'";
-	 /* mysqli
+ 
+ //Pourquoi ne pas faire dans un seul fichier: $requete = "SELECT * FROM liste WHERE acte=".$num." OR  nom=$nom'";
+	 /** Version1: mysqli ❌
       $requete = "SELECT * FROM liste WHERE   nom='".ltrim($nom)."'" ;	  	
 	  $resultNom = mysqli_query($conn,$requete); 
 	  */
-     //pdo
+	  
+    /**Version2:pdo 
 	$sql = "SELECT * FROM liste WHERE nom = :nom";
 	$stmt = $conn->prepare($sql);
 	$stmt->execute([  // Exécution avec paramètre sécurisé
 		'nom' => ltrim($nom)
 	]);
+	*/
+	
+	//Version3(pdo): ✅ Restriction d'accès aux données: Un officier est restreint à sa préfecture d'affectation
+	if ($_SESSION['user_role'] !== 'admin') {
+		$prefUnique = $_SESSION['prefecture'];
+		$sql = "SELECT * FROM liste WHERE nom = :nom AND prefecture = :prefUnique ";
+		$stmt = $conn->prepare($sql);
+		$stmt->execute([ 'nom' => $nom, 'prefUnique' => $prefUnique ]);
+		// Message
+		if($p !== $prefUnique){
+			//echo "Aucun document trouvé dans la préfecture de: <b>".$prefUnique."</b>";
+			echo'
+				<button  class="boutoyahemnayivawo messageResultRestriction">
+					<span>
+					    Recherche limitée à la préfecture de:
+					    <b id="prefectureUnique">'.$prefUnique.'</b> &#46;
+				    </span><br><br>	
+					<span> 
+					    Aucun document relatif au nom "<b id="prefectureUnique">'.$nom.'</b>",<br> n&apos; y est trouvé !  
+					</span>
+				</button>   
+			';
+			exit;
+		}
+	} else {
+		$sql = "SELECT * FROM liste WHERE nom = :nom";
+		$stmt = $conn->prepare($sql);
+		$stmt->execute([ 'nom' => ltrim($nom) ]);
+	}
+	
+	
 	
     // ✅ 3. Récupération des données dans 🎁$donnees: Pour affichage du resultat dans une table 	 
 	 $table='<table  class="resultat_moteur couleurPoliceTableResultat" style="left:42.11%; top:18%;">';

@@ -37,7 +37,6 @@
 		$stmt->execute([ 'num' => $num, 'prefUnique' => $prefUnique ]);
 		// Message
 		if($p !== $prefUnique){
-			//echo "Accès restreint à la préfecture de: <b>".$prefUnique."</b>";
 			echo'
 				<button  class="boutoyahemnayivawo messageResultRestriction">
 					<span>
