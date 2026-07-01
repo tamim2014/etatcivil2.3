@@ -87,7 +87,7 @@
 										id="prefecture"
 										data-role="<?php echo $_SESSION['user_role']; ?>"
 										data-pref="<?php echo $_SESSION['prefecture']; ?>"
-										onChange="control(this); changement(this);">
+										onChange="control(this); changement(this);" required>
 
 									 <optgroup label="Ngazidja"> 
 									 <option> </option>
@@ -223,35 +223,35 @@
 								    <span class="errChamps erreur"></span>
 								 </td>
 								 <td> 
-								    <input type="text" name="naissance_an"  placeholder=" ici l'an" onblur="controlChamp(this)"> 
+								    <input class="obligatoireDeux"  type="text" name="naissance_an"  placeholder=" ici l'an" onblur="controlChamp(this)"> 
 								    <span class="errChamps erreur"></span>
 								 </td>
 							</tr>
 							<tr> 
 								 <td> 
-								     <input type="text" name="naissance_heure"  placeholder=" heure" onblur="controlChamp(this)"> 
+								     <input class="obligatoireDeux"  type="text" name="naissance_heure"  placeholder=" heure" onblur="controlChamp(this)"> 
 								     <span class="errChamps erreur"></span>
 								 </td>
 								 <td> 
-								     <input type="text" name="naissance_minuite"  placeholder=" minuite" onblur="controlChamp(this)"> 
+								     <input class="obligatoireDeux"  type="text" name="naissance_minuite"  placeholder=" minuite" onblur="controlChamp(this)"> 
 								     <span class="errChamps erreur"></span>
 								 </td>
 							</tr>
 							
 							 <tr> 
 							     <td> 
-								    <input type="text" name="naissance_nom_prenom" placeholder="est n&eacute;(e)" onblur="controlChamp(this)">
+								    <input class="obligatoireDeux" type="text" name="naissance_nom_prenom" placeholder="est n&eacute;(e)" onblur="controlChamp(this)">
 								    <span class="errChamps erreur"></span>
 								 </td>
 							     <td> 
-								    <input type="text" name="naissance_lieu"  placeholder=" &agrave;(lieu)" onblur="controlChamp(this)"> 
+								    <input class="obligatoireDeux" type="text" name="naissance_lieu"  placeholder=" &agrave;(lieu)" onblur="controlChamp(this)"> 
 								    <span class="errChamps erreur"></span>
 								 </td>
 							 </tr>
 
 							 <tr> 
 							    <td> 
-								   <input type="text" name="naissance_sexe"   placeholder=" du sexe" onblur="controlChamp(this)"> 
+								   <input class="obligatoireDeux" type="text" name="naissance_sexe"   placeholder=" du sexe" onblur="controlChamp(this)"> 
 								   <span class="errChamps erreur"></span>
 								</td>
 							    <td></td>

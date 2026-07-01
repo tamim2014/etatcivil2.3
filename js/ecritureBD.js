@@ -280,12 +280,23 @@ function checkpoint() {
 	}
 }
 
+//🟩 Contrôle de saisie: 3em check point
+/**
+ * Posé sur le champs Déclaration faite par:"faite par"
+ * Contrôle les 10 champs précedents.
+ * Père:
+ * fils(fille) de, né le, né à, prefession, demeurant à
+ * Mère
+ * et de, née le, à, profession, demeurant à
+ */
+
+
 
 
 // Contrôle génerale
 /**
  * Appliqué au bouton submit
- *🌋 Résultat volcanique: Pas la peine => requered fait ce job!
+ *🌋 Résultat volcanique: Pas la peine => required fait ce job!
  *
  *
 	function checkpointFinal(event) {
