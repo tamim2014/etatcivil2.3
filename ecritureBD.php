@@ -219,22 +219,19 @@
 					<table class="tabledroite showacte"  >
 							<tr> 
 								 <td> 
-								    <input class="obligatoireDeux"  type="text" name="naissance_jour_moi"  placeholder="Le" onfocus="checkpoint();" onblur="controlChamp(this);" >
-								    <span class="errChamps erreur"></span>
+								    <input type="text" name="naissance_jour_moi"  placeholder="Le">
 								 </td>
 								 <td> 
-								    <input class="obligatoireDeux"  type="text" name="naissance_an"  placeholder=" ici l'an" onblur="controlChamp(this)"> 
+								    <input class="obligatoireDeux"  type="text" name="naissance_an"  placeholder=" ici l'an" onfocus="checkpoint();" onblur="controlChamp(this)"> 
 								    <span class="errChamps erreur"></span>
 								 </td>
 							</tr>
 							<tr> 
 								 <td> 
-								     <input class="obligatoireDeux"  type="text" name="naissance_heure"  placeholder=" heure" onblur="controlChamp(this)"> 
-								     <span class="errChamps erreur"></span>
+								     <input type="text" name="naissance_heure"  placeholder="heure"> 
 								 </td>
 								 <td> 
-								     <input class="obligatoireDeux"  type="text" name="naissance_minuite"  placeholder=" minuite" onblur="controlChamp(this)"> 
-								     <span class="errChamps erreur"></span>
+								     <input type="text" name="naissance_minuite"  placeholder=" minuite"> 
 								 </td>
 							</tr>
 							
@@ -294,22 +291,18 @@
 							 </tr>
 							 <tr> 
 							    <td> 
-								   <input class="obligatoireTrois" type="text" name="pere_profession" placeholder="profession" onblur="controlChamp(this)"> 
-								   <span class="errChamps erreur"></span>
+								   <input type="text" name="pere_profession" placeholder="profession"> 
 								</td>  
 								<td> 
-								   <input class="obligatoireTrois" type="text" name="mere_profession" placeholder="profession" onblur="controlChamp(this)">
-								   <span class="errChamps erreur"></span>
+								   <input type="text" name="mere_profession" placeholder="profession">
 								</td>
 							 </tr>
 							 <tr> 
 							    <td> 
-								   <input class="obligatoireTrois" type="text" name="pere_villederesidence" placeholder="demeurant &agrave;" onblur="controlChamp(this)"> 
-								   <span class="errChamps erreur"></span>
+								   <input type="text" name="pere_villederesidence" placeholder="demeurant &agrave;"> 
 								</td> 
 								<td> 
-								   <input class="obligatoireTrois" type="text" name="mere_villederesidenc" placeholder="demeurant &agrave;" onblur="controlChamp(this)"> 
-								   <span class="errChamps erreur"></span>
+								   <input type="text" name="mere_villederesidenc" placeholder="demeurant &agrave;"> 
 								</td>
 							 </tr>
 
@@ -319,7 +312,7 @@
 							 </tr>
 							 <tr> 
 								<td> 
-								    <input type="text" name="declaration_faite_par" placeholder="faite par:" required onfocus="checkpointTrois();" onblur="controlChamp(this)">
+								    <input  type="text" name="declaration_faite_par" placeholder="faite par:" required onfocus="checkpointTrois();" onblur="controlChamp(this)">
 									<span class="errChamps erreur"></span>
 								</td>
 								<td>
@@ -354,7 +347,7 @@
 									}
 								?>
 							    <!-- ✔️ Btn ENREGISTRER   --> 	
-								<input type="submit" class="btnOutput" id="enregistrer" name="Enregistrer" value="Enregistrer l'acte" onclick="checkpointFinal(event)"/> 
+								<input type="submit" class="btnOutput" id="enregistrer" name="Enregistrer" value="Enregistrer l'acte"/> 
 							</td>
 
 							<td> 

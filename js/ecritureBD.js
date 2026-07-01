@@ -223,6 +223,19 @@ function controlChamp(input) {
 		input.classList.remove("errBorder");
 	}
 }
+// On vire le message(pour garder seulement la bordure)
+function controlChampSansMessage(input) {
+	var errChamps = nom.nextElementSibling;
+	//const errSpan = input.nextElementSibling;
+
+	if (input.value.trim() === "") {
+		//errSpan.textContent = "Ce champ est obligatoire.";
+		input.classList.add("errBorder");
+	} else {
+		//errSpan.textContent = "";
+		input.classList.remove("errBorder");
+	}
+}
 
 // 🟩 Contrôle de saisie: 1er check point
 /**
@@ -242,17 +255,20 @@ function checkpoint() {
 	const champs = document.querySelectorAll(".obligatoire");
 	let erreur = null;
 	champs.forEach(champ => {
-		// On réutilise ta fonction générique
-		controlChamp(champ);
+		// On réutilise la fonction générique
+		//controlChamp(champ);
+		controlChampSansMessage(champ); // juste la bordure
+		
 		if (champ.value.trim() === "" && erreur === null) {
 			erreur = champ;
 		}
 	});
-
+    
 	if (erreur) {
 		erreur.scrollIntoView({ behavior: "smooth", block: "center" });
 		erreur.focus();
 	}
+	
 }
 
 //🟩 Contrôle de saisie: 2em check point
@@ -267,8 +283,9 @@ function checkpoint() {
 	const champs = document.querySelectorAll(".obligatoireDeux");
 	let erreur = null;
 	champs.forEach(champ => {
-		// On réutilise ta fonction générique
-		controlChamp(champ);
+		// On réutilise la fonction générique
+		//controlChamp(champ);
+		controlChampSansMessage(champ); // juste la bordure
 		if (champ.value.trim() === "" && erreur === null) {
 			erreur = champ;
 		}
@@ -293,8 +310,9 @@ function checkpoint() {
 	const champs = document.querySelectorAll(".obligatoireTrois");
 	let erreur = null;
 	champs.forEach(champ => {
-		// On réutilise ta fonction générique
-		controlChamp(champ);
+		// On réutilise la fonction générique
+		//controlChamp(champ);
+		controlChampSansMessage(champ); // juste la bordure
 		if (champ.value.trim() === "" && erreur === null) {
 			erreur = champ;
 		}
