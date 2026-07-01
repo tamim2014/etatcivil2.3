@@ -21,7 +21,7 @@
 <head>
 	 <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes"> <!-- ⚠️ Responsive mobil -->
-	 <title> Acces en Ecriture &aacute; la base etatcivil</title>
+	 <title> Acces en Ecriture à la base etatcivil</title>
 	 <link href="css/template.css"  rel="stylesheet" type="text/css" >
 	 <link href="css/accueil22.css" rel="stylesheet"   />
 	 <link href="css/slide.css"     rel="stylesheet"   /> 
@@ -32,6 +32,8 @@
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
 	 <link href="css/nouveaupop.css"  rel="stylesheet"   />	
+	 	 
+	 
      <style>
 		/* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */	
 
@@ -39,12 +41,13 @@
         body, .tabledroite{
 			background:#ECECEA;
 		}
-        		
+		
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js" defer></script>
 	 <script src="js/logout.js" defer></script>
 </head>
+
 
 <body class="page-form">
 	<!-- <div id="acteN"></div> -->
@@ -126,25 +129,86 @@
 						 </tr>
 						 <tr>
 							 <td>Centre</td> 
-							 <td> 
-								 <select  name="centretatcivil"  required>
-									 <option> </option>
+							 <td>
+								 <select name="centretatcivil" id="centretatcivil" onChange="clearPrefectureBorder();" required>
+                                 	<option> </option>
 								 </select>
 							 </td>
 						 </tr>
-						 <tr><td> Registre  </td> <td> <input type="text" name="registre" required> </td></tr>
-						 <tr><td> Acte N°  </td> <td> <input type="text" name="acte" required ></td></tr>
-						 <tr><td> Du(date)  </td> <td> <input type="date" name="date_acte" required ></td></tr>
-						 <tr><td></td> <td></td></tr>
+						 <tr>
+						     <td>Registre</td> 
+							 <td> 
+							     <input type="text" name="registre" required onblur="controlChamp(this)">
+                                 <span class="errChamps erreur"></span>								 
+							 </td>
+						 </tr>
+						 <tr>
+						     <td>Acte N°</td>
+							 <td> 
+							    <input type="text" name="acte" required onblur="controlChamp(this)">
+								<span class="errChamps erreur"></span>
+						     </td>
+						 </tr>
+						 <tr>
+						   <td>Du(date)</td> 
+						   <td> 
+						      <input type="date" name="date_acte" required onblur="controlChamp(this)">
+							  <span class="errChamps erreur"></span>
+						   </td>
+						 </tr>
+						 <tr>
+						    <td></td> 
+							<td></td>
+						 </tr>
 						 
 						 <tr><td> </td><td><font color="##1D702D"> <b>Naissance de:</b></font></td> </tr>
-						 <tr><td> Nom   </td> <td> <input type="text" name="nom" required> </td></tr>
-						 <tr><td> Pr&eacute;nom  </td> <td> <input type="text" name="prenom" required ></td></tr>
+						 <tr>
+						    <td> Nom </td>
+							<td>
+                               <!-- id="nom" ne sert à rien mais si je l'enleve:
+							        le contrôle de saisie ne s'execute pas - même dans les autres champs
+							        Donc je le laisse temporairement !
+							   -->							
+							   <input id="nom" type="text" name="nom" required onblur="controlChamp(this)">
+                               <span class="errChamps erreur"></span>
+							</td>
+						 </tr>
+						 <tr>
+						     <td> Pr&eacute;nom </td> 
+							 <td> 
+							     <input  type="text" name="prenom" required onblur="controlChamp(this)">
+								 <span class="errChamps erreur"></span>
+							 </td>
+						 </tr>
 						 <tr><td> </td><td><font color="##1D702D"> <b>Pour acte certifi&eacute; <span class="conforme">conforme</span></b></font></td></tr>
-						 <tr><td> D&eacute;livr&eacute; &agrave; </td> <td> <input type="text" name="delivre_a" required></td></tr>
-						 <tr><td> Le  </td> <td> <input type="date" name="delivre_le" required></td></tr>
-						 <tr><td> L'an  </td> <td> <input type="text" name="delivre_an"> </td></tr>
-						 <tr><td > S&eacute;rie Num:  <br><br></td> <td> <input type="text" name="num_serie" required><br><br></td></tr>
+						 <tr>
+						    <td> D&eacute;livr&eacute; &agrave; </td>
+							<td> 
+							    <input type="text" name="delivre_a" required onblur="controlChamp(this)">
+								<span class="errChamps erreur"></span>
+							</td>
+						 </tr>
+						 <tr>
+						    <td> Le  </td> 
+							<td> 
+							    <input type="date" name="delivre_le" required onblur="controlChamp(this)">
+								<span class="errChamps erreur"></span>
+							</td>
+						 </tr>
+						 <tr>
+						    <td> L'an  </td> 
+							<td> 
+							   <input type="text" name="delivre_an" onblur="controlChamp(this)"> 
+							   <span class="errChamps erreur"></span>
+							</td>
+						 </tr>
+						 <tr >
+						    <td style="padding-bottom:1em;"> S&eacute;rie Num:  </td> 
+							<td style="padding-bottom:1em;"> 
+							    <input type="text" name="num_serie" required onblur="controlChamp(this)">
+								<span class="errChamps erreur"></span>
+							</td>
+						</tr>
 					 </table> 
 
                 </aside>
@@ -155,21 +219,42 @@
 					<table class="tabledroite showacte"  >
 					    <!-- <p class="showacte">  Pour afficher l'acte modifiÃ© dans la partie droite de la page modifie_.php  -->
 							<tr> 
-								 <td> <input type="text" name="naissance_jour_moi"  placeholder=" Le" > </td>
-								 <td> <input type="text" name="naissance_an"  placeholder=" ici l'an"> </td>
+								 <td> 
+								    <input id="naissanceJourMois" type="text" name="naissance_jour_moi"  placeholder=" Le" onblur="controlChamp(this)">
+								    <span class="errChamps erreur"></span>
+								 </td>
+								 <td> 
+								    <input type="text" name="naissance_an"  placeholder=" ici l'an" onblur="controlChamp(this)"> 
+								    <span class="errChamps erreur"></span>
+								 </td>
 							</tr>
 							<tr> 
-								 <td> <input type="text" name="naissance_heure"  placeholder=" heure"> </td>
-								 <td> <input type="text" name="naissance_minuite"  placeholder=" minuite" > </td>
+								 <td> 
+								     <input type="text" name="naissance_heure"  placeholder=" heure" onblur="controlChamp(this)"> 
+								     <span class="errChamps erreur"></span>
+								 </td>
+								 <td> 
+								     <input type="text" name="naissance_minuite"  placeholder=" minuite" onblur="controlChamp(this)"> 
+								     <span class="errChamps erreur"></span>
+								 </td>
 							</tr>
 							
 							 <tr> 
-							     <td> <input type="text" name="naissance_nom_prenom" placeholder="est n&eacute;(e)" ></td>
-							     <td> <input type="text" name="naissance_lieu"  placeholder=" &agrave;(lieu)" > </td>
+							     <td> 
+								    <input type="text" name="naissance_nom_prenom" placeholder="est n&eacute;(e)" onblur="controlChamp(this)">
+								    <span class="errChamps erreur"></span>
+								 </td>
+							     <td> 
+								    <input type="text" name="naissance_lieu"  placeholder=" &agrave;(lieu)" onblur="controlChamp(this)"> 
+								    <span class="errChamps erreur"></span>
+								 </td>
 							 </tr>
 
 							 <tr> 
-							    <td> <input type="text" name="naissance_sexe"   placeholder=" du sexe" > </td>
+							    <td> 
+								   <input type="text" name="naissance_sexe"   placeholder=" du sexe" onblur="controlChamp(this)"> 
+								   <span class="errChamps erreur"></span>
+								</td>
 							    <td></td>
 							 </tr>
 							 
@@ -178,28 +263,87 @@
 								 <td class="margeSection"> <font color="##1D702D"><b>La m&egrave;re</b></font></td> 
 							 </tr>
 							  
-							 <tr> <td> <input type="text" name="pere_nom_prenom"  placeholder=" fils(fille) de" >         <td> <input type="text" name="mere_nom_prenom"  placeholder=" et de" > </td> </td></tr>
-							 <tr> <td> <input type="text" name="pere_datenaisance"  placeholder=" n&eacute; le"> </td>    <td> <input type="text" name="mere_datenaisance"  placeholder="n&eacute;e le"  > </td> </tr>
-							 <tr> <td> <input type="text" name="pere_lieunaissance"   placeholder=" n&eacute; &agrave;" > </td>   <td> <input type="text" name="mere_lieunaissance"      placeholder=" &agrave;"> </td></tr>
-							 <tr> <td> <input type="text" name="pere_profession"    placeholder=" profession "   > </td>  <td> <input type="text" name="mere_profession"       placeholder=" profession" ></td></tr>
-							 <tr> <td> <input type="text" name="pere_villederesidence"   placeholder=" demeurant &agrave;"  > </td> <td> <input type="text" name="mere_villederesidenc"   placeholder=" demeurant &agrave;"> </td></tr>
-
+							 <tr> 
+							     <td> 
+								      <input type="text" name="pere_nom_prenom"  placeholder=" fils(fille) de" onblur="controlChamp(this)"> 
+                                      <span class="errChamps erreur"></span>
+								 </td>									  
+								 <td> 
+								     <input type="text" name="mere_nom_prenom"  placeholder=" et de" onblur="controlChamp(this)"> 
+								     <span class="errChamps erreur"></span>
+								 </td> 
+							 </tr>
+							 <tr> 
+							     <td> 
+								    <input type="text" name="pere_datenaisance" placeholder=" n&eacute; le" onblur="controlChamp(this)"> 
+								    <span class="errChamps erreur"></span>
+								 </td>    
+								 <td> 
+								     <input type="text" name="mere_datenaisance" placeholder="n&eacute;e le" onblur="controlChamp(this)"> 
+								     <span class="errChamps erreur"></span>
+								 </td> 
+							 </tr>
+							 <tr> 
+							     <td> 
+								     <input type="text" name="pere_lieunaissance" placeholder="n&eacute; &agrave;" onblur="controlChamp(this)"> 
+								     <span class="errChamps erreur"></span>
+								 </td>   
+								 <td> 
+								    <input type="text" name="mere_lieunaissance" placeholder="&agrave;" onblur="controlChamp(this)"> 
+								    <span class="errChamps erreur"></span>
+								 </td>
+							 </tr>
+							 <tr> 
+							    <td> 
+								   <input type="text" name="pere_profession" placeholder="profession" onblur="controlChamp(this)"> 
+								   <span class="errChamps erreur"></span>
+								</td>  
+								<td> 
+								   <input type="text" name="mere_profession" placeholder="profession" onblur="controlChamp(this)">
+								   <span class="errChamps erreur"></span>
+								</td>
+							 </tr>
+							 <tr> 
+							    <td> 
+								   <input type="text" name="pere_villederesidence" placeholder="demeurant &agrave;" onblur="controlChamp(this)"> 
+								   <span class="errChamps erreur"></span>
+								</td> 
+								<td> 
+								   <input type="text" name="mere_villederesidenc" placeholder="demeurant &agrave;" onblur="controlChamp(this)"> 
+								   <span class="errChamps erreur"></span>
+								</td>
+							 </tr>
 
 							 <tr>
 							      <td class="margeSection"> <font color="##1D702D"><b>La d&eacute;claration</b></font></td> 
 							      <td class="margeSection"> </td> 
 							 </tr>
 							 <tr> 
-								 <td> <input type="text" name="declaration_faite_par" placeholder=" faite par:"> </td>
-								 <td ><input class="jugement" type="text"  placeholder="Emetteur jugement"></td>
+								<td> 
+								    <input type="text" name="declaration_faite_par" placeholder="faite par:" onblur="controlChamp(this)">
+									<span class="errChamps erreur"></span>
+								</td>
+								<td>
+								    <input class="jugement" type="text"  placeholder="Emetteur jugement">
+								</td>
 							 </tr>
 							 <tr> 
-								 <td > <input type="text" name="declaration_recue_pa" placeholder=" re&ccedil;ue par"> </td>
-								 <td ><input class="jugement" type="text"  placeholder="Titre  recepteur"></td>
+								<td> 
+								   <input type="text" name="declaration_recue_pa" placeholder="re&ccedil;ue par" onblur="controlChamp(this)"> 
+								   <span class="errChamps erreur"></span>
+								</td>
+								<td>
+								    <input class="jugement" type="text" placeholder="Titre recepteur">
+								</td>
 							 </tr>
 							 <tr> 
-								 <td> <input id="tetu" type="date" name="datejugement" placeholder=" date jugement : " style="height:15px;"> </td>
-								 <td ><input class="jugement" type="text"  placeholder="Date jugement"></td>
+								<td> 
+								    <input id="tetu" type="date" name="datejugement" placeholder="date jugement:" style="height:15px;" onblur="controlChamp(this)"> 
+								    <span class="errChamps erreur"></span>
+								</td>
+								<td>
+								    <input class="jugement" type="text" placeholder="Date jugement">
+								</td>
 							 </tr>
 						 </p>
 						<tr> 
@@ -291,6 +435,8 @@
 	</div>
 		
     <script src="js/nouveaupop.js"></script>
+
+    	
 </body>
 </html>
 

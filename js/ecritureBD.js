@@ -17,6 +17,7 @@ function instanceAJAX() {
 		}
 		
 /* Contrôle d'accès:  "non-admin" reste sur sa prefecture d'affectation  */
+/*
 function control(select) {
 
     let role = select.dataset.role;
@@ -29,6 +30,38 @@ function control(select) {
         }
     }
 }
+*/
+// On ajoute une bordure rouge
+function control(select) {
+
+    let role = select.dataset.role;
+    let prefAutorisee = select.dataset.pref;
+    let prefChoisie = select.value;
+
+    if (role !== "admin") {
+
+        if (prefChoisie !== prefAutorisee) {
+
+            // Bordure rouge
+            select.style.border = "2px solid green";
+
+            alert("La préfecture saisie est différente de votre centre d'affectation !");
+            select.value = prefAutorisee;
+
+        } else {
+
+            // Bordure normale si valide
+            select.style.border = "";
+        }
+    }
+}
+// Virer la bordure rouge si la prefecture est valide
+function clearPrefectureBorder() {
+    const prefSelect = document.getElementById("prefecture");
+    prefSelect.style.border = "";
+}
+
+
 		
 
 /* ACCES AU backend(pour lire les fichier .txt)*/
@@ -168,8 +201,28 @@ function ouvrirPopupEcritureBD(lien) {
 
 
 
+// Contrôle de saisie: Générique sur tous les ckamps
+/**
+ *
+ * à chaque fois que l'utilisateur quitte le champs: "blur"
+ * à chaque frappe sur le champs:"input" 
+ *
+ * nom.addEventListener("input", function(){...
+ * nom.addEventListener("blur", function(){
+ *	 
+ */
+function controlChamp(input) {
+	var errChamps = nom.nextElementSibling;
+	const errSpan = input.nextElementSibling;
 
-
+	if (input.value.trim() === "") {
+		errSpan.textContent = "Ce champ est obligatoire.";
+		input.classList.add("errBorder");
+	} else {
+		errSpan.textContent = "";
+		input.classList.remove("errBorder");
+	}
+}
 
 
 

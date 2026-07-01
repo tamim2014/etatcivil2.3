@@ -21,7 +21,7 @@
 <head>
 	 <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes"> <!-- ⚠️ Responsive mobil -->
-	 <title> Acces en Ecriture &aacute; la base etatcivil</title>
+	 <title> Acces en Ecriture à la base etatcivil</title>
 	 <link href="css/template.css"  rel="stylesheet" type="text/css" >
 	 <link href="css/accueil22.css" rel="stylesheet"   />
 	 <link href="css/slide.css"     rel="stylesheet"   /> 
@@ -32,6 +32,8 @@
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
 	 <link href="css/nouveaupop.css"  rel="stylesheet"   />	
+	 	 
+	 
      <style>
 		/* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */	
 
@@ -39,12 +41,26 @@
         body, .tabledroite{
 			background:#ECECEA;
 		}
+		
+		
+		/* Contrôle de saisie */
+		.erreur{
+			color:#ff8080;
+			font-size:0.9em;
+			/* white-space:pre-line; */
+			display:block;
+		}
+		.errBorder{
+			border:2px solid red !important;
+		}
+		
         		
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js" defer></script>
 	 <script src="js/logout.js" defer></script>
 </head>
+
 
 <body class="page-form">
 	<!-- <div id="acteN"></div> -->
@@ -126,20 +142,39 @@
 						 </tr>
 						 <tr>
 							 <td>Centre</td> 
-							 <td> 
+							 <td>
+                                <!--							 
 								 <select  name="centretatcivil"  required>
 									 <option> </option>
 								 </select>
+								 -->
+								 <select name="centretatcivil" id="centretatcivil" onChange="clearPrefectureBorder();" required>
+                                 	<option> </option>
+								 </select>
 							 </td>
 						 </tr>
-						 <tr><td> Registre  </td> <td> <input type="text" name="registre" required> </td></tr>
+						 <tr>
+						     <td> Registre  </td> 
+							 <td> <input type="text" name="registre" required> </td>
+						 </tr>
 						 <tr><td> Acte N°  </td> <td> <input type="text" name="acte" required ></td></tr>
 						 <tr><td> Du(date)  </td> <td> <input type="date" name="date_acte" required ></td></tr>
 						 <tr><td></td> <td></td></tr>
 						 
 						 <tr><td> </td><td><font color="##1D702D"> <b>Naissance de:</b></font></td> </tr>
-						 <tr><td> Nom   </td> <td> <input type="text" name="nom" required> </td></tr>
-						 <tr><td> Pr&eacute;nom  </td> <td> <input type="text" name="prenom" required ></td></tr>
+						 <tr>
+						    <td> Nom </td>
+							<td> 
+							   <input id="nom" type="text" name="nom"  required>
+                               <span  id="errChamps" class="erreur"></span>							   
+							</td>
+						 </tr>
+						 <tr>
+						     <td> Pr&eacute;nom </td> 
+							 <td> 
+							     <input id="prenom" type="text" name="prenom" required >
+							 </td>
+						 </tr>
 						 <tr><td> </td><td><font color="##1D702D"> <b>Pour acte certifi&eacute; <span class="conforme">conforme</span></b></font></td></tr>
 						 <tr><td> D&eacute;livr&eacute; &agrave; </td> <td> <input type="text" name="delivre_a" required></td></tr>
 						 <tr><td> Le  </td> <td> <input type="date" name="delivre_le" required></td></tr>
@@ -155,7 +190,9 @@
 					<table class="tabledroite showacte"  >
 					    <!-- <p class="showacte">  Pour afficher l'acte modifiÃ© dans la partie droite de la page modifie_.php  -->
 							<tr> 
-								 <td> <input type="text" name="naissance_jour_moi"  placeholder=" Le" > </td>
+								 <td> 
+								      <input id="naissanceJourMois" type="text" name="naissance_jour_moi"  placeholder=" Le" >
+								 </td>
 								 <td> <input type="text" name="naissance_an"  placeholder=" ici l'an"> </td>
 							</tr>
 							<tr> 
@@ -291,6 +328,25 @@
 	</div>
 		
     <script src="js/nouveaupop.js"></script>
+    <!-- Contrôle de saisie  -->
+    <script>
+	    var nom = document.getElementById("nom");
+	    var errChamps = document.getElementById("errChamps");
+	    // à chaque fois que l'utilisateur quitte le champs: "blur"
+		// à chaque frappe sur le champs:"input" 
+		//nom.addEventListener("input", function(){
+		nom.addEventListener("blur", function(){
+			if(nom.value.trim() === ""){
+			    errChamps.textContent = "Ce champs est obligatoire.";
+                nom.classList.add("errBorder");				
+			}else{
+				errChamps.textContent = "";
+                nom.classList.remove("errBorder");
+			}
+	    });
+		// Contrôle  des 11 premier champs sur le 12em: id="naissanceJourMois"
+	</script>	
+    	
 </body>
 </html>
 

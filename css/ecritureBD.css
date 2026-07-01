@@ -190,7 +190,16 @@
 				
 			}
 			
-	
+	        /* Contrôle de saisie: Générique sur tous les ckamps */
+			.erreur{
+				color:#ff8080;
+				font-size:0.9em;
+				/* white-space:pre-line; */
+				display:block;
+			}
+			.errBorder{
+				border:2px solid red !important;
+			}
 			
 			
 			
