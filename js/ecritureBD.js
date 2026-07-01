@@ -201,7 +201,7 @@ function ouvrirPopupEcritureBD(lien) {
 
 
 
-// Contrôle de saisie: Générique sur tous les ckamps
+// Contrôle de saisie: Générique sur le champs courant
 /**
  *
  * à chaque fois que l'utilisateur quitte le champs: "blur"
@@ -224,9 +224,94 @@ function controlChamp(input) {
 	}
 }
 
+// 🟩 Contrôle de saisie: 1er check point
+/**
+ * Posé sur le champs date de naissanse:"Le"
+ * Contrôle les 9 champs précedents:
+ * Registre, Acte N°, Du(date)
+ * Nom, Prénom, Délivré à
+ * Le, l'an, Série Numb
+ *
+ * Attention! Ne pas poser la class="obligatoire" sur les 2 champs suivant:
+ * 🌋 Prefecture et
+ * 🌋 Centre
+ *
+ * Sinon; Conflit de contrôles
+ */
+function checkpoint() {
+	const champs = document.querySelectorAll(".obligatoire");
+	let erreur = null;
+	champs.forEach(champ => {
+		// On réutilise ta fonction générique
+		controlChamp(champ);
+		if (champ.value.trim() === "" && erreur === null) {
+			erreur = champ;
+		}
+	});
+
+	if (erreur) {
+		erreur.scrollIntoView({ behavior: "smooth", block: "center" });
+		erreur.focus();
+	}
+}
+
+//🟩 Contrôle de saisie: 2em check point
+/**
+ * Posé sur le champs nom du père:"fils(fille) de"
+ * Contrôle les 7 champs précedents:
+ * Le, l'an, heure,  minuite
+ * est né(e), à (lieu), du sexe
+ *
+ */
+ function checkpointDeux() {
+	const champs = document.querySelectorAll(".obligatoireDeux");
+	let erreur = null;
+	champs.forEach(champ => {
+		// On réutilise ta fonction générique
+		controlChamp(champ);
+		if (champ.value.trim() === "" && erreur === null) {
+			erreur = champ;
+		}
+	});
+
+	if (erreur) {
+		erreur.scrollIntoView({ behavior: "smooth", block: "center" });
+		erreur.focus();
+	}
+}
 
 
 
+// Contrôle génerale
+/**
+ * Appliqué au bouton submit
+ *🌋 Résultat volcanique: Pas la peine => requered fait ce job!
+ *
+ *
+	function checkpointFinal(event) {
+
+		const champs = document.querySelectorAll(".obligatoire");
+		let erreur = null;
+
+		champs.forEach(champ => {
+
+			// On réutilise ta fonction générique
+			controlChamp(champ);
+
+			if (champ.value.trim() === "" && erreur === null) {
+				erreur = champ;
+			}
+		});
+
+		if (erreur) {
+			event.preventDefault(); // bloque l’envoi du formulaire
+
+			erreur.scrollIntoView({ behavior: "smooth", block: "center" });
+			erreur.focus();
+		}
+	}
+*
+*/
 
 
 

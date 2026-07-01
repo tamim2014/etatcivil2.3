@@ -130,7 +130,7 @@
 						 <tr>
 							 <td>Centre</td> 
 							 <td>
-								 <select name="centretatcivil" id="centretatcivil" onChange="clearPrefectureBorder();" required>
+								 <select name="centretatcivil"  id="centretatcivil" onChange="clearPrefectureBorder();" required>
                                  	<option> </option>
 								 </select>
 							 </td>
@@ -138,21 +138,21 @@
 						 <tr>
 						     <td>Registre</td> 
 							 <td> 
-							     <input type="text" name="registre" required onblur="controlChamp(this)">
+							     <input type="text" name="registre" class="obligatoire" required onblur="controlChamp(this)">
                                  <span class="errChamps erreur"></span>								 
 							 </td>
 						 </tr>
 						 <tr>
 						     <td>Acte N°</td>
 							 <td> 
-							    <input type="text" name="acte" required onblur="controlChamp(this)">
+							    <input type="text" name="acte" class="obligatoire" required onblur="controlChamp(this)">
 								<span class="errChamps erreur"></span>
 						     </td>
 						 </tr>
 						 <tr>
 						   <td>Du(date)</td> 
 						   <td> 
-						      <input type="date" name="date_acte" required onblur="controlChamp(this)">
+						      <input type="date" name="date_acte" class="obligatoire" required onblur="controlChamp(this)">
 							  <span class="errChamps erreur"></span>
 						   </td>
 						 </tr>
@@ -169,14 +169,14 @@
 							        le contrôle de saisie ne s'execute pas - même dans les autres champs
 							        Donc je le laisse temporairement !
 							   -->							
-							   <input id="nom" type="text" name="nom" required onblur="controlChamp(this)">
+							   <input id="nom" class="obligatoire"  type="text" name="nom" required onblur="controlChamp(this)">
                                <span class="errChamps erreur"></span>
 							</td>
 						 </tr>
 						 <tr>
 						     <td> Pr&eacute;nom </td> 
 							 <td> 
-							     <input  type="text" name="prenom" required onblur="controlChamp(this)">
+							     <input id="prenom" class="obligatoire"  type="text" name="prenom" required onblur="controlChamp(this)">
 								 <span class="errChamps erreur"></span>
 							 </td>
 						 </tr>
@@ -184,28 +184,28 @@
 						 <tr>
 						    <td> D&eacute;livr&eacute; &agrave; </td>
 							<td> 
-							    <input type="text" name="delivre_a" required onblur="controlChamp(this)">
+							    <input type="text" name="delivre_a" class="obligatoire" required onblur="controlChamp(this)">
 								<span class="errChamps erreur"></span>
 							</td>
 						 </tr>
 						 <tr>
 						    <td> Le  </td> 
 							<td> 
-							    <input type="date" name="delivre_le" required onblur="controlChamp(this)">
+							    <input type="date" name="delivre_le" class="obligatoire" required onblur="controlChamp(this)">
 								<span class="errChamps erreur"></span>
 							</td>
 						 </tr>
 						 <tr>
 						    <td> L'an  </td> 
 							<td> 
-							   <input type="text" name="delivre_an" onblur="controlChamp(this)"> 
+							   <input type="text" name="delivre_an" class="obligatoire" onblur="controlChamp(this)"> 
 							   <span class="errChamps erreur"></span>
 							</td>
 						 </tr>
 						 <tr >
 						    <td style="padding-bottom:1em;"> S&eacute;rie Num:  </td> 
 							<td style="padding-bottom:1em;"> 
-							    <input type="text" name="num_serie" required onblur="controlChamp(this)">
+							    <input type="text" name="num_serie" class="obligatoire" required onblur="controlChamp(this)">
 								<span class="errChamps erreur"></span>
 							</td>
 						</tr>
@@ -217,10 +217,9 @@
             <div class="colonne_contenu" style="padding:0; width:40%;">
 			     <aside class="aside2">
 					<table class="tabledroite showacte"  >
-					    <!-- <p class="showacte">  Pour afficher l'acte modifiÃ© dans la partie droite de la page modifie_.php  -->
 							<tr> 
 								 <td> 
-								    <input id="naissanceJourMois" type="text" name="naissance_jour_moi"  placeholder=" Le" onblur="controlChamp(this)">
+								    <input class="obligatoireDeux"  type="text" name="naissance_jour_moi"  placeholder="Le" onfocus="checkpoint();" onblur="controlChamp(this);" >
 								    <span class="errChamps erreur"></span>
 								 </td>
 								 <td> 
@@ -265,7 +264,7 @@
 							  
 							 <tr> 
 							     <td> 
-								      <input type="text" name="pere_nom_prenom"  placeholder=" fils(fille) de" onblur="controlChamp(this)"> 
+								      <input  type="text" name="pere_nom_prenom"  placeholder=" fils(fille) de" onfocus="checkpointDeux();" onblur="controlChamp(this)"> 
                                       <span class="errChamps erreur"></span>
 								 </td>									  
 								 <td> 
@@ -320,7 +319,7 @@
 							 </tr>
 							 <tr> 
 								<td> 
-								    <input type="text" name="declaration_faite_par" placeholder="faite par:" onblur="controlChamp(this)">
+								    <input type="text" name="declaration_faite_par" placeholder="faite par:" required onblur="controlChamp(this)">
 									<span class="errChamps erreur"></span>
 								</td>
 								<td>
@@ -338,7 +337,7 @@
 							 </tr>
 							 <tr> 
 								<td> 
-								    <input id="tetu" type="date" name="datejugement" placeholder="date jugement:" style="height:15px;" onblur="controlChamp(this)"> 
+								    <input id="tetu" type="date" name="datejugement" placeholder="date jugement:" style="height:15px;" required onblur="controlChamp(this)"> 
 								    <span class="errChamps erreur"></span>
 								</td>
 								<td>
@@ -355,7 +354,7 @@
 									}
 								?>
 							    <!-- ✔️ Btn ENREGISTRER   --> 	
-								<input type="submit" class="btnOutput" id="enregistrer" name="Enregistrer" value="Enregistrer l'acte"/> 
+								<input type="submit" class="btnOutput" id="enregistrer" name="Enregistrer" value="Enregistrer l'acte" onclick="checkpointFinal(event)"/> 
 							</td>
 
 							<td> 
@@ -433,10 +432,7 @@
 			</div>
 		</div>
 	</div>
-		
     <script src="js/nouveaupop.js"></script>
-
-    	
 </body>
 </html>
 
