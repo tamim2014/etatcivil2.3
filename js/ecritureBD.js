@@ -289,7 +289,22 @@ function checkpoint() {
  * Mère
  * et de, née le, à, profession, demeurant à
  */
+ function checkpointTrois() {
+	const champs = document.querySelectorAll(".obligatoireTrois");
+	let erreur = null;
+	champs.forEach(champ => {
+		// On réutilise ta fonction générique
+		controlChamp(champ);
+		if (champ.value.trim() === "" && erreur === null) {
+			erreur = champ;
+		}
+	});
 
+	if (erreur) {
+		erreur.scrollIntoView({ behavior: "smooth", block: "center" });
+		erreur.focus();
+	}
+}
 
 
 

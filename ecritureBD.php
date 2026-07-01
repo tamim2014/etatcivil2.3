@@ -31,7 +31,7 @@
 	 <link href="css/ecritureBDmenudroite.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
-	 <link href="css/nouveaupop.css"  rel="stylesheet"   />	
+	 
 	 	 
 	 
      <style>
@@ -264,51 +264,51 @@
 							  
 							 <tr> 
 							     <td> 
-								      <input  type="text" name="pere_nom_prenom"  placeholder=" fils(fille) de" onfocus="checkpointDeux();" onblur="controlChamp(this)"> 
+								      <input class="obligatoireTrois"  type="text" name="pere_nom_prenom"  placeholder=" fils(fille) de" onfocus="checkpointDeux();" onblur="controlChamp(this)"> 
                                       <span class="errChamps erreur"></span>
 								 </td>									  
 								 <td> 
-								     <input type="text" name="mere_nom_prenom"  placeholder=" et de" onblur="controlChamp(this)"> 
+								     <input class="obligatoireTrois" type="text" name="mere_nom_prenom"  placeholder=" et de" onblur="controlChamp(this)"> 
 								     <span class="errChamps erreur"></span>
 								 </td> 
 							 </tr>
 							 <tr> 
 							     <td> 
-								    <input type="text" name="pere_datenaisance" placeholder=" n&eacute; le" onblur="controlChamp(this)"> 
+								    <input class="obligatoireTrois" type="text" name="pere_datenaisance" placeholder=" n&eacute; le" onblur="controlChamp(this)"> 
 								    <span class="errChamps erreur"></span>
 								 </td>    
 								 <td> 
-								     <input type="text" name="mere_datenaisance" placeholder="n&eacute;e le" onblur="controlChamp(this)"> 
+								     <input class="obligatoireTrois" type="text" name="mere_datenaisance" placeholder="n&eacute;e le" onblur="controlChamp(this)"> 
 								     <span class="errChamps erreur"></span>
 								 </td> 
 							 </tr>
 							 <tr> 
 							     <td> 
-								     <input type="text" name="pere_lieunaissance" placeholder="n&eacute; &agrave;" onblur="controlChamp(this)"> 
+								     <input class="obligatoireTrois" type="text" name="pere_lieunaissance" placeholder="n&eacute; &agrave;" onblur="controlChamp(this)"> 
 								     <span class="errChamps erreur"></span>
 								 </td>   
 								 <td> 
-								    <input type="text" name="mere_lieunaissance" placeholder="&agrave;" onblur="controlChamp(this)"> 
+								    <input class="obligatoireTrois" type="text" name="mere_lieunaissance" placeholder="&agrave;" onblur="controlChamp(this)"> 
 								    <span class="errChamps erreur"></span>
 								 </td>
 							 </tr>
 							 <tr> 
 							    <td> 
-								   <input type="text" name="pere_profession" placeholder="profession" onblur="controlChamp(this)"> 
+								   <input class="obligatoireTrois" type="text" name="pere_profession" placeholder="profession" onblur="controlChamp(this)"> 
 								   <span class="errChamps erreur"></span>
 								</td>  
 								<td> 
-								   <input type="text" name="mere_profession" placeholder="profession" onblur="controlChamp(this)">
+								   <input class="obligatoireTrois" type="text" name="mere_profession" placeholder="profession" onblur="controlChamp(this)">
 								   <span class="errChamps erreur"></span>
 								</td>
 							 </tr>
 							 <tr> 
 							    <td> 
-								   <input type="text" name="pere_villederesidence" placeholder="demeurant &agrave;" onblur="controlChamp(this)"> 
+								   <input class="obligatoireTrois" type="text" name="pere_villederesidence" placeholder="demeurant &agrave;" onblur="controlChamp(this)"> 
 								   <span class="errChamps erreur"></span>
 								</td> 
 								<td> 
-								   <input type="text" name="mere_villederesidenc" placeholder="demeurant &agrave;" onblur="controlChamp(this)"> 
+								   <input class="obligatoireTrois" type="text" name="mere_villederesidenc" placeholder="demeurant &agrave;" onblur="controlChamp(this)"> 
 								   <span class="errChamps erreur"></span>
 								</td>
 							 </tr>
@@ -319,7 +319,7 @@
 							 </tr>
 							 <tr> 
 								<td> 
-								    <input type="text" name="declaration_faite_par" placeholder="faite par:" required onblur="controlChamp(this)">
+								    <input type="text" name="declaration_faite_par" placeholder="faite par:" required onfocus="checkpointTrois();" onblur="controlChamp(this)">
 									<span class="errChamps erreur"></span>
 								</td>
 								<td>
@@ -433,6 +433,7 @@
 		</div>
 	</div>
     <script src="js/nouveaupop.js"></script>
+	<link href="css/nouveaupop.css"  rel="stylesheet" />	
 </body>
 </html>
 
