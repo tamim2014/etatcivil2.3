@@ -190,49 +190,6 @@
 				
 			}
 			
-	        /* Contrôle de saisie: Générique blur sur champs courant */
-			.erreur {
-				color:#111;
-				background:#fff;
-				font-size:0.9em;
-				display:block;
-				box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-				border-radius:4px;
-				width:64%; /* 60% */
-				position:relative; /* nécessaire pour la flèche */
-				padding:2px 4px;
-				margin-left:22%;
-				display:none; /* flèche caché tant qu'il n'y a pas d'erreur */
-			}
-			.erreur.actif {
-				display:block; /* affiché seulement en cas d'erreur */
-			}
-			/* En cas de probleme sur mobil: Réajuster ce paramètre   
-			@media screen and (max-width: 768px) {
-				.erreur {
-					margin-left:22%;
-				}
-			}
-			*/
-			
-			/* Message direction: Une pointe(flèche) vers le haut */ 
 
-			span.erreur::after {
-				content: "";
-				position: absolute;
-				bottom: calc(100% - 1px); /* remonte légèrement la flèche */
-				left: 10%; /* position horizontale de la pointe */
-				margin-left: -6px;        /* centre la flèche */
-				border-width: 7px;        /* flèche un peu plus grande */
-				border-style: solid;
-				border-color: transparent transparent #fff transparent;
-			}
-
-
-			.errBorder{
-				border:2px solid #dc3545 !important; /* #ff8080   #dc3545🟥 #ff5252🟥*/
-			}
-			
-			
 			
 

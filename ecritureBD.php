@@ -23,11 +23,12 @@
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes"> <!-- ⚠️ Responsive mobil -->
 	 <title> Acces en Ecriture à la base etatcivil</title>
 	 <link href="css/template.css"  rel="stylesheet" type="text/css" >
-	 <link href="css/accueil22.css" rel="stylesheet"   />
-	 <link href="css/slide.css"     rel="stylesheet"   /> 
-	 <link href="css/dropdown.css"  rel="stylesheet"    />
+	 <link href="css/accueil22.css" rel="stylesheet"/>
+	 <link href="css/slide.css"     rel="stylesheet"/> 
+	 <link href="css/dropdown.css"  rel="stylesheet"/>
 	 <link href="css/lectureBD.css" rel="stylesheet" title="Style" />  <!-- pour les bouton du panneau central -->
 	 <link href="css/ecritureBD.css" rel="stylesheet" title="Style" />
+	 <link href="css/controleSaisie.css" rel="stylesheet"/>
 	 <link href="css/ecritureBDmenudroite.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
@@ -41,9 +42,12 @@
         body, .tabledroite{
 			background:#ECECEA;
 		}
+		
+
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js" defer></script>
+	 <script src="js/controleSaisie.js" defer></script>
 	 <script src="js/logout.js" defer></script>
 </head>
 
@@ -138,21 +142,21 @@
 						     <td>Registre</td> 
 							 <td> 
 							     <input type="text" name="registre" class="obligatoire" required onblur="controlChamp(this)">
-                                 <span class="errChamps erreur"></span>								 
+                                 <span class="errChamps erreur idS"></span>								 
 							 </td>
 						 </tr>
 						 <tr>
 						     <td>Acte N°</td>
 							 <td> 
 							    <input type="text" name="acte" class="obligatoire" required onblur="controlChamp(this)">
-								<span class="errChamps erreur"></span>
+								<span class="errChamps erreur idS"></span>
 						     </td>
 						 </tr>
 						 <tr>
 						   <td>Du(date)</td> 
 						   <td> 
 						      <input type="date" name="date_acte" class="obligatoire" required onblur="controlChamp(this)">
-							  <span class="errChamps erreur"></span>
+							  <span class="errChamps erreur idS"></span>
 						   </td>
 						 </tr>
 						 <tr>
@@ -169,14 +173,14 @@
 							        Donc je le laisse temporairement !
 							   -->							
 							   <input id="nom" class="obligatoire"  type="text" name="nom" required onblur="controlChamp(this)">
-                               <span class="errChamps erreur"></span>
+                               <span class="errChamps erreur idS"></span>
 							</td>
 						 </tr>
 						 <tr>
 						     <td> Pr&eacute;nom </td> 
 							 <td> 
 							     <input id="prenom" class="obligatoire"  type="text" name="prenom" required onblur="controlChamp(this)">
-								 <span class="errChamps erreur"></span>
+								 <span class="errChamps erreur idS"></span>
 							 </td>
 						 </tr>
 						 <tr><td> </td><td><font color="##1D702D"> <b>Pour acte certifi&eacute; <span class="conforme">conforme</span></b></font></td></tr>
@@ -184,28 +188,28 @@
 						    <td> D&eacute;livr&eacute; &agrave; </td>
 							<td> 
 							    <input type="text" name="delivre_a" class="obligatoire" required onblur="controlChamp(this)">
-								<span class="errChamps erreur"></span>
+								<span class="errChamps erreur idS"></span>
 							</td>
 						 </tr>
 						 <tr>
 						    <td> Le  </td> 
 							<td> 
 							    <input type="date" name="delivre_le" class="obligatoire" required onblur="controlChamp(this)">
-								<span class="errChamps erreur"></span>
+								<span class="errChamps erreur idS"></span>
 							</td>
 						 </tr>
 						 <tr>
 						    <td> L'an  </td> 
 							<td> 
 							   <input type="text" name="delivre_an" class="obligatoire" onblur="controlChamp(this)"> 
-							   <span class="errChamps erreur"></span>
+							   <span class="errChamps erreur idS"></span>
 							</td>
 						 </tr>
 						 <tr >
 						    <td style="padding-bottom:1em;"> S&eacute;rie Num:  </td> 
 							<td style="padding-bottom:1em;"> 
 							    <input type="text" name="num_serie" class="obligatoire" required onblur="controlChamp(this)">
-								<span class="errChamps erreur"></span>
+								<span class="errChamps erreur idS"></span>
 							</td>
 						</tr>
 					 </table> 
@@ -222,7 +226,7 @@
 								 </td>
 								 <td> 
 								    <input class="obligatoireDeux"  type="text" name="naissance_an"  placeholder=" ici l'an" onfocus="checkpoint();" onblur="controlChamp(this)"> 
-								    <span class="errChamps erreur"></span>
+								    <span class="errChamps erreur idS"></span>
 								 </td>
 							</tr>
 							<tr> 
@@ -237,18 +241,18 @@
 							 <tr> 
 							     <td> 
 								    <input class="obligatoireDeux" type="text" name="naissance_nom_prenom" placeholder="est n&eacute;(e)" onblur="controlChamp(this)">
-								    <span class="errChamps erreur"></span>
+								    <span class="errChamps erreur idS"></span>
 								 </td>
 							     <td> 
 								    <input class="obligatoireDeux" type="text" name="naissance_lieu"  placeholder=" &agrave;(lieu)" onblur="controlChamp(this)"> 
-								    <span class="errChamps erreur"></span>
+								    <span class="errChamps erreur idS"></span>
 								 </td>
 							 </tr>
 
 							 <tr> 
 							    <td> 
 								   <input class="obligatoireDeux" type="text" name="naissance_sexe"   placeholder=" du sexe" onblur="controlChamp(this)"> 
-								   <span class="errChamps erreur"></span>
+								   <span class="errChamps erreur idS"></span>
 								</td>
 							    <td></td>
 							 </tr>
@@ -261,31 +265,31 @@
 							 <tr> 
 							     <td> 
 								      <input class="obligatoireTrois"  type="text" name="pere_nom_prenom"  placeholder=" fils(fille) de" onfocus="checkpointDeux();" onblur="controlChamp(this)"> 
-                                      <span class="errChamps erreur"></span>
+                                      <span class="errChamps erreur idS"></span>
 								 </td>									  
 								 <td> 
 								     <input class="obligatoireTrois" type="text" name="mere_nom_prenom"  placeholder=" et de" onblur="controlChamp(this)"> 
-								     <span class="errChamps erreur"></span>
+								     <span class="errChamps erreur idS"></span>
 								 </td> 
 							 </tr>
 							 <tr> 
 							     <td> 
 								    <input class="obligatoireTrois" type="text" name="pere_datenaisance" placeholder=" n&eacute; le" onblur="controlChamp(this)"> 
-								    <span class="errChamps erreur"></span>
+								    <span class="errChamps erreur idS"></span>
 								 </td>    
 								 <td> 
 								     <input class="obligatoireTrois" type="text" name="mere_datenaisance" placeholder="n&eacute;e le" onblur="controlChamp(this)"> 
-								     <span class="errChamps erreur"></span>
+								     <span class="errChamps erreur idS"></span>
 								 </td> 
 							 </tr>
 							 <tr> 
 							     <td> 
 								     <input class="obligatoireTrois" type="text" name="pere_lieunaissance" placeholder="n&eacute; &agrave;" onblur="controlChamp(this)"> 
-								     <span class="errChamps erreur"></span>
+								     <span class="errChamps erreur idS"></span>
 								 </td>   
 								 <td> 
 								    <input class="obligatoireTrois" type="text" name="mere_lieunaissance" placeholder="&agrave;" onblur="controlChamp(this)"> 
-								    <span class="errChamps erreur"></span>
+								    <span class="errChamps erreur idS"></span>
 								 </td>
 							 </tr>
 							 <tr> 
@@ -312,7 +316,7 @@
 							 <tr> 
 								<td> 
 								    <input  type="text" name="declaration_faite_par" placeholder="faite par:" required onfocus="checkpointTrois();" onblur="controlChamp(this)">
-									<span class="errChamps erreur"></span>
+									<span class="errChamps erreur idS"></span>
 								</td>
 								<td>
 								    <input class="jugement" type="text"  placeholder="Emetteur jugement">
@@ -321,7 +325,7 @@
 							 <tr> 
 								<td> 
 								   <input type="text" name="declaration_recue_pa" placeholder="re&ccedil;ue par" onblur="controlChamp(this)"> 
-								   <span class="errChamps erreur"></span>
+								   <span class="errChamps erreur idS"></span>
 								</td>
 								<td>
 								    <input class="jugement" type="text" placeholder="Titre recepteur">
@@ -330,7 +334,7 @@
 							 <tr> 
 								<td> 
 								    <input id="tetu" type="date" name="datejugement" placeholder="date jugement:" style="height:15px;" required onblur="controlChamp(this)"> 
-								    <span class="errChamps erreur"></span>
+								    <span class="errChamps erreur idS"></span>
 								</td>
 								<td>
 								    <input class="jugement" type="text" placeholder="Date jugement">
