@@ -211,18 +211,27 @@ function ouvrirPopupEcritureBD(lien) {
  * nom.addEventListener("blur", function(){
  *	 
  */
-function controlChamp(input) {
-	var errChamps = nom.nextElementSibling;
-	const errSpan = input.nextElementSibling;
 
-	if (input.value.trim() === "") {
-		errSpan.textContent = "Ce champ est obligatoire.";
-		input.classList.add("errBorder");
-	} else {
-		errSpan.textContent = "";
-		input.classList.remove("errBorder");
-	}
+function controlChamp(input) {
+    const errSpan = input.nextElementSibling;
+
+    if (input.value.trim() === "") {
+        errSpan.textContent = "Ce champ est obligatoire ⚠️";
+        errSpan.classList.add("actif");
+        input.classList.add("errBorder");
+    } else {
+        errSpan.textContent = "";
+        errSpan.classList.remove("actif");
+        input.classList.remove("errBorder");
+    }
 }
+
+ 
+
+
+
+
+
 // On vire le message(pour garder seulement la bordure)
 function controlChampSansMessage(input) {
 	var errChamps = nom.nextElementSibling;
@@ -236,6 +245,16 @@ function controlChampSansMessage(input) {
 		input.classList.remove("errBorder");
 	}
 }
+
+/* C'était pour cacher/ afficher le mesaage d'erreur( contrôle de saisie)
+if (champ.value.trim() === "") {
+	erreurSpan.classList.add("actif");
+} else {
+	erreurSpan.classList.remove("actif");
+}
+*/
+
+
 
 // 🟩 Contrôle de saisie: 1er check point
 /**

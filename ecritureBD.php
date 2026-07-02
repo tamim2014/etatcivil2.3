@@ -41,7 +41,6 @@
         body, .tabledroite{
 			background:#ECECEA;
 		}
-		
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js" defer></script>
@@ -426,7 +425,8 @@
 		</div>
 	</div>
     <script src="js/nouveaupop.js"></script>
-	<link href="css/nouveaupop.css"  rel="stylesheet" />	
+	<link href="css/nouveaupop.css"  rel="stylesheet" />
+	
 </body>
 </html>
 
