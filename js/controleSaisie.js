@@ -1,5 +1,5 @@
 /**
- * 🟦 Controle d'accès sur le champs "Prefecture"
+ * 🟦 Controle d'acces sur le champs "Prefecture"
  * 🟦 Controle de saisie sur les autres champs
  *
  */

@@ -33,6 +33,10 @@ $_SESSION["v"]= $p; // ← celui-là est crucial
 // get in: accueil.php 
 $_SESSION['messageDelete'] = "Suppression effectuée avec succès⚠️"; 
 
+// set in: backend/lectureBD2_searchPlayBack, backend/lectureBD2_searchPlayBackByName
+// get in: backend/pop.php (ligne4), afficherdanspop.php
+$_SESSION['identifiant']= $donnees['ID']; 
+
 
 // Obsolete
 // set in: backend/ecritureBD_insertionSQL.php  , 

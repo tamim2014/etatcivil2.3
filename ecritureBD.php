@@ -32,9 +32,6 @@
 	 <link href="css/ecritureBDmenudroite.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsiveTopnav.css" rel="stylesheet" title="Style" />
 	 <link href="css/responsivecritureBD.css" rel="stylesheet" title="Style" />
-	 
-	 	 
-	 
      <style>
 		/* 🧩 Task:Nettoyage css.Virer tous les résidus ccs qui trainent dans ecritureBD.css ( à mettre dans ecritureBD.css) */	
 
@@ -42,8 +39,6 @@
         body, .tabledroite{
 			background:#ECECEA;
 		}
-		
-
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js" defer></script>

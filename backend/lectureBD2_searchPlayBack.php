@@ -9,34 +9,28 @@
  *       Pour affichage du resultat dans une table
  * ✅ 4. Gestion des droits utilisateurs sur la fonction Rectifier
  */
-   // session_start(); // pour la restriction d'accès aux données
+
+
+
  
     // ✅ 1. On recupere le filtre(saisie): Transmis par "backend/serchEngine.php"
     if(!isset($_GET['num'])) $_GET['num']="";    $num=$_GET['num']; //acte
-	if(!isset($_GET['nom'])) $_GET['nom']="";     $nom=$_GET['nom'];// ❌ Pas la peine ici car on traite seulement le numero
    
-    // ✅ 2. On fait un select(from liste) par ce filtre 
-    /** Version1: mysqli ❌
-    $requete = "SELECT * FROM liste WHERE acte=".$num ;  
-	$result = mysqli_query($conn,$requete);
-    */
-	
-	/**Version2:pdo 
-	$sql = "SELECT * FROM liste WHERE acte = :num";
-	$stmt = $conn->prepare($sql);
-	$stmt->execute([  // Exécution avec paramètre sécurisé
-		'num' => $num
-	]);
-	*/
-	
-	//Version3(pdo): ✅ Restriction d'accès aux données: Un officier est restreint à sa préfecture d'affectation
+    $restriction = false; // Flag(pour remplacer exit;): Si document existe ailleurs mais pas dans prefecture autorisée
+
+
+   // ✅ 2. On fait un select(from liste) par ce filtre 
+
+	//🟩 Restriction d'accès aux données: Un officier est restreint à sa préfecture d'affectation
 	if ($_SESSION['user_role'] !== 'admin') {
 		$prefUnique = $_SESSION['prefecture'];
 		$sql = "SELECT * FROM liste WHERE acte = :num AND prefecture = :prefUnique ";
 		$stmt = $conn->prepare($sql);
 		$stmt->execute([ 'num' => $num, 'prefUnique' => $prefUnique ]);
 		// Message
+		
 		if($p !== $prefUnique){
+			$restriction = true; // pour empêcher l'affichage d'un table vide par la suite
 			echo'
 				<button  class="boutoyahemnayivawo messageResultRestriction">
 					<span>
@@ -48,7 +42,9 @@
 					</span>
 				</button>   
 			';
-			exit;
+			// exit; //❗Bug javaScript: 🔒 Déconnexion bloquée
+			// Sans exit, un tableau vide s'Affiche
+			// 🧠 Comment bloquer l’affichage du tableau sans utiliser exit ? utiliser un flag ($restriction)
 		}
 	} else {
 		$sql = "SELECT * FROM liste WHERE acte = :num";
@@ -57,15 +53,10 @@
 	}
 	
 	
-	
-	
     // ✅ 3. Récupération des données dans 🎁$donnees: Pour affichage du resultat dans une table 
 	 $table='<table class="resultat_moteur" style="left:42.11%; top:18%;">';
 	 $table.='<tr><th>ID</th><th>Nom</th><th>Prenom</th><th>Acte numero</th><th></th><th></th><th></th></tr>';
-
-	 //while ($donnees = mysqli_fetch_array($result) )  
      while ($donnees = $stmt->fetch(PDO::FETCH_ASSOC)) { 	 	 
-       // $table.='<tr ><td>'.$donnees["ID"].'</td><td>'.$donnees["nom"].'</td><td>'.$donnees["prenom"].'</td><td>'.$donnees["acte"].'</td><td><a href="modifier_.php?n='.$donnees["ID"].' & nom_='.$donnees["nom"].' & prenom_='.$donnees["prenom"].' & acte_='.$donnees["acte"].'"><span class="desktopText1">Modifier</span><span class="mobilText1">✍️</span></a></td>     
 		$table .= '<tr>
 			<td>'.$donnees["ID"].'</td>
 			<td>'.$donnees["nom"].'</td>
@@ -85,15 +76,10 @@
 			<td><a href="imprimer.php?n='.$donnees["ID"].'"><span class="desktopText2">Imprimer</span><span class="mobilText2">🖨️</span></a></td>
 			<td><a id="lien" href="#" onclick="popup_lectureBD2();"><span class="desktopText3">Afficher</span><span class="mobilText3">👁</span></a></td>
 		</tr>';
-
-		   // à utiliser dans include backend/pop.php (ligne4) donc dans  afficherdanspop.php
-		   // puisqu'on a courcircuté afficherdanspop.php
-		   // backend/pop.php et cette variables vont à  la poubelle
-		   $_SESSION['identifiant']= $donnees['ID']; 
+        // get in : backend/pop.php (ligne4), afficherdanspop.php
+		$_SESSION['identifiant']= $donnees['ID']; 
 	} 
      $table.='</table>'; 
-	 
-
 	?>
 	<script>
 		const USER_ROLE = "<?= $_SESSION['user_role'] ?>";
@@ -101,18 +87,11 @@
 	</script>
 	<?php
 
-  
-     echo $table;
-	 
-	 	 
-	  //mysqli_close($conn);
-	  $conn = null;
-    
-    //"La connaissance s'acquiert par l'expérience, tout le reste n'est que de l'information" .Albert Einstein.
-
-
-
-?>
+		if (!$restriction) {
+			echo $table;
+		}
+	    $conn = null;
+    ?>
 
 
 
