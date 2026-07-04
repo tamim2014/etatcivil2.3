@@ -24,7 +24,7 @@ $prenom_ = $_GET["prenom_"]?? null;
 $acte_   = $_GET["acte_"]  ?? null;
 
 
-$rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></i> </b>  <br><br> <i><b>Nom :</b></i> '.$nom_.' <br> <i><b>Pr&eacute;nom :</b></i> '.$prenom_.' <br> <i><b>Acte num&eacute;ro:</b></i> '.$acte_.'';
+$rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></i> </b>  <br><i><b>Nom :</b></i> '.$nom_.' <br> <i><b>Pr&eacute;nom :</b></i> '.$prenom_.' <br> <i><b>Acte num&eacute;ro:</b></i> '.$acte_.'';
 
  // echo '<div class="rappel">'.$rappel.'</div>' ;
 
@@ -111,7 +111,8 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 		  <!-- LE PANNEAU DE GAUCHE :  -->
 		  	<div class="colonne_laterale" style="width: 33%; ">
 			    <aside class="aside1">
-					<table class="tablegauche"  name="listes" style="height:30em; padding:1em inherit;">
+					<!-- <table class="tablegauche"  name="listes" style="height:30em; padding:1em inherit;"> -->
+					<table class="tablegauche"  name="listes" style="min-height:63.15% !important;  padding:1em inherit;"> 	
 						<caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;    "> 
 							<font color="gray" style="line-height:2;">
 								<h3> UNION DES COMORES  </h3>
@@ -227,7 +228,8 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 		    <!-- LE PANNEAU DE CENTRAL : -->
 		    <div class="colonne_contenu" style="padding:0; width: 40%;">
 			    <aside class="aside2">
-                   	<table  class="tabledroite" style="height:43em;" >
+                   	<!-- <table  class="tabledroite" style="height:43em;" > -->
+					<table class="tabledroite showacte" style="min-height:100vh !important;" >
 						 <p class="showacte"> <!-- Pour afficher l'acte modifié dans la partie droite de la page modifie_.php  -->
 							 <tr> <td> <input type="text" name="naissance_jour_moi"  value="<?php echo $donnees["naissance_jour_moi"];?>" placeholder=" Le" > </td>
 							 <td> <input type="text" name="naissance_an"  value="<?php echo $donnees["naissance_an"];?>" placeholder=" ici l'an"> </td></tr>
@@ -309,7 +311,8 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 		    <!-- LE PANNEAU DE DROITE :  -->
 		    <div class="colonne_laterale"  style="width: 25%; ">
 				<aside class="aside1" >
-						<table  class="tablemenu" style="min-height:41.835em;" > 
+						<!-- <table  class="tablemenu" style="min-height:41.835em;" > -->
+						<table  class="tablemenu " style="min-height:88.75%;"> 
 							<tr><td> 
 								  <?php include("inc/ecriture/ecritureBD_edit_menudroite1.php"); ?>
 							</td></tr>     
