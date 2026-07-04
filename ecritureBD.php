@@ -64,9 +64,9 @@
 		<form action ="backend/ecritureBD_insertionSQL.php" method="post" name="form1" >
 			<!-- LE PANNEAU DE GAUCHE :  -->
 			<div class="colonne_laterale" style="width: 33%;  " >
-				<aside class="aside1">			    
+				<aside class="aside1" style="min-height:100vh !important;">			    
 		            <!-- ❌ include("inc/ecriture/ecritureBD_panodegauche.php"); ❌ ça donne un espace fantôme en haut -->
-					  <table class="tablegauche"  name="listes" style="height:30em; padding:1em inherit;"> 
+					  <table class="tablegauche"  name="listes" style="min-height:63.15% !important;  padding:1em inherit;"> 
 						  <caption  style="caption-side:top; box-shadow: 0 40px 65px #cdbe9f inset; "> 
 							<font color="gray" style="line-height:2;">
 								<h3> UNION DES COMORES  </h3>
@@ -214,7 +214,7 @@
 			 <!-- LE PANNEAU CENTRAL   -->
             <div class="colonne_contenu" style="padding:0; width:40%;">
 			     <aside class="aside2">
-					<table class="tabledroite showacte"  >
+					<table class="tabledroite showacte" style="min-height:100vh !important;" >
 							<tr> 
 								 <td> 
 								    <input type="text" name="naissance_jour_moi"  placeholder="Le">
@@ -367,9 +367,10 @@
 				</aside>
 			</div><!-- Fin PANNEAU CENTRALE -->
 			<!-- LE PANNEAU DE DROITE: -->
-			<div class="colonne_laterale" style="width: 25%; ">
+			<div class="colonne_laterale" style="width: 25%;">
 				<aside class="aside1">			    
-		            <table  class="tablemenu" style="min-height:41.835em;">    
+		            <!-- <table  class="tablemenu" style="min-height:41.835em; background:red;"> -->    
+		            <table  class="tablemenu" style="min-height:88.75%;">    
 						<tr><td>
 							<?php include("inc/ecriture/ecritureBD_menudroite.php"); ?>
 						</td></tr>

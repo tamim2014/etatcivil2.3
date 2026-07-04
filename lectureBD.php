@@ -59,7 +59,7 @@
     <div class="contenu" > <!-- 🎁 FlexBox: on remplace float:left sur les contenu par display:flex sur le conteneur  -->
 		<!-- LE PANNEAU DE GAUCHE :  -->
 		<div class="colonne_laterale" >
-			<aside class="aside1">
+			<aside class="aside1" >
 				<form action ="" method="POST" name="form1" >
 					<table class="tablegauche tablegauche-lectureBD" style=" height:25em;"> 
 						 <caption> 

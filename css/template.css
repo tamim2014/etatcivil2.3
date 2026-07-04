@@ -92,11 +92,12 @@ body {
 
 .colonne_laterale aside {
 	/* à supprimer ces 2 première proprietés  ✍️ */
-    background:inherit;  /*  */  
-    padding:15px;
+    background:inherit;   
+    /* padding:15px;  Pourquoi? C'est dangereux ça */ 
 	padding-top:0 !important;
-	
+	/*
 	margin:0 0 15px;
+	*/
 	
 }
 
@@ -171,6 +172,10 @@ img {
 	 background: #ECECEA !important; /* #ECECEA */
 	 box-shadow: 0 0 65px #cdbe9f inset !important; 
   }
+  aside.aside1{
+	  height:100vh !important; /* forcer sur accueil.php et ecritureBD.php/modifier_.php */
+      min-height:100vh !important; /* ⚠️ */
+ }
   aside.aside2{
 	  box-shadow:none !important;
 	  height:auto !important; /* ⚠️⚠️⚠️ virer l'espace vide en bas  de .aside2🎯 */
