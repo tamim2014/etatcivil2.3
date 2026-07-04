@@ -183,6 +183,7 @@ img {
 	 height:100% !important; /* forcer sur accueil.php et ecritureBD.php/modifier_.php */
 	 min-height:100% !important; /* 100vh ⚠️ */
   }
+
   aside.aside2{
 	  box-shadow:none !important;
 	  height:auto !important; /* ⚠️⚠️⚠️ virer l'espace vide en bas  de .aside2🎯 */
