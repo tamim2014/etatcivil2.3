@@ -31,14 +31,7 @@
 		}
 		
 		
-		/* colonne laterale sur [ 50%- 80% ] 
-		
-		aside.aside1, aside.aside2 {
-			height: 100% !important;
-			background: #ECECEA !important;
-			box-shadow: 0 0 65px #cdbe9f inset !important;
-		}
-		*/
+	
 	</style>
 
 	

@@ -39,6 +39,12 @@
         body, .tabledroite{
 			background:#ECECEA;
 		}
+		
+		/* Décollage relief colonne_latterale 125% */
+		    aside.aside1{
+	         height:100% !important; /* forcer sur accueil.php et ecritureBD.php/modifier_.php */
+             min-height:100% !important; /* 100vh ⚠️ */
+          }
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js" defer></script>
