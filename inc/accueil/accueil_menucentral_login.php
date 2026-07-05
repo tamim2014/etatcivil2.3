@@ -1,10 +1,13 @@
 <?php
  echo '
   
-	<ul style="margin-left:28%;" id="hamburguer">
+	<ul id="hamburguer">
+	  <li class="dropdown" id="pixelPerfect">
+		<button   class="dropbtn  btn-accueil"><a  href="#">Pixel-perfect Pixel-perfect Pixel-perfect</a></button>
+      </li>
 	  <li class="dropdown" >
 		<button class="dropbtn btn-accueil"><a href="#">Accueil</a></button>
-    </li>	  
+      </li>	  
 	  <li class="dropdown" >
 		<button class="dropbtn"> Acte de naissance</button>
 		<div class="dropdown-content">

@@ -1,5 +1,8 @@
 <?php
- echo '<ul style="margin-left:32%;" id="hamburguer"> <!-- 28% -->
+ echo '<ul  id="hamburguer"> <!-- margin-left:32%; -->
+	  <li class="dropdown" id="pixelPerfect">
+		<button   class="dropbtn  btn-accueil"><a  href="#">Pixel-perfect Pixel-perfect Pixel-perfect</a></button>
+      </li>
 	  <li class="dropdown" >
 		<button class="dropbtn btnHover btn-accueil"><a  href="accueil.php">Accueil</a></button>
       </li>	  
