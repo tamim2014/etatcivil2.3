@@ -28,12 +28,8 @@
 	<style>
 		select{
 		   border: 1px solid #bbb; /* #bbb; #8c8b8b;  */
-		}
-		
-		
-	
+		}			
 	</style>
-
 	
     <!-- ✅ Pour les messages - Boite de dialogue et les Popup -->
 	<script src="js/dialogueBox.js" defer></script>
@@ -67,7 +63,7 @@
 	    <form action ="" method="POST" name="form1" >
 			<!-- LE PANNEAU DE GAUCHE : Recher des document par numero ou nom -->
 			<div class="colonne_laterale" style=" margin-bottom:0; padding-bottom:0;">
-				<aside class="aside1" >
+				<aside class="aside1" style="min-height:100vh !important;" > <!-- ⚠️ ❗ exporté, ce style ne s'applique pas -->
 					<table class="tablegauche" style="margin-bottom:0; padding-bottom:0; height:24em; "  > <!-- height:24em;  -->
 					    <!-- <caption  style="caption-side:top; box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;  ">  -->
 						<caption  style="caption-side:top; box-shadow: 0 20px 65px #cdbe9f inset;"> 

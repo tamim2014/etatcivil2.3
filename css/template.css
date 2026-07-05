@@ -24,8 +24,8 @@ body {
 .menu{
     background-color: #74AFAD; /*  ✍️*/
     /* Essai  */
-    margin-top: -16px;
-    text-align: center;
+    margin-top: -10px; /* -16px */
+    text-align: center; 
 }
 
 .menu li {
@@ -172,16 +172,16 @@ img {
 	 background: #ECECEA !important; /* #ECECEA */
 	 box-shadow: 0 0 65px #cdbe9f inset !important; 
   }
- /*🟥🟩 Décollage relief colonne_latterale -80% */
+ /*🟥🟩 Décollage relief colonne_latterale 80% - */
   aside.aside1{
 	  height:100vh !important; /* forcer sur accueil.php et ecritureBD.php/modifier_.php */
-      min-height:100vh !important; /* ⚠️ */
+      min-height:100vh !important; 
  }
  
-/*🟥🟩 Décollage relief colonne_latterale +125% */
+/*🟥🟩 Décollage relief colonne_latterale 125% + */
 	aside.aside1{
 	 height:100% !important; /* forcer sur accueil.php et ecritureBD.php/modifier_.php */
-	 min-height:100% !important; /* 100vh ⚠️ */
+	 min-height:100% !important; 
   }
 
   aside.aside2{

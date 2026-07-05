@@ -70,3 +70,33 @@
 }
 
 
+/* 🟥🟩 zoom+ :Responsive  topnav: Trop à gauche. Je le veux +ou- centré sur colonne_contenu */
+
+#pixelPerfect button {
+	border: 1px solid transparent;
+}
+#pixelPerfect button a {
+	color:transparent;
+}
+
+#pixelPerfect:hover,
+#pixelPerfect button:hover{
+	background:inherit;
+	cursor:inherit;
+}
+#pixelPerfect button a:hover{
+	cursor:default;
+}
+
+@media screen and (max-width: 1070px) { /* zoom 150%  */
+	#pixelPerfect {
+		display:none !important;
+	}
+}
+@media screen and (max-width: 768px) { /* mobil  */
+	#pixelPerfect {
+		display:none !important;
+	}
+}
+
+
