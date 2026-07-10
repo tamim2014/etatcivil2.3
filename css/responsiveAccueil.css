@@ -24,6 +24,15 @@
     margin: 0;
 }
 
+/* 
+ * Responsive grand écran: 
+ * limiter la compression du panel de chargement des tables 
+ * accueil_prefecture.php
+ */
+.flip{
+	 min-height:38vh;
+}
+
 /* --- MODE RESPONSIVE AUTOMATIQUE --- */
 
 
@@ -411,16 +420,12 @@
 			#commandePanel {
 				max-width:40px  !important;
 			}
+			.flip{
+				 min-height:auto;
+			}
 		}
 		
-    /* 
-	 * Responsive grand écran: 
-	 * limiter la compression du panel de chargement des tables 
-	 * accueil_prefecture.php
-	 */
-	.flip{
-	     min-height:38vh;
-	}
+
 		
 		
 		
