@@ -1,6 +1,5 @@
 <?php
  echo '
-  
 	<ul id="hamburguer">
 	  <li class="dropdown" id="pixelPerfect">
 		<button   class="dropbtn  btn-accueil"><a  href="#">Pixel-perfect Pixel-perfect Pixel-perfect</a></button>

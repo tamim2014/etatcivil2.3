@@ -413,7 +413,14 @@
 			}
 		}
 		
-
+    /* 
+	 * Responsive grand écran: 
+	 * limiter la compression du panel de chargement des tables 
+	 * accueil_prefecture.php
+	 */
+	.flip{
+	     min-height:38vh;
+	}
 		
 		
 		

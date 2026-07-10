@@ -1,6 +1,5 @@
 <?php
  echo '
-  
 	<!-- <ul style="margin-left:28%;" id="hamburguer"> -->
 	<ul  id="hamburguer">
 	  <li class="dropdown" id="pixelPerfect">
