@@ -126,12 +126,13 @@
 			
 			/* ✅ modifier_.php */
 			
-		    /*Ecarter les btn menu droite */
-					/* Grandir les champs de saisie */
-		    input{
-				  padding:.2em .5em;
+		    /*
+			 * Ecarter les btn menu droite 
+			 *Grandir les champs de saisie 
+			 */
+			input:not(.flag) {
+				padding: .2em .5em;
 			}
-			
 			.menudroiteEdit .kangalaheMenu{
 				margin-top: 2em;			   
 			}

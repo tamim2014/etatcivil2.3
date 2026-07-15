@@ -39,7 +39,7 @@
         body, .tabledroite{
 			background:#ECECEA;
 		}
-		
+				
 	 </style>	 
 	 <script src="js/jquery.js"></script>
 	 <script src="js/ecritureBD.js" defer></script>
@@ -52,8 +52,8 @@
 	<!-- <div id="acteN"></div> -->
 	<header>
 		<div class="en-tete">
-			<div class="hollowTop"   >				   
-			   <input type="image" src="img/drapeau.png" align="left" class="flag" />
+			<div class="hollowTop" >
+               <input class="flag" type="image" src="img/drapeau.png" align="left"/>			
 			   <p class="text_header" style="padding-left:23%;">OFFICE   <br> D'&Eacute;TAT CIVIL </p>			  
 			</div> 
 		</div>		

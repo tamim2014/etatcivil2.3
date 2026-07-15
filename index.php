@@ -55,8 +55,7 @@
 <body >
     <header>
 		<div class="en-tete">
-			<div class="hollowTop"   >				   
-			   
+			<div class="hollowTop">				   
 			   <input class="flag" type="image" src="img/drapeau.png" align="left"/>
 			   <p class="text_header">OFFICE  D'&Eacute;TAT CIVIL </p>			  
 			</div> 

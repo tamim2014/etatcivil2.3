@@ -14,7 +14,7 @@ $pr=ltrim($pr);// Voilà la solution MASHA ALLAH. Un espace s'est glissé en dé
 // On enleve l'echappement si get_magic_quotes_gpc est active
 // Mais attention:  la fonction 🔍get_magic_quotes_gpc()🔍 n'existe plus depuis PHP 7.4 
 // ❌ On peut donc supprimer ce bloc de code.
-/* obsolete get_magic_quotes_gpc()
+/* get_magic_quotes_gpc() : obsolete mais tolerée/ non tolerée depuis juillet 2026
 if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) 
 {
 	$_GET['pr'] = stripslashes($_GET['pr']);

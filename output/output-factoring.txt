@@ -1,38 +1,62 @@
-Task: Refactoring
+Task: Refactoring ( 12 fichiers impactés )
 
-Objets: Mettre  imprimer.php, afficher.php, afficherdanspop.php
-        dans le dossier output
+Objet: Mettre  imprimer.php, afficher.php, afficherdanspop.php
+       dans le dossier output
        
-10 fichiers impactés.
-
-
-Combiner la navigation + la doc pour reperer les fichier impacter (mieux pour le classement ci-dessus)
-ou 
-uiliser  vs code avec les filtres imprimer.php, afficher.php, afficherdanspop.php
 
 
 
 
-accueil.php
-1) backend/colonne_afficher_naissance.php .......................... afficher
-2) backend/colonne_imprimer_acte.php ............................... imprimer
+accueil.php -----------------------------------------------------------------------------
 
-lectureBD.php
-3) ???? .......................... afficher
-4)  ??? ............................... imprimer
+1) backend/colonne_afficher_naissance.php 
+    <a href="afficher.php?n='.$ligne["ID"].'" onclick="return ouvrePop(this.href);">
+        👁️
+    </a>
+2) backend/colonne_imprimer_acte.php 
+  <a href="imprimer.php?n='.$ligne2["ID"].'" >
+       🖨️
+  </a>
 
-lectureBD2.php
-5) ???? .......................... afficher
-6)  ??? ............................... imprimer
+lectureBD.php ----------------------------------------------------------------------------
 
-ecritureBD.php
-7) ???? .......................... afficher
-8)  ??? ............................... imprimer
+3) backend/lectureBD_afficherNaissance.php
+   <span  onclick="ouvrePop(\'afficher.php?n='.$ligne['ID'].'\')">👁️</span>   
+4) backend/lectureBD_afficherNaissance.php
+  <span onclick="window.location=\'imprimer.php?n='.$ligne['ID'].'\'">🖨️</span>
 
-modifier_.php
-9) ???? .......................... afficher
-10)  ??? ............................... imprimer
+lectureBD2.php----------------------------------------------------------------------------
+
+✅backend/lectureBD2_searchPlayBack.php (search by number result)
+ 5) <a id="lien" href="#" onclick="popup_lectureBD2();"> 👁 </a> 
+   lectureBD.js : function popup_lectureBD2()
+   window.open("afficherdanspop.php", ...); ❗             
+ 6) <a href="imprimer.php?n='.$donnees["ID"].'"> 🖨️</a>
+✅backend/lectureBD2_searchPlayBackByName.php (search by name result)
+7)  <a href="afficher.php?n='.$donnees["ID"].'" onclick="return ouvrePop(this.href);"> 👁 </a> 
+8)  <a href="imprimer.php?n='.$donnees["ID"].'"> 🖨️ </a>
 
 
-N.B
-Conserver ce fichier dans un redMe du dossier output
+ecritureBD.php -----------------------------------------------------------------------------
+
+✅ inc/ecriture/ecritureBD_menudroite.php
+9) <a href="afficher.php?n=' . $id_document . '" onclick="return ouvrirEtVerifier(this, ' . $id_js . ');">
+        <input  type="button" value="Afficher" />
+   </a>
+✅ ecritureBD.js : function verifierAvantImpression(id)
+10) window.location.href = "imprimer.php?n=" + id;
+   <a href="#" onclick="return verifierAvantImpression(<?php echo $id_js; ?>);">
+	<input type="button" value="Imprimer l'acte" />
+   </a>
+
+modifier_.php ---------------------------------------------------------------------------------
+
+✅  inc/ecriture/ecritureBD_edit_menudroite1.php
+11) <a  href="afficher.php?n=' . $donnees["ID"] . '" onclick="return ouvrirPopupEcritureBD(this);">
+	<input type="button"  value="Afficher"/>
+    </a>
+12) <a href="imprimer.php?n=<?php echo $donnees["ID"];?> ">
+       <input type="button"  value="Imprimer l'acte" />
+    </a>
+
+
