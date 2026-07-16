@@ -14,7 +14,8 @@
 	   filter:brightness(80%);
    }
    .text_header{
-	   padding-top:2%; 
+	   /* padding-top:2%; */ 
+	   padding-block:25px;
 	   padding-left:45%;
    }
    .tablegauche{
