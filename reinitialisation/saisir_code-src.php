@@ -12,18 +12,15 @@ if (!isset($_SESSION['user_id'])) {
 
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes">
-    <title>Vérification du code </title>
-	<link href="../css/template.css"  rel="stylesheet" type="text/css" >
-	<link href="../css/accueil22.css" rel="stylesheet"/>
- 
-	<style>
+    <title>Vérification du code</title>
 
-		
-	    .contenu {
+	
+
+    <style>
+        body {
             font-family: Arial, sans-serif;
             background: #E8E4D8; /* #f5f5f5; */
             display: flex;
@@ -43,19 +40,9 @@ if (!isset($_SESSION['user_id'])) {
 			*	Assure-toi que ta .box a bien position: relative;  
 			*	Sinon la croix ne se positionnera pas correctement.
 			*/
-			position: relative;			
+			position: relative;
         }
-		
-		/* Aligner les champs du formulaire verticalement  ⚠️*/
-				
-		.box form {
-			display: block !important;
-			width: 100%;
-		}
-		
-		/* Contenu du formulaire */
-		
-        input:not(.flag) { /* ⚠️ */
+        input {
             width: 90%;
             padding: 10px;
             margin-top: 15px;
@@ -65,7 +52,7 @@ if (!isset($_SESSION['user_id'])) {
         }
         button {
             margin-top: 20px;
-            padding: 12px 20px;
+            padding: 10px 20px;
             background: #007bff;  /*  #558C89; */
             color: white;
             border: none;
@@ -114,77 +101,32 @@ if (!isset($_SESSION['user_id'])) {
 			color: #000;
 		}
 		
-		/* *****************  */
-		  .flag{
-			   height:100%; 
-			   filter:brightness(80%);
-		   }
-		   .text_header{
-			   padding-block:25px;
-			   padding-left:45%;
-		   }
-		   
-		/*  **********************  */
-		
-		@media screen and (max-width: 768px) {
-				.hollowTop{
-					height:5em;
-					padding:.27em .2em;
-				}
-			  	.text_header{
-				   display:none;
-			    }
-			    .flag{
-				   width:100%;
-                   border-radius:5.5px 5.5px 5.5px 5.5px ;				   
-			    }
-		}
-	</style>
+
+
+    </style>
 </head>
+<body>
 
-<body >
-    <header>
-		<div class="en-tete">
-			<div class="hollowTop">				   
-			   <input class="flag" type="image" src="../img/drapeau.png" align="left"/>
-			   <p class="text_header">OFFICE  D'&Eacute;TAT CIVIL </p>			  
-			</div> 
-		</div>		
 
-    </header>
-    <div class="contenu"  >
-	
-		<div class="box">
-			<a href="../index.php" class="close-btn">×</a>
-			<h2>Vérification du code</h2>
-			<p>Veuillez entrer le code que vous avez reçu par email.</p>
+<div class="box">
+    <a href="../index.php" class="close-btn">×</a>
+    <h2>Vérification du code</h2>
+    <p>Veuillez entrer le code que vous avez reçu par email.</p>
 
-			<form method="POST" action="verifier_code.php">
-				<input type="text" name="code" placeholder="Code reçu" required>
-				<button type="submit">Valider</button>
-				<a href="envoyer_code.php" class="btn-renvoyer">Renvoyer le code</a>
-			</form>
-			<?php
-			if (isset($_GET['error'])) {
-				echo '<p class="error">Code incorrect ou expiré</p>';
-			}
-			?>
+    <form method="POST" action="verifier_code.php">
+        <input type="text" name="code" placeholder="Code reçu" required>
+        <button type="submit">Valider</button>
+		<a href="envoyer_code.php" class="btn-renvoyer">Renvoyer le code</a>
+    </form>
+    <?php
+    if (isset($_GET['error'])) {
+        echo '<p class="error">Code incorrect ou expiré</p>';
+    }
+    ?>
 
-		</div>
-    </div> 
+</div>
 
-	
-    <div class="footer">
-        <p>
-		    <span>2026 &copy; -</span> 
-			<span>Etat civil</span>
-		</p>
-    </div>
+
+
 </body>
 </html>
-
-
-
-
- 
-

@@ -28,7 +28,7 @@
 			
 			box-shadow: 0 0 12px rgba(0,0,0,0.15) !important;
 		}
-		/* Aligner les champs dur .form1 verticalement */
+		/* Aligner les champs du .form1 verticalement */
 				
 		.form-container form {
 			display: block !important;
