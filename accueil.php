@@ -52,7 +52,7 @@
 		<div class="en-tete">
 			<div class="hollowTop">				   
 			   <input type="image" src="img/drapeau.png" align="left" class="flag" style="width:30%; height:100%; filter:brightness(80%);" />
-			   <p class="text_header" style="padding-block:25px; padding-left:45%;">OFFICE    D'&Eacute;TAT CIVIL </p>			  
+			   <p class="text_header" style="padding-block:25px; padding-left:45%;">OFFICE    D&apos;ÉTAT CIVIL </p>			  
 			</div> 
 		</div>		
 		<div class="menu topnav"  id="myTopnav"> 

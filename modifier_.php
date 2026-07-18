@@ -99,7 +99,7 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 		<div class="en-tete">
 			<div class="hollowTop"   >				   
 			   <input type="image" src="img/drapeau.png" align="left" class="flag" />
-			   <p class="text_header">OFFICE   <br> D'&Eacute;TAT CIVIL </p>			  
+			   <p class="text_header">OFFICE   <br> D&apos;ÉTAT CIVIL </p>			  
 			</div> 
 		</div>		
 		<div class="menu topnav"  id="myTopnav"> 

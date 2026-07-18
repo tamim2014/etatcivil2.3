@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		<div class="en-tete">
 			<div class="hollowTop">				   
 			   <input class="flag" type="image" src="../img/drapeau.png" align="left"/>
-			   <p class="text_header">OFFICE  D'&Eacute;TAT CIVIL </p>			  
+			   <p class="text_header">OFFICE  D&apos;ÉTAT CIVIL </p>			  
 			</div> 
 		</div>		
 
