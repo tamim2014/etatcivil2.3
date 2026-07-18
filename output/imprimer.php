@@ -18,7 +18,7 @@ $id=$_GET['n'];
 $id=ltrim($id);
 // try{$conn = new PDO('mysql:host=localhost;dbname=etatcivil;charset=utf8', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));} //// Le array active les exception PDO: pour obtenir + de détail sur d'eventuels erreurs
 // catch(Exception $e){die('Erreur de connexion à la base de données: '.$e->getMessage());}
-require_once 'backend/connection_PDO.php';
+require_once '../backend/connection_PDO.php';
 
 if($id <= 0) {
     die("ID invalide : \n <h4>Veuillez saisir le document avant de l'imprimer ⚠️</h4>");
@@ -59,13 +59,13 @@ $donnees = $reponse->fetch();
 <table border="1" align="center"  style="border-collapse:collapse" bordercolor="#111111" width="80%" >
   
    <tr>
-      <td align="center" VALIGN="top"><h2>UNION DES COMORES</h2> <h6>Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement<h6> <h3>MINISTERE DE L'INTERIEUR</h3> <img src="img/armoirie.png"  /> 
+      <td align="center" VALIGN="top"><h2>UNION DES COMORES</h2> <h6>Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement<h6> <h3>MINISTERE DE L'INTERIEUR</h3> <img src="../img/armoirie.png"  /> 
 	  
-         		   <h4> Pr&eacute;fecture de: </h4> 		   
+           <h4> Pr&eacute;fecture de: </h4> 		   
 		   <input type="text"  style="margin-left:-95px; margin-bottom:0;"  value="<?php echo $donnees["prefecture"];?>"  >		   
 		   <hr style="margin-top:0;" />
 		   
-		   <h4>Centre d'Etat Civil de: </h4>  
+		   <h4>Centre d'État Civil de: </h4>  
 		   <input type="text"  style="margin-left:-95px; margin-bottom:0;"  value="<?php echo $donnees["centretatcivil"];?>" > 
 		   <hr style="margin-top:0;" /> 
 		   <div style="margin-left:10px;">

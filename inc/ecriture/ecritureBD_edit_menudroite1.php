@@ -7,7 +7,7 @@
 				</div>     
 			</a>
 			<div class="kangalaheMenu">			  
-					<a id="acteAJAX" href="afficher.php?n=' . $donnees["ID"] . '" onclick="return ouvrirPopupEcritureBD(this);">
+					<a id="acteAJAX" href="output/afficher.php?n=' . $donnees["ID"] . '" onclick="return ouvrirPopupEcritureBD(this);">
 						<input class="btnWrite"  type="button"  value="Afficher" align="center"  />
 					</a>
 			 </div>		

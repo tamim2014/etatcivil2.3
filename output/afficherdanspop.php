@@ -1,51 +1,28 @@
 <?php
-
-require_once 'backend/connection_PDO.php';
-/* 
- * Transmis par: 
- * 1) backend/colonne-afficher-naissance.php
- * 2) inc/backend/ecritureBD_menudroite.php (include de ecritureBD.php depuis le 17.05.26)
- * 3) inc/backend/ecritureBD_edit_menudroite1.php (include de modifier_.php)
+session_start(); // Transmettre l'identifiant par une variable session(et nom par la variable $_GET) sinon PROBLEME:il faudra rechArger la page pour réactualiser la POPUP. Et j'ai passé 2 jour sans pouvoir resoudre ce probleme. Heureusemen la varible $_SESSION['identifiant ] résoud ce probleme de mémoire-cache qui renvoie tjrs l'ancien acte de naissance dans la popup de la page parent(page d'appel) 
+include("../backend/pop.php");
+/*
+ * backend/pop.php
  *
- */
-
-if(!isset($_GET['n'])) $_GET['n']=""; 
-
-$id = isset($_GET['n']) ? intval($_GET['n']) : 0;
-
-if($id <= 0) {
-    die("ID invalide : \n <h4>Veuillez saisir le document avant de l'afficher ⚠️</h4>");
-}
-
-$reponse = $conn->prepare("SELECT * FROM liste WHERE ID = ?");
-$reponse->execute([$id]);
-$donnees = $reponse->fetch();
+ * require_once 'connection_PDO.php';
+ 
+ * $sql = 'SELECT * FROM liste WHERE ID='.$_SESSION['identifiant'];
+ * $req = $conn->query( $sql );
+ * $donnees = $req->fetch();
+*/
 
 ?>
 
+
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
      <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes"> -->
-     
-	 <title>Recupere l'identifiant transmis et afffiche les données relatives dans un pop </title>
-	 <link href="css/afficher.css" rel="stylesheet" title="Style" />     
+     <title>Pop relatif à la page affichée suite à une recherche par Numero/Nom(lecturetureBD2.php) </title>
+	 <link href="css/afficher.css" rel="stylesheet" title="Style" /> 
      <style>
-	     input { border:none; }	
-		 
-         /* Supprimer les marge */
-	     @page { margin: 0; }
-         body { margin: .5em 0 !important; }
-		 
-		 /* Remplire la page */
-         @media (max-width: 768px) {
-			 body{
-				 min-width:98vw !important;
-				 min-height:98vh !important;
-			 }
-		 }		 
-     </style>
+	     input { border:none; }		 
+     </style>	 
 </head>
 
 <body>
@@ -54,37 +31,38 @@ $donnees = $reponse->fetch();
 <table border="1" align="center"  style="border-collapse:collapse" bordercolor="#111111" width="80%" >
   
    <tr>
-      <td align="center" VALIGN="top">
-	      <h2>UNION DES COMORES</h2> 
-		  <h6>Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement<h6>
-		  <h3>MINISTERE DE L'INTERIEUR</h3> 
-		  <img src="img/armoirie.png"  /> 
-		  
-		  <h4> Pr&eacute;fecture de: </h4> 
-		  <input type="text"  style="margin-left:-95px; margin-bottom:0;"  value="<?php echo $donnees["prefecture"];?>"  >
-		  <hr style="margin-top:0;" />
-		  
-		  <h4>Centre d'Etat Civil de: </h4>
-		  <input type="text"  style="margin-left:-95px; margin-bottom:0;"  value="<?php echo $donnees["centretatcivil"];?>" > 
-		  <hr style="margin-top:0;" /> 
-		  <div style="margin-left:10px;">
-		        <h6 align="left" style="line-height:0;">
-		          <input type="text"   style="margin-left:65px;"  value="<?php echo $donnees["registre"];?>" ><br>
-			       Registre N° ------------------------------
-			    </h6>
-			    <h6 align="left">
-					<p style="line-height:0; ">
-					   <input type="text"   style="margin-left:65px;"  value="<?php echo $donnees["acte"];?>" ><br>
-					   Acte N° -----------------------------------
+        <td align="center" VALIGN="top">
+	       <h2>UNION DES COMORES</h2> 
+		   <h6>Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement<h6> 
+		   <h3>MINISTERE DE L'INTERIEUR</h3> 
+		   <img src="../img/armoirie.png"  />
+ 		   
+		   <h4> Pr&eacute;fecture de: </h4> 		   
+		   <input type="text"  style="margin-left:-95px; margin-bottom:0;"  value="<?php echo $donnees["prefecture"];?>"  >		   
+		   <hr style="margin-top:0;" />
+		   
+		   <h4>Centre d'État Civil de: </h4>  
+		   <input type="text"  style="margin-left:-95px; margin-bottom:0;"  value="<?php echo $donnees["centretatcivil"];?>" > 
+		   <hr style="margin-top:0;" /> 
+		   <div style="margin-left:10px;">
+		        <h6 align="left" style="line-height:0;">			    
+				      <input type="text"   style="margin-left:65px;"  value="<?php echo $donnees["registre"];?>" ><br>
+				      Registre N° ------------------------------				 
+				</h6>
+				<h6 align="left">
+				    <p style="line-height:0; ">
+				      <input type="text"   style="margin-left:65px;"  value="<?php echo $donnees["acte"];?>" ><br>
+				      Acte N° -----------------------------------
+				    </p>
+				    <p style="line-height:0; ">
+				      <input type="text"  style="margin-left:65px;" value="<?php echo $donnees["date_acte"];?>" ><br>
+				      Du -----------------------------------------
 					</p>
-					<p style="line-height:0; ">				
-					   <input type="text"  style="margin-left:65px;" value="<?php echo $donnees["date_acte"];?>" ><br>
-					   Du -----------------------------------------
-					</p>   
-			    </h6>
-		    </div>
-	    </td>
-        <td  align="left"  rowspan="2" >
+				</h6>
+			</div>
+		</td>
+      
+	    <td  align="left"  rowspan="2" >
 	        <h1 align="center"  style="color: white; text-shadow: 2px 2px 4px #1D702D;">ACTE DE NAISSANCE</h1>
 		    <div style="margin-left:10px;">
 				 <p style="line-height:0; ">
@@ -155,7 +133,7 @@ $donnees = $reponse->fetch();
 				 </p>
 		    </div>
 	    </td>
-   </tr>
+    </tr>
    
    <tr>
         <td align="center" rowspan="2"  >
@@ -214,6 +192,7 @@ $donnees = $reponse->fetch();
 	  </td>
    </tr>
 </table>
+        
 </div>
 </body>
 </html>

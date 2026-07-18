@@ -110,7 +110,7 @@ function verifierAvantImpression(id) {
     }
 
     // Si l'ID est valide → redirection
-    window.location.href = "imprimer.php?n=" + id;
+    window.location.href = "output/imprimer.php?n=" + id;
     return false;
 }
 

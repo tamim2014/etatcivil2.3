@@ -54,7 +54,7 @@ while($ligne=mysqli_fetch_array($R)){// en utlisant FOREACH ça marche pas .j'sa
   <td>'.$ligne["acte"].'</td>
   <td>'.$ligne["prefecture"].'</td>
   <td>
-    <a class="icon-btn" href="afficher.php?n='.$ligne["ID"].'" onclick="return ouvrePop(this.href);">
+    <a class="icon-btn" href="output/afficher.php?n='.$ligne["ID"].'" onclick="return ouvrePop(this.href);">
         👁️
     </a>
   </td>

@@ -86,11 +86,11 @@ $table .= '<tr>
 <td>'.$ligne["prefecture"].'</td>
 
 <td>
-    <span class="icon-btn" onclick="window.location=\'imprimer.php?n='.$ligne['ID'].'\'">🖨️</span>
+    <span class="icon-btn" onclick="window.location=\'output/imprimer.php?n='.$ligne['ID'].'\'">🖨️</span>
 </td>
 
 <td>
-    <span class="icon-btn" onclick="ouvrePop(\'afficher.php?n='.$ligne['ID'].'\')">👁️</span>
+    <span class="icon-btn" onclick="ouvrePop(\'output/afficher.php?n='.$ligne['ID'].'\')">👁️</span>
 </td>
 
 </tr>';

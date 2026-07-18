@@ -8,7 +8,7 @@ echo '<div id="menudroite" >
     </a>
                 
     <div class="kangalaheMenu">           
-        <a id="acteAJAX" href="afficher.php?n=' . $id_document . '" onclick="return ouvrirEtVerifier(this, ' . $id_js . ');">
+        <a id="acteAJAX" href="output/afficher.php?n=' . $id_document . '" onclick="return ouvrirEtVerifier(this, ' . $id_js . ');">
             <input class="btnWrite" type="button" value="Afficher" align="center"/>
         </a>
     </div>

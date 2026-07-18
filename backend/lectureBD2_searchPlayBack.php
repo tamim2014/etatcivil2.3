@@ -73,7 +73,7 @@
 					<span class="mobilText1">✍️</span>
 				</a>
 			</td>
-			<td><a href="imprimer.php?n='.$donnees["ID"].'"><span class="desktopText2">Imprimer</span><span class="mobilText2">🖨️</span></a></td>
+			<td><a href="output/imprimer.php?n='.$donnees["ID"].'"><span class="desktopText2">Imprimer</span><span class="mobilText2">🖨️</span></a></td>
 			<td><a id="lien" href="#" onclick="popup_lectureBD2();"><span class="desktopText3">Afficher</span><span class="mobilText3">👁</span></a></td>
 		</tr>';
         // get in : backend/pop.php (ligne4), afficherdanspop.php

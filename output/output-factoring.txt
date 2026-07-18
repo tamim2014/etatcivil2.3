@@ -7,55 +7,56 @@ Objet: Mettre  imprimer.php, afficher.php, afficherdanspop.php
 
 
 
-accueil.php -----------------------------------------------------------------------------
+accueil.php ----------------------------------------------------------------------------- OK
 
 1) backend/colonne_afficher_naissance.php 
-    <a href="afficher.php?n='.$ligne["ID"].'" onclick="return ouvrePop(this.href);">
+    <a href="output/afficher.php?n='.$ligne["ID"].'" onclick="return ouvrePop(this.href);">
         👁️
     </a>
 2) backend/colonne_imprimer_acte.php 
-  <a href="imprimer.php?n='.$ligne2["ID"].'" >
+  <a href="output/imprimer.php?n='.$ligne2["ID"].'" >
        🖨️
   </a>
 
-lectureBD.php ----------------------------------------------------------------------------
+lectureBD.php ---------------------------------------------------------------------------- OK
 
 3) backend/lectureBD_afficherNaissance.php
-   <span  onclick="ouvrePop(\'afficher.php?n='.$ligne['ID'].'\')">👁️</span>   
+   <span  onclick="ouvrePop(\'output/afficher.php?n='.$ligne['ID'].'\')">👁️</span>   
 4) backend/lectureBD_afficherNaissance.php
-  <span onclick="window.location=\'imprimer.php?n='.$ligne['ID'].'\'">🖨️</span>
+  <span onclick="window.location=\'output/imprimer.php?n='.$ligne['ID'].'\'">🖨️</span>
 
-lectureBD2.php----------------------------------------------------------------------------
+lectureBD2.php---------------------------------------------------------------------------- OK
 
 ✅backend/lectureBD2_searchPlayBack.php (search by number result)
  5) <a id="lien" href="#" onclick="popup_lectureBD2();"> 👁 </a> 
    lectureBD.js : function popup_lectureBD2()
-   window.open("afficherdanspop.php", ...); ❗             
+   window.open("output/afficherdanspop.php", ...); ❗             
  6) <a href="imprimer.php?n='.$donnees["ID"].'"> 🖨️</a>
 ✅backend/lectureBD2_searchPlayBackByName.php (search by name result)
-7)  <a href="afficher.php?n='.$donnees["ID"].'" onclick="return ouvrePop(this.href);"> 👁 </a> 
-8)  <a href="imprimer.php?n='.$donnees["ID"].'"> 🖨️ </a>
+7)  <a href="output/afficher.php?n='.$donnees["ID"].'" onclick="return ouvrePop(this.href);"> 👁 </a> 
+8)  <a href="output/imprimer.php?n='.$donnees["ID"].'"> 🖨️ </a>
 
 
-ecritureBD.php -----------------------------------------------------------------------------
+ecritureBD.php ----------------------------------------------------------------------------- OK
 
 ✅ inc/ecriture/ecritureBD_menudroite.php
-9) <a href="afficher.php?n=' . $id_document . '" onclick="return ouvrirEtVerifier(this, ' . $id_js . ');">
+9) <a href="output/afficher.php?n=' . $id_document . '" onclick="return ouvrirEtVerifier(this, ' . $id_js . ');">
         <input  type="button" value="Afficher" />
    </a>
 ✅ ecritureBD.js : function verifierAvantImpression(id)
-10) window.location.href = "imprimer.php?n=" + id;
+10) window.location.href = "output/imprimer.php?n=" + id; ❗
    <a href="#" onclick="return verifierAvantImpression(<?php echo $id_js; ?>);">
 	<input type="button" value="Imprimer l'acte" />
    </a>
 
-modifier_.php ---------------------------------------------------------------------------------
+modifier_.php ---------------------------------------------------------------------------------OK
 
 ✅  inc/ecriture/ecritureBD_edit_menudroite1.php
-11) <a  href="afficher.php?n=' . $donnees["ID"] . '" onclick="return ouvrirPopupEcritureBD(this);">
+11) <a  href="output/afficher.php?n=' . $donnees["ID"] . '" onclick="return ouvrirPopupEcritureBD(this);">
 	<input type="button"  value="Afficher"/>
     </a>
-12) <a href="imprimer.php?n=<?php echo $donnees["ID"];?> ">
+✅  modifier_.php
+12) <a href="output/imprimer.php?n=<?php echo $donnees["ID"];?> ">
        <input type="button"  value="Imprimer l'acte" />
     </a>
 

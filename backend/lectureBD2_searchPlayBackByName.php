@@ -69,13 +69,13 @@
 				</a>
 			</td>
 			<td>
-				<a href="imprimer.php?n='.$donnees["ID"].'">
+				<a href="output/imprimer.php?n='.$donnees["ID"].'">
 					<span class="desktopText2">Imprimer</span>
 					<span class="mobilText2">🖨️</span>
 				</a>
 			</td>
 			<td>
-				<a href="afficher.php?n='.$donnees["ID"].'" onclick="return ouvrePop(this.href);">
+				<a href="output/afficher.php?n='.$donnees["ID"].'" onclick="return ouvrePop(this.href);">
 					<span class="desktopText3">Afficher</span>
 					<span class="mobilText3">👁</span>
 				</a>

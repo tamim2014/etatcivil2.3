@@ -31,7 +31,7 @@ while($ligne2=mysqli_fetch_array($R)){// en utlisant FOREACH ça marche pas .j's
 			 <td>'.$ligne2["prenom"].'</td>
 			 <td>'.$ligne2["acte"].'</td>
 			 <td>'.$ligne2["prefecture"].'</td>
-			 <td><a class="icon-btn" href="imprimer.php?n='.$ligne2["ID"].'" >🖨️</a></td>
+			 <td><a class="icon-btn" href="output/imprimer.php?n='.$ligne2["ID"].'" >🖨️</a></td>
 		</tr>';
 }
 $table.='</table>';

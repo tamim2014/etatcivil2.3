@@ -297,7 +297,7 @@ $rappel = '<b style="text-align:center"><i> <u>Document &agrave; rectifier</u></
 				                <input type="submit" class="btnOutput" onclick="actenumero();" id="enregistrer" name="Enregistrer" value="Enregistrer l'acte"/>
 							 </td>
 							 <td>
-							    <a href="imprimer.php?n=<?php echo $donnees["ID"];?> ">
+							    <a href="output/imprimer.php?n=<?php echo $donnees["ID"];?> ">
 								    <input type="button"  value="Imprimer l'acte" align="center" class="btnOutput" />
 								</a>
 							 </td>

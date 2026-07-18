@@ -152,7 +152,7 @@
 // mais je ne suprime pas encore la fonction car je sais pas si je l'ai utilis�e ailleurs!
     function popup_lectureBD2(){ 
 		     //window.open("afficherdanspop.php",'Popup','scrollbars=1,Menubar=1,resizable=1,height=409,width=958,top=258,left=175'); return false;          
-		     window.open("afficherdanspop.php",'Popup','scrollbars=1,Menubar=1,resizable=1,height=409,width=958,top=258,left=175'); return false;          
+		     window.open("output/afficherdanspop.php",'Popup','scrollbars=1,Menubar=1,resizable=1,height=409,width=958,top=258,left=175'); return false;          
 	}
 /**
  *
