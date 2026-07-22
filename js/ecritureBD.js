@@ -156,5 +156,30 @@ function ouvrirPopupEcritureBD(lien) {
 	return false;
 }
 
+// Le pop: ecritureBD.php/Afficher
+
+function ouvrirEtVerifier(lien, id) {
+	if (id <= 0) {
+	//	alert("Veuillez saisir le document avant de l'afficher ⚠️");
+	//	return false;
+		document.body.insertAdjacentHTML('beforeend', `
+			<div class="alert2">
+				Veuillez saisir le document avant de l'afficher ⚠️
+				<span class="flash-close">&times;</span>
+			</div>
+		`);
+		return false;
+	}
+
+	// Ouvre une fenêtre standard
+	window.open(
+		lien.href,
+		"PopupAffichage",
+		"width=900,height=700,top=100,left=100,resizable=yes,scrollbars=yes"
+	);
+
+	return false; // Empêche le lien de naviguer
+}
+
 
 

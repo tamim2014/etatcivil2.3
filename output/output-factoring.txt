@@ -1,4 +1,4 @@
-Task: Refactoring ( 12 fichiers impactés )
+Task: Refactoring ( 11 fichiers impactés )
 
 Objet: Mettre  imprimer.php, afficher.php, afficherdanspop.php
        dans le dossier output
@@ -7,7 +7,7 @@ Objet: Mettre  imprimer.php, afficher.php, afficherdanspop.php
 
 
 
-accueil.php ----------------------------------------------------------------------------- OK
+accueil.php ----------------------------------------------------------------------------- 
 
 1) backend/colonne_afficher_naissance.php 
     <a href="output/afficher.php?n='.$ligne["ID"].'" onclick="return ouvrePop(this.href);">
@@ -18,26 +18,26 @@ accueil.php --------------------------------------------------------------------
        🖨️
   </a>
 
-lectureBD.php ---------------------------------------------------------------------------- OK
+lectureBD.php ---------------------------------------------------------------------------- 
 
 3) backend/lectureBD_afficherNaissance.php
    <span  onclick="ouvrePop(\'output/afficher.php?n='.$ligne['ID'].'\')">👁️</span>   
 4) backend/lectureBD_afficherNaissance.php
   <span onclick="window.location=\'output/imprimer.php?n='.$ligne['ID'].'\'">🖨️</span>
 
-lectureBD2.php---------------------------------------------------------------------------- OK
+lectureBD2.php---------------------------------------------------------------------------- 
 
 ✅backend/lectureBD2_searchPlayBack.php (search by number result)
  5) <a id="lien" href="#" onclick="popup_lectureBD2();"> 👁 </a> 
    lectureBD.js : function popup_lectureBD2()
    window.open("output/afficherdanspop.php", ...); ❗             
- 6) <a href="imprimer.php?n='.$donnees["ID"].'"> 🖨️</a>
+ 6) <a href="output/imprimer.php?n='.$donnees["ID"].'"> 🖨️</a>
 ✅backend/lectureBD2_searchPlayBackByName.php (search by name result)
 7)  <a href="output/afficher.php?n='.$donnees["ID"].'" onclick="return ouvrePop(this.href);"> 👁 </a> 
 8)  <a href="output/imprimer.php?n='.$donnees["ID"].'"> 🖨️ </a>
 
 
-ecritureBD.php ----------------------------------------------------------------------------- OK
+ecritureBD.php ----------------------------------------------------------------------------- 
 
 ✅ inc/ecriture/ecritureBD_menudroite.php
 9) <a href="output/afficher.php?n=' . $id_document . '" onclick="return ouvrirEtVerifier(this, ' . $id_js . ');">
@@ -49,7 +49,7 @@ ecritureBD.php -----------------------------------------------------------------
 	<input type="button" value="Imprimer l'acte" />
    </a>
 
-modifier_.php ---------------------------------------------------------------------------------OK
+modifier_.php ---------------------------------------------------------------------------------
 
 ✅  inc/ecriture/ecritureBD_edit_menudroite1.php
 11) <a  href="output/afficher.php?n=' . $donnees["ID"] . '" onclick="return ouvrirPopupEcritureBD(this);">

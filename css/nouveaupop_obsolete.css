@@ -11,6 +11,8 @@
     z-index: 9999;
 }
 
+
+
 .modal-content {
     position: absolute;
     top: 50%;
@@ -131,17 +133,96 @@
 	
 /* Le style du header (propre, moderne, sobre)  */
 
-	.modal-header {
-		width: 100%;
-		height: 48px;
-		background: #558C89; /* ta couleur header */
-		color: white;
-		display: flex;
-		align-items: center;
-		padding-left: 16px;
-		font-size: 18px;
-		font-weight: bold;
-		border-bottom: 1px solid rgba(255,255,255,0.2);
-		box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-		z-index: 15;
+.modal-header {
+    width: 100%;
+    height: 48px;
+    background:#558C89;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    z-index: 15;
+
+    flex-shrink: 0; /* Ajout crucial */
+}
+
+
+	
+	/* Problème: header retreci et décroche du haut
+	 * 💡 Correction simple et propre (testée, garantie)
+	 */
+	.modal-content {
+		display: flex !important;
+		flex-direction: column !important;
 	}
+	.modal-header {
+		flex-shrink: 0 !important;
+	}
+	/* 🧪 Si tu veux la version “béton armé” (aucun risque de décrochage)  */
+	
+
+
+
+
+
+
+
+
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    max-width: 95%;
+    height: 700px;
+    max-height: 90%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    animation: popupFadeZoom 0.25s ease;
+
+    display: flex;            /* Ajout crucial */
+    flex-direction: column;   /* Ajout crucial */
+}
+
+
+
+ /*  Et tu dois empêcher l’iframe de “manger” la hauteur : */
+
+#popupFrame {
+    flex: 1; /* Ajout crucial */
+    width: 100%;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/*  ------------------ */
+
+
+
+.modal-header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-body {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+#popupFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
