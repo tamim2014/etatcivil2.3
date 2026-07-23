@@ -35,21 +35,58 @@ $donnees = $reponse->fetch();
      <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
 	 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, roles-scalable=yes"> -->
 	 <title>Recupere l'identifiant transmis et l'afffiche dans un pop </title>
-	 <link href="css/afficher.css" rel="stylesheet" title="Style" /> 
+	 <!-- Attention! afficher.css je le trouve pas ⚠️⚠️⚠️  -->
+	 <link href="../css/afficher.css" rel="stylesheet" title="Style" /> 
      <style>
-	     input { border:none; }	
+	    input { border:none; }	
+		 
+	    .titregauche,
+	    .titredroite{
+		   text-align:center;
+	    }
+	    .titregauche{
+		   padding-inline:.3em;
+	    }
+		 
+		 
+		/* ##################### 1er réajustement de la sortie  ##############################  */ 
          
          /* Supprimer les marge */
+		 
 	     @page { margin: 0; }
          body { margin: .5em 0 0 0 !important; }
 		 
 		 /* Remplire la page */
+		 
          @media (max-width: 768px) {
 			 body{
 				 min-width:98vw !important;
 				 min-height:98vh !important;
 			 }
-		 }		 
+		 }
+
+		 
+         /* ##################### 2em réajustement de la sortie  ##############################  */
+		 
+         /* 🟩 Ajustement verticale */
+           #wrap{
+			   line-height:1.92;
+		   }
+		   
+        /* 🟩 Ajustement Horizontale */
+		   #wrap{
+			   padding:0 !important;
+		   }
+		   table{
+			   width:97% !important;
+		   }
+		   .tdUn{
+			   width:40% !important;
+		   }
+
+
+
+	  
      </style>	 
 </head>
 <!-- Tasks: tests et le reajustement CSS3 selon le resultat des  tests -->
@@ -59,101 +96,105 @@ $donnees = $reponse->fetch();
 <table border="1" align="center"  style="border-collapse:collapse" bordercolor="#111111" width="80%" >
   
    <tr>
-      <td align="center" VALIGN="top"><h2>UNION DES COMORES</h2> <h6>Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement<h6> <h3>MINISTERE DE L'INTERIEUR</h3> <img src="../img/armoirie.png"  /> 
+      <td align="center" VALIGN="top" class="tdUn">
+	       <h2 class="titregauche">UNION DES COMORES</h2> 
+		   <h6>Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement<h6> 
+		   <h3>MINISTÈRE DE L&apos;INTÉRIEUR</h3> 
+		   <img src="../img/armoirie.png"  /> 
 	  
            <h4> Pr&eacute;fecture de: </h4> 		   
-		   <input type="text"  style="margin-left:-95px; margin-bottom:0;"  value="<?php echo $donnees["prefecture"];?>"  >		   
+		   <input type="text"  class="nomPrefecture" style="margin-left:-95px; margin-bottom:0;"  value="<?php echo $donnees["prefecture"];?>"  >		   
 		   <hr style="margin-top:0;" />
 		   
 		   <h4>Centre d'État Civil de: </h4>  
-		   <input type="text"  style="margin-left:-95px; margin-bottom:0;"  value="<?php echo $donnees["centretatcivil"];?>" > 
+		   <input type="text" class="nomPrefecture" style="margin-left:-95px; margin-bottom:0;"  value="<?php echo $donnees["centretatcivil"];?>" > 
 		   <hr style="margin-top:0;" /> 
 		   <div style="margin-left:10px;">
 		        <h6 align="left" style="line-height:0;">			    
 				      <input type="text"   style="margin-left:65px;"  value="<?php echo $donnees["registre"];?>" ><br>
-				      Registre N° ------------------------------				 
+				      Registre N° -----------------------------------------------------------------				 
 				</h6>
 				<h6 align="left">
 				    <p style="line-height:0; ">
 				      <input type="text"   style="margin-left:65px;"  value="<?php echo $donnees["acte"];?>" ><br>
-				      Acte N° -----------------------------------</h6><h6 align="left" >
+				      Acte N° ----------------------------------------------------------------------</h6><h6 align="left" >
 				    </p>
 				    <p style="line-height:0; ">
 				      <input type="text"  style="margin-left:65px;" value="<?php echo $donnees["date_acte"];?>" ><br>
-				      Du -----------------------------------------
+				      Du ----------------------------------------------------------------------------
 					</p>
 				</h6>
 			</div>
-		</td>
+	  </td>
       
 	  <td  align="left"  rowspan="2" >
-	     <h1 align="center"  style="color: white; text-shadow: 2px 2px 4px #1D702D;">ACTE DE NAISSANCE</h1>
+	     <h1 align="center"  class="titredroite" style="color: white; text-shadow: 2px 2px 4px #1D702D;">ACTE DE NAISSANCE</h1>
 		 <div style="margin-left:10px;">
 		 <p style="line-height:0; ">
 	        <input type="text"  style="margin-left:85px; " value="<?php echo $donnees["naissance_jour_moi"];?>"  ><br><b>
-		    <span>Le</span><span> --------------------------------------------------------</span><br>
+		    <span>Le</span><span> ------------------------------------------------------------------------------</span><br>
 		 </p>
 		 <p style="line-height:0;">		 
 		    <input type="text"  style="margin-left:85px;" value="<?php echo $donnees["naissance_an"];?>" ><br>
-		    et l'an ---------------------------------------------------<br>
+		    et l'an -------------------------------------------------------------------------<br>
 		 </p>
 		 <p style="line-height:0; ">
-		    <input type="text"  style="margin-left:200px;  width:20px;  position:absolute;" value="<?php echo $donnees["naissance_minuite"];?>">
-		    <input type="text"  style="margin-left:20px;" value="<?php echo $donnees["naissance_heure"];?>"><br>
-			&agrave; ---------------- heure(s) ---------------- minute(s)<br><br>
+		    <input type="text"  style="margin-left:300px;  width:20px;  position:absolute;" value="<?php echo $donnees["naissance_minuite"];?>">
+		    <input type="text"  style="margin-left:90px;" value="<?php echo $donnees["naissance_heure"];?>"><br>
+			&agrave; --------------------------- heure(s) --------------------------- minute(s)<br><br>
 		 </p>
 		 <p style="line-height:0; margin-top:3em; ">
 		    <input type="text"  style="margin-left:120px;" value="<?php echo $donnees["naissance_nom_prenom"];?>"><br>
-		    est n&eacute;(e) -------------------------------------------------<br>
+		    est n&eacute;(e) -----------------------------------------------------------------------<br>
 		 </p>
 		 <p style="line-height:0; ">
 		    <input type="text"  style="margin-left:120px;" value="<?php echo $donnees["naissance_lieu"];?>"><br>
-		    &agrave; ----------------------------------------------------------<br>
+		    &agrave; --------------------------------------------------------------------------------<br>
 		 </p>
 		 <p style="line-height:0; ">
 		    <input type="text"  style="margin-left:120px;" value="<?php echo $donnees["naissance_sexe"];?>"><br>
-		    du sexe --------------------------------------------------<br><br><br>
+		    du sexe ------------------------------------------------------------------------<br><br><br>
 		 </p>
          <p style="line-height:0; margin-top:3em;  ">		
 		    <input type="text"  style="margin-left:120px;"  value="<?php echo $donnees["pere_nom_prenom"];?>"><br>
-		    fils(fille de) ---------------------------------------------<br>
+		    fils(fille de) -------------------------------------------------------------------<br>
 		 </p> 
 		 <p style="line-height:0; ">
 		    <input type="text"  style="margin-left:120px;" value="<?php echo $donnees["pere_datenaisance"];?>"><br>
-		    n&eacute(e) le --------------------------------------------------<br>
+		    n&eacute(e) le ------------------------------------------------------------------------<br>
 		 </p>
 		 <p style="line-height:0; ">
 		    <input type="text"  style="margin-left:120px;" value="<?php echo $donnees["pere_lieunaissance"];?>" ><br>
-		    &agrave; ----------------------------------------------------------<br>
+		    &agrave; --------------------------------------------------------------------------------<br>
 		 </p>
 		 <p style="line-height:0; ">
 		    <input type="text"  style="margin-left:120px;" value="<?php echo $donnees["pere_profession"] ;?>" ><br>
-		    Profession ----------------------------------------------<br>
+		    Profession --------------------------------------------------------------------<br>
 		 </p>
 		 <p style="line-height:0; ">
 		    <input type="text"  style="margin-left:120px;" value="<?php echo $donnees["pere_villederesidence"] ;?>" ><br>
-		    Démeurant &agrave; -------------------------------------------<br>
+		    Démeurant &agrave; -----------------------------------------------------------------<br>
 		 </p>
 		 <p align="left" style="margin-top:3em;" >
 		    <p style="line-height:0; ">
 			    <input type="text"  style="margin-left:120px;" value="<?php echo $donnees["mere_nom_prenom"];?>"><br>
-			    et de -----------------------------------------------------<br>
+			    et de ---------------------------------------------------------------------------<br>
 			</p> 
 			<p style="line-height:0; ">
 			   <input type="text"  style="margin-left:120px;" value="<?php echo $donnees["mere_datenaisance"];?>" ><br>
-			   n&eacute;(e) le --------------------------------------------------<br>
+			   n&eacute;(e) le ------------------------------------------------------------------------<br>
 			</p>
 			   <p style="line-height:0; ">
 			   <input type="text"  style="margin-left:120px;" value="<?php echo $donnees["mere_lieunaissance"];?>" ><br>
-			   &agrave; -----------------------------------------------------------<br>
+			   &agrave; -------------------------------------------------------------------------------<br>
 			</p>
 			<p style="line-height:0; ">
 			  <input type="text"  style="margin-left:120px;" value="<?php echo $donnees["mere_profession"] ;?>" ><br>
-			  Profession ----------------------------------------------<br>
+			  Profession --------------------------------------------------------------------<br>
 			</p>
 			<p style="line-height:0; padding-bottom:1em;">
 			  <input type="text"  style="margin-left:120px;" value="<?php echo $donnees["mere_villederesidenc"] ;?>" ><br>
-			  Démeurant &agrave; ------------------------------------------
+			  Démeurant &agrave; ----------------------------------------------------------------
 	        </p>
 		 </p>
 		 
@@ -202,18 +243,18 @@ $donnees = $reponse->fetch();
 		 <div style="margin-left:10px;">
 		 <p style="line-height:0; ">
 		    <input type="text"  style="margin-left:95px;"  value="<?php echo $donnees["delivre_a"];?>" ><br><b>
-		    D&eacute;livr&eacute; &agrave; -------------------------------------<br>
+		    D&eacute;livr&eacute; &agrave; -----------------------------------------<br>
 		</p>
 		<p style="line-height:0; ">
 		    <input type="text"  style="margin-left:95px;"  value="<?php echo $donnees["delivre_le"];?>" ><br>
-		    Le ---------------------------------------------<br>
+		    Le -------------------------------------------------<br>
 		</p>
 		<p style="line-height:0; ">
 		   <input type="text"  style="margin-left:95px;"   value="<?php echo $donnees["delivre_an"];?>"><br>
-		   L'an -------------------------------------------<br>
+		   L'an -----------------------------------------------<br>
 		 </p>
 		 </div>
-		 <p > <h4  align="center"> L'officier de l'Etat Civil:</h4></p>
+		 <p > <h4  align="center"> L&apos;officier de l'État Civil:</h4></p>
 	  </td>
    </tr>
 </table>

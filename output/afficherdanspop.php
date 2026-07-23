@@ -34,7 +34,7 @@ include("../backend/pop.php");
         <td align="center" VALIGN="top">
 	       <h2>UNION DES COMORES</h2> 
 		   <h6>Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement<h6> 
-		   <h3>MINISTERE DE L'INTERIEUR</h3> 
+		   <h3>MINISTÈRE DE L&apos;INTÉRIEUR</h3> 
 		   <img src="../img/armoirie.png"  />
  		   
 		   <h4> Pr&eacute;fecture de: </h4> 		   

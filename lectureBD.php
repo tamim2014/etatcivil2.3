@@ -66,7 +66,7 @@
 							<font color="gray">
 								<h3> UNION DES COMORES  </h3>
 								<h6> Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement  </h6>
-								<h4> MINISTERE DE L'INTERIEUR  </h4>
+								<h4> MINISTÈRE DE L&apos;INTÉRIEUR  </h4>
 							</font>
 							<img src="img/armoirie.png"/>
 						 </caption>
