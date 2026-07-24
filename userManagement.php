@@ -140,7 +140,7 @@ if (isset($_POST['ajouter'])) {
 		<div class="en-tete">
 			<div class="hollowTop"   >				   
 			   <input type="image" src="img/drapeau.png" align="left" class="flag"  />
-			   <p class="text_header">OFFICE D&apos;ÉTAT CIVIL </p>			  
+			   <p class="text_header">OFFICE D'&Eacute;TAT CIVIL </p>			  
 			</div> 
 		</div>		
 		<div class="menu topnav" id="myTopnav" > 
@@ -166,7 +166,7 @@ if (isset($_POST['ajouter'])) {
 						    <font color="gray" style="line-height:2;">
 								 <h3> UNION DES COMORES  </h3>
 								 <h6> Unit&eacute;-Solidarit&eacute;-D&eacute;veloppement  </h6>
-								 <h4> MINISTERE <br>DE<br> L'INTERIEUR  </h4>
+								 <h4> MINISTÈRE <br>DE<br> L&apos;INTÉRIEUR  </h4>
 							 </font>
 							 <!-- <img src="img/armoirie.png" style="z-index:3; transform: translate(200%, 0);  "  /> -->
 							  <img src="img/armoirie.png"/>
